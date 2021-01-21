@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 2021_01_21_162729) do
 
   create_table "capstones", force: :cascade do |t|
     t.string "title"
-    t.string "type"
+    t.string "type_of"
     t.string "main"
     t.string "main_framework"
     t.string "description"
@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 2021_01_21_162729) do
   create_table "contacts", force: :cascade do |t|
     t.string "title"
     t.string "url"
-    t.string "class"
+    t.string "fa_class"
     t.string "fa_key"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 2021_01_21_162729) do
 
   create_table "projects", force: :cascade do |t|
     t.string "title"
-    t.string "type"
+    t.string "type_of"
     t.string "main"
     t.string "main_framework"
     t.string "description"
