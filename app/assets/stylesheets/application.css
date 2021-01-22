@@ -132,3 +132,11 @@ strong {
 .wow {
   visibility: hidden;
 }
+
+
+
+
+/* loading screen */
+.loader {
+  height: 100vh;
+}
