@@ -84,11 +84,11 @@ header .container {
   z-index: -1;
 }
 
-.introduction h1.hello {
+.main .introduction h1.hello {
   font-size: 5rem;
 }
 
-.introduction h1.about {
+.main .introduction h1.about {
   width: 130%;
 }
 
@@ -100,11 +100,17 @@ strong {
 
 .main .slide-swiper {
   height: 100vh;
+  width: 100%;
   padding-right: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .main .neomorphism {
   height: 100vh;
+  width: 100%;
 }
 
 @media only screen and (max-width: 900px) {
@@ -113,7 +119,7 @@ strong {
     right: 1rem;
   }
 
-  .about {
+  .main .introduction h1.about {
     font-size: 1.3rem;
   }
 }
@@ -131,12 +137,4 @@ strong {
 /* WOWjs */
 .wow {
   visibility: hidden;
-}
-
-
-
-
-/* loading screen */
-.loader {
-  height: 100vh;
 }
