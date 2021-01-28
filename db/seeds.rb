@@ -20,4 +20,4 @@ c2 = Contact.create(title: "GitHub", url: "https://github.com/briantacderan", fa
 
 c3 = Contact.create(title: "Twitter", url: "https://twitter.com/BrianTacderan", fa_class: "twitter", fa_key: "fa-twitter")
 
-c4 = Contact.create(title: "E-mail", url: "mailto:briantacderan@gmail.com", fa_class: "instagram", fa_key: "fa_instagram")
+c4 = Contact.create(title: "Email", url: "mailto:briantacderan@gmail.com", fa_class: "email", fa_key: "fa-telegram-plane")
