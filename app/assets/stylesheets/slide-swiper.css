@@ -283,7 +283,7 @@
 
 @media only screen and (max-width: 700px) {
   .slide-swiper .container {
-    padding-right: 22%;
+    padding-right: 20%;
     height: 600px;
     max-height: 600px;
   }
@@ -302,7 +302,7 @@
   .swiper-container {
     margin-left: 0;
     margin-top: 3rem;
-    max-width: 350px;
+    max-width: 360px;
     right: 1rem;
     height: 400px;
   }
@@ -329,6 +329,7 @@
 
   .socials .icon-popups {
     padding-bottom: 8rem;
+    padding-right: 1rem;
   }
     
   .socials img {
@@ -382,6 +383,6 @@
     
   .socials img {
     padding: 0.75rem 0.85rem;
-    width: 50%;
+    width: 100px;
   }
 }
