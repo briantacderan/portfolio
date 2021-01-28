@@ -314,7 +314,7 @@
   }
 
   .socials .icon-popups {
-    margin-bottom: 2rem;
+    padding-bottom: 2rem;
   }
     
   .socials img {
@@ -331,8 +331,6 @@
 
   .slide-swiper .container {
     align-items: flex-start;
-    height: 600px;
-    max-height: 600px;
   }
     
   .swiper-container {

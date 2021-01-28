@@ -126,21 +126,21 @@ strong {
 
 @media only screen and (max-width: 500px) {
   .main .introduction {
-    height: 700px;
+    height: 600px;
     right: 0;
     bottom: 3rem;
   }
     
-  .main .slide-swiper {
-    height: 700px;
+  .main .introduction h1.about {
+    font-size: 1.1rem;
   }
     
   .main .slide-swiper {
-    height: 700px;
+    height: 600px;
   }
 
   .main .neomorphism {
-    height: 700px;
+    height: 600px;
   }
 }
 
