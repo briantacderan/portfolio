@@ -310,7 +310,7 @@
   }
     
   .slide-swiper .slider-item-content p {
-    display: hidden;
+    display: none;
   }
 
   .socials .icon-popups {
@@ -323,7 +323,7 @@
   }
 }
 
-@media only screen and (max-height: 800px) {
+@media only screen and (max-height: 600px) {
   .slide-swiper h1.title-header {
     top: 4rem;
     font-size: 2.5rem;
