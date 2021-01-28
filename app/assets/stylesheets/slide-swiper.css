@@ -329,7 +329,7 @@
 
   .socials .icon-popups {
     padding-bottom: 8rem;
-    padding-right: 1rem;
+    padding-right: 1.5rem;
   }
     
   .socials img {
@@ -380,13 +380,13 @@
     text-overflow: ellipsis;
   }
     
-  .socials .icon-popups .wrapper {
-    padding-bottom: 10rem;
+  .socials .icon-popups {
+    padding-right: 0.75rem;
   }
     
   .socials img {
     padding: 0.75rem 0.85rem;
-    min-width: 75px;
-    width: 75px;
+    min-width: 80px;
+    width: 80px;
   }
 }
