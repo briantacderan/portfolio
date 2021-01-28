@@ -126,6 +126,7 @@ strong {
 
 @media only screen and (max-height: 500px) {
   .main .introduction {
+    height: 400px;  
     right: 0;
     bottom: 3rem;
   }
@@ -145,6 +146,7 @@ strong {
 
 @media only screen and (max-height: 800px) {
   .main .introduction {
+    height: 400px;
     right: 0;
     bottom: 3rem;
   }
