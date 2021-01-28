@@ -122,10 +122,10 @@
     position: relative;
     background-color: #ffffff;
     border-radius: 50%;
-    padding: 15px;
+    padding: 18px;
     margin-left: 2rem;
-    width: 30px;
-    height: 30px;
+    width: 36px;
+    height: 36px;
     box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1);
   }
 }
