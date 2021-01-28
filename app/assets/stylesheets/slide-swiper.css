@@ -346,10 +346,12 @@
     
   .swiper-container {
     max-height: 150px;
+    height: 150px;
   }
 
   .slide-swiper .container {
     align-items: flex-start;
+    height: 150px;
   }
 
   .slider-image-wrapper {
@@ -385,5 +387,6 @@
   .socials img {
     padding: 0.75rem 0.85rem;
     min-width: 50px;
+    width: 50px;
   }
 }
