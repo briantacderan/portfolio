@@ -115,7 +115,7 @@ strong {
 
 @media only screen and (max-width: 900px) {
   .main .introduction {
-    padding-right: 26%;
+    padding-right: 36%;
     right: 1rem;
   }
 
@@ -126,8 +126,7 @@ strong {
 
 @media only screen and (max-width: 500px) {
   .main .introduction {
-    height: 700px;  
-    width: 70%;
+    height: 700px;
     right: 0;
     bottom: 3rem;
   }
