@@ -126,7 +126,7 @@ strong {
 
 @media only screen and (max-width: 500px) {
   .main .introduction {
-    height: 600px;
+    height: 650px;
     right: 0;
     bottom: 3rem;
   }
@@ -136,11 +136,11 @@ strong {
   }
     
   .main .slide-swiper {
-    height: 600px;
+    height: 650px;
   }
 
   .main .neomorphism {
-    height: 600px;
+    height: 650px;
   }
 }
 

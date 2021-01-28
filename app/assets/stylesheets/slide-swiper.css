@@ -301,6 +301,7 @@
 
   .slide-swiper .container {
     align-items: flex-start;
+    height: 500px;
   }
 
   .slider-image-wrapper {
