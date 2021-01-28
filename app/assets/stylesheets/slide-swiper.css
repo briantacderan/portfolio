@@ -328,7 +328,7 @@
   }
 
   .socials .icon-popups {
-    padding-bottom: 2rem;
+    padding-bottom: 4rem;
   }
     
   .socials img {
@@ -382,6 +382,6 @@
     
   .socials img {
     padding: 0.75rem 0.85rem;
-    width: 50px;
+    width: 50%;
   }
 }
