@@ -129,6 +129,10 @@ strong {
     right: 0;
     bottom: 3rem;
   }
+    
+  .main .slide-swiper {
+    height: 400px;
+  }
 }
 
 
