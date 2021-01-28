@@ -105,13 +105,6 @@
   color: #ffffff;
 }
 
-.wrapper .youtube:hover,
-.wrapper .youtube:hover .tooltip,
-.wrapper .youtube:hover .tooltip::before {
-  background-color: #de463b;
-  color: #ffffff;
-}
-
 @media only screen and (max-width: 850px) {
   .wrapper {
     padding-bottom: 2rem;
