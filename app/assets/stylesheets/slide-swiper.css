@@ -54,7 +54,7 @@
 }
 
 .slider-item-content {
-  padding: 32px;
+  padding: 2rem;
   max-height: 400px;
   display: flex;
   flex-direction: column;
@@ -315,6 +315,11 @@
     height: 40%;
     width: 100%;
     overflow: hidden;
+  }
+    
+  .slider-item-content {
+    padding-right: 1rem;
+    margin-bottom: 1rem;
   }
     
   .slide-swiper .slider-item-content p {
