@@ -127,6 +127,7 @@ strong {
 @media only screen and (max-width: 500px) {
   .main .introduction {
     height: 700px;  
+    width: 70%;
     right: 0;
     bottom: 3rem;
   }
