@@ -283,7 +283,7 @@
 
 @media only screen and (max-width: 700px) {
   .slide-swiper .container {
-    padding-right: 27%;
+    padding-right: 22%;
     height: 600px;
     max-height: 600px;
   }
@@ -302,6 +302,7 @@
   .swiper-container {
     margin-left: 0;
     max-width: 350px;
+    right: 5px;
   }
 
   .slide-swiper .container {
