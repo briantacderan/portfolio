@@ -308,6 +308,10 @@
     width: 100%;
     overflow: hidden;
   }
+    
+  .slide-swiper .slider-item-content p {
+    display: hidden;
+  }
 
   .socials .icon-popups {
     margin-bottom: 2rem;
