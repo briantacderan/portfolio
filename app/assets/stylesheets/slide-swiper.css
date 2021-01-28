@@ -228,7 +228,7 @@
 @media only screen and (max-width: 900px) {
   .slide-swiper {
     align-items: flex-start;
-    padding-right: 20%;
+    padding-right: 18%;
   }
     
   .slide-swiper h1.title-header {
