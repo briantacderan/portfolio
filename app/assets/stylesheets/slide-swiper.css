@@ -350,15 +350,8 @@
   .slide-swiper .container {
     align-items: flex-start;
   }
-    
-  .swiper-container {
-    height: 100%;
-    position: relative;
-    max-height: 220px;
-  }
 
   .slider-image-wrapper {
-    height: 400px;
     width: 100%;
     overflow: hidden;
   }
