@@ -298,6 +298,10 @@
     top: 4rem;
     font-size: 2.5rem;
   }
+    
+  .swiper-container {
+    margin-left: 0;
+  }
 
   .slide-swiper .container {
     align-items: flex-start;
@@ -332,6 +336,7 @@
 
   .slide-swiper .container {
     align-items: flex-start;
+    height: 
   }
     
   .swiper-container {
