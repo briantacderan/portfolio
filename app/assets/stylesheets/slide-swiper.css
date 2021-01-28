@@ -375,8 +375,8 @@
     text-overflow: ellipsis;
   }
     
-  .socials .icon-popups {
-    margin-bottom: 2rem;
+  .socials .icon-popups .wrapper {
+    padding-bottom: 4rem;
   }
     
   .socials img {
