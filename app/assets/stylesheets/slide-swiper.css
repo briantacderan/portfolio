@@ -301,6 +301,7 @@
     
   .swiper-container {
     margin-left: 0;
+    margin-top: 1rem;
     max-width: 350px;
     right: 5px;
   }
