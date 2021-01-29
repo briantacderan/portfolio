@@ -75,12 +75,9 @@ function slideDurationTimeout(slideDuration) {
 }
 
 // ------------- ADD EVENT LISTENER ------------- //
-var mousewheelEvent = isFirefox ? "DOMMouseScroll" : "wheel";
+var mousewheelEvent = isFirefox ? "DOMMouseScroll" : "mousewheel";
 window.addEventListener(mousewheelEvent, _.throttle(parallaxScroll, 60), false);
 
-window.on("touchmove", function() {
-  window.trigger("mousewheel");
-});
 
 // ------------- SLIDE MOTION ------------- //
 function nextItem() {
