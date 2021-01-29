@@ -146,7 +146,7 @@ strong {
 
 @media only screen and (max-height: 600px) {
   .main .introduction {
-    height: 400px;
+    height: 300px;
     right: 2rem;
     bottom: 4rem;
     align-items: center;
