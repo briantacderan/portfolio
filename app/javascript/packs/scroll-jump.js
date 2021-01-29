@@ -91,7 +91,7 @@ function nextItem() {
 
   $('html, body').animate({
     scrollTop: $target.offset().top + 20
-  }, 'slow');
+  }, 800);
 
   $('.back').removeClass('back').addClass('back-back');
   $('.active').removeClass('active').addClass('back');
@@ -105,7 +105,7 @@ function previousItem() {
 
   $('html, body').animate({
     scrollTop: $target.offset().top + 20
-  }, 'slow');
+  }, 800);
 
   $('.active').removeClass('active').addClass('forward');
   $('.back-back').removeClass('back-back').addClass('back');
