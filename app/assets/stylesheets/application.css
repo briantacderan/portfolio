@@ -149,6 +149,11 @@ strong {
     height: 400px;
     right: 0;
     bottom: 3rem;
+    align-items: flex-start;
+  }
+    
+  .main .introduction h1.about {
+    font-size: 1.1rem;
   }
     
   .main .slide-swiper {
