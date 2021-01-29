@@ -78,7 +78,7 @@ function slideDurationTimeout(slideDuration) {
 var mousewheelEvent = isFirefox ? "DOMMouseScroll" : "mousewheel";
 window.addEventListener(mousewheelEvent, _.throttle(parallaxScroll, 60), false);
 
-window.addEventListener("touchmove", function() {
+window.on("touchmove", function() {
   window.trigger("mousewheel");
 });
 
