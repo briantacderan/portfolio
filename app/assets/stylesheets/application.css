@@ -147,9 +147,10 @@ strong {
 @media only screen and (max-height: 600px) {
   .main .introduction {
     height: 400px;
-    right: 0;
-    bottom: 3rem;
-    align-items: flex-start;
+    right: 100px;
+    bottom: 4rem;
+    align-items: center;
+    justify-content: flex-start;
   }
     
   .main .introduction h1.about {
