@@ -364,7 +364,7 @@
   .slider-item-content {
     align-items: center;
     flex-direction: row;
-    padding: 0.5rem 1rem;
+    padding: 0.6rem 1rem;
   }
 
   .slide-swiper .slider-item-content h1 {
