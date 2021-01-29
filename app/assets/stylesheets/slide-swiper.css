@@ -347,11 +347,12 @@
   .swiper-container {
     max-height: 200px;
     height: 200px;
-    margin-left: 1rem;
+    width: 70%;
+    left: 3rem;
   }
 
   .slide-swiper .container {
-    align-items: flex-start;
+    align-items: center;
   }
 
   .slider-image-wrapper {
@@ -363,7 +364,7 @@
   .slider-item-content {
     align-items: center;
     flex-direction: row;
-    padding-right: 1rem;
+    padding: 0.5rem 1rem;
   }
 
   .slide-swiper .slider-item-content h1 {
