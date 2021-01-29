@@ -347,6 +347,7 @@
   .swiper-container {
     max-height: 200px;
     height: 200px;
+    margin-left: 1rem;
   }
 
   .slide-swiper .container {
@@ -362,6 +363,7 @@
   .slider-item-content {
     align-items: center;
     flex-direction: row;
+    padding-right: 1rem;
   }
 
   .slide-swiper .slider-item-content h1 {
