@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(version: 2021_01_21_162729) do
     t.string "git_url"
     t.string "website"
     t.string "additional_info"
+    t.string "id_tag"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

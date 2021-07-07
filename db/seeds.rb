@@ -1,6 +1,10 @@
-p1 = Project.create(title: "Hoodcast", type_of: "package", main: "Python", main_framework: "Flask", description: "Scrapes SEC EDGAR company financial statements, styled into easy-to-read Pandas DataFrames; Creates widget forecast tool with linear regression modeling and Yahoo! stock market data, providing easy market analysis", image: "", git_url: "https://github.com/briantacderan/hoodcast.git", website: "coming soon", additional_info: "modules: robbin, mobbin")
+Project.destroy_all
+Capstone.destroy_all
+Contact.destroy_all
 
-p2 = Project.create(title: "Cookies by Relle", type_of: "food(dessert) e-commerce w/ payment processing", main: "Ruby", main_framework: "Ruby on Rails", description: "Scrapes SEC EDGAR company financial statements, styled into easy-to-read Pandas DataFrames; Creates widget forecast tool with linear regression modeling and Yahoo! stock market data, providing easy market analysis", image: "", git_url: "https://github.com/briantacderan/hoodcast.git", website: "coming soon", additional_info: "modules: robbin, mobbin")
+p1 = Project.create(title: "Hoodcast", type_of: "web scraping", main: "Python", main_framework: "Flask", description: "Scrapes SEC EDGAR for company financial statements, styled into neat and easy-to-read tables", image: "hc-gold.svg", git_url: "https://github.com/briantacderan/hoodcast-gold", website: "https://hoodcast-gold.herokuapp.com/", additional_info: "includes additional module called Hoodflex for web crawling", id_tag: "hoodcast-project")
+
+p2 = Project.create(title: "Cookies by Relle", type_of: "e-commerce", main: "Ruby", main_framework: "Rails", description: "Custom e-commerce website for a cookie shop", image: "cookies.svg", git_url: "https://github.com/briantacderan/cookies", website: "https://relles-cookies.herokuapp.com/", additional_info: "Includes Stripe API payment system", id_tag: "cookies-project")
 
 
 

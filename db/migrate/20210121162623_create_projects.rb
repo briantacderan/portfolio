@@ -10,6 +10,7 @@ class CreateProjects < ActiveRecord::Migration[6.1]
       t.string :git_url
       t.string :website
       t.string :additional_info
+      t.string :id_tag
       t.timestamps
     end
   end

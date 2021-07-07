@@ -5,10 +5,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <%= csrf_meta_tags %>
-    <%= csp_meta_tag %> 
-      
+    <%= csp_meta_tag %>
+
     <!-- universal -->
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>  
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'reset', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
@@ -35,35 +35,41 @@
       <div class="container">
         <div class="row">
           <div class="socials">
-            
-            <%= link_to root_path, :html => { :class => "social-link" } do %>
-              <%= image_tag("my-logo.png") %>
+
+            <%= link_to root_path, class: "social-link" do %>
+              <%= image_tag "my-logo.png" %>
             <% end %>
 
             <!-- icon popups -->
             <div class="icon-popups">
               <div class="wrapper">
-                  
-                <div class="icon linkedin">
-                  <div class="tooltip">LinkedIn</div>
-                  <span><i class="fab fa-linkedin"></i></span>
-                </div>
-                  
-                <div class="icon github">
-                  <div class="tooltip">Github</div>
-                  <span><i class="fab fa-github"></i></span>
-                </div>
-                  
-                <div class="icon twitter">
-                  <div class="tooltip">Twitter</div>
-                  <span><i class="fab fa-twitter"></i></span>
-                </div>
-                  
+
+                <a href="https://www.linkedin.com/in/briantacderan/">
+                  <div class="icon linkedin">
+                    <div class="tooltip">LinkedIn</div>
+                    <span><i class="fab fa-linkedin"></i></span>
+                  </div>
+                </a>
+
+                <a href="https://github.com/briantacderan/?tab=repositories">
+                  <div class="icon github">
+                    <div class="tooltip">Github</div>
+                    <span><i class="fab fa-github"></i></span>
+                  </div>
+                </a>
+
+                <a href="https://twitter.com/BrianTacderan/">
+                  <div class="icon twitter">
+                    <div class="tooltip">Twitter</div>
+                    <span><i class="fab fa-twitter"></i></span>
+                  </div>
+                </a>
+
                 <div class="icon email">
                   <div class="tooltip">Email</div>
                   <span><i class="fab fa-telegram-plane"></i></span>
                 </div>
-                  
+
               </div>
             </div>
 

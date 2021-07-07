@@ -1,6 +1,7 @@
 /*
     Icons with Popups
     Author: Abdelrhman Said
+    Edited by: Brian Tacderan
 */
 
 .icon-popups {
@@ -24,6 +25,7 @@
 .wrapper .icon {
   position: relative;
   background-color: #ffffff;
+  color: black;
   border-radius: 50%;
   padding: 15px;
   margin: 10px;
