@@ -22,6 +22,12 @@ html {
   */
 }
 
+html body {
+  opacity: 0.99;
+  /* override semantic-ui background for body */
+  background: rgba(149, 157, 165, 0);
+}
+
 @-webkit-keyframes gradient {
   0% {
     background-position: 0% 50%;
@@ -98,7 +104,8 @@ strong {
   padding: 2px 8px;
 }
 
-.main .slide-swiper {
+.main .slide-swiper,
+.main .neomorphism {
   height: 100vh;
   width: 100%;
   padding-right: 5%;

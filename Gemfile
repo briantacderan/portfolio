@@ -15,6 +15,8 @@ gem 'rails_12factor', group: :production
 gem 'puma', '~> 5.3.2'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
+# Use semantic-ui-css for Rails
+gem 'semantic-ui-sass', '~> 2.4.4'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker', '~> 5.4.0'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
