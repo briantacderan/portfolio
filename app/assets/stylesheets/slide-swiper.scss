@@ -141,13 +141,13 @@ a.slider-image {
   justify-content: flex-end;
 }
 
-.wrapper#slide-right-container ul li {
+.wrapper#slide-right-container ul li p {
   color: #3374FF;
   font-size: 0.9rem;
   font-weight: bold;
 }
 
-.wrapper#slide-right-container ul li:hover {
+.wrapper#slide-right-container ul li p:hover {
   color: orange;
   font-weight: bold;
   cursor: pointer;
