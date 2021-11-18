@@ -106,6 +106,39 @@
   background-color: #333333;
   color: #ffffff;
 }
+    
+    
+    
+/* website preview tooltip */
+.wrapper .preview:hover .tooltip {
+  top: -450px;
+  left: -100px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .preview:hover .tooltip img {
+  width: auto;
+  height: 450px;
+  overflow: visible;
+}
+
+.wrapper .preview:hover span,
+.wrapper .preview:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .preview:hover,
+.wrapper .preview:hover .tooltip,
+.wrapper .preview:hover .tooltip::before {
+  background-color: #333333;
+  color: orange;
+}
+    
+    
+    
+
 
 @media only screen and (max-width: 850px) {
   .wrapper {
@@ -123,6 +156,30 @@
     width: 36px;
     height: 36px;
     box-shadow: 0 7.2px 7.2px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .wrapper .preview:hover .tooltip {
+    top: -350px;
+    left: -75px;
+  }
+
+  .wrapper .preview:hover .tooltip img {
+    width: auto;
+    height: 350px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .wrapper .preview:hover .tooltip {
+    top: -250px;
+    left: -50px;
+  }
+
+  .wrapper .preview:hover .tooltip img {
+    width: auto;
+    height: 250px;
   }
 }
 

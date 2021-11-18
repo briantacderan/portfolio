@@ -44,32 +44,15 @@
             <!-- icon popups -->
             <div class="icon-popups">
               <div class="wrapper">
-
-                <a href="https://www.linkedin.com/in/briantacderan/">
-                  <div class="icon linkedin">
-                    <div class="tooltip">LinkedIn</div>
-                    <span><i class="fab fa-linkedin"></i></span>
-                  </div>
-                </a>
-
-                <a href="https://github.com/briantacderan/?tab=repositories">
-                  <div class="icon github">
-                    <div class="tooltip">Github</div>
-                    <span><i class="fab fa-github"></i></span>
-                  </div>
-                </a>
-
-                <a href="https://twitter.com/BrianTacderan/">
-                  <div class="icon twitter">
-                    <div class="tooltip">Twitter</div>
-                    <span><i class="fab fa-twitter"></i></span>
-                  </div>
-                </a>
-
-                <div class="icon email">
-                  <div class="tooltip">Email</div>
-                  <span><i class="fab fa-telegram-plane"></i></span>
-                </div>
+                  
+                <% @contacts.each do |contact| %>
+                  <a href="<%= contact.url %>">
+                    <div class="icon <%= contact.fa_class %>">
+                      <div class="tooltip"><%= contact.title %></div>
+                      <span><i class="fab <%= contact.fa_key %>"></i></span>
+                    </div>
+                  </a>
+                <% end %>
 
               </div>
             </div>

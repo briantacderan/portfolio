@@ -8,7 +8,8 @@ class CreateProjects < ActiveRecord::Migration[6.1]
       t.string :description
       t.string :image
       t.string :git_url
-      t.string :website
+      t.string :website_url
+      t.string :preview_file
       t.string :additional_info
       t.string :id_tag
       t.timestamps

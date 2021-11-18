@@ -33,13 +33,35 @@
           <% @projects.each do |project| %>
             <div class="slider-item swiper-slide">
               <div class="slider-image-wrapper <%= project.id_tag %>">
-                <%= link_to project.website, class: "slider-image" do %>
+                <%= link_to project.website_url, class: "slider-image" do %>
                   <%= image_tag project.image, class: project.id_tag %>
                 <% end %>
               </div>
-              <div class="slider-item-content">
-                <h1><%= project.title %></h1>
-                <p><%= project.description %></p>
+              <div id="slider-content-container">
+                
+                <div id="slider-left" class="slider-item-content">
+                  <h1><%= project.title %></h1>
+                  <p><%= project.description %></p>
+                  <div id="slide-divider"></div>
+                </div>
+                  
+                <div id="slider-right" class="slider-item-content">
+                  <div id="slide-right-container" class="wrapper">
+                    <div class="icon preview">
+                      <div class="tooltip">
+                        <%= image_tag project.preview_file %>
+                      </div>
+                      <h3>PREVIEW</h3>
+                    </div>
+                    <ul>
+                      <li>
+                        <a href="<%= project.git_url %>">GIT PAGE</a>
+                      </li>
+                      <li>MORE INFO</li>
+                    </ul>
+                  </div>
+                </div>
+                  
               </div>
             </div>
           <% end %>
