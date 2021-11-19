@@ -34,7 +34,7 @@
             <div class="slider-item swiper-slide">
               <div class="slider-image-wrapper <%= project.id_tag %>">
                 <%= link_to project.website_url, class: "slider-image" do %>
-                  <%= image_tag project.image, class: project.id_tag %>
+                  <%= image_tag project.image, id: project.id_tag %>
                 <% end %>
               </div>
               <div id="slider-content-container">
@@ -47,17 +47,32 @@
                   
                 <div id="slider-right" class="slider-item-content">
                   <div id="slide-right-container" class="wrapper">
-                    <div class="icon preview">
-                      <div class="tooltip">
-                        <%= image_tag project.preview_file %>
-                      </div>
-                      <h3>PREVIEW</h3>
-                    </div>
                     <ul>
-                      <li>
-                        <a href="<%= project.git_url %>"><p>GIT PAGE</p></a>
+                    
+                      <li class="icon preview specs">
+                        <div class="tooltip">
+                          <div class="project-about">
+                          </div>
+                        </div>
+                        <h3>SPECS</h3>
                       </li>
-                      <li><p>MORE INFO</p></li>
+                        
+                      <li class="icon preview site">
+                        <div class="tooltip">
+                          <%= image_tag project.preview_file %>
+                        </div>
+                        <h3>PREVIEW</h3>
+                      </li>
+                    
+                      <li id="project-links">
+                        <a href="<%= project.website_url %>">
+                          WEBPAGE
+                        </a>
+                        <a href="<%= project.git_url %>">
+                          GIT
+                        </a>
+                      </li>
+                      
                     </ul>
                   </div>
                 </div>

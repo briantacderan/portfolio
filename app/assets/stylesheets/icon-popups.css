@@ -16,7 +16,7 @@
 .wrapper {
   height: 100%;
   width: 100%;
-  padding-bottom: 4rem;
+  padding-bottom: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -110,12 +110,31 @@
     
     
 /* website preview tooltip */
+.wrapper .preview {
+  background-color: orange;
+  height: 1rem;
+  width: 1rem;
+  opacity: 0.5;
+  transition: all 250ms;
+}
+
+.wrapper .preview:hover {
+  height: 3.5rem;
+  width: 3.5rem;
+  opacity: 1;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 .wrapper .preview:hover .tooltip {
   top: -450px;
-  left: -100px;
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
+}
+
+.wrapper .preview.specs:hover .tooltip {
+  left: -100px;
 }
 
 .wrapper .preview:hover .tooltip img {
@@ -124,16 +143,23 @@
   overflow: visible;
 }
 
-.wrapper .preview:hover span,
 .wrapper .preview:hover .tooltip {
   text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .preview:hover h3 {
+  transition: all 250ms;
+}
+
+.wrapper .preview:hover h3 {
+  margin-top: 5rem;
 }
 
 .wrapper .preview:hover,
 .wrapper .preview:hover .tooltip,
 .wrapper .preview:hover .tooltip::before {
   background-color: #333333;
-  color: orange;
+  color: gray;
 }
     
     
@@ -141,20 +167,11 @@
 
 
 @media only screen and (max-width: 850px) {
-  .wrapper {
-    padding-bottom: 2rem;
-    justify-content: flex-end;
-  }
-
   .wrapper .icon {
     position: relative;
-    background-color: #ffffff;
     border-radius: 50%;
     font-size: 1.2rem;
-    padding: 18px;
-    margin-left: 2rem;
-    width: 36px;
-    height: 36px;
+    padding: 1rem;
     box-shadow: 0 7.2px 7.2px rgba(0, 0, 0, 0.1);
   }
 }
@@ -162,6 +179,9 @@
 @media only screen and (max-width: 700px) {
   .wrapper .preview:hover .tooltip {
     top: -350px;
+  }
+
+  .wrapper .preview.specs:hover .tooltip {
     left: -75px;
   }
 
@@ -174,6 +194,9 @@
 @media only screen and (max-width: 500px) {
   .wrapper .preview:hover .tooltip {
     top: -250px;
+  }
+
+  .wrapper .preview.specs:hover .tooltip {
     left: -50px;
   }
 
@@ -185,9 +208,8 @@
 
 @media only screen and (max-height: 600px) {
   .wrapper {
-    padding-top: 0.75rem;
-    padding-right: 0.9rem;
-    justify-content: flex-start;
+    padding-bottom: 2rem;
+    justify-content: flex-end;
   }
 
   .wrapper .icon {
@@ -195,8 +217,7 @@
     background-color: #ffffff;
     border-radius: 50%;
     font-size: 1.2rem;
-    padding: 18px;
-    margin-left: 2rem;
+    padding: 1rem;
     width: 36px;
     height: 36px;
     box-shadow: 0 7.2px 7.2px rgba(0, 0, 0, 0.1);
