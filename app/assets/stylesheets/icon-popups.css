@@ -168,10 +168,8 @@
 
 @media only screen and (max-width: 850px) {
   .wrapper .icon {
-    position: relative;
-    border-radius: 50%;
-    font-size: 1.2rem;
-    padding: 1rem;
+    width: 36px;
+    height: 36px;
     box-shadow: 0 7.2px 7.2px rgba(0, 0, 0, 0.1);
   }
 }
@@ -203,6 +201,22 @@
   .wrapper .preview:hover .tooltip img {
     width: auto;
     height: 250px;
+  }
+    
+  .wrapper {
+    padding-bottom: 2rem;
+    justify-content: flex-end;
+  }
+
+  .wrapper .icon {
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    padding: 1rem;
+    width: 36px;
+    height: 36px;
+    box-shadow: 0 7.2px 7.2px rgba(0, 0, 0, 0.1);
   }
 }
 
