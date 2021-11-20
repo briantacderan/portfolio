@@ -469,6 +469,10 @@ li#project-links {
 
 
 @media only screen and (max-width: 500px) {
+  .slider-item-content#slider-right {
+    max-height: 100px;
+  }
+    
   .slider-image-wrapper {
     max-height: 140px;
   }
