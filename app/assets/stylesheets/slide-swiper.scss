@@ -8,11 +8,10 @@
 
 .swiper-container {
   font-family: "Montserrat", sans-serif;
-  height: 100%;
+  height: 600px;
   width: 100%;
   max-width: 655px;
   position: relative;
-  max-height: 600px;
   border-radius: 10px;
   background: linear-gradient(270deg, #f7f9ff 0%, #f0f0f0 100%);
   box-shadow: 40px 40px 40px #cccccc,
@@ -39,10 +38,6 @@
   overflow: hidden;
 }
 
-.slider-image-wrapper {
-  background-color: gray;
-}
-
 a.slider-image {
   height: 100%;
   width: 100%;
@@ -53,19 +48,50 @@ a.slider-image {
   width: 100%;
 }
 
+.slider-image-wrapper {
+  background-color: gray;
+}
+
+.slider-image-wrapper.cookies-project {
+  background-color: #1F1C1C;
+}
+
+.slider-image-wrapper.fitness-project {
+  background-color: #00062D;
+}
+
+.slider-image-wrapper.codecademy-goldmedal {
+  background-color: #9CD1D6;
+}
+
+.slider-image-wrapper.codecademy-jammy {
+  background-color: rgba(3, 14, 65, 1);
+}
+
+.slider-image-wrapper.codecademy-storeo {
+  background-color: #C91717;
+}
+
 .slider-image-wrapper img {
   height: 100%;
-  width: 100%;
+  width: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0;
-}
-
-.slider-image-wrapper img#hoodcast-project {
-  width: 50%;
   max-width: 200px;
   margin: auto;
+}
+
+.slider-image-wrapper img#hoodcast-project,
+.slider-image-wrapper img#codecademy-goldmedal,
+.slider-image-wrapper img#codecademy-storeo {
+  padding: 2rem;
+}
+
+.slider-image-wrapper img#fitness-project,
+.slider-image-wrapper img#cookies-project {
+  max-width: 300px;
 }
 
 .slider-item {
@@ -291,7 +317,6 @@ li#project-links {
   }
 
   .swiper-container {
-    height: 100%;
     margin-left: 5%;
   }
 
@@ -439,6 +464,19 @@ li#project-links {
   .wrapper#slide-right-container ul li a {
     font-size: 0.5rem;
     line-height: 0.75rem;
+  }
+}
+
+
+@media only screen and (max-width: 500px) {
+  .slider-image-wrapper {
+    max-height: 200px;
+  }
+    
+  .slider-image-wrapper img {
+    padding: 0 1rem;
+    width: 50%;
+    min-width: 200px;
   }
 }
 
