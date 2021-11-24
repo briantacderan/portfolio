@@ -322,8 +322,99 @@
     font-size: 1rem;
   }
     
-  .box {
+  .main .neomorphism #cert-container {
+
+  }
     
+  @keyframes anime {
+    0% {
+      width: 12vw;
+      height: 12vw;
+      box-shadow: 0 0 0 #cccccc,
+                  0 0 0 #ffffff,
+                  10px 10px 10px #cccccc inset,
+                  -10px -10px 10px #ffffff inset;
+    }
+    25% {
+      width: 12vw;
+      height: 12vw;
+      box-shadow: 10px 10px 10px #cccccc,
+                  10px 10px 10px #ffffff,
+                  0 0 0 #cccccc inset,
+                  0 0 0 #ffffff inset;
+    }
+    50% {
+      width: 12vw;
+      height: 28vw;
+      box-shadow: 10px 10px 10px #cccccc,
+                  10px 10px 10px #ffffff,
+                  0 0 0 #cccccc inset,
+                  0 0 0 #ffffff inset;
+    }
+    100% {
+      width: 56vw;
+      height: 42vw;
+      box-shadow: 40px 40px 40px #cccccc,
+                  0 0 0 #ffffff,
+                  0 0 0 #cccccc inset,
+                  2px 2px 2px #ffffff inset;
+    }
+  }
+
+  @keyframes unanime {
+    0% {
+      margin: 1.75rem;
+      width: 56vw;
+      height: 42vw;
+      box-shadow: 40px 40px 40px #cccccc,
+                  0 0 0 #ffffff,
+                  0 0 0 #cccccc inset,
+                  2px 2px 2px #ffffff inset;
+    }
+    1% {
+      margin: 0.5rem;
+    }
+    25% {
+      margin: 0.5rem;
+      width: 12vw;
+      height: 28vw;
+      box-shadow: 10px 10px 10px #cccccc,
+                  10px 10px 10px #ffffff,
+                  0 0 0 #cccccc inset,
+                  0 0 0 #ffffff inset;
+    }
+    50% {
+      margin: 0.5rem;
+      width: 12vw;
+      height: 12vw;
+      box-shadow: 10px 10px 10px #cccccc,
+                  10px 10px 10px #ffffff,
+                  0 0 0 #cccccc inset,
+                  0 0 0 #ffffff inset;
+    }
+    99% {
+      margin: 0.5rem;
+      width: 12vw;
+      height: 12vw;
+      box-shadow: 0 0 0 #cccccc,
+                  0 0 0 #ffffff,
+                  10px 10px 10px #cccccc inset,
+                  -10px -10px 10px #ffffff inset;
+    }
+    100% {
+    margin: 0.5rem;     
+    display: none;
+    }
+  }
+    
+  .box {
+    border-radius: 5px;  
+  }
+
+  .box-B.unanimated {
+    margin: 1.5rem;
+    width: 12vw;
+    height: 12vw;
   }
 }
 
@@ -344,5 +435,7 @@
     padding-bottom: 0;
     height: auto;
     overflow-x: scroll;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
   }
 }

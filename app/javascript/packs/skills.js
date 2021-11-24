@@ -40,14 +40,8 @@ const hideSelfShowBig = (elemA, elemB) => {
     var $target = event.target;
     if (($target === elemA || elemA.contains($target)) || 
         ($target === elemB || elemB.contains($target))) {
-      //document.getElementsByClassName('animated').classList.add('unanimated');
-      //document.getElementsByClassName('appear').classList.add('disappear');
       elemA.classList.add('hide');
       elemB.classList.add('show');
-      //setTimeout(() => {
-        //document.getElementsByClassName('unanimated').classList.remove('unanimated');
-        //document.getElementsByClassName('disappear').classList.remove('disappear');
-      //}, 100);
       elemB.classList.add('animated');
       elemB.children[0].classList.add('appear');
       hideOnClick(elemA, elemB);
