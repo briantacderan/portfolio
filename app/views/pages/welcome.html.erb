@@ -27,7 +27,7 @@
     </h1><br>
 
     <div class="container section-wrapper">
-      <div class="row swiper-container wow fadeInUp" data-wow-delay="0.45s">
+      <div class="row swiper-container wow fadeInLeft" data-wow-delay="0.45s">
         <div id="slide-box" class="swiper-wrapper">
             
           <% @projects.each do |project| %>
@@ -92,18 +92,36 @@
       </div>
     </div>
   </div>
-
-  <!-- neomorphism>
-  <div class="s s3 neomorphism">  
     
-    <h1 class="row title-header wow fadeInDown" data-wow-delay="0.25s">
-      <strong>Codecademy Certificates</strong>
-    </h1><br>  
+  <!-- neomorphism -->
+  <div class="s s3 forward neomorphism">  
+      
+    <div class="row swiper-container neo wow fadeInLeft" data-wow-delay="0.45s">
+      <h1 class="row title-header neo wow fadeInDown" data-wow-delay="0.25s">
+        <strong>Codecademy Certificates</strong>
+      </h1><br> 
     
-    <div class="box-section">
-      <div class="container section-wrapper box"></div>
+      <div id="cert-container" class="swiper-wrapper neo">
+    
+        <% @skills.each_with_index do |skill, index| %>
+          
+        <div class="box-section neo">
+          <div id="box-A<%= index+1 %>" class="container section-wrapper neo box box-A">
+            <%= image_tag skill.icon, class: "neo cert-icon" %>
+          </div>
+          <div id="box-B<%= index+1 %>" class="container section-wrapper neo box box-B animated">
+            <%= image_tag skill.cert, class: "neo cert-full" %>
+          </div>
+        </div>
+        <% end %>
+      
+      </div>
+        
+      
     </div>
 
-  </div-->
+  </div>
     
 </div>
+
+<%= javascript_pack_tag 'skills' %>

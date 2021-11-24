@@ -23,6 +23,23 @@
   */
 }
 
+.main .neomorphism .swiper-container.neo {
+  font-family: "Montserrat", sans-serif;
+  height: auto;
+  width: 100%;
+  max-width: 655px;
+  position: relative;
+  border-radius: 10px;
+  background: linear-gradient(270deg, #f7f9ff 0%, #f0f0f0 100%);
+  box-shadow: 40px 40px 40px #cccccc,
+              0 0 0 #ffffff,
+              0 0 0 #cccccc inset,
+              2px 2px 2px #ffffff inset;
+  /*
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  */
+}
+
 .swiper-wrapper {
   width: 100%;
   height: 100%;
@@ -394,7 +411,6 @@ li#project-links {
     min-width: 100px;
     display: flex;
     justify-content: center;
-    align-items: center;
     padding: 3rem 0.85rem;
   }
 }
@@ -503,7 +519,7 @@ li#project-links {
   }
 }
 
-@media only screen and (max-height: 600px) {
+@media only screen and (max-width: 800px) and (max-height: 600px) {
   .slide-swiper h1.title-header {
     top: 4rem;
     font-size: 2.5rem;
@@ -512,12 +528,13 @@ li#project-links {
   .swiper-container {
     max-height: 200px;
     height: 200px;
-    width: 350px;
+    width: 400px;
     left: 3rem;
   }
 
   .slide-swiper .container {
     align-items: center;
+    justify-content: flex-start;
   }
 
   .slider-image-wrapper {

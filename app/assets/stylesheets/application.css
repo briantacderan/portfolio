@@ -105,6 +105,7 @@ strong {
 }
 
 .main .slide-swiper,
+.main .resume,
 .main .neomorphism {
   height: 100vh;
   width: 100%;
@@ -113,11 +114,6 @@ strong {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-}
-
-.main .neomorphism {
-  height: 100vh;
-  width: 100%;
 }
 
 @media only screen and (max-width: 900px) {
@@ -141,11 +137,9 @@ strong {
   .main .introduction h1.about {
     font-size: 1.1rem;
   }
-    
-  .main .slide-swiper {
-    height: 650px;
-  }
 
+  .main .slide-swiper,
+  .main .resume,
   .main .neomorphism {
     height: 650px;
   }
@@ -153,21 +147,19 @@ strong {
 
 @media only screen and (max-height: 600px) {
   .main .introduction {
-    height: 300px;
+    height: 120vh;
     right: 2rem;
     bottom: 4rem;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
   }
     
   .main .introduction h1.about {
     font-size: 1.1rem;
   }
     
-  .main .slide-swiper {
-    height: 400px;
-  }
-    
+  .main .slide-swiper,
+  .main .resume,
   .main .neomorphism {
     height: 400px;
   }

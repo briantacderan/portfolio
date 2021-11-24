@@ -1,2 +1,0 @@
-class Capstone < ApplicationRecord
-end

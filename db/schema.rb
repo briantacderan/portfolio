@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_21_162729) do
+ActiveRecord::Schema.define(version: 2021_11_22_102510) do
 
   create_table "capstones", force: :cascade do |t|
     t.string "title"
@@ -47,6 +47,14 @@ ActiveRecord::Schema.define(version: 2021_01_21_162729) do
     t.string "preview_file"
     t.string "additional_info"
     t.string "id_tag"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "skills", force: :cascade do |t|
+    t.string "name"
+    t.string "icon"
+    t.string "cert"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
