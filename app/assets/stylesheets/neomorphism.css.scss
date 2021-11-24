@@ -22,6 +22,10 @@
   height: 7vw;
   margin: 1.5rem;
   display: block;
+  box-shadow: 10px 10px 10px #cccccc,
+              10px 10px 10px #ffffff,
+              0 0 0 #cccccc inset,
+              0 0 0 #ffffff inset;
   transition: all 250ms;
 }
 
@@ -71,7 +75,7 @@
 
 @keyframes unanime {
   0% {
-    margin: 5rem;
+    margin: 6rem;
     width: 56vw;
     height: 42vw;
     box-shadow: 40px 40px 40px #cccccc,
@@ -123,12 +127,19 @@
   display: block;
 }
 
+.box-A {
+  box-shadow: 10px 10px 10px #cccccc,
+              10px 10px 10px #ffffff,
+              0 0 0 #cccccc inset,
+              0 0 0 #ffffff inset;
+}
+
 .box-B {
   display: none;
-  box-shadow:  0 0 0 #cccccc,
-               0 0 0 #ffffff,
-                10px 10px 10px #cccccc inset,
-                -10px -10px 10px #ffffff inset;
+  box-shadow: 10px 10px 10px #cccccc,
+              10px 10px 10px #ffffff,
+              0 0 0 #cccccc inset,
+              0 0 0 #ffffff inset;
   -webkit-animation: anime 3s cubic-bezier(0.16, 1, 0.3, 1);
           animation: anime 3s cubic-bezier(0.16, 1, 0.3, 1);
   animation-fill-mode: forwards;
@@ -147,10 +158,10 @@
   margin: 1.5rem;
   width: 7vw;
   height: 7vw;
-  box-shadow: 0 0 0 #cccccc,
-              0 0 0 #ffffff,
-              10px 10px 10px #cccccc inset,
-              -10px -10px 10px #ffffff inset;
+  box-shadow: 10px 10px 10px #cccccc,
+              10px 10px 10px #ffffff,
+              0 0 0 #cccccc inset,
+              0 0 0 #ffffff inset;
   -webkit-animation: unanime 3s cubic-bezier(0.16, 1, 0.3, 1);
           animation: unanime 3s cubic-bezier(0.16, 1, 0.3, 1);
   animation-fill-mode: forwards;
@@ -198,6 +209,24 @@
 }
 
 @media only screen and (min-width: 1101px) {
+  .box {
+    height: 80px;
+    width: 80px;
+  }
+    
+  .main .neomorphism #cert-container {
+    overflow-y: scroll;
+    align-items: flex-start;
+    height: 600px;
+    width: 655px;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+  }
+  
+  .main .neomorphism #cert-container::-webkit-scrollbar {
+    display: none;
+  } 
+    
   @keyframes anime {
     0% {
       width: 80px;
@@ -217,15 +246,15 @@
     }
     50% {
       width: 80px;
-      height: 480px;
+      height: 420px;
       box-shadow: 10px 10px 10px #cccccc,
                   10px 10px 10px #ffffff,
                   0 0 0 #cccccc inset,
                   0 0 0 #ffffff inset;
     }
     100% {
-      width: 640px;
-      height: 480px;
+      width: 548px;
+      height: 420px;
       box-shadow: 40px 40px 40px #cccccc,
                   0 0 0 #ffffff,
                   0 0 0 #cccccc inset,
@@ -233,32 +262,61 @@
     } 
   }
     
+  @keyframes unanime {
+    0% {
+      margin: 7rem;
+      width: 548px;
+      height: 420px;
+      box-shadow: 40px 40px 40px #cccccc,
+                  0 0 0 #ffffff,
+                  0 0 0 #cccccc inset,
+                  2px 2px 2px #ffffff inset;
+    }
+    1% {
+      margin: 1.5rem;
+    }
+    25% {
+      margin: 1.5rem;
+      width: 80px;
+      height: 420px;
+      box-shadow: 10px 10px 10px #cccccc,
+                  10px 10px 10px #ffffff,
+                  0 0 0 #cccccc inset,
+                  0 0 0 #ffffff inset;
+    }
+    50% {
+      margin: 1.5rem;
+      width: 80px;
+      height: 80px;
+      box-shadow: 10px 10px 10px #cccccc,
+                  10px 10px 10px #ffffff,
+                  0 0 0 #cccccc inset,
+                  0 0 0 #ffffff inset;
+    }
+    99% {
+      margin: 1.5rem;
+      width: 80px;
+      height: 80px;
+      box-shadow: 0 0 0 #cccccc,
+                  0 0 0 #ffffff,
+                  10px 10px 10px #cccccc inset,
+                  -10px -10px 10px #ffffff inset;
+    }
+    100% {
+      margin: 1.5rem;     
+      display: none;
+    }
+  }
+
+    
   .box-B.animated {
-    width: 640px;
-    height: 480px;
+    width: 548px;
+    height: 420px;
     box-shadow: 40px 40px 40px #cccccc,
                 0 0 0 #ffffff,
                 0 0 0 #cccccc inset,
                 2px 2px 2px #ffffff inset;
   }
-    
-  .box {
-    height: 80px;
-    width: 80px;
-  }
-    
-  .main .neomorphism #cert-container {
-    overflow-y: scroll;
-    align-items: flex-start;
-    height: 600px;
-    width: 655px;
-    scroll-behavior: smooth;
-    -ms-overflow-style: none;
-  }
-  
-  .main .neomorphism #cert-container::-webkit-scrollbar {
-    display: none;
-  } 
 }
     
 
@@ -408,7 +466,7 @@
   }
     
   .box {
-    border-radius: 5px;  
+    border-radius: 8px;  
   }
 
   .box-B.unanimated {
