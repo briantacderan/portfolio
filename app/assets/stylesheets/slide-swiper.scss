@@ -157,6 +157,13 @@ a.slider-image {
   transition: 0.2s;
 }
 
+.slider-image #ggu-image {
+  width: 100%;
+  background: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .slide-swiper h1.title-header {
   font-size: 4rem;
   align-self: flex-start;
@@ -440,6 +447,11 @@ li#project-links {
     height: 500px;
     width: 110%;
   }
+    
+  #edu-slide .swiper-container {
+    margin-left: 15px;
+    margin-top: 0;
+  }
 
   .slide-swiper .container {
     align-items: flex-start;
@@ -489,6 +501,11 @@ li#project-links {
     width: 110%;
   }
     
+  #edu-slide .swiper-container {
+    margin-left: 15px;
+    margin-top: 0;
+  }
+    
   .slider-content-container {
     
   }
@@ -502,7 +519,6 @@ li#project-links {
   }
     
   .slider-image-wrapper img {
-    padding: 0 1rem;
     width: 50%;
     min-width: 200px;
   }
@@ -600,5 +616,132 @@ li#project-links {
   .slider-image-wrapper img#fitness-project,
   .slider-image-wrapper img#cookies-project {
     max-width: 200px;
+  }
+}
+
+
+
+
+/* Education slide */
+#edu-slide.swiper-slide .swiper-container.neo {
+  height: 100%;
+}
+
+#edu-slide .slider-image-wrapper img {
+  margin: 0;
+  width: 100%;
+  max-width: none;
+}    
+
+#edu-slide .slider-item-content h1 {
+  margin-right: 1.5rem;
+}
+
+
+
+
+/* About Me slide */
+#about-me-slide {
+  
+}
+
+#about-me-container {
+  display: inline-block;
+  overflow-inline: scroll;
+}    
+
+#about-me-slide img.about-me {
+  width: 35%;
+  box-shadow: 0 7.2px 7.2px rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  float: left; 
+  margin: 0 2rem 1rem 2rem;
+}
+
+#about-me-slide #about-me-content p {
+  margin: 0 1rem 1rem 3rem;
+  font-size: 2rem;
+  font-weight: 100;
+  text-align: end;
+}
+
+@media only screen and (max-width: 500px) {
+  #about-me-slide #about-me-content p {
+    line-height: 2rem;
+    font-size: 1rem;
+  }
+}
+
+
+
+
+/* Experience slide */
+#exp-container {
+  // display: flex;
+  // flex-direction: column;
+  display: inline-block;
+}
+
+#exp-container .exp-item {
+  display: flex;
+  flex-direction: row;
+  float: left;
+}
+
+#exp-container .exp-item {
+  display: flex;
+  flex-direction: row;
+  float: left;
+}
+
+#exp-container .exp-item img {
+  height: 80px;
+}
+
+#exp-container .exp-content {
+  display: flex;
+  flex-direction: column;
+}
+
+#exp-container .exp-content h2 {
+  margin: 0.5rem 1rem;
+  font-size: 1.2rem;
+}
+
+#exp-container .exp-content strong {
+  margin: 0 1rem;
+}
+
+#exp-container .exp-content h3 {
+  margin-top: 1rem;
+  font-size: 0.7rem;
+}
+
+#exp-container p {
+  margin: 4rem;
+  font-size: 0.76rem;
+}
+
+@media only screen and (max-width: 500px) {
+  .swiper-container {
+    
+  }
+    
+  #exp-slide {
+    overflow-y: scroll;  
+    
+  }
+    
+  #exp-container {
+    height: 400px;
+  }
+    
+  #exp-container p {
+    margin: 1.5rem;
+    font-size: 0.76rem;
+  }
+    
+  #edu-slide p {
+    margin-left: 1.5rem;  
   }
 }

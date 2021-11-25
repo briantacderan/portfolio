@@ -99,13 +99,25 @@
     <div class="row swiper-container neo wow fadeInLeft" data-wow-delay="0.45s">
       <div id="slide-box-two" class="swiper-wrapper neo">
         
+        <div id="about-me-slide" class="slider-item swiper-slide neo">
+          <h1 class="row title-header neo wow fadeInDown" data-wow-delay="0.25s">
+            <strong>About me</strong>
+          </h1><br>
+          <div id="about-me-container" class="swiper-wrapper neo">
+            <%= image_tag "profile-img.png", class: "neo about-me" %>
+            <div id="about-me-content" class="about-me">
+              <p>Looking to attain UI/UX and full-stack related positions in Tech. Inclined towards joining a start-up team to call home, so I can further develop my skills in building full enterprise frameworks along with new and upcoming products that will make all-around positive differences in the local SF community.</p>
+            </div>
+          </div>
+        </div>
+            
         <div id="cert-slide" class="slider-item swiper-slide neo">
           <h1 class="row title-header neo wow fadeInDown" data-wow-delay="0.25s">
             <strong>Codecademy Certificates</strong>
-          </h1><br>
-    
+          </h1><br>   
+           
           <div id="cert-container" class="swiper-wrapper neo">
-    
+          
             <% @skills.each_with_index do |skill, index| %>
             <div class="box-section neo">
               <div id="box-A<%= index+1 %>" class="container section-wrapper neo box box-A">
@@ -121,15 +133,31 @@
         </div>
           
         <div id="edu-slide" class="slider-item swiper-slide neo">
-          <h1 class="row title-header neo wow fadeInDown" data-wow-delay="0.25s">
-            <strong>Education</strong>
-          </h1><br>
+          <div class="row swiper-container neo wow fadeInLeft" data-wow-delay="0.45s">
+            <div id="slide-box" class="swiper-wrapper">
+              <div class="slider-item swiper-slide">
+             
+                <div class="slider-image-wrapper neo-image-wrapper">
+                  <%= link_to "ggu.edu", class: "slider-image" do %>
+                    <%= image_tag "ggu-pride.png", id: "ggu-image" %>
+                  <% end %>
+                </div>
             
-          <div id="edu-container" class="swiper-wrapper neo">
-    
-            
+                <div id="slider-content-container">
+                
+                  <div id="slider-left" class="slider-item-content">
+                    <h1>GOLDEN GATE UNIVERSITY</h1>
+                    <h2>Bachelor's Degree, B.S. Business</h2>
+                    <p>San Francisco, CA (US)</p>
+                  </div>
+                  <p>Aug 2013 - Aug 2018</p>
+                    
+                </div>
+              
+              </div>
+            </div>
+          </div>  
       
-          </div>
         </div>
           
         <div id="exp-slide" class="slider-item swiper-slide neo">
@@ -138,25 +166,61 @@
           </h1><br>
             
           <div id="exp-container" class="swiper-wrapper neo">
-    
             
-      
-          </div>
+            <div class="exp-item">
+              <div class="exp-img-container">
+                <%= image_tag "clarins-logo.png", class: "exp-img" %>
+              </div>
+              <div class="exp-content">
+                <h2>Fragrance Specialist</h2>
+                <strong>CLARINS</strong>
+                  <h3>San Francisco Bay Area, CA</h3>
+              </div>
+            </div>
+            <p>Traveled around Bay Area to represent various fragrance brands at most peninsula and SF county malls. Able to secure at least one limited position at a fragrance counter, representing a brand at all times for 6 years, mainly at Hillsdale Mall in San Mateo, CA, reaching reasonable sales goals during 100% of all assignments and during 99% of assignments of crucial events/peak holiday traffic times.</p>
+            
+            <div class="exp-divider">
+              
+            <div class="exp-item">
+              <div class="exp-img-container">
+                <%= image_tag "ccsf-logo.png", class: "exp-img" %>  
+              </div>
+              <div class="exp-content">
+                <h2>Office Assistant</h2>
+                <strong>CITY COLLEGE OF SAN FRANCISCO</strong>
+                <h3>San Francisco, CA</h3>
+              </div>
+            </div> 
+            <p>Worked multiple short stints supporting the Financial Aid, Nursing, and Accounting Departments in various office duties. Gained insight into the many department processes that function together to support the second largest community college in the U.S. Assisted in processing journal entries and contracts and in organzing of the filing system, eventually leading a necessary overhaul to completion. Was given additional responsibility in handling the dispursements, averaging $10k and above, of annual budget resources to various departments and faculty, using the Oracle Banner ERM system</p>
+              
+            <div class="exp-divider">
+              
+            <div class="exp-item">
+              <div class="exp-img-container">
+                <%= image_tag "bike-logo.png", class: "exp-img" %>  
+              </div>
+              <div class="exp-content">
+                <h2>Bike Mechanic</h2>
+                <strong>BIKE RELIGION</strong>
+                <h3>Irvine, CA</h3>
+              </div>
+            </div>
+            <p>Year stint in bicycle repair and maintenance. Developed abilities in  problem solving, which certainly relates to the skills necessary for programming code and developing business plans.</p>
+              
+          </div> 
         </div>
-            
+          
       </div>
-        
+      
       <div class="slider-buttons">
         <button class="swiper-button-prev neo">Prev</button>
         <button class="swiper-button-next neo">Next</button>
       </div>
-      
-      <div class="swiper-pagination neo"></div>
-        
-    </div>
-
-  </div>
     
+      <div class="swiper-pagination neo"></div>
+    </div>
+      
+  </div>
 </div>
 
 <%= javascript_pack_tag 'skills' %>

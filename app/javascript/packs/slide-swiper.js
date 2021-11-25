@@ -4,8 +4,11 @@ var swiperOne = new Swiper('.swiper-container.projects', {
   effect: 'fade',
   loop: true,
   speed: 300,
+  
   mousewheel: {
     invert: false,
+    thresholdDelta: 7,
+    thresholdTime: 1000
   },
   pagination: {
     el: '.swiper-pagination.projects',
