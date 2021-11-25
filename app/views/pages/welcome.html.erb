@@ -27,9 +27,9 @@
     </h1><br>
 
     <div class="container section-wrapper">
-      <div class="row swiper-container wow fadeInLeft" data-wow-delay="0.45s">
+      <div class="row swiper-container projects wow fadeInLeft" data-wow-delay="0.45s">
         <div id="slide-box" class="swiper-wrapper">
-            
+          
           <% @projects.each do |project| %>
             <div class="slider-item swiper-slide">
               <div class="slider-image-wrapper <%= project.id_tag %>">
@@ -44,7 +44,7 @@
                   <p><%= project.description %></p>
                   <div id="slide-divider"></div>
                 </div>
-                  
+                
                 <div id="slider-right" class="slider-item-content">
                   <div id="slide-right-container" class="wrapper">
                     <ul>
@@ -56,7 +56,7 @@
                         </div>
                         <h3>SPECS</h3>
                       </li>
-                        
+                      
                       <li class="icon preview site">
                         <div class="tooltip">
                           <%= image_tag project.preview_file %>
@@ -84,40 +84,75 @@
         </div>
 
         <div class="slider-buttons">
-          <button class="swiper-button-prev">Prev</button>
-          <button class="swiper-button-next">Next</button>
+          <button class="swiper-button-prev projects">Prev</button>
+          <button class="swiper-button-next projects">Next</button>
         </div>
-
-        <div class="swiper-pagination"></div>
+        
+        <div class="swiper-pagination projects"></div>
       </div>
     </div>
   </div>
-    
+  
   <!-- neomorphism -->
-  <div class="s s3 forward neomorphism">  
-      
+  <div class="s s3 forward neomorphism">
+    
     <div class="row swiper-container neo wow fadeInLeft" data-wow-delay="0.45s">
-      <h1 class="row title-header neo wow fadeInDown" data-wow-delay="0.25s">
-        <strong>Codecademy Certificates</strong>
-      </h1><br> 
+      <div id="slide-box-two" class="swiper-wrapper neo">
+        
+        <div id="cert-slide" class="slider-item swiper-slide neo">
+          <h1 class="row title-header neo wow fadeInDown" data-wow-delay="0.25s">
+            <strong>Codecademy Certificates</strong>
+          </h1><br>
     
-      <div id="cert-container" class="swiper-wrapper neo">
+          <div id="cert-container" class="swiper-wrapper neo">
     
-        <% @skills.each_with_index do |skill, index| %>
-          
-        <div class="box-section neo">
-          <div id="box-A<%= index+1 %>" class="container section-wrapper neo box box-A">
-            <%= image_tag skill.icon, class: "neo cert-icon" %>
-          </div>
-          <div id="box-B<%= index+1 %>" class="container section-wrapper neo box box-B animated">
-            <%= image_tag skill.cert, class: "neo cert-full" %>
+            <% @skills.each_with_index do |skill, index| %>
+            <div class="box-section neo">
+              <div id="box-A<%= index+1 %>" class="container section-wrapper neo box box-A">
+                <%= image_tag skill.icon, class: "neo cert-icon" %>
+              </div>
+              <div id="box-B<%= index+1 %>" class="container section-wrapper neo box box-B animated">
+                <%= image_tag skill.cert, class: "neo cert-full" %>
+              </div>
+            </div>
+            <% end %>
+      
           </div>
         </div>
-        <% end %>
+          
+        <div id="edu-slide" class="slider-item swiper-slide neo">
+          <h1 class="row title-header neo wow fadeInDown" data-wow-delay="0.25s">
+            <strong>Education</strong>
+          </h1><br>
+            
+          <div id="edu-container" class="swiper-wrapper neo">
+    
+            
       
+          </div>
+        </div>
+          
+        <div id="exp-slide" class="slider-item swiper-slide neo">
+          <h1 class="row title-header neo wow fadeInDown" data-wow-delay="0.25s">
+            <strong>Experience</strong>
+          </h1><br>
+            
+          <div id="exp-container" class="swiper-wrapper neo">
+    
+            
+      
+          </div>
+        </div>
+            
       </div>
         
+      <div class="slider-buttons">
+        <button class="swiper-button-prev neo">Prev</button>
+        <button class="swiper-button-next neo">Next</button>
+      </div>
       
+      <div class="swiper-pagination neo"></div>
+        
     </div>
 
   </div>

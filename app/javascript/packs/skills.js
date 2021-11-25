@@ -42,14 +42,15 @@ const hideSelfShowBig = (elemA, elemB) => {
         ($target === elemB || elemB.contains($target))) {
       elemA.classList.add('hide');
       elemB.classList.add('show');
+      elemB.style.margin = '1.5rem';
       elemB.classList.add('animated');
       elemB.children[0].classList.add('appear');
       hideOnClick(elemA, elemB);
       setTimeout(() => {  
         elemB.scrollIntoView(true);
-        elemB.style.margin = '6rem';
-      }, 2500);
-    }  
+        elemB.style.margin = '6rem 2rem';
+      }, 1750);
+    }
   }
   
   elemA.addEventListener('click', iconClickListener);
