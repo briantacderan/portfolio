@@ -627,6 +627,11 @@ li#project-links {
   height: 100%;
 }
 
+#edu-slide.swiper-slide #slide-box {
+  display: flex;
+  flex-direction: column;
+}
+
 #edu-slide .slider-image-wrapper img {
   margin: 0;
   width: 100%;
@@ -696,6 +701,7 @@ li#project-links {
 
 #exp-container .exp-item img {
   height: 80px;
+  padding : 1rem;
 }
 
 #exp-container .exp-content {
@@ -710,6 +716,7 @@ li#project-links {
 
 #exp-container .exp-content strong {
   margin: 0 1rem;
+  min-width: 180px;
 }
 
 #exp-container .exp-content h3 {
@@ -729,11 +736,12 @@ li#project-links {
     
   #exp-slide {
     overflow-y: scroll;  
-    
-  }
+    direction: rtl;
+  }    
     
   #exp-container {
     height: 400px;
+    direction: ltr;
   }
     
   #exp-container p {

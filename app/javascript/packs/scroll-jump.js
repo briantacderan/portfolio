@@ -79,7 +79,7 @@ var mousewheelEvent = isFirefox ? "DOMMouseScroll" : "mousewheel";
 window.addEventListener(mousewheelEvent, _.throttle(parallaxScroll, 60), false);
 
 window.addEventListener("touchmove", function() {
-  window.trigger("mousewheel");
+  $(window).trigger("mousewheel");
 });
 
 
