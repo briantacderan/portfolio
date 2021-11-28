@@ -659,6 +659,7 @@ li#project-links {
   width: 35%;
   box-shadow: 0 7.2px 7.2px rgba(0, 0, 0, 0.6);
   border-radius: 50%;
+  border: 5px solid orange;
   float: left; 
   margin: 0 2rem 1rem 2rem;
 }
@@ -671,7 +672,16 @@ li#project-links {
 }
 
 @media only screen and (max-width: 500px) {
-  #about-me-slide #about-me-content p {
+  #about-me-slide img.about-me {
+      width: 35%;
+      box-shadow: 0 7.2px 7.2px rgba(0, 0, 0, 0.6);
+      border-radius: 50%;
+      border: 3px solid orange;
+      float: left; 
+      margin: 0 0.5rem 0.5rem 1.5rem;
+  }
+    
+    #about-me-slide #about-me-content p {
     line-height: 2rem;
     font-size: 1rem;
   }
@@ -700,6 +710,11 @@ li#project-links {
 }
 
 #exp-container .exp-item img {
+  height: 100px;
+  padding : 1rem;
+}
+
+#exp-container .exp-item img#clarins-img {
   height: 80px;
   padding : 1rem;
 }
@@ -738,6 +753,10 @@ li#project-links {
     overflow-y: scroll;  
     direction: rtl;
   }    
+    
+  #exp-slide h1.title-header {
+    padding: 1rem;
+  }
     
   #exp-container {
     height: 400px;
