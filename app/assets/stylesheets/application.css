@@ -127,8 +127,8 @@ strong {
 
 @media only screen and (max-width: 500px) {
   html body {
-    scroll-snap-type: mandatory;
     scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
   }
     
@@ -143,7 +143,7 @@ strong {
 
   .main .s {
     height: 800px;
-    scroll-snap-align: start;
+    scroll-snap-align: center;
   }
 }
 
