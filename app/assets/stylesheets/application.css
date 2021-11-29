@@ -128,8 +128,12 @@ strong {
 }
 
 @media only screen and (max-width: 500px) {
+  html body {
+    scroll-snap-type: mandatory;
+    scroll-snap-type: y mandatory;
+  }
+    
   .main .introduction {
-    height: 650px;
     right: 0;
     bottom: 3rem;
   }
@@ -138,10 +142,9 @@ strong {
     font-size: 1.1rem;
   }
 
-  .main .slide-swiper,
-  .main .resume,
-  .main .neomorphism {
-    height: 650px;
+  .main .s {
+    height: 800px;
+    scroll-snap-align: start;
   }
 }
 
