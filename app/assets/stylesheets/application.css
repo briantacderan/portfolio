@@ -129,6 +129,30 @@ strong {
   html body {
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
+    -webkit-scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+    
+  .main .introduction {
+    right: 0;
+    bottom: 3rem;
+  }
+    
+  .main .introduction h1.about {
+    font-size: 1.1rem;
+  }
+
+  .main .s {
+    height: 800px;
+    scroll-snap-align: center;
+  }
+}
+
+@media only screen and (max-width: 800px) and (max-height: 600px) {
+  html body {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    -webkit-scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
   }
     
