@@ -34,7 +34,7 @@
             <div class="slider-item swiper-slide">
               <div class="slider-image-wrapper <%= project.id_tag %>">
                 <%= link_to project.website_url, class: "slider-image" do %>
-                  <%= image_tag project.image, id: project.id_tag %>
+                  <%= image_tag "#{@s3}#{project.image}", id: project.id_tag %>
                 <% end %>
               </div>
               <div id="slider-content-container">
@@ -62,7 +62,7 @@
                       
                       <li class="icon preview site">
                         <div class="tooltip">
-                          <%= image_tag project.preview_file %>
+                          <%= image_tag "#{@s3}#{project.preview_file}" %>
                         </div>
                         <h3>PREVIEW</h3>
                       </li>
@@ -107,7 +107,7 @@
             <strong>About me</strong>
           </h1><br>
           <div id="about-me-container" class="swiper-wrapper neo">
-            <%= image_tag "profile-img.png", class: "neo about-me" %>
+            <%= image_tag "#{@s3}profile-img.png", class: "neo about-me" %>
             <div id="about-me-content" class="about-me">
               <p>Looking to attain UI/UX and full-stack related position in tech. Inclined towards joining a team to call home, so I can further develop my skills in hopes to build full enterprise frameworks, learn from fellow colleagues, and develop innovative products and services that will make positive impacts in the local SF and Bay Area communities and abroad.</p>
             </div>
@@ -124,10 +124,10 @@
             <% @skills.each_with_index do |skill, index| %>
             <div class="box-section neo">
               <div id="box-A<%= index+1 %>" class="container section-wrapper neo box box-A">
-                <%= image_tag skill.icon, class: "neo cert-icon" %>
+                <%= image_tag "#{@s3}#{skill.icon}", class: "neo cert-icon" %>
               </div>
               <div id="box-B<%= index+1 %>" class="container section-wrapper neo box box-B animated">
-                <%= image_tag skill.cert, class: "neo cert-full" %>
+                <%= image_tag "#{@s3}#{skill.cert}", class: "neo cert-full" %>
               </div>
             </div>
             <% end %>
@@ -140,7 +140,7 @@
             <div id="slide-box" class="swiper-wrapper">
              
                 <div class="slider-image-wrapper neo-image-wrapper">
-                  <%= image_tag "ggu-pride.png", id: "ggu-image" %>
+                  <%= image_tag "#{@s3}ggu-pride.png", id: "ggu-image" %>
                 </div>
             
                 <div id="slider-content-container">
@@ -166,7 +166,7 @@
             
             <div class="exp-item">
               <div class="exp-img-container">
-                <%= image_tag "clarins-logo.png", class: "exp-img", id: "clarins-img" %>
+                <%= image_tag "#{@s3}clarins-logo.png", class: "exp-img", id: "clarins-img" %>
               </div>
               <div class="exp-content">
                 <h2>Fragrance Specialist</h2>
@@ -180,7 +180,7 @@
               
             <div class="exp-item">
               <div class="exp-img-container">
-                <%= image_tag "ccsf-logo.png", class: "exp-img" %>  
+                <%= image_tag "#{@s3}ccsf-logo.png", class: "exp-img" %>  
               </div>
               <div class="exp-content">
                 <h2>Office Assistant</h2>
@@ -194,7 +194,7 @@
               
             <div class="exp-item">
               <div class="exp-img-container">
-                <%= image_tag "bike-logo.png", class: "exp-img", id: "bike-logo" %>  
+                <%= image_tag "#{@s3}bike-logo.png", class: "exp-img", id: "bike-logo" %>  
               </div>
               <div class="exp-content">
                 <h2>Bike Mechanic</h2>
