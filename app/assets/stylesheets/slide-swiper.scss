@@ -23,7 +23,7 @@
   */
 }
 
-.main .neomorphism .swiper-container.neo {
+.swiper-container.neo {
   font-family: "Montserrat", sans-serif;
   height: auto;
   width: 100%;
@@ -333,6 +333,24 @@ li#project-links {
   z-index: 10;
 }
 
+#slide-box-two h1 {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#cert-slide #cert-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 0 1.5rem 3rem 1.5rem;
+  height: auto;
+  overflow: hidden;
+}
+
+
 @media only screen and (max-width: 1150px) {
   .slide-swiper {
     left: 20px;
@@ -349,6 +367,22 @@ li#project-links {
 
   .slide-swiper .slider-item-content h1 {
     font-size: 1.4rem;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .main .neomorphism {
+    padding-right: 30%;
+  }  
+    
+  #cert-slide #cert-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1.5rem;
+    height: auto;
   }
 }
 
@@ -665,7 +699,7 @@ li#project-links {
 }
 
 #about-me-slide #about-me-content p {
-  margin: 0 1rem 1rem 3rem;
+  margin-right: 3rem;
   font-size: 2rem;
   font-weight: 100;
   text-align: end;
@@ -684,6 +718,8 @@ li#project-links {
     #about-me-slide #about-me-content p {
     line-height: 2rem;
     font-size: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
   }
 }
 
@@ -741,14 +777,16 @@ li#project-links {
 
 #exp-container p {
   margin: 4rem;
-  font-size: 0.76rem;
+  padding-top: 3rem;
+  font-size: 0.85rem;
+  text-align: justify;
+}
+
+#exp-container p#first-exp {
+  padding-top: 0;
 }
 
 @media only screen and (max-width: 500px) {
-  .swiper-container {
-    
-  }
-    
   #exp-slide {
     overflow-y: scroll;  
     direction: rtl;
@@ -768,7 +806,97 @@ li#project-links {
     font-size: 0.76rem;
   }
     
+  #exp-container p:last-child {
+    padding-bottom: 2rem;
+  }
+    
   #edu-slide p {
     margin-left: 1.5rem;  
+  }
+}
+
+@media only screen and (max-width: 800px) and (max-height: 600px) {
+  .swiper-container.neo {
+    max-height: 300px;
+    height: 300px;
+    justify-content: flex-end;
+    overflow-x: hidden;
+  }
+    
+  #about-me-slide img.about-me {
+    width: 70px;
+    border-radius: 50%;
+    border: 2px solid orange;
+    margin: 0 2rem 2rem 3rem;
+  }
+
+  #about-me-slide #about-me-content p {
+    font-size: 1rem;
+  }
+    
+  #exp-slide {
+    overflow-y: scroll;  
+    direction: rtl;
+  }    
+    
+  #exp-slide h1.title-header {
+    padding: 1rem;
+  }
+    
+  #exp-container {
+    height: 400px;
+    direction: ltr;
+  }
+    
+  #exp-container .exp-content h2 {
+    font-size: 1rem;
+  }
+
+  #exp-container .exp-content strong {
+    font-size: 0.7rem;
+    min-width: 0;
+    max-width: 120px;
+  }
+
+  #exp-container .exp-content h3 {
+    font-size: 0.7rem;
+  }
+
+  #exp-container p {
+    font-size: 0.76rem;
+    padding-top: 0;
+  }
+    
+  #exp-container p:last-child {
+    padding-bottom: 2rem;
+  }
+
+  #edu-slide .slider-image-wrapper img {
+    opacity: 0.5;
+  }
+  
+  #edu-slide .slider-item-content {
+    color: white;
+    font-weight: 700;
+    -webkit-text-stroke: 2x black;
+  }  
+    
+  #edu-slide #slider-content-container p {
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    color: white;
+  }
+    
+  #cert-slide #cert-container {
+    height: 100%;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 1rem;
+    padding-bottom: 0;
+  }
+    
+  #cert-slide h1 {
+    font-size: 1rem;
   }
 }
