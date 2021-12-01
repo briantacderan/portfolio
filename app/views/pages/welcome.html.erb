@@ -30,9 +30,9 @@
       <div class="row swiper-container projects wow fadeInLeft" data-wow-delay="0.45s">
         <div id="slide-box" class="swiper-wrapper">
           
-          <% @projects.each do |project| %>
+          <% @projects.each_with_index do |project, index| %>
             <div class="slider-item swiper-slide">
-              <div class="slider-image-wrapper <%= project.id_tag %>">
+              <div class="slider-image-wrapper <%= project.id_tag %> projects">
                 <%= link_to project.website_url, class: "slider-image" do %>
                   <%= image_tag "#{@s3}#{project.image}", id: project.id_tag %>
                 <% end %>
@@ -41,7 +41,7 @@
                 
                 <div id="slider-left" class="slider-item-content">
                   <h1><%= project.title %></h1>
-                  <p><%= project.description %></p>
+                  <p class="front-desc"><%= project.description %></p>
                   <div id="slide-divider"></div>
                 </div>
                 
@@ -52,19 +52,44 @@
                       <li class="icon preview specs">
                         <div class="tooltip">
                           <div class="project-about">
-                            <div class="project-about-container">
-                              Stack:
+                            <div class="specs-container">
+                                
+                              <div class="stack-container">
+                                <h3><strong>TECH STACK</strong><br>featuring</h3>
+                                <ul class="stack-list">
+                                
+                                  <% @stones[index].stacks.each do |stack| %>
+                                  <li>
+                                    <%= image_tag "#{@s3}#{stack}", class: "stack-item" %>
+                                  </li>
+                                  <% end %>
+                                  
+                                </ul>
+                              </div>
+                                
+                              <ul class="showcase-list">
+                                <li><h3 class="th"><strong>MILESTONES</strong> noteworthy updates</h3></li>
+
+                                <% for j in 1..@stones[index].racks.length do %>
+                                <li>
+                                  <h3><%= @stones[index].racks[j-1] %></h3>
+                                  <p class="p-tags"><%= @stones[index].tags[j-1] %></p>
+                                </li>
+                                <% end %>
+                                  
+                              </ul>
+                                
                             </div>
                           </div>
                         </div>
-                        <h3>SPECS</h3>
+                        <h3 class="hover-button">SPECS</h3>
                       </li>
                       
                       <li class="icon preview site">
                         <div class="tooltip">
                           <%= image_tag "#{@s3}#{project.preview_file}" %>
                         </div>
-                        <h3>PREVIEW</h3>
+                        <h3 class="hover-button">PREVIEW</h3>
                       </li>
                     
                       <li id="project-links">
@@ -188,7 +213,7 @@
                 <h3>San Francisco, CA</h3>
               </div>
             </div> 
-            <p>Worked multiple short stints supporting the Financial Aid, Nursing, and Accounting Departments in various office duties. Gained insight into the many department processes that function together to support the second largest community college in the U.S. Assisted in processing journal entries and contracts and in organzing of the filing system, eventually leading a necessary overhaul to completion. Was given additional responsibility in handling the dispursements, averaging $10k and above, of annual budget resources to various departments and faculty, using the Oracle Banner ERM system</p>
+            <p>Worked multiple short stints supporting the Financial Aid, Nursing, and Accounting Departments in various office duties. Gained insight into the many department processes that function together to support the second largest community college in the U.S. Assisted in processing journal entries and contracts and in organizing of the filing system, eventually leading a necessary overhaul to completion. Was given additional responsibility in handling the dispursements, averaging $10k and above, of annual budget resources to various departments and faculty, using the Oracle Banner ERM system</p>
               
             <div class="exp-divider">
               

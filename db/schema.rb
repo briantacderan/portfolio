@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_22_102510) do
+ActiveRecord::Schema.define(version: 2021_12_01_023558) do
 
   create_table "capstones", force: :cascade do |t|
     t.string "title"
@@ -57,6 +57,19 @@ ActiveRecord::Schema.define(version: 2021_11_22_102510) do
     t.string "cert"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "stones", force: :cascade do |t|
+    t.string "stacks"
+    t.string "racks"
+    t.string "tags"
+    t.integer "project_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["project_id"], name: "index_stones_on_project_id"
+    t.index ["racks"], name: "index_stones_on_racks"
+    t.index ["stacks"], name: "index_stones_on_stacks"
+    t.index ["tags"], name: "index_stones_on_tags"
   end
 
 end

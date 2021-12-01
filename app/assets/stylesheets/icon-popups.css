@@ -107,6 +107,7 @@
   color: #ffffff;
 }
     
+
     
     
 /* website preview tooltip */
@@ -140,7 +141,6 @@
 .wrapper .preview:hover .tooltip img {
   width: auto;
   height: 450px;
-  overflow: visible;
 }
 
 .wrapper .preview:hover .tooltip {
@@ -152,7 +152,7 @@
 }
 
 .wrapper .preview:hover h3 {
-  margin-top: 5rem;
+  margin: 1rem;
 }
 
 .wrapper .preview:hover,
@@ -162,6 +162,33 @@
   color: gray;
 }
     
+
+
+
+
+/* Projects container */
+.wrapper .preview.specs .tooltip {
+  width: 640px;
+  height: 500px;
+  z-index: 10000;
+}
+
+.wrapper .preview.specs .tooltip .project-about {
+  
+}
+
+.wrapper .preview.specs:hover .tooltip {
+  top: -480px;
+}
+
+.wrapper .preview:hover h3,
+.wrapper .preview:hover li {
+  color: white;
+}
+
+.wrapper .preview .tooltip img.stack-item {
+    
+}
     
     
 
@@ -174,13 +201,33 @@
   }
 }
 
-@media only screen and (max-width: 700px) {
-  .wrapper .preview:hover .tooltip {
+@media only screen and (max-width: 800px) {
+  .wrapper .preview.specs .tooltip {
+    width: 80vw;
+    height: 520px;
+  }
+
+  .wrapper .preview.specs:hover .tooltip {
+    top: -500px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .wrapper .preview.specs .tooltip,
+  .wrapper .preview.specs:hover .tooltip {
+    left: -80px;
+  }
+}
+
+
+@media only screen and (max-width: 650px) {
+  .wrapper .preview.site:hover .tooltip {
     top: -350px;
   }
 
   .wrapper .preview.specs:hover .tooltip {
-    left: -75px;
+    top: -360px;
+    left: -50px;
   }
 
   .wrapper .preview:hover .tooltip img {
@@ -190,17 +237,27 @@
 }
 
 @media only screen and (max-width: 500px) {
-  .wrapper .preview:hover .tooltip {
+  .wrapper .preview.specs .tooltip,
+  .wrapper .preview.specs:hover .tooltip {
+    height: 405px;  
+  }
+    
+  .wrapper .preview.site .tooltip,
+  .wrapper .preview.site:hover .tooltip {
+    height: 260px;
     top: -250px;
   }
 
   .wrapper .preview.specs:hover .tooltip {
-    left: -50px;
+    left: -40px;
+    top: -290px;
   }
 
-  .wrapper .preview:hover .tooltip img {
+  .wrapper .preview.site:hover .tooltip img {
     width: auto;
     height: 250px;
+    top:135px;
+    margin-bottom: 0;
   }
     
   .wrapper {
@@ -220,6 +277,12 @@
 
   .wrapper .icon-popups {
     
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .wrapper .preview.specs:hover .tooltip {
+    left: -35px;
   }
 }
 
