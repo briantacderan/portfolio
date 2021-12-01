@@ -1,5 +1,5 @@
 class Stone < ApplicationRecord
-  serialize :stacks, JSON
-  serialize :racks, JSON
-  serialize :tags, JSON
+  serialize :stacks
+  serialize :racks
+  serialize :tags
 end
