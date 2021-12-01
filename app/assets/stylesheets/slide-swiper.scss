@@ -145,6 +145,20 @@ a.slider-image {
   cursor: grab;
 }
 
+#slide-box img#ggu-image {
+  height: 100%;
+}
+
+#slide-box #slider-content-container.ggu {
+  height: 50%;
+  background: url("https://tacderan-code.s3.us-west-1.amazonaws.com/images/ggu_fade.png") no-repeat center center;
+  background-size: cover;
+}
+
+.slider-item-content.ggu {
+  border-top: 8px solid orange;
+}
+
 .slider-item-content {
   padding: 1rem 2rem;
   max-height: 400px;
@@ -729,6 +743,7 @@ li#project-links {
     
   .wrapper#slide-right-container ul.showcase-list p {
     font-size: 0.65rem;
+    padding-left: 0.5rem;
   }
 }
 
@@ -736,6 +751,10 @@ li#project-links {
   .wrapper#slide-right-container ul.stack-container h3 {
     width: 3rem;
     margin-left: 0rem;
+  }
+    
+  .wrapper#slide-right-container ul.stack-list img {
+    margin: 0.25rem 0 0.25rem 0.75rem;
   }
     
   .wrapper#slide-right-container ul.showcase-list h3.th { 
@@ -746,6 +765,10 @@ li#project-links {
     
   .wrapper#slide-right-container ul.showcase-list h3 {
     font-size: 0.75rem;
+  }
+    
+  #slide-box #slider-content-container.ggu {
+    height: 75%;
   }
 }
 
