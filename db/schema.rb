@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_01_023558) do
+ActiveRecord::Schema.define(version: 2021_12_01_083753) do
 
   create_table "capstones", force: :cascade do |t|
     t.string "title"
@@ -60,16 +60,14 @@ ActiveRecord::Schema.define(version: 2021_12_01_023558) do
   end
 
   create_table "stones", force: :cascade do |t|
-    t.string "stacks"
-    t.string "racks"
-    t.string "tags"
+    t.integer "order"
     t.integer "project_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "stacks"
+    t.string "racks"
+    t.string "tabs"
     t.index ["project_id"], name: "index_stones_on_project_id"
-    t.index ["racks"], name: "index_stones_on_racks"
-    t.index ["stacks"], name: "index_stones_on_stacks"
-    t.index ["tags"], name: "index_stones_on_tags"
   end
 
 end
