@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_01_083753) do
+ActiveRecord::Schema.define(version: 2021_12_01_092602) do
 
   create_table "capstones", force: :cascade do |t|
     t.string "title"
@@ -67,6 +67,7 @@ ActiveRecord::Schema.define(version: 2021_12_01_083753) do
     t.string "stacks"
     t.string "racks"
     t.string "tabs"
+    t.string "tags"
     t.index ["project_id"], name: "index_stones_on_project_id"
   end
 
