@@ -21,26 +21,33 @@ c4 = Contact.create(title: "Email", url: "mailto:briantacderan@gmail.com", fa_cl
 
 
 
-s1 = Skill.create(name: "Bash Scripting", icon: "icons/bash-icon.png", cert: "certificates/bash_scripting_BT.png")
-s2 = Skill.create(name: "Command Line", icon: "icons/cmd-line-icon.png", cert: "certificates/command_line_BT.png")
-s3 = Skill.create(name: "Build a Website with HTML, CSS, and Github Pages", icon: "icons/html-css-git.png", cert: "certificates/build_websites_BT.png")
-s4 = Skill.create(name: "D3", icon: "icons/d3-icon.png", cert: "certificates/d3_BT.png")
-s5 = Skill.create(name: "Git", icon: "icons/git-icon.png", cert: "certificates/git_BT.png")
+s20 = Skill.create(name: "Web Development Career Path", icon: "icons/mern-app.png", cert: "certificates/web_developement_BT.png")
+s8 = Skill.create(name: "Python 3", icon: "icons/py-icon.png", cert: "certificates/python_3_BT.png")
+s14 = Skill.create(name: "Ruby", icon: "icons/ruby-icon.png", cert: "certificates/ruby_BT.png")
+s18 = Skill.create(name: "Swift", icon: "icons/swift-icon.png", cert: "certificates/swift_BT.png")
 s6 = Skill.create(name: "Java", icon: "icons/java-icon.png", cert: "certificates/java_BT.png")
 s7 = Skill.create(name: "Building Interactive JavaScript Websites", icon: "icons/js-icon.png", cert: "certificates/interactive_javascript_BT.png")
-s8 = Skill.create(name: "Python 3", icon: "icons/py-icon.png", cert: "certificates/python_3_BT.png")
+s3 = Skill.create(name: "Build a Website with HTML, CSS, and Github Pages", icon: "icons/html-css-git.png", cert: "certificates/build_websites_BT.png")
+s1 = Skill.create(name: "Bash Scripting", icon: "icons/bash-icon.png", cert: "certificates/bash_scripting_BT.png")
+s2 = Skill.create(name: "Command Line", icon: "icons/cmd-line-icon.png", cert: "certificates/command_line_BT.png")
+s4 = Skill.create(name: "D3", icon: "icons/d3-icon.png", cert: "certificates/d3_BT.png")
+s5 = Skill.create(name: "Git", icon: "icons/git-icon.png", cert: "certificates/git_BT.png")
+s6 = Skill.create(name: "Heroku", icon: "icons/heroku-icon.png", cert: "certificates/heroku_netlify_BT.png")
+s6 = Skill.create(name: "Android apps with Java", icon: "icons/java-android.png", cert: "certificates/java_mobile_BT.png")
 s9 = Skill.create(name: "Basics of Blockchain with Python", icon: "icons/py-bchain-icon.png", cert: "certificates/blockchain_python_BT.png")
 s10 = Skill.create(name: "How to Clean Data with Python", icon: "icons/py-data-clean.png", cert: "certificates/clean_data_python_BT.png")
 s11 = Skill.create(name: "Build Chatbots with Python", icon: "icons/py-chatbot.png", cert: "certificates/python_chatbots_BT.png")
 s12 = Skill.create(name: "Visualize Data with Python", icon: "icons/py-matplot.png", cert: "certificates/visualize_data_with_python_BT.png")
 s13 = Skill.create(name: "Web Scraping with Beautiful Soup", icon: "icons/py-bs4-app.png", cert: "certificates/beautiful_soup_BT.png")
-s14 = Skill.create(name: "Ruby", icon: "icons/ruby-icon.png", cert: "certificates/ruby_BT.png")
+s6 = Skill.create(name: "Responsive Design", icon: "icons/resp-design-icon.png", cert: "certificates/rep_design_BT.png")
 s15 = Skill.create(name: "Ruby on Rails", icon: "icons/rails-icon.png", cert: "certificates/ruby_on_rails_BT.png")
 s16 = Skill.create(name: "Authentication with Ruby on Rails", icon: "icons/ruby-rails-app.png", cert: "certificates/rails_authentication_BT.png")
 s17 = Skill.create(name: "Sass", icon: "icons/sass-icon.png", cert: "certificates/sass_BT.png")
-s18 = Skill.create(name: "Swift", icon: "icons/swift-icon.png", cert: "certificates/swift_BT.png")
 s19 = Skill.create(name: "Vue.js", icon: "icons/vue-icon.png", cert: "certificates/vue_BT.png")
-s20 = Skill.create(name: "Web Development Career Path", icon: "icons/mern-app.png", cert: "certificates/web_developement_BT.png")
+s19 = Skill.create(name: "Codecademy Intro 1", icon: "icons/ca-icon.png", cert: "certificates/intro_code_BT.png")
+s19 = Skill.create(name: "Codecademy Intro 2", icon: "icons/ca-icon.png", cert: "certificates/intro_code2_BT.png")
+
+
 
 srt1 = Stone.create(stacks: ["icons/py-icon.png", "icons/flask-icon.png", "icons/bs4-icon.png"], racks: ["hoodflex", "Deconstructed statements", "Logo + loading fill animation"], tags: ["PyPI package created as separate library housing the webscraping operations, separated into multiple modules for ease", "Jinja2 templating engine for HTML is the tool used to re-piece the financials. In combination with CSS, JS, and the right algorithms, the EDGAR SEC data has been properly re-pivoted into custom tables, along with sticky headers and instant static-page statement changes", "Custom logo created with Inkscape, a vector graphics software. Enabled svg logo to animate fill during webscraping request load sequence"], project_id: p1.id)
 
