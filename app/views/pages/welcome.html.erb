@@ -4,17 +4,20 @@
   <div class="s s1 active introduction">
     <div class="container section-wrapper">
       <div class="row">
-        <br><br><h1 class="hello title-header wow fadeInLeft">
-          Hello.
+        <br><br>
+        <h1 class="hello title-header wow fadeInLeft"> 
+            <!--style="font-size: 6rem;"--> 
+          <!--i>HELLO</i-->
+            Hello.
         </h1>
 
+        <!--div style="padding-left: 2.5rem;"-->
         <h1 class="about wow fadeInLeft" data-wow-delay="1.8s">
-          My name is <strong>Brian Tacderan</strong>.
-        </h1>
+          My name is <strong>BRIAN TACDERAN</strong>.
+        </h1>  <!--br-->
         <h1 class="about wow fadeInLeft" data-wow-delay="2s">
-          I am an aspiring full-stack engineer.
+          I am a full-stack developer.
         </h1>
-
       </div>
     </div>
   </div>
@@ -134,13 +137,14 @@
           <div id="about-me-container" class="swiper-wrapper neo">
             <%= image_tag "#{@s3}profile-img.png", class: "neo about-me" %>
             <div id="about-me-content" class="about-me">
-              <p>Looking to attain UI/UX and full-stack related position in tech. Inclined towards joining a team to call home, so I can further develop my skills in hopes to build full enterprise frameworks, learn from fellow colleagues, and develop innovative products and services that will make positive impacts in the local SF and Bay Area communities and abroad.</p>
+              <p>Looking to attain full stack related position in tech. Wanting to develop my skills through team collaboration and guided mentorship. Aiming to find a diverse group of people, that closely share my eagerness to create positive and impactful innovations that will lead local SF Bay Area and global communities toward the future. Fintech, Data Science, and AI++ However, my interests cover everything under the <i>techological umbrella</i>.</p>
             </div>
           </div>
         </div>
             
         <div id="cert-slide" class="slider-item swiper-slide neo">
-          <h1 class="row title-header neo wow fadeInDown" data-wow-delay="0.25s">
+          <h1 class="row title-header neo wow fadeInDown" 
+              data-wow-delay="0.25s">
             <strong>Codecademy Certificates</strong>
           </h1><br>   
            
@@ -148,10 +152,12 @@
           
             <% @skills.each_with_index do |skill, index| %>
             <div class="box-section neo">
-              <div id="box-A<%= index+1 %>" class="container section-wrapper neo box box-A">
+              <div id="box-A<%= index+1 %>" 
+                   class="container section-wrapper neo box box-A">
                 <%= image_tag "#{@s3}#{skill.icon}", class: "neo cert-icon" %>
               </div>
-              <div id="box-B<%= index+1 %>" class="container section-wrapper neo box box-B animated">
+              <div id="box-B<%= index+1 %>" 
+                   class="container section-wrapper neo box box-B animated">
                 <%= image_tag "#{@s3}#{skill.cert}", class: "neo cert-full" %>
               </div>
             </div>
@@ -161,7 +167,8 @@
         </div>
         
         <div id="edu-slide" class="slider-item swiper-slide neo">
-          <div class="row swiper-container neo wow fadeInLeft" data-wow-delay="0.45s">
+          <div class="row swiper-container neo wow fadeInLeft" 
+               data-wow-delay="0.45s">
             <div id="slide-box" class="swiper-wrapper">
              
                 <div class="slider-image-wrapper neo-image-wrapper">
@@ -183,7 +190,8 @@
         </div>
           
         <div id="exp-slide" class="slider-item swiper-slide neo">
-          <h1 class="row title-header neo wow fadeInDown" data-wow-delay="0.25s">
+          <h1 class="row title-header neo wow fadeInDown" 
+              data-wow-delay="0.25s">
             <strong>Experience</strong>
           </h1><br>
             
