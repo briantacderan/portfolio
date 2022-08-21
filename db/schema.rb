@@ -66,7 +66,6 @@ ActiveRecord::Schema.define(version: 2021_12_01_092602) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "stacks"
     t.string "racks"
-    t.string "tabs"
     t.string "tags"
     t.index ["project_id"], name: "index_stones_on_project_id"
   end
