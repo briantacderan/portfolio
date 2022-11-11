@@ -87,7 +87,11 @@ a.slider-image {
 }
 
 .slider-image-wrapper.codecademy-unquote {
-  background-color: #efd9ca;
+  background-color: #EFD9CA;
+}
+
+.slider-image-wrapper.codecademy-bossing {
+  background-color: #333333;
 }
 
 .slider-image-wrapper.codecademy-goldmedal {
@@ -98,8 +102,22 @@ a.slider-image {
   background-color: rgba(3, 14, 65, 1);
 }
 
+.slider-image-wrapper.medium-heroes {
+  background-color: #3479F6;
+}
+
 .slider-image-wrapper.codecademy-storeo {
   background-color: #C91717;
+}
+
+.slider-image-wrapper.codecademy-jammy,
+.slider-image-wrapper.codecademy-bossing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto 0;
+  height: 100%;
 }
 
 .slider-image-wrapper img {
@@ -131,8 +149,22 @@ a.slider-image {
   max-width: 300px;
 }
 
-.slider-image-wrapper img#codecademy-jammy {
+.slider-image-wrapper img#medium-heroes {
+  padding: 0;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+}
+
+.slider-image-wrapper img#codecademy-jammy,
+.slider-image-wrapper img#codecademy-bossing {
   max-width: 250px;
+  padding: 0 auto;
+}
+
+.slider-image-wrapper img#codecademy-bossing {
+  max-height: 180px;
+  margin-top: 15%;
 }
 
 .slider-item {
@@ -226,7 +258,7 @@ a.slider-image {
 .slide-swiper #slide-divider {
   border-bottom: 1px solid #889DB8;
   margin: 0 auto;
-  width: 50%; 
+  width: 50%;
 }
 
 .wrapper .preview:hover h3.hover-button {
@@ -235,7 +267,7 @@ a.slider-image {
 }
 
 .wrapper#slide-right-container {
-  
+
 }
 
 .wrapper#slide-right-container ul {
@@ -255,7 +287,7 @@ a.slider-image {
   float: left;
 }
 
-.wrapper#slide-right-container .stack-container h3 { 
+.wrapper#slide-right-container .stack-container h3 {
   margin: 1.5rem;
 }
 
@@ -463,8 +495,8 @@ li#project-links {
 @media only screen and (max-width: 1100px) {
   .main .neomorphism {
     padding-right: 30%;
-  }  
-    
+  }
+
   #cert-slide #cert-container {
     display: flex;
     flex-direction: row;
@@ -479,13 +511,13 @@ li#project-links {
 @media only screen and (max-width: 1000px) {
   .swiper-container,
   .slider-item {
-    border-radius: 0 10px 10px 0;  
+    border-radius: 0 10px 10px 0;
   }
-  
+
   .slider-item-content#slider-right {
     padding: 0;
   }
-    
+
   .slide-swiper {
     align-items: flex-start;
     padding-right: 18%;
@@ -563,7 +595,7 @@ li#project-links {
     float: left;
   }
 
-  .wrapper#slide-right-container .stack-container h3 { 
+  .wrapper#slide-right-container .stack-container h3 {
     margin: 1.5rem;
   }
 
@@ -613,8 +645,8 @@ li#project-links {
 
   .socials img {
     padding: 0 1.5rem;
-  }  
-    
+  }
+
   .slide-swiper h1.title-header {
     top: 4rem;
     font-size: 2.5rem;
@@ -627,7 +659,7 @@ li#project-links {
     height: 500px;
     width: 110%;
   }
-    
+
   #edu-slide .swiper-container {
     margin-left: 15px;
     margin-top: 0;
@@ -647,7 +679,7 @@ li#project-links {
     padding-right: 1rem;
     margin-bottom: 1rem;
   }
-    
+
   .slide-swiper .slider-item-content h3 {
     font-size: 0.85rem;
   }
@@ -659,23 +691,23 @@ li#project-links {
   .socials .icon-popups {
     padding-bottom: 8rem;
   }
-    
+
   .wrapper .preview {
     height: 1rem;
     width: 1rem;
   }
-    
+
   .wrapper#slide-right-container ul li a {
     font-size: 0.5rem;
     line-height: 0.75rem;
   }
-    
+
   .wrapper#slide-right-container .stack-container {
     width: 6vw;
     margin: 6vw;
   }
 
-  .wrapper#slide-right-container .stack-container h3 { 
+  .wrapper#slide-right-container .stack-container h3 {
     margin-left: 0rem;
     width: 6vw;
     font-size: 10px;
@@ -702,49 +734,49 @@ li#project-links {
     height: 400px;
     width: 110%;
   }
-    
+
   #edu-slide .swiper-container {
     margin-left: 15px;
     margin-top: 0;
   }
-    
+
   .slider-content-container {
-    
+
   }
-    
+
   .slider-item-content#slider-right {
-      
+
   }
-    
+
   .slider-image-wrapper {
     max-height: 140px;
   }
-    
+
   .slider-image-wrapper img {
     width: 50%;
     min-width: 200px;
   }
-    
+
   .wrapper .icon {
     font-size: 1rem;
     padding: 0.75rem;
   }
-    
+
   .wrapper#slide-right-container ul.stack-list {
     margin: 0.25rem;
     margin-left: 0;
-  }  
-    
+  }
+
   .wrapper#slide-right-container ul.stack-list img {
     margin: 0.25rem auto;
     width: 2.75rem;
     height: 2.75rem;
   }
-    
+
   .wrapper#slide-right-container ul.showcase-list {
-      
+
   }
-    
+
   .wrapper#slide-right-container ul.showcase-list p {
     font-size: 0.65rem;
     padding-left: 0.5rem;
@@ -756,21 +788,21 @@ li#project-links {
     width: 3rem;
     margin-left: 0rem;
   }
-    
+
   .wrapper#slide-right-container ul.stack-list img {
     margin: 0.25rem 0 0.25rem 0.75rem;
   }
-    
-  .wrapper#slide-right-container ul.showcase-list h3.th { 
+
+  .wrapper#slide-right-container ul.showcase-list h3.th {
     margin: 0;
     margin-top: 0.5rem;
     font-size: 0.5rem;
   }
-    
+
   .wrapper#slide-right-container ul.showcase-list h3 {
     font-size: 0.75rem;
   }
-    
+
   #slide-box #slider-content-container.ggu {
     height: 75%;
   }
@@ -804,11 +836,11 @@ li#project-links {
     width: 100%;
     height: 100%;
   }
-  
+
   #slider-content-container {
     position: absolute;
   }
-  
+
   #slider-right,
   #slider-left p,
   #slider-left #slide-divider {
@@ -845,13 +877,13 @@ li#project-links {
     min-width: 125px;
     width: 125px;
   }
-    
+
   .wrapper .icon {
     font-size: 1rem;
     padding: 0.75rem;
     margin: 7px;
   }
-    
+
   .slider-image-wrapper img#hoodcast-project,
   .slider-image-wrapper img#codecademy-goldmedal,
   .slider-image-wrapper img#codecademy-storeo,
@@ -882,7 +914,7 @@ li#project-links {
 #edu-slide .slider-image-wrapper img {
   margin: 0;
   width: 100%;
-}    
+}
 
 #edu-slide .slider-item-content h1 {
   margin-right: 1.5rem;
@@ -907,9 +939,9 @@ li#project-links {
   #edu-slide .slider-item-content h1 {
     font-size: 2.5rem;
   }
-    
+
   #edu-slide p {
-    margin-left: 1.5rem;  
+    margin-left: 1.5rem;
   }
 }
 
@@ -919,20 +951,20 @@ li#project-links {
 
 /* About Me slide */
 #about-me-slide {
-  
+
 }
 
 #about-me-container {
   display: inline-block;
   overflow-inline: scroll;
-}    
+}
 
 #about-me-slide img.about-me {
   width: 35%;
   box-shadow: 0 7.2px 7.2px rgba(0, 0, 0, 0.6);
   border-radius: 50%;
   border: 5px solid orange;
-  float: left; 
+  float: left;
   margin: 0 2rem 1rem 2rem;
 }
 
@@ -958,10 +990,10 @@ li#project-links {
       box-shadow: 0 7.2px 7.2px rgba(0, 0, 0, 0.6);
       border-radius: 50%;
       border: 3px solid orange;
-      float: left; 
+      float: left;
       margin: 0 0.5rem 0.5rem 1.5rem;
   }
-    
+
   #about-me-slide #about-me-content p {
     line-height: 2rem;
     font-size: 1rem;
@@ -1035,10 +1067,10 @@ li#project-links {
 
 @media only screen and (max-width: 900px) {
   #exp-slide {
-    overflow-y: scroll;  
+    overflow-y: scroll;
     direction: rtl;
   }
-    
+
   #exp-container {
     direction: ltr;
     height: 600px;
@@ -1049,16 +1081,16 @@ li#project-links {
   #exp-slide h1.title-header {
     padding: 1rem;
   }
-    
+
   #exp-container {
     height: 400px;
   }
-    
+
   #exp-container p {
     margin: 1.5rem;
     font-size: 0.76rem;
   }
-    
+
   #exp-container p:last-child {
     padding-bottom: 2rem;
   }
@@ -1071,7 +1103,7 @@ li#project-links {
     justify-content: flex-end;
     overflow-x: hidden;
   }
-    
+
   #about-me-slide img.about-me {
     width: 70px;
     border-radius: 50%;
@@ -1082,21 +1114,21 @@ li#project-links {
   #about-me-slide #about-me-content p {
     font-size: 1rem;
   }
-    
+
   #exp-slide {
-    overflow-y: scroll;  
+    overflow-y: scroll;
     direction: rtl;
-  }    
-    
+  }
+
   #exp-slide h1.title-header {
     padding: 1rem;
   }
-    
+
   #exp-container {
     height: 400px;
     direction: ltr;
   }
-    
+
   #exp-container .exp-content h2 {
     font-size: 1rem;
   }
@@ -1115,7 +1147,7 @@ li#project-links {
     font-size: 0.76rem;
     padding-top: 0;
   }
-    
+
   #exp-container p:last-child {
     padding-bottom: 2rem;
   }
@@ -1123,19 +1155,19 @@ li#project-links {
   #edu-slide .slider-image-wrapper img {
     opacity: 0.5;
   }
-  
+
   #edu-slide .slider-item-content {
     color: white;
     font-weight: 700;
     -webkit-text-stroke: 2x black;
-  }  
-    
+  }
+
   #edu-slide #slider-content-container p {
     font-size: 1.5rem;
     margin-left: 1rem;
     color: white;
   }
-    
+
   #cert-slide #cert-container {
     height: 100%;
     width: 100%;
@@ -1144,7 +1176,7 @@ li#project-links {
     padding: 1rem;
     padding-bottom: 0;
   }
-    
+
   #cert-slide h1 {
     font-size: 1rem;
   }
