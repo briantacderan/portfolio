@@ -97,7 +97,7 @@
                 -10px -10px 10px #ffffff inset;
   }
   100% {
-    margin: 1.5rem;     
+    margin: 1.5rem;
     display: none;
   }
 }
@@ -158,7 +158,7 @@
   }
   100% {
     opacity: 1;
-  }    
+  }
 }
 
 @keyframes disappear {
@@ -170,7 +170,7 @@
   }
   100% {
     opacity: 0;
-  }    
+  }
 }
 
 .box-B img {
@@ -196,22 +196,22 @@
     height: 80px;
     width: 80px;
   }
-    
+
   #cert-slide #cert-container {
     overflow-y: hidden;
     flex-direction: row-reverse;
     align-items: flex-end;
     justify-content: flex-end;
-    height: 600px;
+    height: 610px;
     width: 655px;
     scroll-behavior: smooth;
     -ms-overflow-style: none;
   }
-  
+
   #cert-slide #cert-container::-webkit-scrollbar {
     display: none;
-  } 
-    
+  }
+
   @keyframes anime {
     0% {
       width: 80px;
@@ -244,9 +244,9 @@
                   0 0 0 #ffffff,
                   0 0 0 #cccccc inset,
                   2px 2px 2px #ffffff inset;
-    } 
+    }
   }
-    
+
   @keyframes unanime {
     0% {
       margin: 5rem;
@@ -288,12 +288,12 @@
                   -10px -10px 10px #ffffff inset;
     }
     100% {
-      margin: 1.5rem;     
+      margin: 1.5rem;
       display: none;
     }
   }
 
-    
+
   .box-B.animated {
     width: 540px;
     height: 420px;
@@ -303,13 +303,13 @@
                 2px 2px 2px #ffffff inset;
   }
 }
-    
+
 
 @media only screen and (max-width: 1100px) {
   .main .neomorphism {
     padding-right: 30%;
-  }  
-    
+  }
+
   #cert-slide #cert-container {
     display: flex;
     flex-direction: row;
@@ -345,7 +345,7 @@
     height: 12vw;
     margin: 0.5rem;
   }
-    
+
   .swiper-container.neo {
     width: 100%;
     max-width: 600px;
@@ -360,7 +360,7 @@
   #slide-box-two h1 {
     font-size: 1rem;
   }
-    
+
   @keyframes anime {
     0% {
       width: 12vw;
@@ -437,13 +437,13 @@
                   -10px -10px 10px #ffffff inset;
     }
     100% {
-    margin: 0.5rem;     
+    margin: 0.5rem;
     display: none;
     }
   }
-    
+
   .box {
-    border-radius: 8px;  
+    border-radius: 8px;
   }
 
   .box-B.unanimated {
@@ -457,12 +457,12 @@
   .box {
     width: 6vw;
     height: 6vw;
-    margin: 0.5rem;
+    //margin: 0.5rem;
   }
-  
+
   @keyframes anime {
     0% {
-      margin: 0.5rem;
+      //margin: 0.5rem;
       width: 6vw;
       height: 6vw;
       box-shadow: 0 0 0 #cccccc,
@@ -487,16 +487,16 @@
                   0 0 0 #ffffff inset;
     }
     100% {
-      margin: 1.5rem;  
+      margin: 1.5rem;
       width: 40vw;
       height: 32vw;
       box-shadow: 40px 40px 40px #cccccc,
                   0 0 0 #ffffff,
                   0 0 0 #cccccc inset,
                   2px 2px 2px #ffffff inset;
-    } 
+    }
   }
-    
+
   @keyframes unanime {
     0% {
       margin: 1.5rem;
@@ -534,12 +534,12 @@
                   10px 10px 10px #cccccc inset,
                   -10px -10px 10px #ffffff inset;
     }
-    100% {    
+    100% {
       display: none;
     }
   }
 
-    
+
   .box-B.animated {
     width: 6vw;
     height: 6vw;

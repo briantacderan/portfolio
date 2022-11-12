@@ -30,7 +30,7 @@ const hideOnClick = (elemA, elemB) => {
   const removeClickListener = () => {
     document.removeEventListener('click', certClickListener);
   }
-  
+
   document.addEventListener('click', certClickListener);
 }
 
@@ -38,7 +38,7 @@ const hideOnClick = (elemA, elemB) => {
 const hideSelfShowBig = (elemA, elemB) => {
   const iconClickListener = event => {
     var $target = event.target;
-    if (($target === elemA || elemA.contains($target)) || 
+    if (($target === elemA || elemA.contains($target)) ||
         ($target === elemB || elemB.contains($target))) {
       elemA.classList.add('hide');
       elemB.classList.add('show');
@@ -46,13 +46,13 @@ const hideSelfShowBig = (elemA, elemB) => {
       elemB.classList.add('animated');
       elemB.children[0].classList.add('appear');
       hideOnClick(elemA, elemB);
-      setTimeout(() => {  
+      setTimeout(() => {
         elemB.scrollIntoView(true);
-        elemB.style.margin = '6rem 2rem';
+        elemB.style.margin = '7rem 2rem';
       }, 1750);
     }
   }
-  
+
   elemA.addEventListener('click', iconClickListener);
 }
 
