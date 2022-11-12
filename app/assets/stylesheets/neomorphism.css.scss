@@ -199,6 +199,8 @@
 
   #cert-slide #cert-container {
     overflow-y: hidden;
+    position: absolute;
+    margin-top: 6rem;
     flex-direction: row-reverse;
     align-items: flex-end;
     justify-content: flex-end;
@@ -210,6 +212,10 @@
 
   #cert-slide #cert-container::-webkit-scrollbar {
     display: none;
+  }
+
+  div.box-B.show {
+    margin: 4rem 0;
   }
 
   @keyframes anime {

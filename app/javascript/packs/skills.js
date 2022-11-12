@@ -48,7 +48,7 @@ const hideSelfShowBig = (elemA, elemB) => {
       hideOnClick(elemA, elemB);
       setTimeout(() => {
         elemB.scrollIntoView(true);
-        elemB.style.margin = '7rem 2rem';
+        elemB.style.margin = '8.5rem 2rem 7.5rem 2rem';
       }, 1750);
     }
   }

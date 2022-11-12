@@ -5,8 +5,8 @@
     <div class="container section-wrapper">
       <div class="row">
         <br><br>
-        <h1 class="hello title-header wow fadeInLeft"> 
-            <!--style="font-size: 6rem;"--> 
+        <h1 class="hello title-header wow fadeInLeft">
+            <!--style="font-size: 6rem;"-->
           <!--i>HELLO</i-->
             Hello.
         </h1>
@@ -31,8 +31,8 @@
 
     <div class="container section-wrapper">
       <div class="row swiper-container projects wow fadeInLeft" data-wow-delay="0.45s">
-        <div id="slide-box" class="swiper-wrapper">
-          
+        <div id="slide-box-one" class="swiper-wrapper scroll-point">
+
           <% @projects.each_with_index do |project, index| %>
             <div class="slider-item swiper-slide">
               <div class="slider-image-wrapper <%= project.id_tag %> projects">
@@ -41,35 +41,35 @@
                 <% end %>
               </div>
               <div id="slider-content-container">
-                
+
                 <div id="slider-left" class="slider-item-content">
                   <h1><%= project.title %></h1>
                   <p class="front-desc"><%= project.description %></p>
                   <div id="slide-divider"></div>
                 </div>
-                
+
                 <div id="slider-right" class="slider-item-content">
                   <div id="slide-right-container" class="wrapper">
                     <ul>
-                    
+
                       <li class="icon preview specs">
                         <div class="tooltip">
                           <div class="project-about">
                             <div class="specs-container">
-                                
+
                               <div class="stack-container">
                                 <h3><strong>TECH STACK</strong><br>featuring</h3>
                                 <ul class="stack-list">
-                                
+
                                   <% @stones[index].stacks.each do |stack| %>
                                   <li>
                                     <%= image_tag "#{@s3}#{stack}", class: "stack-item" %>
                                   </li>
                                   <% end %>
-                                  
+
                                 </ul>
                               </div>
-                                
+
                               <ul class="showcase-list">
                                 <li><h3 class="th"><strong>MILESTONES</strong> noteworthy updates</h3></li>
 
@@ -79,22 +79,22 @@
                                   <p class="p-tags"><%= @stones[index].tags[j-1] %></p>
                                 </li>
                                 <% end %>
-                                  
+
                               </ul>
-                                
+
                             </div>
                           </div>
                         </div>
                         <h3 class="hover-button">SPECS</h3>
                       </li>
-                      
+
                       <li class="icon preview site">
                         <div class="tooltip">
                           <%= image_tag "#{@s3}#{project.preview_file}" %>
                         </div>
                         <h3 class="hover-button">PREVIEW</h3>
                       </li>
-                    
+
                       <li id="project-links">
                         <a href="<%= project.website_url %>">
                           WEBPAGE
@@ -103,11 +103,11 @@
                           GIT
                         </a>
                       </li>
-                      
+
                     </ul>
                   </div>
                 </div>
-                  
+
               </div>
             </div>
           <% end %>
@@ -118,18 +118,18 @@
           <button class="swiper-button-prev projects">Prev</button>
           <button class="swiper-button-next projects">Next</button>
         </div>
-        
+
         <div class="swiper-pagination projects"></div>
       </div>
     </div>
   </div>
-  
+
   <!-- neomorphism -->
   <div class="s s3 forward neomorphism">
-    
+
     <div class="row swiper-container neo wow fadeInLeft" data-wow-delay="0.45s">
-      <div id="slide-box-two" class="swiper-wrapper neo">
-        
+      <div id="slide-box-two" class="swiper-wrapper scroll-point neo">
+
         <div id="about-me-slide" class="slider-item swiper-slide neo">
           <h1 class="row title-header neo wow fadeInDown" data-wow-delay="0.25s">
             <strong>About me</strong>
@@ -141,40 +141,40 @@
             </div>
           </div>
         </div>
-            
+
         <div id="cert-slide" class="slider-item swiper-slide neo">
-          <h1 class="row title-header neo wow fadeInDown" 
+          <h1 class="row title-header neo wow fadeInDown"
               data-wow-delay="0.25s">
             <strong>Codecademy Certificates</strong>
-          </h1><br>   
-           
+          </h1><br>
+
           <div id="cert-container" class="swiper-wrapper neo">
-          
+
             <% @skills.each_with_index do |skill, index| %>
             <div class="box-section neo">
-              <div id="box-A<%= index+1 %>" 
+              <div id="box-A<%= index+1 %>"
                    class="container section-wrapper neo box box-A">
                 <%= image_tag "#{@s3}#{skill.icon}", class: "neo cert-icon" %>
               </div>
-              <div id="box-B<%= index+1 %>" 
+              <div id="box-B<%= index+1 %>"
                    class="container section-wrapper neo box box-B animated">
                 <%= image_tag "#{@s3}#{skill.cert}", class: "neo cert-full" %>
               </div>
             </div>
             <% end %>
-      
+
           </div>
         </div>
-        
+
         <div id="edu-slide" class="slider-item swiper-slide neo">
-          <div class="row swiper-container neo wow fadeInLeft" 
+          <div class="row swiper-container neo wow fadeInLeft"
                data-wow-delay="0.45s">
-            <div id="slide-box" class="swiper-wrapper">
-             
+            <div id="edu-container" class="swiper-wrapper">
+
                 <div class="slider-image-wrapper neo-image-wrapper">
                   <%= image_tag "#{@s3}ggu-pride.png", id: "ggu-image" %>
                 </div>
-            
+
                 <div id="slider-content-container" class="ggu">
                   <div id="slider-left" class="slider-item-content ggu">
                     <h1>GOLDEN GATE UNIVERSITY</h1>
@@ -183,20 +183,20 @@
                   </div>
                   <p>Aug 2013 - Aug 2018</p>
                 </div>
-                
+
             </div>
-          </div>  
-      
+          </div>
+
         </div>
-          
+
         <div id="exp-slide" class="slider-item swiper-slide neo">
-          <h1 class="row title-header neo wow fadeInDown" 
+          <h1 class="row title-header neo wow fadeInDown"
               data-wow-delay="0.25s">
             <strong>Experience</strong>
           </h1><br>
-            
+
           <div id="exp-container" class="swiper-wrapper neo">
-            
+
             <div class="exp-item">
               <div class="exp-img-container">
                 <%= image_tag "#{@s3}clarins-logo.png", class: "exp-img", id: "clarins-img" %>
@@ -208,26 +208,26 @@
               </div>
             </div>
             <p id="first-exp">Traveled around Bay Area to represent various fragrance brands at most peninsula and SF county malls. Main vendor representative at Serramonte and Hillsdale Macy's for 3+ years each, totaling over 6 years. Exceeded sales goals during most assignments on main visual and focus. Developed great work relationships with a truly diverse group of the best people in the Bay Area, mostly competitors</p>
-            
+
             <div class="exp-divider">
-              
+
             <div class="exp-item">
               <div class="exp-img-container">
-                <%= image_tag "#{@s3}ccsf-logo.png", class: "exp-img" %>  
+                <%= image_tag "#{@s3}ccsf-logo.png", class: "exp-img" %>
               </div>
               <div class="exp-content">
                 <h2>Office Assistant</h2>
                 <strong>CITY COLLEGE OF SAN FRANCISCO</strong>
                 <h3>San Francisco, CA</h3>
               </div>
-            </div> 
+            </div>
             <p>Worked multiple short stints supporting the Financial Aid, Nursing, and Accounting Departments in various office duties. Gained insight into the many department processes that function together to support the second largest community college in the U.S. Assisted in processing journal entries and contracts and in organizing of the filing system, eventually leading a necessary overhaul to completion. Was given additional responsibility in handling the disbursements, averaging $10k and above, of annual budget resources to various departments and faculty, using the Oracle Banner ERM system</p>
-              
+
             <div class="exp-divider">
-              
+
             <div class="exp-item">
               <div class="exp-img-container">
-                <%= image_tag "#{@s3}bike-logo.png", class: "exp-img", id: "bike-logo" %>  
+                <%= image_tag "#{@s3}bike-logo.png", class: "exp-img", id: "bike-logo" %>
               </div>
               <div class="exp-content">
                 <h2>Bike Mechanic</h2>
@@ -236,20 +236,20 @@
               </div>
             </div>
             <p>Year stint in bicycle repair, maintenance, and sales at UC Irvine. Developed abilities in managing a queue of various bikes of different needs, requiring problem solving abilities at all levels. Developed not only skills in mechanical repair but gained much insight on optimization through the prioritization of tasks, serving the student body of UCI, which translated into programming code and developing business plans.</p>
-              
-          </div> 
+
+          </div>
         </div>
-          
+
       </div>
     </div>
     <div class="slider-buttons">
       <button class="swiper-button-prev neo">Prev</button>
       <button class="swiper-button-next neo">Next</button>
     </div>
-    
+
     <div class="swiper-pagination neo"></div>
-    
-      
+
+
   </div>
 </div>
 

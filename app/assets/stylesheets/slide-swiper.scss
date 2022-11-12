@@ -181,11 +181,11 @@ a.slider-image {
   cursor: grab;
 }
 
-#slide-box img#ggu-image {
+#edu-container img#ggu-image {
   height: 100%;
 }
 
-#slide-box #slider-content-container.ggu {
+#edu-container #slider-content-container.ggu {
   height: 50%;
   background: url("https://tacderan-code.s3.us-west-1.amazonaws.com/images/ggu_fade.png") no-repeat center center;
   background-size: cover;
@@ -802,7 +802,7 @@ li#project-links {
     font-size: 0.75rem;
   }
 
-  #slide-box #slider-content-container.ggu {
+  #edu-container #slider-content-container.ggu {
     height: 75%;
   }
 }
@@ -892,7 +892,7 @@ li#project-links {
   height: 100%;
 }
 
-#edu-slide.swiper-slide #slide-box {
+#edu-slide.swiper-slide #edu-container {
   display: flex;
   flex-direction: column;
 }
@@ -1041,7 +1041,7 @@ li#project-links {
 }
 
 #exp-container p {
-  margin: 4rem;
+  margin: 3rem;
   padding-top: 3rem;
   font-size: 0.85rem;
   text-align: justify;

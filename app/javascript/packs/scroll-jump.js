@@ -9,28 +9,49 @@ var totalSlideNumber = $(".s").length;
 
 // ------------- DETERMINE DELTA/SCROLL DIRECTION ------------- //
 function parallaxScroll(evt) {
-  var div = document.getElementById('slide-box');
+  var div0 = document.getElementById('slide-box-one');
+  var div1 = document.getElementById('slide-box-two');
+
   var flag = false;
+
   function touchStart() {
-    div.style.color = "black";
+    div0.style.color = "black";
+    div1.style.color = "black";
   }
+
   function touchEnd() {
     var $target = evt.target;
-    if ($target === div || div.contains($target)) {
-      div.style.color = "#26384E";
+
+    if ($target === div0 || div0.contains($target)) {
+      divs0.style.color = "#26384E";
+    }
+
+    if ($target === div1 || div1.contains($target)) {
+      div1.style.color = "#26384E";
     }
   }
+
   function mouseOver() {
-    div.style.color = "black";
+    div0.style.color = "black";
+    div1.style.color = "black";
   }
+
   function mouseOut() {
-    div.style.color = "#26384E";
+    div0.style.color = "#26384E";
+    div1.style.color = "#26384E";
   }
-  div.addEventListener("mouseover", mouseOver);
-  div.addEventListener("mouseout", mouseOut);
-  div.addEventListener("touchstart", touchStart);
-  div.addEventListener("touchend", touchEnd);
-  if (div.style.color === "black") {
+
+  div0.addEventListener("mouseover", mouseOver);
+  div0.addEventListener("mouseout", mouseOut);
+  div0.addEventListener("touchstart", touchStart);
+  div0.addEventListener("touchend", touchEnd);
+
+  div1.addEventListener("mouseover", mouseOver);
+  div1.addEventListener("mouseout", mouseOut);
+  div1.addEventListener("touchstart", touchStart);
+  div1.addEventListener("touchend", touchEnd);
+
+  if ((div0.style.color === "black") || (div1.style.color === "black")) {
     return;
   }
 
@@ -76,6 +97,7 @@ function slideDurationTimeout(slideDuration) {
 
 // ------------- ADD EVENT LISTENER ------------- //
 var mousewheelEvent = isFirefox ? "DOMMouseScroll" : "mousewheel";
+
 window.addEventListener(mousewheelEvent, _.throttle(parallaxScroll, 60), false);
 
 window.addEventListener("touchmove", function() {
