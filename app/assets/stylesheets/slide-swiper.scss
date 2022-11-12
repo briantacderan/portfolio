@@ -139,13 +139,18 @@ a.slider-image {
 }
 
 .slider-image-wrapper img#hoodcast-project,
+.slider-image-wrapper img#codecademy-jammy {
+  padding: 3rem;
+}
+
 .slider-image-wrapper img#codecademy-goldmedal,
 .slider-image-wrapper img#codecademy-storeo {
-  padding: 2rem;
+  padding: 2.5rem;
 }
 
 .slider-image-wrapper img#fitness-project,
-.slider-image-wrapper img#cookies-project {
+.slider-image-wrapper img#cookies-project,
+.slider-image-wrapper img#codecademy-jammy {
   max-width: 300px;
 }
 
@@ -156,15 +161,10 @@ a.slider-image {
   height: 100%;
 }
 
-.slider-image-wrapper img#codecademy-jammy,
 .slider-image-wrapper img#codecademy-bossing {
-  max-width: 250px;
-  padding: 0 auto;
-}
-
-.slider-image-wrapper img#codecademy-bossing {
-  max-height: 180px;
-  margin-top: 15%;
+  margin-top: 10%;
+  max-width: 200px;
+  max-height: 175px;
 }
 
 .slider-item {
@@ -883,20 +883,7 @@ li#project-links {
     padding: 0.75rem;
     margin: 7px;
   }
-
-  .slider-image-wrapper img#hoodcast-project,
-  .slider-image-wrapper img#codecademy-goldmedal,
-  .slider-image-wrapper img#codecademy-storeo,
-  .slider-image-wrapper img#codecademy-jammy {
-    padding: 3.5rem;
-  }
-
-  .slider-image-wrapper img#fitness-project,
-  .slider-image-wrapper img#cookies-project {
-    max-width: 200px;
-  }
 }
-
 
 
 
@@ -1115,7 +1102,8 @@ li#project-links {
     font-size: 1rem;
   }
 
-  #exp-slide {
+  #exp-slide,
+  #cert-slide, {
     overflow-y: scroll;
     direction: rtl;
   }
@@ -1124,7 +1112,8 @@ li#project-links {
     padding: 1rem;
   }
 
-  #exp-container {
+  #exp-container,
+  #cert-container {
     height: 400px;
     direction: ltr;
   }
@@ -1169,8 +1158,8 @@ li#project-links {
   }
 
   #cert-slide #cert-container {
-    height: 100%;
-    width: 100%;
+    /*height: 100%;
+    width: 100%;*/
     justify-content: flex-start;
     align-items: flex-end;
     padding: 1rem;
