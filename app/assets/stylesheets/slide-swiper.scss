@@ -806,7 +806,7 @@ li#project-links {
   #edu-container #slider-content-container.ggu {
     height: 75%;
   }
-  
+
   div.s3 .slider-item {
     height: 450px;
   }
@@ -1058,7 +1058,8 @@ li#project-links {
 
 @media only screen and (max-width: 900px) {
   #exp-slide,
-  #cert-container {
+  #cert-container,
+  #about-me-slide {
     overflow-y: scroll;
     direction: rtl;
   }
