@@ -33,7 +33,8 @@
       <div class="row swiper-container projects wow fadeInLeft" data-wow-delay="0.45s">
         <div id="slide-box-one" class="swiper-wrapper scroll-point">
 
-          <% @projects.each_with_index do |project, index| %>
+          <!--% @projects[3..].each_with_index do |project, index| %-->
+          <% @projects[0..2].each_with_index do |project, index| %>
             <div class="slider-item swiper-slide">
               <div class="slider-image-wrapper <%= project.id_tag %> projects">
                 <%= link_to project.website_url, class: "slider-image" do %>

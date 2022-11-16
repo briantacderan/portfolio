@@ -28,8 +28,8 @@ var swiperTwo = new Swiper('.swiper-container.neo', {
   mousewheel: {
     invert: false,
   },
-  allowTouchMove: false,
-  /* allowSlidePrev: false,
+  /* allowTouchMove: false,
+  allowSlidePrev: false,
   mousewheel: {
     invert: false,
     thresholdDelta: 7,
