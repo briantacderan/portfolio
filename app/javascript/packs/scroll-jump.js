@@ -23,7 +23,7 @@ function parallaxScroll(evt) {
     var $target = evt.target;
 
     if ($target === div0 || div0.contains($target)) {
-      divs0.style.color = "#26384E";
+      div0.style.color = "#26384E";
     }
 
     if ($target === div1 || div1.contains($target)) {
