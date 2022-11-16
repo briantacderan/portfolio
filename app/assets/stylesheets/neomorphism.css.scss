@@ -198,7 +198,7 @@
   }
 
   #cert-slide #cert-container {
-    overflow-y: hidden;
+    overflow-y: scroll;
     position: absolute;
     margin-top: 6rem;
     flex-direction: row-reverse;

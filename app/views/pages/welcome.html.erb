@@ -26,16 +26,15 @@
   <div class="s s2 forward slide-swiper">
 
     <h1 class="row title-header wow fadeInDown" data-wow-delay="0.25s">
-      <strong>> Projects</strong>
+      <strong id="proj-title">> Projects</strong>
     </h1><br>
 
     <div class="container section-wrapper">
       <div class="row swiper-container projects wow fadeInLeft" data-wow-delay="0.45s">
         <div id="slide-box-one" class="swiper-wrapper scroll-point">
 
-          <!--% @projects[3..].each_with_index do |project, index| %-->
-          <% @projects[0..2].each_with_index do |project, index| %>
-            <div class="slider-item swiper-slide">
+          <% @projects.each_with_index do |project, index| %>
+            <div class="slider-item project-slide swiper-slide <%= project.id_tag.split('-')[1] %> <%= project.id_tag.split('-')[0] %>">
               <div class="slider-image-wrapper <%= project.id_tag %> projects">
                 <%= link_to project.website_url, class: "slider-image" do %>
                   <%= image_tag "#{@s3}#{project.image}", id: project.id_tag %>

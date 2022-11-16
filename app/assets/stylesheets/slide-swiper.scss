@@ -162,10 +162,10 @@ a.slider-image {
 }
 
 .slider-image-wrapper img#codecademy-bossing {
-  margin-top: 10%;
-  min-width: 100px;
-  width: 100px;
-  max-height: 90px;
+  margin: 20% auto;
+  min-width: 125px;
+  width: 125px;
+  max-height: 75px;
 }
 
 .slider-item {
@@ -806,6 +806,10 @@ li#project-links {
   #edu-container #slider-content-container.ggu {
     height: 75%;
   }
+  
+  div.s3 .slider-item {
+    height: 450px;
+  }
 }
 
 @media only screen and (min-height: 601px) {
@@ -1053,7 +1057,8 @@ li#project-links {
 }
 
 @media only screen and (max-width: 900px) {
-  #exp-slide {
+  #exp-slide,
+  #cert-container {
     overflow-y: scroll;
     direction: rtl;
   }
@@ -1103,7 +1108,7 @@ li#project-links {
   }
 
   #exp-slide,
-  #cert-slide, {
+  #cert-container, {
     overflow-y: scroll;
     direction: rtl;
   }
