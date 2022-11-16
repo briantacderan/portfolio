@@ -310,23 +310,6 @@
   }
 }
 
-
-@media only screen and (max-width: 1100px) {
-  .main .neomorphism {
-    padding-right: 30%;
-  }
-
-  #cert-slide #cert-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 1.5rem;
-    height: auto;
-  }
-}
-
 @media only screen and (max-width: 750px) {
   .box {
     width: 7vw;

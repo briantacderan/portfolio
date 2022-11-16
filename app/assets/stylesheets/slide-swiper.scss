@@ -504,7 +504,12 @@ li#project-links {
     justify-content: flex-end;
     align-items: center;
     padding: 1.5rem;
-    height: auto;
+    height: 600px;
+    overflow-y: scroll;
+  }
+
+  #cert-slide {
+    overflow-y: scroll;
   }
 }
 
