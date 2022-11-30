@@ -21,7 +21,7 @@ p8 = Project.create(title: "Jammming", type_of: "Spotify API one pager", main: "
 c1 = Contact.create(title: "GitHub", url: "https://github.com/briantacderan?tab=repositories", fa_class: "github", fa_key: "fa-github")
 c2 = Contact.create(title: "Twitter", url: "https://twitter.com/BrianTacderan", fa_class: "twitter", fa_key: "fa-twitter")
 c3 = Contact.create(title: "LinkedIn", url: "https://www.linkedin.com/in/briantacderan", fa_class: "linkedin", fa_key: "fa-linkedin")
-c4 = Contact.create(title: "Email", url: "mailto:briantacderan@gmail.com", fa_class: "email", fa_key: "fa-telegram-plane")
+c4 = Contact.create(title: "Email", url: "mailto:brian@thetacderancode.com", fa_class: "email", fa_key: "fa-telegram-plane")
 
 
 
