@@ -134,10 +134,6 @@
   pointer-events: auto;
 }
 
-.wrapper .preview.specs:hover .tooltip {
-  left: -100px;
-}
-
 .wrapper .preview:hover .tooltip img {
   width: auto;
   height: 450px;
@@ -173,6 +169,10 @@
   z-index: 10000;
 }
 
+.wrapper .preview.specs:hover .tooltip {
+  left: -100px;
+}
+
 .wrapper .preview.specs .tooltip .project-about {
   
 }
@@ -190,6 +190,51 @@
     
 }
     
+
+
+
+
+/* About me */
+div#about-me-slide .wrapper .preview.specs .tooltip {
+  width: 640px;
+  height: 680px;
+  z-index: 10000;
+  overflow-y: scroll;
+}
+
+div#about-me-slide .wrapper .preview.specs:hover .tooltip {
+  left: -115px;
+}
+
+div#about-me-slide .wrapper .preview.specs .tooltip .project-about {
+  
+}
+
+div#about-me-slide .wrapper .preview.specs:hover .tooltip {
+  top: -650px;
+}
+
+/* About me */
+div#about-me-slide .wrapper .preview.specs .tooltip {
+  width: 640px;
+  height: 680px;
+  z-index: 10000;
+  overflow-y: scroll;
+}
+
+div#about-me-slide .wrapper .preview.specs:hover .tooltip {
+  left: -115px;
+}
+
+div#about-me-slide .wrapper .preview.specs .tooltip .project-about {
+  
+}
+
+div#about-me-slide .wrapper .preview.specs:hover .tooltip {
+  top: -650px;
+}
+
+
     
 
 
@@ -198,6 +243,19 @@
     width: 36px;
     height: 36px;
     box-shadow: 0 7.2px 7.2px rgba(0, 0, 0, 0.1);
+  }
+    
+  div#about-me-slide .wrapper .preview.specs .tooltip {
+    width: 500px;
+    height: 650px;
+  }
+    
+  div#about-me-slide .wrapper .preview.specs:hover .tooltip {
+    top: -615px;
+  }
+    
+  div#about-me-slide .wrapper .preview.specs:hover .tooltip {
+    left: -60px;
   }
 }
 
@@ -216,6 +274,10 @@
   .wrapper .preview.specs .tooltip,
   .wrapper .preview.specs:hover .tooltip {
     left: -80px;
+  }
+    
+  div#about-me-slide .wrapper .preview.specs .tooltip {
+    width: 350px;
   }
 }
 
@@ -242,6 +304,10 @@
     height: 405px;  
   }
     
+  div#about-me-slide .wrapper .preview.specs .tooltip {
+    height: 60px;
+  }
+    
   .wrapper .preview.site .tooltip,
   .wrapper .preview.site:hover .tooltip {
     height: 260px;
@@ -256,12 +322,12 @@
   .wrapper .preview.site:hover .tooltip img {
     width: auto;
     height: 250px;
-    top:135px;
+    top: 135px;
     margin-bottom: 0;
   }
     
   .wrapper {
-    padding-bottom: 2rem;
+    padding-bottom: 0;
     justify-content: flex-end;
   }
 
@@ -283,6 +349,25 @@
 @media only screen and (max-width: 500px) {
   .wrapper .preview.specs:hover .tooltip {
     left: -35px;
+  }
+    
+  div#about-me-slide div#slider-content-container {
+    overflow-y: scroll;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+  }
+    
+  div#about-me-slide div#slider-content-container::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+    
+  div#about-me-slide div.slider-image-wrapper.projects {
+    max-height: 50%;
+    height: 100%;
+  }
+    
+  div#about-me-slide div.slider-image-wrapper.projects img {
+    margin: 1rem;  
   }
 }
 
