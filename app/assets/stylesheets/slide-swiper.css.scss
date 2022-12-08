@@ -127,12 +127,10 @@ a.slider-image {
 
 .slider-image-wrapper img {
   height: 100%;
-  width: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0;
-  max-width: 200px;
   margin: auto;
 }
 
@@ -192,7 +190,7 @@ a.slider-image {
 }
 
 #edu-container #slider-content-container.ggu {
-  height: 50%;
+  height: 70%;
   background: url("https://tacderan-code.s3.us-west-1.amazonaws.com/images/ggu_fade.png") no-repeat center center;
   background-size: cover;
 }
@@ -595,7 +593,6 @@ li#project-links {
   }
     
   div#about-me-slide .slider-image-wrapper.projects {
-    background: none;
     background-color: orange;
     width: 100%;
   }
@@ -771,8 +768,7 @@ li#project-links {
   }
 
   .slider-image-wrapper img {
-    width: 50%;
-    min-width: 200px;
+      
   }
 
   .wrapper .icon {
@@ -799,9 +795,7 @@ li#project-links {
     font-size: 0.65rem;
     padding-left: 0.5rem;
   }
-}
 
-@media only screen and (max-width: 500px) {
   .wrapper#slide-right-container ul.stack-container h3 {
     width: 3rem;
     margin-left: 0rem;
@@ -1033,7 +1027,6 @@ li#project-links {
 
 @media only screen and (max-width: 500px) {
   #about-me-slide img.about-me {
-      width: 35%;
       box-shadow: 0 7.2px 7.2px rgba(0, 0, 0, 0.6);
       border-radius: 50%;
       border: 3px solid orange;
@@ -1052,11 +1045,11 @@ li#project-links {
   #about-me-slide #about-me-content p.front-desc {
     line-height: 1.75rem;
     font-size: 0.5rem;
+    overflow-x: hidden;
   }
     
   #about-me-slide img.about-me {
     max-height: 100%;
-    height: 90%;
   }
 }
 
@@ -1126,6 +1119,7 @@ li#project-links {
 @media only screen and (max-width: 900px) {
   #exp-slide {
     overflow-y: scroll;
+    overflow-x: hidden;
     direction: rtl;
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
     scrollbar-width: none;  /* Firefox */
@@ -1134,7 +1128,7 @@ li#project-links {
   #exp-slide::-webkit-scrollbar {
     display: none;
   }
-
+    
   #exp-container {
     direction: ltr;
     height: 600px;
@@ -1229,8 +1223,6 @@ li#project-links {
   }
 
   #cert-slide #cert-container {
-    /*height: 100%;
-    width: 100%;*/
     justify-content: flex-start;
     align-items: flex-end;
     padding: 1rem;

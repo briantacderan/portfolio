@@ -305,7 +305,8 @@ div#about-me-slide .wrapper .preview.specs:hover .tooltip {
   }
     
   div#about-me-slide .wrapper .preview.specs .tooltip {
-    height: 60px;
+    width: 290px;
+    height: 310px;
   }
     
   .wrapper .preview.site .tooltip,
@@ -344,11 +345,14 @@ div#about-me-slide .wrapper .preview.specs:hover .tooltip {
   .wrapper .icon-popups {
     
   }
-}
 
-@media only screen and (max-width: 500px) {
   .wrapper .preview.specs:hover .tooltip {
     left: -35px;
+  }
+    
+  div#about-me-slide .wrapper .preview.specs:hover .tooltip {
+    left: -50px;
+    top: -275px;
   }
     
   div#about-me-slide div#slider-content-container {
@@ -359,10 +363,9 @@ div#about-me-slide .wrapper .preview.specs:hover .tooltip {
     
   div#about-me-slide div#slider-content-container::-webkit-scrollbar { 
     display: none;  /* Safari and Chrome */
-}
+  }
     
   div#about-me-slide div.slider-image-wrapper.projects {
-    max-height: 50%;
     height: 100%;
   }
     
