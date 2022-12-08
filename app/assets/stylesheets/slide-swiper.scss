@@ -59,13 +59,6 @@
   height: 60%;
 }
 
-div#about-me-slide .slider-image-wrapper.projects {
-  background: url("https://tacderan-code.s3.us-west-1.amazonaws.com/images/sf-skyline.png") no-repeat center center;
-  background-size: 100%;
-  width: 100%;
-  border-bottom: 8px solid black;
-}
-
 .slider-image-wrapper.neo-image-wrapper {
   border: 3px solid black;
 }
@@ -511,12 +504,10 @@ li#project-links {
     padding: 1.5rem;
     height: 600px;
     overflow-y: scroll;
-    -ms-overflow-style: none;  /* Internet Explorer 10+ */
-    scrollbar-width: none;  /* Firefox */
   }
-    
-  #cert-slide #cert-container::-webkit-scrollbar {
-    display: none;
+
+  #cert-slide {
+    overflow-y: scroll;
   }
 }
 
@@ -592,12 +583,6 @@ li#project-links {
     display: flex;
     justify-content: center;
     padding: 3rem 0.85rem;
-  }
-    
-  div#about-me-slide .slider-image-wrapper.projects {
-    background: none;
-    background-color: orange;
-    width: 100%;
   }
 }
 
@@ -959,68 +944,30 @@ li#project-links {
 
 
 /* About Me slide */
+#about-me-slide {
+
+}
+
 #about-me-container {
   display: inline-block;
-  overflow-y: hidden;
-}
-
-#about-me-content {
-  overflow-y: hidden;
-}
-
-#about-me-slide {
-  overflow-y: hidden;
+  overflow-inline: scroll;
 }
 
 #about-me-slide img.about-me {
+  width: 35%;
   box-shadow: 0 7.2px 7.2px rgba(0, 0, 0, 0.6);
   border-radius: 50%;
   border: 5px solid orange;
-  margin: 1.5rem 2rem 1rem 2rem;
-  position: absolute;
-  right: 0.5rem;
-  max-height: 40%;
-  max-width: 50%;
-  float: right;
+  float: left;
+  margin: 0 2rem 1rem 2rem;
 }
 
 #about-me-slide #about-me-content p {
-  margin: 0 3rem 0 1rem;
-  font-size: 1.75rem;
-  line-height: 3.5rem;
+  margin-right: 3rem;
+  font-size: 1.3rem;
+  line-height: 2.5rem;
   font-weight: 100;
   text-align: end;
-  float: left;
-  overflow-y: hidden;
-}
-
-#about-me-slide #about-me-content p#intro {
-  width: 40%; 
-}
-
-#about-me-slide div.about-me p#long-version {
-  width: 100%;
-  margin: 1rem 1.5rem 0 1.5rem;
-  font-size: 1rem;
-  line-height: 1.5rem;
-}
-
-#about-me-slide h3.hover-button {
-  margin: 0;
-}
-
-#about-me-slide div.about-me li#p-tags-list {
-  height: 100%;
-}
-
-#about-me-slide div.about-me li#p-tags-list p.p-tags:nth-child(odd) {
-  text-align-last: left;
-  text-align: left;
-}
-
-#about-me-slide div.about-me li#p-tags-list p.p-tags:nth-child(even) {
-  text-align: right;
-  text-align-last: right;
 }
 
 @media only screen and (max-width: 900px) {
@@ -1037,9 +984,8 @@ li#project-links {
       box-shadow: 0 7.2px 7.2px rgba(0, 0, 0, 0.6);
       border-radius: 50%;
       border: 3px solid orange;
-      float: right;
+      float: left;
       margin: 0 0.5rem 0.5rem 1.5rem;
-      position: relative;
   }
 
   #about-me-slide #about-me-content p {
@@ -1047,16 +993,6 @@ li#project-links {
     font-size: 1rem;
     margin-left: 2rem;
     margin-right: 2rem;
-  }
-    
-  #about-me-slide #about-me-content p.front-desc {
-    line-height: 1.75rem;
-    font-size: 0.5rem;
-  }
-    
-  #about-me-slide img.about-me {
-    max-height: 100%;
-    height: 90%;
   }
 }
 
@@ -1124,15 +1060,11 @@ li#project-links {
 }
 
 @media only screen and (max-width: 900px) {
-  #exp-slide {
+  #exp-slide,
+  #cert-container,
+  #about-me-slide {
     overflow-y: scroll;
     direction: rtl;
-    -ms-overflow-style: none;  /* Internet Explorer 10+ */
-    scrollbar-width: none;  /* Firefox */
-  }
-    
-  #exp-slide::-webkit-scrollbar {
-    display: none;
   }
 
   #exp-container {
@@ -1177,6 +1109,12 @@ li#project-links {
 
   #about-me-slide #about-me-content p {
     font-size: 1rem;
+  }
+
+  #exp-slide,
+  #cert-container, {
+    overflow-y: scroll;
+    direction: rtl;
   }
 
   #exp-slide h1.title-header {
