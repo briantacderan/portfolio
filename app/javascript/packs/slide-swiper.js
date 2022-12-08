@@ -40,6 +40,7 @@ var swiperTwo = new Swiper('.swiper-container.neo', {
     clickable: true,
     dynamicBullets: true
   },
+  touchAngle: 45,
   // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next.neo',
