@@ -1,4 +1,4 @@
-var swiperOne = new Swiper('.swiper-container.projects', {
+var swiperOne = new Swiper('#swiper-1', {
   slidesPerView: 1,
   spaceBetween: 20,
   effect: 'fade',
@@ -19,7 +19,7 @@ var swiperOne = new Swiper('.swiper-container.projects', {
   }
 });
 
-var swiperTwo = new Swiper('.swiper-container.neo', {
+var swiperTwo = new Swiper('#swiper-2', {
   slidesPerView: 1,
   spaceBetween: 20,
   effect: 'fade',
@@ -27,6 +27,7 @@ var swiperTwo = new Swiper('.swiper-container.neo', {
   speed: 300,
   mousewheel: {
     invert: false,
+    forceToAxis: true
   },
   /* allowTouchMove: false,
   allowSlidePrev: false,
@@ -40,7 +41,6 @@ var swiperTwo = new Swiper('.swiper-container.neo', {
     clickable: true,
     dynamicBullets: true
   },
-  touchAngle: 45,
   // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next.neo',
