@@ -306,7 +306,7 @@ div#about-me-slide .wrapper .preview.specs:hover .tooltip {
     
   div#about-me-slide .wrapper .preview.specs .tooltip {
     width: 290px;
-    height: 310px;
+    height: 265px;
   }
     
   .wrapper .preview.site .tooltip,
@@ -352,13 +352,12 @@ div#about-me-slide .wrapper .preview.specs:hover .tooltip {
     
   div#about-me-slide .wrapper .preview.specs:hover .tooltip {
     left: -50px;
-    top: -275px;
+    top: -225px;
   }
     
   div#about-me-slide div#slider-content-container {
     overflow-y: scroll;
-    -ms-overflow-style: none;  /* Internet Explorer 10+ */
-    scrollbar-width: none;  /* Firefox */
+    height: 60%;
   }
     
   div#about-me-slide div#slider-content-container::-webkit-scrollbar { 

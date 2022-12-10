@@ -146,7 +146,11 @@ a.slider-image {
   padding: 3rem;
 }
 
-.slider-image-wrapper img#codecademy-goldmedal,
+.slider-image-wrapper img#hoodcast-project,
+.slider-image-wrapper img#codecademy-goldmedal {
+  padding: 8rem;
+}
+
 .slider-image-wrapper img#codecademy-storeo {
   padding: 2.5rem;
 }
@@ -155,6 +159,10 @@ a.slider-image {
 .slider-image-wrapper img#cookies-project,
 .slider-image-wrapper img#codecademy-jammy {
   max-width: 300px;
+}
+
+.slider-image-wrapper img#codecademy-unquote {
+  padding: 6rem;
 }
 
 .slider-image-wrapper img#medium-heroes {
@@ -696,7 +704,7 @@ li#project-links {
 
   .slider-item-content {
     padding-right: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0;
   }
 
   .slide-swiper .slider-item-content h3 {
@@ -766,6 +774,11 @@ li#project-links {
   .slider-item-content#slider-right {
 
   }
+    
+  .slider-item-content.ggu h2 {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
 
   .slider-image-wrapper {
     max-height: 140px;
@@ -807,6 +820,19 @@ li#project-links {
 
   .wrapper#slide-right-container ul.stack-list img {
     margin: 0.25rem 0 0.25rem 0.75rem;
+  }
+    
+  .slider-image-wrapper img#fitness-project,
+  .slider-image-wrapper img#cookies-project,
+  .slider-image-wrapper img#codecademy-unquote {
+    max-width: 300px;
+    padding: 3rem;
+  }
+    
+  .slider-image-wrapper img#fitness-project,
+  .slider-image-wrapper img#hoodcast-project,
+  .slider-image-wrapper img#codecademy-goldmedal {
+    padding: 3.5rem;  
   }
 
   .wrapper#slide-right-container ul.showcase-list h3.th {
@@ -1039,21 +1065,19 @@ li#project-links {
       position: relative;
   }
 
-  #about-me-slide #about-me-content p {
-    line-height: 2rem;
-    font-size: 1rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
-  }
-    
-  #about-me-slide #about-me-content p.front-desc {
-    line-height: 1.75rem;
-    font-size: 0.5rem;
+  #about-me-slide p.front-desc {
+    line-height: 1rem;
+    font-size: 0.75rem;
     overflow-x: hidden;
+    margin-bottom: 0;
   }
     
   #about-me-slide img.about-me {
     max-height: 100%;
+  }
+    
+  #about-me-slide h1 {
+    margin-top: 0;
   }
 }
 
@@ -1145,8 +1169,13 @@ li#project-links {
   }
 
   #exp-container {
-    height: 400px;
+    height: 315px;
+    overflow-y: scroll;
   }
+    
+  #exp-container::-webkit-scrollbar {
+    display: none;
+  }  
 
   #exp-container p {
     margin: 1.5rem;
