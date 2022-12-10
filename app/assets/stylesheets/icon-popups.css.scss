@@ -157,6 +157,13 @@
   background-color: #333333;
   color: gray;
 }
+
+#about-me-slide .wrapper .preview:hover,
+#about-me-slide .wrapper .preview:hover .tooltip,
+#about-me-slide .wrapper .preview:hover .tooltip::before {
+  background-color: #202325;
+  color: white;
+}
     
 
 
