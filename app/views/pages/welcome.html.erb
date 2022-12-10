@@ -30,7 +30,9 @@
     </h1><br>
 
     <div class="container section-wrapper">
-      <div id="swiper-1" class="row swiper-container projects wow fadeInLeft" data-wow-delay="0.45s">
+      <div id="swiper-1" 
+           class="row swiper-container projects wow fadeInLeft" 
+           data-wow-delay="0.45s">
         <div id="slide-box-one" class="swiper-wrapper scroll-point">
 
           <% @projects.each_with_index do |project, index| %>
@@ -62,9 +64,9 @@
                                 <ul class="stack-list">
 
                                   <% @stones[index].stacks.each do |stack| %>
-                                  <li>
-                                    <%= image_tag "#{@s3}#{stack}", class: "stack-item" %>
-                                  </li>
+                                    <li>
+                                      <%= image_tag "#{@s3}#{stack}", class: "stack-item" %>
+                                    </li>
                                   <% end %>
 
                                 </ul>
@@ -74,10 +76,10 @@
                                 <li><h3 class="th"><strong>MILESTONES</strong> noteworthy updates</h3></li>
 
                                 <% for j in 1..@stones[index].racks.length do %>
-                                <li>
-                                  <h3><%= @stones[index].racks[j-1] %></h3>
-                                  <p class="p-tags"><%= @stones[index].tags[j-1] %></p>
-                                </li>
+                                  <li>
+                                    <h3><%= @stones[index].racks[j-1] %></h3>
+                                    <p class="p-tags"><%= @stones[index].tags[j-1] %></p>
+                                  </li>
                                 <% end %>
 
                               </ul>
@@ -131,64 +133,65 @@
       <div id="slide-box-two" class="swiper-wrapper scroll-point neo">
           
         <div id="about-me-slide" class="slider-item project-slide swiper-slide about-me">
-              <div class="slider-image-wrapper projects">
-                  <%= image_tag "#{@s3}profile-img.png", class: "neo about-me" %>
-              </div>
-              <div id="slider-content-container">
+          <div class="slider-image-wrapper projects">
+            <%= image_tag "#{@s3}profile-img.png", class: "neo about-me" %>
+          </div>
+          <div id="slider-content-container">
 
-                <div id="slider-left" class="slider-item-content">
-                  <h1>About me</h1>
-                  <p class="front-desc">Looking to attain full stack related position in tech. Wanting to develop my skills through team collaboration and guided mentorship. Aiming to find a diverse group of people, that closely share my eagerness to create positive and impactful innovations that will lead local SF Bay Area and global communities toward the future. Fintech, Data Science, and Strategic Management. However, my interests cover everything under the globalized world umbrella.</p>
-                  <div id="slide-divider"></div>
-                </div>
+            <div id="slider-left" class="slider-item-content">
+              <h1>About me</h1>
+              <p class="front-desc">Looking to attain full stack related position in tech. Wanting to develop my skills through team collaboration and guided mentorship. Aiming to find a diverse group of people, that closely share my eagerness to create positive and impactful innovations that will lead local SF Bay Area and global communities toward the future. Fintech, Data Science, and Strategic Management. However, my interests cover everything under the globalized world umbrella.</p>
+              <div id="slide-divider"></div>
+            </div>
 
-                <div id="slider-right" class="slider-item-content">
-                  <div id="slide-right-container" class="wrapper">
-                    <ul>
+            <div id="slider-right" class="slider-item-content">
+              <div id="slide-right-container" class="wrapper">
+                <ul>
 
-                      <li class="icon preview specs">
-                        <div class="tooltip">
-                          <div class="project-about">
-                            <div class="specs-container">
+                  <li class="icon preview specs">
+                    <div class="tooltip">
+                      <div class="project-about">
+                        <div class="specs-container">
 
-                              <ul class="showcase-list">
-                                <li><h3 class="th"><strong>About</strong> my purpose</h3></li>
+                          <ul class="showcase-list">
+                            <li><h3 class="th"><strong>About</strong> my purpose</h3></li>
 
-                                <li id="p-tags-list">
-                                  <p id="p-tag-1" class="p-tags">Everyday I’m learning new skills, and I’m growing into myself faster than ever. Thanks to the limitless online resources out there, we can push toward new heights. And when we keep society and the people we care for in mind, innovation can be achieved with little friction to satisfy whatever need that is out there. I want to work with a team that truly cares to make a difference in today’s world, as the world fills with uncertainty or disadvantage. I want to level the playing field, get new accounts of real issues, and strategize what can be done. And simply make it happen.</p>
+                            <li id="p-tags-list">
+                              <p id="p-tag-1" class="p-tags">Everyday I’m learning new skills, and I’m growing into myself faster than ever. Thanks to the limitless online resources out there, we can push toward new heights. And when we keep society and the people we care for in mind, innovation can be achieved with little friction to satisfy whatever need that is out there. I want to work with a team that truly cares to make a difference in today’s world, as the world fills with uncertainty or disadvantage. I want to level the playing field, get new accounts of real issues, and strategize what can be done. And simply make it happen.</p>
 
-                                  <p id="p-tag-2" class="p-tags">Problem solving is more effective through a collaboration of diverse minds. Being inundated with so much data, the world has the resources to tackle the growing list of global issues, a lot of which can be solved through teamwork. Putting our minds together, lending a helping hand, and directing diversity and collaboration toward the heart of communities-in-need is where change should begin, as we aim for equality for all.</p>
+                              <p id="p-tag-2" class="p-tags">Problem solving is more effective through a collaboration of diverse minds. Being inundated with so much data, the world has the resources to tackle the growing list of global issues, a lot of which can be solved through teamwork. Putting our minds together, lending a helping hand, and directing diversity and collaboration toward the heart of communities-in-need is where change should begin, as we aim for equality for all.</p>
 
-                                  <p id="p-tag-3" class="p-tags">Each of us has had to face unique challenges during these past years. I am still in awe of how the world came together in swift resilience, in spite of the continually looming tragedy throughout the duration of the pandemic. While some days have been sparse of hope, love has managed to shine through, even during the most critical moments in economic, political, and social turmoil.</p>
+                              <p id="p-tag-3" class="p-tags">Each of us has had to face unique challenges during these past years. I am still in awe of how the world came together in swift resilience, in spite of the continually looming tragedy throughout the duration of the pandemic. While some days have been sparse of hope, love has managed to shine through, even during the most critical moments in economic, political, and social turmoil.</p>
 
-                                  <p id="p-tag-4" class="p-tags">Like many of history’s major obstacles, one thing proves true: when we are at our most vulnerable, real change comes soon after, and what we as a society value takes center stage. These values appear as disparate Zeitgeists and somehow find ways to morph simple opinions into contentious ideologies. This causes further alienation, even between close friends and family. As mask mandates were lifted, being a good neighbor had to be relearned in a world too unfamiliar. Along with leaps in advancement in the modern, globalized world, unprecedented social transformation traversed around the world faster than any wave that a tsunami or pandemic can produce. The ideas and values we choose to persist in our communities and abroad has never been more critical to mold into what is right for this new beginning.</p>
-                                  <p id="p-tag-5" class="p-tags">Addressing the pandemic, however challenging, immense, uncomfortable, or hopeless it has been, life still goes on. The fight for equality and justice has never been more imperative than it is today. Ethical business practices are essential. Transparency has ensued society to come together. We are called to defend each other in a force so mystifyingly provocative, for our once deeply-held beliefs are quickly being disillusioned at this very moment.</p>
+                              <p id="p-tag-4" class="p-tags">Like many of history’s major obstacles, one thing proves true: when we are at our most vulnerable, real change comes soon after, and what we as a society value takes center stage. These values appear as disparate Zeitgeists and somehow find ways to morph simple opinions into contentious ideologies. This causes further alienation, even between close friends and family. As mask mandates were lifted, being a good neighbor had to be relearned in a world too unfamiliar. Along with leaps in advancement in the modern, globalized world, unprecedented social transformation traversed around the world faster than any wave that a tsunami or pandemic can produce. The ideas and values we choose to persist in our communities and abroad has never been more critical to mold into what is right for this new beginning.</p>
+                                   
+                              <p id="p-tag-5" class="p-tags">Addressing the pandemic, however challenging, immense, uncomfortable, or hopeless it has been, life still goes on. The fight for equality and justice has never been more imperative than it is today. Ethical business practices are essential. Transparency has ensued society to come together. We are called to defend each other in a force so mystifyingly provocative, for our once deeply-held beliefs are quickly being disillusioned at this very moment.</p>
 
-                                  <p id="p-tag-6" class="p-tags">I am networking to meet and work with kindred souls, who also aim to innovate with the broad vision of making life easier for everyone, especially for those disadvantaged while pursuing their dreams.</p>
+                              <p id="p-tag-6" class="p-tags">I am networking to meet and work with kindred souls, who also aim to innovate with the broad vision of making life easier for everyone, especially for those disadvantaged while pursuing their dreams.</p>
 
-                                  <p id="p-tag-7" class="p-tags">San Franciscan, Filipino-American/AAPI, BIPOC, and LGBTQQIA+ communities are just a few of the groups that I identify with. It may seem totally easy to seek refuge in these communities, but more than a decade ago, it was not, at least for me. For many young people today, the concept of loving who you are is still foreign. True acceptance and identifying with a label is a journey in itself because compassion can be absent during challenging times. However, with years of introspection and with every moment I was inspired by brave trailblazers, I eventually learned to embrace myself fully and stand tall. My last name, Tacderan, comes from the Ilocano language, a Filipino dialect of the people from the northernmost tip of the Philippine islands. Tacderan means "to stand up." Surely, I did -- it's the Tacderan code.
+                              <p id="p-tag-7" class="p-tags">San Franciscan, Filipino-American/AAPI, BIPOC, and LGBTQQIA+ communities are just a few of the groups that I identify with. It may seem totally easy to seek refuge in these communities, but more than a decade ago, it was not, at least for me. For many young people today, the concept of loving who you are is still foreign. True acceptance and identifying with a label is a journey in itself because compassion can be absent during challenging times. However, with years of introspection and with every moment I was inspired by brave trailblazers, I eventually learned to embrace myself fully and stand tall. My last name, Tacderan, comes from the Ilocano language, a Filipino dialect of the people from the northernmost tip of the Philippine Islands. Tacderan means "to stand up." Surely, I did -- that's following the Tacderan code.
                                       
-                                  <p id="p-tag-8" class="p-tags">My purpose in life is to be that inspiration and guide for others also. From these learned reference points, I am readily open to expand my values and build bridges where none have yet been built. When we collectively open our minds and embrace what makes each of us different, major shifts occur in law and society. Full awareness of our diversity allows empathy to dictate economic growth. These newly established connections allow us to stand in solidarity with the people we walk by everyday, not with fear but with friendly debate. Let’s invite new possibilities to build, write, and design the future together and for one another. I encourage you to connect with me and share your story or just say hello!</p>
+                              <p id="p-tag-8" class="p-tags">My purpose in life is to be that inspiration and guide for others also. From these learned reference points, I am readily open to expand my values and build bridges where none have yet been built. When we collectively open our minds and embrace what makes each of us different, major shifts occur in law and society. Full awareness of our diversity allows empathy to dictate economic growth. These newly established connections allow us to stand in solidarity with the people we walk by everyday, not with fear but with friendly debate. Let’s invite new possibilities to build, write, and design the future together and for one another. I encourage you to connect with me and share your story or just say hello!</p>
 
-                                  <p id="p-tag-8" class="p-tags">Be inspirational by being you. For the city, for the people, and for the world!</p>
-                                </li>
+                              <p id="p-tag-8" class="p-tags">Be inspirational by being you. For the city, for the people, and for the world!</p>
+                            </li>
 
-                              </ul>
+                          </ul>
 
-                            </div>
-                          </div>
                         </div>
-                        <h3 class="hover-button">PURPOSE</h3>
-                      </li>
-                      <li></li>
-                      <li></li>
+                      </div>
+                    </div>
+                    <h3 class="hover-button">PURPOSE</h3>
+                  </li>
+                  <li></li>
+                  <li></li>
 
-                    </ul>
-                  </div>
-                </div>
-
+                </ul>
               </div>
             </div>
+
+          </div>
+        </div>
 
         <div id="cert-slide" class="slider-item swiper-slide neo">
           <h1 class="row title-header neo wow fadeInDown"
@@ -199,16 +202,16 @@
           <div id="cert-container" class="swiper-wrapper neo">
 
             <% @skills.each_with_index do |skill, index| %>
-            <div class="box-section neo">
-              <div id="box-A<%= index+1 %>"
-                   class="container section-wrapper neo box box-A">
-                <%= image_tag "#{@s3}#{skill.icon}", class: "neo cert-icon" %>
+              <div class="box-section neo">
+                <div id="box-A<%= index+1 %>"
+                     class="container section-wrapper neo box box-A">
+                  <%= image_tag "#{@s3}#{skill.icon}", class: "neo cert-icon" %>
+                </div>
+                <div id="box-B<%= index+1 %>"
+                     class="container section-wrapper neo box box-B animated">
+                  <%= image_tag "#{@s3}#{skill.cert}", class: "neo cert-full" %>
+                </div>
               </div>
-              <div id="box-B<%= index+1 %>"
-                   class="container section-wrapper neo box box-B animated">
-                <%= image_tag "#{@s3}#{skill.cert}", class: "neo cert-full" %>
-              </div>
-            </div>
             <% end %>
 
           </div>
@@ -219,18 +222,18 @@
                data-wow-delay="0.45s">
             <div id="edu-container" class="swiper-wrapper">
 
-                <div class="slider-image-wrapper neo-image-wrapper">
-                  <%= image_tag "#{@s3}ggu-pride.png", id: "ggu-image" %>
-                </div>
+              <div class="slider-image-wrapper neo-image-wrapper">
+                <%= image_tag "#{@s3}ggu-pride.png", id: "ggu-image" %>
+              </div>
 
-                <div id="slider-content-container" class="ggu">
-                  <div id="slider-left" class="slider-item-content ggu">
-                    <h1>GOLDEN GATE UNIVERSITY</h1>
-                    <h2>Bachelor's Degree, B.S. Business</h2>
-                    <p>San Francisco, CA (US)</p>
-                  </div>
-                  <p>Aug 2013 - Aug 2018</p>
+              <div id="slider-content-container" class="ggu">
+                <div id="slider-left" class="slider-item-content ggu">
+                  <h1>GOLDEN GATE UNIVERSITY</h1>
+                  <h2>Bachelor's Degree, B.S. Business</h2>
+                  <p>San Francisco, CA (US)</p>
                 </div>
+                <p>Aug 2013 - Aug 2018</p>
+              </div>
 
             </div>
           </div>
@@ -244,7 +247,6 @@
           </h1><br>
 
           <div id="exp-container" class="swiper-wrapper neo">
-
             <div class="exp-item">
               <div class="exp-img-container">
                 <%= image_tag "#{@s3}clarins-logo.png", class: "exp-img", id: "clarins-img" %>
@@ -259,46 +261,72 @@
 
             <div class="exp-divider">
 
-            <div class="exp-item">
-              <div class="exp-img-container">
-                <%= image_tag "#{@s3}ccsf-logo.png", class: "exp-img" %>
+              <div class="exp-item">
+                <div class="exp-img-container">
+                  <%= image_tag "#{@s3}ccsf-logo.png", class: "exp-img" %>
+                </div>
+                <div class="exp-content">
+                  <h2>Office Assistant</h2>
+                  <strong>CITY COLLEGE OF SAN FRANCISCO</strong>
+                  <h3>San Francisco, CA</h3><br />
+                </div>
               </div>
-              <div class="exp-content">
-                <h2>Office Assistant</h2>
-                <strong>CITY COLLEGE OF SAN FRANCISCO</strong>
-                <h3>San Francisco, CA</h3><br />
+              <p>Worked multiple short stints supporting the Financial Aid, Nursing, and Accounting Departments in various office duties. Gained insight into the many department processes that function together to support the second largest community college in the U.S. Assisted in processing journal entries and contracts and in organizing of the filing system, eventually leading a necessary overhaul to completion. Was given additional responsibility in handling the disbursements, averaging $10k and above, of annual budget resources to various departments and faculty, using the Oracle Banner ERM system</p>
+
+              <div class="exp-divider">
+
+                <div class="exp-item">
+                  <div class="exp-img-container">
+                    <%= image_tag "#{@s3}bike-logo.png", class: "exp-img", id: "bike-logo" %>
+                  </div>
+                  <div class="exp-content">
+                    <h2>Bike Mechanic</h2>
+                    <strong>BIKE RELIGION</strong>
+                    <h3>Irvine, CA</h3><br />
+                  </div>
+                </div>
+                <p>Year stint in bicycle repair, maintenance, and sales at UC Irvine. Developed abilities in managing a queue of various bikes of different needs, requiring problem solving abilities at all levels. Developed not only skills in mechanical repair but gained much insight on optimization through the prioritization of tasks, serving the student body of UCI, which translated into programming code and developing business plans.</p>
+
               </div>
             </div>
-            <p>Worked multiple short stints supporting the Financial Aid, Nursing, and Accounting Departments in various office duties. Gained insight into the many department processes that function together to support the second largest community college in the U.S. Assisted in processing journal entries and contracts and in organizing of the filing system, eventually leading a necessary overhaul to completion. Was given additional responsibility in handling the disbursements, averaging $10k and above, of annual budget resources to various departments and faculty, using the Oracle Banner ERM system</p>
-
-            <div class="exp-divider">
-
-            <div class="exp-item">
-              <div class="exp-img-container">
-                <%= image_tag "#{@s3}bike-logo.png", class: "exp-img", id: "bike-logo" %>
-              </div>
-              <div class="exp-content">
-                <h2>Bike Mechanic</h2>
-                <strong>BIKE RELIGION</strong>
-                <h3>Irvine, CA</h3><br />
-              </div>
-            </div>
-            <p>Year stint in bicycle repair, maintenance, and sales at UC Irvine. Developed abilities in managing a queue of various bikes of different needs, requiring problem solving abilities at all levels. Developed not only skills in mechanical repair but gained much insight on optimization through the prioritization of tasks, serving the student body of UCI, which translated into programming code and developing business plans.</p>
 
           </div>
         </div>
+        <div class="slider-buttons">
+          <button class="swiper-button-prev neo">Prev</button>
+          <button class="swiper-button-next neo">Next</button>
+        </div>
+
+        <div class="swiper-pagination neo"></div>
+
 
       </div>
     </div>
-    <div class="slider-buttons">
-      <button class="swiper-button-prev neo">Prev</button>
-      <button class="swiper-button-next neo">Next</button>
-    </div>
-
-    <div class="swiper-pagination neo"></div>
-
-
   </div>
+        
+  <!-- conclusion -->
+  <div id="quote" class="s s4 forward conclusion">
+    <div class="container section-wrapper">
+      <div class="row">
+        <br><br>
+          
+        <h1 class="about wow fadeInLeft">
+            <strong>"My last name</strong><span> Tacderan </span><strong> comes from the Ilocano language, a Filipino dialect of the people from the northernmost tip of the Philippine Islands.</strong>.
+        </h1><br /><br />
+        
+        <h1 class="about wow fadeInLeft middle" data-wow-delay="5s">
+            <strong>Tacderan means</strong><span> to stand up</span><strong> And surely, I did</strong>
+        </h1><br />
+          
+        <h1 class="wow fadeInLeft end" data-wow-delay="8s">
+          -- that's following <i>the Tacderan code</i>."
+        </h1>
+          
+      </div>
+    </div>
+  </div>
+
+        
 </div>
 
 <%= javascript_pack_tag 'skills' %>

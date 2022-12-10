@@ -128,7 +128,8 @@ header .container {
 
 
 /* main content */
-.main .introduction {
+.main .introduction,
+.main .conclusion {
   height: 100vh;
   width: 100%;
   line-height: 1.1;
@@ -147,8 +148,20 @@ header .container {
   font-size: 5rem;
 }
 
-.main .introduction h1.about {
-  width: 130%;
+.main .introduction h1.about,
+.main .conclusion h1.about,
+.main .conclusion h1.end i {
+  width: 140%;
+  font-family: "Antic Slab", sans-serif !important;
+}
+
+.main .conclusion h1.end {
+  text-align: right;
+  font-size: 2rem;
+}
+
+.main .conclusion h1.about span {
+  padding-right: 1rem;
 }
 
 strong {
@@ -158,7 +171,7 @@ strong {
 }
 
 .main .s {
-  height: 110vh;
+  height: 100vh;
   width: 100%;
   padding-right: 5%;
   display: flex;
@@ -168,12 +181,14 @@ strong {
 }
 
 @media only screen and (max-width: 900px) {
-  .main .introduction {
+  .main .introduction,
+  .main .conclusion {
     padding-right: 36%;
     right: 1rem;
   }
 
-  .main .introduction h1.about {
+  .main .introduction h1.about,
+  .main .conclusion h1.about {
     font-size: 1.3rem;
   }
 }
@@ -186,12 +201,14 @@ strong {
     -webkit-overflow-scrolling: touch;
   }
     
-  .main .introduction {
+  .main .introduction,
+  .main .conclusion {
     right: 0;
     bottom: 3rem;
   }
     
-  .main .introduction h1.about {
+  .main .introduction h1.about,
+  .main .conclusion h1.about{
     font-size: 1.1rem;
   }
 
@@ -224,10 +241,10 @@ strong {
   }
 }
 
-@media only screen and (max-height: 600px) {
+@media only screen and (max-width: 600px) {
   .main .introduction {
     height: 120vh;
-    right: 2rem;
+    //right: 2rem;
     bottom: 4rem;
     align-items: center;
     justify-content: center;
@@ -236,11 +253,8 @@ strong {
   .main .introduction h1.about {
     font-size: 1.1rem;
   }
-    
-  .main .s {
-    height: 400px;
-  }
 }
+
 
 
 
