@@ -371,6 +371,10 @@ li#project-links {
   float: center;
 }
 
+.swiper-pagination.neo {
+  z-index: 100000;
+}
+
 .swiper-pagination-bullet {
   border-radius: 0;
   width: 8px;
