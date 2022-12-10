@@ -208,7 +208,7 @@ a.slider-image {
 }
 
 .slider-item-content {
-  padding: 1rem 2rem;
+  padding: 1rem 2rem 0;
   max-height: 400px;
   display: flex;
   flex-direction: column;
@@ -269,7 +269,7 @@ a.slider-image {
 
 .slide-swiper #slide-divider {
   border-bottom: 1px solid #889DB8;
-  margin: 0 auto;
+  margin: 1rem auto;
   width: 50%;
 }
 
