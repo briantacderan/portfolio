@@ -1,4 +1,4 @@
-# heroku restart && heroku pg:reset DATABASE_URL --confirm the-tacderan-code && heroku run rake db:migrate && heroku run rake db:seed
+# heroku restart && heroku pg:reset DATABASE_URL --confirm the-tacderan-code && heroku run rake db:migrate && heroku run rake db:seed && cd .. && cd heroes && heroku run ./target/release/diesel migration run && cd .. && cd bullseye-studio && heroku run rake db:migrate && heroku run rake db:seed && cd ~
 
 p1 = Project.create(title: "FM Fitness", type_of: "Customizable subscription service", main: "SwiftUI", main_framework: "Rails", description: "Personal Fitness website with Swift iOS app for appointments using Google Cloud, a simple Stripe API with user-friendly admin", image: "fm-fitness.svg", git_url: "https://github.com/briantacderan/fmfitness-ios", website_url: "https://fm-fitness.herokuapp.com", preview_file: "fitness-ex.gif", additional_info: "sm-img-land", id_tag: "fitness-project")
 
