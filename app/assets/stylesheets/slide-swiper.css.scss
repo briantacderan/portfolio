@@ -142,12 +142,14 @@ a.slider-image {
 }
 
 .slider-image-wrapper img#hoodcast-project,
-.slider-image-wrapper img#codecademy-jammy {
+.slider-image-wrapper img#codecademy-jammy,
+.slider-image-wrapper img#medium-heroes {
   padding: 3rem;
 }
 
 .slider-image-wrapper img#hoodcast-project,
-.slider-image-wrapper img#codecademy-goldmedal {
+.slider-image-wrapper img#codecademy-goldmedal,
+.slider-image-wrapper img#medium-heroes {
   padding: 8rem;
 }
 
@@ -163,13 +165,6 @@ a.slider-image {
 
 .slider-image-wrapper img#codecademy-unquote {
   padding: 6rem;
-}
-
-.slider-image-wrapper img#medium-heroes {
-  padding: 0;
-  max-width: 100%;
-  width: 100%;
-  height: 100%;
 }
 
 .slider-image-wrapper img#codecademy-bossing {
@@ -524,7 +519,7 @@ li#project-links {
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
     scrollbar-width: none;  /* Firefox */
   }
-    
+
   #cert-slide #cert-container::-webkit-scrollbar {
     display: none;
   }
@@ -603,7 +598,7 @@ li#project-links {
     justify-content: center;
     padding: 3rem 0.85rem;
   }
-    
+
   div#about-me-slide .slider-image-wrapper.projects {
     background-color: orange;
     width: 100%;
@@ -774,7 +769,7 @@ li#project-links {
   .slider-item-content#slider-right {
 
   }
-    
+
   .slider-item-content.ggu h2 {
     font-size: 1rem;
     margin-top: 0.5rem;
@@ -785,7 +780,7 @@ li#project-links {
   }
 
   .slider-image-wrapper img {
-      
+
   }
 
   .wrapper .icon {
@@ -821,18 +816,19 @@ li#project-links {
   .wrapper#slide-right-container ul.stack-list img {
     margin: 0.25rem 0 0.25rem 0.75rem;
   }
-    
+
   .slider-image-wrapper img#fitness-project,
   .slider-image-wrapper img#cookies-project,
   .slider-image-wrapper img#codecademy-unquote {
     max-width: 300px;
     padding: 3rem;
   }
-    
+
   .slider-image-wrapper img#fitness-project,
   .slider-image-wrapper img#hoodcast-project,
-  .slider-image-wrapper img#codecademy-goldmedal {
-    padding: 3.5rem;  
+  .slider-image-wrapper img#codecademy-goldmedal,
+  .slider-image-wrapper img#medium-heroes {
+    padding: 3.5rem;
   }
 
   .wrapper#slide-right-container ul.showcase-list h3.th {
@@ -1018,7 +1014,7 @@ li#project-links {
 }
 
 #about-me-slide #about-me-content p#intro {
-  width: 40%; 
+  width: 40%;
 }
 
 #about-me-slide div.about-me p#long-version {
@@ -1070,11 +1066,11 @@ li#project-links {
     overflow-x: hidden;
     margin-bottom: 0;
   }
-    
+
   #about-me-slide img.about-me {
     max-height: 100%;
   }
-    
+
   #about-me-slide h1 {
     margin-top: 0;
   }
@@ -1151,11 +1147,11 @@ li#project-links {
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
     scrollbar-width: none;  /* Firefox */
   }
-    
+
   #exp-slide::-webkit-scrollbar {
     display: none;
   }
-    
+
   #exp-container {
     direction: ltr;
     height: 600px;
@@ -1172,10 +1168,10 @@ li#project-links {
     overflow-y: scroll;
     overflow-x: hidden;
   }
-    
+
   #exp-container::-webkit-scrollbar {
     display: none;
-  }  
+  }
 
   #exp-container p {
     margin: 1.5rem;
@@ -1185,7 +1181,7 @@ li#project-links {
   #exp-container p:last-child {
     padding-bottom: 2rem;
   }
-    
+
   #cert-slide #cert-container {
     height: 75%;
     padding-top: 0;
