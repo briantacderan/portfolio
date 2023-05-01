@@ -22,6 +22,10 @@
   justify-content: flex-end;
 }
 
+div.icon-popups div.wrapper {
+  height: 400px;
+}
+
 .wrapper .icon {
   position: relative;
   background-color: #ffffff;
@@ -106,10 +110,10 @@
   background-color: #333333;
   color: #ffffff;
 }
-    
 
-    
-    
+
+
+
 /* website preview tooltip */
 .wrapper .preview {
   background-color: orange;
@@ -164,7 +168,7 @@
   background-color: #202325;
   color: white;
 }
-    
+
 
 
 
@@ -181,7 +185,7 @@
 }
 
 .wrapper .preview.specs .tooltip .project-about {
-  
+
 }
 
 .wrapper .preview.specs:hover .tooltip {
@@ -194,9 +198,9 @@
 }
 
 .wrapper .preview .tooltip img.stack-item {
-    
+
 }
-    
+
 
 
 
@@ -214,7 +218,7 @@ div#about-me-slide .wrapper .preview.specs:hover .tooltip {
 }
 
 div#about-me-slide .wrapper .preview.specs .tooltip .project-about {
-  
+
 }
 
 div#about-me-slide .wrapper .preview.specs:hover .tooltip {
@@ -234,7 +238,7 @@ div#about-me-slide .wrapper .preview.specs:hover .tooltip {
 }
 
 div#about-me-slide .wrapper .preview.specs .tooltip .project-about {
-  
+
 }
 
 div#about-me-slide .wrapper .preview.specs:hover .tooltip {
@@ -242,7 +246,7 @@ div#about-me-slide .wrapper .preview.specs:hover .tooltip {
 }
 
 
-    
+
 
 
 @media only screen and (max-width: 850px) {
@@ -251,16 +255,16 @@ div#about-me-slide .wrapper .preview.specs:hover .tooltip {
     height: 36px;
     box-shadow: 0 7.2px 7.2px rgba(0, 0, 0, 0.1);
   }
-    
+
   div#about-me-slide .wrapper .preview.specs .tooltip {
     width: 500px;
     height: 650px;
   }
-    
+
   div#about-me-slide .wrapper .preview.specs:hover .tooltip {
     top: -615px;
   }
-    
+
   div#about-me-slide .wrapper .preview.specs:hover .tooltip {
     left: -60px;
   }
@@ -282,7 +286,7 @@ div#about-me-slide .wrapper .preview.specs:hover .tooltip {
   .wrapper .preview.specs:hover .tooltip {
     left: -80px;
   }
-    
+
   div#about-me-slide .wrapper .preview.specs .tooltip {
     width: 350px;
   }
@@ -308,14 +312,14 @@ div#about-me-slide .wrapper .preview.specs:hover .tooltip {
 @media only screen and (max-width: 500px) {
   .wrapper .preview.specs .tooltip,
   .wrapper .preview.specs:hover .tooltip {
-    height: 405px;  
+    height: 405px;
   }
-    
+
   div#about-me-slide .wrapper .preview.specs .tooltip {
     width: 290px;
     height: 265px;
   }
-    
+
   .wrapper .preview.site .tooltip,
   .wrapper .preview.site:hover .tooltip {
     height: 260px;
@@ -333,7 +337,7 @@ div#about-me-slide .wrapper .preview.specs:hover .tooltip {
     top: 135px;
     margin-bottom: 0;
   }
-    
+
   .wrapper {
     padding-bottom: 0;
     justify-content: flex-end;
@@ -350,33 +354,33 @@ div#about-me-slide .wrapper .preview.specs:hover .tooltip {
   }
 
   .wrapper .icon-popups {
-    
+
   }
 
   .wrapper .preview.specs:hover .tooltip {
     left: -35px;
   }
-    
+
   div#about-me-slide .wrapper .preview.specs:hover .tooltip {
     left: -50px;
     top: -225px;
   }
-    
+
   div#about-me-slide div#slider-content-container {
     //overflow-y: scroll;
     height: 60%;
   }
-    
-  div#about-me-slide div#slider-content-container::-webkit-scrollbar { 
+
+  div#about-me-slide div#slider-content-container::-webkit-scrollbar {
     display: none;  /* Safari and Chrome */
   }
-    
+
   div#about-me-slide div.slider-image-wrapper.projects {
     height: 100%;
   }
-    
+
   div#about-me-slide div.slider-image-wrapper.projects img {
-    margin: 1rem;  
+    margin: 1rem;
   }
 }
 
@@ -396,7 +400,7 @@ div#about-me-slide .wrapper .preview.specs:hover .tooltip {
     height: 1.75rem;
     box-shadow: 0 7.2px 7.2px rgba(0, 0, 0, 0.1);
   }
-    
+
   .socials img {
     padding: 0 1.5rem;
   }

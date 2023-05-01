@@ -25,7 +25,7 @@
 
 .swiper-container.neo {
   // font-family: "Unbounded", sans-serif;
-  height: auto;
+  height: 100%;
   width: 100%;
   max-width: 655px;
   position: relative;
@@ -41,8 +41,10 @@
 }
 
 @media only screen and (min-width: 500px) {
+  div#swiper-0,
   div#swiper-1,
-  div#swiper-2 {
+  div#swiper-2,
+  div#swiper-3, {
     zoom: 75%;
   }
 }
@@ -762,6 +764,11 @@ li#project-links {
     right: 1rem;
     height: 400px;
     width: 110%;
+  }
+
+  .swiper-container.neo {
+    height: auto;
+    max-width: 275px;
   }
 
   #edu-slide .swiper-container {
