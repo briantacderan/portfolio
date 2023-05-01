@@ -40,6 +40,13 @@
   */
 }
 
+@media only screen and (min-width: 500px) {
+  div#swiper-1,
+  div#swiper-2 {
+    zoom: 75%;
+  }
+}
+
 .swiper-wrapper {
   width: 100%;
   height: 100%;
@@ -61,7 +68,7 @@
 
 div#about-me-slide .slider-image-wrapper.projects {
   background: url("https://tacderan-code.s3.us-west-1.amazonaws.com/images/sf-skyline.png") no-repeat center center;
-  background-size: 100%;
+  background-size: 115%;
   width: 100%;
   border-bottom: 8px solid black;
 }
