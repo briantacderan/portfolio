@@ -1,0 +1,55 @@
+<%= stylesheet_link_tag 'projects', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<div id="fm-project-view">
+
+  <div id="project-header">
+    <div class="header-content container">
+      <div class="text-container">
+        <h1 class="header">FM Fitness</h1>
+      </div>
+      <div class="img-container">
+        <%= image_tag "#{$s3}fitness.png", class: "header" %>
+      </div>
+    </div>
+  </div>
+
+  <div id="project-desc">
+    <div class="desc-container container">
+      <div class="main-points">
+        <h2 class="header">iOS Application</h2>
+        <ul>
+          <li>Google Firebase DB&Auth</li>
+          <li>Client PF Customization</li>
+          <li>UX Appointment Rsrv.</li>
+          <li>Modern iOS Design&Features</li>
+          <li>Simple Admin Control</li>
+          <li>Stripe API Payment System</li>
+        </ul>
+        <br>
+        <%= link_to "https://github.com/briantacderan/fmfitness-ios" do %>
+          <span>Go to GitHub</span>
+        <% end %>
+      </div>
+      <div class="description">
+        <p>Personal Fitness application built with Swift iOS for administration appointment scheduling. Database connected to Google Cloud. Created with user-friendly payment subscription capability with Stripe API.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="project-main">
+    <div class="main-container container">
+
+      <%= image_tag "#{$s3}fitness-center.gif", id: "gif", class: "primary" %>
+      <%= image_tag "#{$s3}iphone-frame.png", id: "frame", class: "primary" %>
+
+    </div>
+    <div class="extra-content">
+      <div class="extra-container container">
+        <%= image_tag "#{$s3}fitness-client.png", class: "secondary" %>
+        <%= image_tag "#{$s3}fitness-dash.png", class: "secondary" %>
+        <%= image_tag "#{$s3}fitness-admin.png", class: "secondary" %>
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>The Tacderan Code</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0" />
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <!-- universal -->
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Castoro:ital@0;1&family=Kaushan+Script&family=Orbitron:wght@900&family=Permanent+Marker&family=Lexend+Zetta:wght@200;300;400;900&family=Fugaz+One&family=Alfa+Slab+One&family=Major+Mono+Display&family=Russo+One&display=swap" rel="stylesheet" />
+
+    <!-- scroll reveal -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/animatecss/3.5.2/animate.min.css" />
+
+    <!-- slide swiper -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
+
+    <%= favicon_link_tag asset_path('https://tacderan-code.s3.us-west-1.amazonaws.com/images/new/bt-logo.png') %>
+
+  </head>
+
+  <body>
+
+    <!-- jquery -->
+    <script src="//cdn.jsdelivr.net/jquery/2.2.0/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/jquery.sidr/2.2.1/jquery.sidr.min.js"></script>
+
+    <header id="scroll-top">
+      <div class="content">
+
+        <%= link_to root_path, class: "desktop" do %>
+          <h1>BRIAN TACDERAN</h1>
+        <% end %>
+
+        <nav class="desktop">
+          <ul>
+            <li id="heart">
+              <%= link_to "https://github.com/briantacderan" do %>
+                <%= image_tag "#{$s3}bt-logo.png", id: "heart", class: "icon" %>
+              <% end %>
+            </li>
+          </ul>
+        </nav>
+
+        <nav class="mobile">
+          <ul>
+            <li id="heart">
+              <%= link_to "https://github.com/briantacderan" do %>
+                <%= image_tag "#{$s3}bt-logo.png", id: "heart", class: "icon" %>
+              <% end %>
+            </li>
+          </ul>
+        </nav>
+
+      </div>
+    </header>
+
+    <%= yield %>
+
+    <!-- slide swiper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
+    <%= javascript_pack_tag 'swiper' %>
+
+  </body>
+</html>
