@@ -1,0 +1,234 @@
+header h1 {
+  color: black;
+}
+
+div#hc-project-view {
+  position: absolute;
+  background-color: #f1f1f1;
+  // color: #F4C420;
+  height: 100%;
+  width: 100vw;
+  overflow-x: hidden;
+
+  #project-header {
+    height: 700px;
+    width: 100vw;
+
+    .header-content  {
+      padding-top: 10vh;
+      display: flex;
+      align-items: stretch;
+      justify-content: space-around;
+      flex-flow: row;
+
+      .text-container {
+        //width: 20vw;
+        padding-right: 10vw;
+        padding-top: 15rem;
+        z-index: 1;
+        flex-grow: 1;
+
+        h1 {
+          font-family: 'Alfa Slab One', sans-serif;
+          font-size: 6rem;
+          text-align: left;
+          text-shadow: -1px 1px 1px rgba(0,0,0,0.81),
+                       -2px 2px 2px rgba(0,0,0,0.81),
+                       -4px 4px 4px rgba(0,0,0,0.81);
+        }
+      }
+
+      .img-container  {
+        width: 60%;
+        height: 0;
+        padding-top: calc(100vh * (100 / 200));
+        overflow-x: hidden;
+        flex-grow: 4;
+
+        img {
+          position: absolute;
+          top: 10%;
+          width: 70%;
+          height: 45%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+
+
+
+
+
+  #project-desc {
+    font-family: 'Castoro', sans-serif;
+    height: 400px;
+
+    .desc-container {
+      display: flex;
+      width: 700px;
+      max-width: 800px;
+      margin: 0 auto;
+
+      .main-points {
+        width: 350px;
+
+        h2 {
+          font-family: 'Major Mono Display', sans-serif;
+          font-size: 1;
+        }
+
+        li {
+          line-height: 1.5rem;
+        }
+
+        span {
+          top: 3rem;
+          color: #F4C420;
+          font-family: 'Alfa Slab One', sans-serif;
+          text-shadow: -1px 1px 1px rgba(0,0,0,0.81),
+                       -2px 2px 2px rgba(0,0,0,0.81),
+                       -4px 4px 4px rgba(0,0,0,0.81);
+        }
+
+        span:hover {
+          color: #ccc;
+        }
+      }
+
+      .description {
+        margin-left: 2rem;
+        font-size: 1.25rem;
+        line-height: 2rem;
+
+        p {
+          color: #ccc;
+          margin-top: 1.5rem;
+          width: 450px;
+        }
+
+        span {
+          font-family: 'Alfa Slab One', sans-serif;
+        }
+
+        span:hover {
+          color: #F4C420;
+        }
+      }
+    }
+  }
+
+
+
+
+
+  #project-main {
+    .main-container {
+      width: 100vw;
+
+      img {
+        width: 100%;
+      }
+
+      img#widget {
+        padding: 5vw 20vw;
+      }
+    }
+
+    .extra-content {
+      background-color: white;
+      width: 100vw;
+
+      .extra-container {
+        display: flex;
+        flex-direction: column;
+        padding-top: 100px;
+
+        img {
+          background-color: #ccc;
+          width: 60%;
+          min-width: 700px;
+          padding: 60px 0 0;
+          margin: 60px auto 0;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 800px) {
+  div#hc-project-view {
+    #project-header {
+      height: 500px;
+
+      .header-content {
+        .text-container {
+          width: 500px;
+
+          h1 {
+            font-size: 3.5rem;
+          }
+        }
+
+        .img-container img {
+          height: 30%;
+        }
+      }
+    }
+
+    #project-desc {
+      height: 320px;
+
+      .desc-container {
+        margin-left: 25vw;
+
+        .main-points {
+          width: 350px;
+
+          h2 {
+            font-size: 0.75rem;
+          }
+        }
+
+        .description {
+          display: none;
+        }
+      }
+    }
+
+    #project-main {
+      .main-container {
+        img#widget {
+          padding: 5vw;
+        }
+      }
+
+      .extra-content {
+        background-color: white;
+        width: 100vw;
+
+        .extra-container {
+          display: flex;
+          flex-direction: column;
+          padding-top: 0;
+
+          img {
+            background-color: #ccc;
+            width: 100vw;
+            min-width: 0;
+            padding: 0;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}

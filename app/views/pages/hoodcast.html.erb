@@ -1,0 +1,54 @@
+<%= stylesheet_link_tag 'hoodcast', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<div id="hc-project-view">
+
+  <div id="project-header">
+    <div class="header-content container">
+      <div class="img-container">
+        <%= image_tag "#{$s3}hoodcast.png", class: "header" %>
+      </div>
+      <div class="text-container">
+        <h1 class="header">Hoodcast</h1>
+      </div>
+    </div>
+  </div>
+
+  <div id="project-desc">
+    <div class="desc-container container">
+      <div class="main-points">
+        <h2 class="header">Financial Data Tool</h2>
+        <ul>
+          <li>Simple Flask web application </li>
+          <li>BeautifulSoup webscraping</li>
+          <li>SEC EDGAR statements</li>
+          <li>Yahoo! Stocks datasets</li>
+          <li>Hoodflex Python Package</li>
+          <li>MatPlotLib visualization</li>
+          <li>Financial metrics</li>
+        </ul>
+        <br>
+        <%= link_to "https://github.com/briantacderan/hoodcast-gold" do %>
+          <span>Go to GitHub</span>
+        <% end %>
+      </div>
+      <div class="description">
+        <p>Scrapes SEC EDGAR for company report datasets, styled into easy-to-read sheets. Demystifies complicated financial statements for any investor and provides useful ratios for a quick evaluation of a company's leverage in realtime. Created along with <%= link_to "https://github.com/briantacderan/hoodflex" do %><span>Hoodflex</span><% end %>, a Python package where the webscraping and data handling code is housed. Can also get stock information from Yahoo! Stocks and give quick predictions on stock prices in charts with MatPlotLib.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="project-main">
+    <div class="main-container container">
+      <%= image_tag "#{$s3}hoodcast-web.png", id: "web", class: "primary" %>
+      <%= image_tag "#{$s3}hoodcast_widget.png", id: "widget", class: "primary" %>
+    </div>
+    <div class="extra-content">
+      <div class="extra-container container">
+        <%= image_tag "#{$s3}hoodcast-web2.png", class: "secondary" %>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<%= javascript_pack_tag 'hoodcast', 'data-turbolinks-track': 'reload' %>

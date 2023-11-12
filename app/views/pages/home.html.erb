@@ -89,7 +89,7 @@
         </div>
 
         <div class="project-img image-one">
-          <%= link_to projectA_path, class: "project-link" do %>
+          <%= link_to fmfitness_path, class: "project-link" do %>
             <%= image_tag "#{$s3}fitness.png", class: "pImg oc-obs" %>
           <% end %>
         </div>
@@ -103,7 +103,9 @@
         </div>
 
         <div class="project-img image-four">
-          <%= image_tag "#{$s3}hoodcast.png", class: "pImg space-trash" %>
+          <%= link_to hoodcast_path, class: "project-link" do %>
+            <%= image_tag "#{$s3}hoodcast.png", class: "pImg space-trash" %>
+          <% end %>
         </div>
 
       </section>
