@@ -55,15 +55,15 @@ group :test do
   gem 'capybara', '>= 3.26'
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
-  gem 'webdrivers'
+  gem 'webdrivers', "= 5.3.0"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Stripe API payment gateway and dependencies
-gem 'stripe', '~> 5.35.0'
-gem 'devise', '~> 4.8.0'
+# gem 'stripe', '~> 5.35.0'
+# gem 'devise', '~> 4.8.0'
 gem 'dotenv-rails', :groups => [:development, :test]
 
 # Amazon S3 images
@@ -71,6 +71,3 @@ gem 'carrierwave', '~> 2.0'
 
 # Fixed protocol initialization errors
 gem "net-http"
-
-# gsap javascript
-## gem 'greensock-rails', '~> 1.20', '>= 1.20.4.0'
