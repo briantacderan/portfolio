@@ -5,13 +5,18 @@ import ScrollToPlugin from "gsap/ScrollToPlugin";
 // import SplitText from "gsap-trial/SplitText";
 
 
-window.addEventListener( "pageshow", function ( event ) {
+window.addEventListener("pageshow", function(event) {
+  var count = 0;
   var historyTraversal = !!window.performance && window.performance.navigation.type == 2;
-  if ( historyTraversal ) {
+
+  if((historyTraversal) || (count==1)) {
     // Handle page restore.
     window.location.reload();
     console.log('Page reloaded!');
   }
+
+  count++;
+  console.log('First pageload');
 });
 
 document.addEventListener("turbolinks:load", function() {
