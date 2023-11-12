@@ -4,21 +4,6 @@ import ScrollToPlugin from "gsap/ScrollToPlugin";
 // import ScrollSmoother from "gsap-trial/ScrollSmoother";
 // import SplitText from "gsap-trial/SplitText";
 
-
-window.addEventListener("pageshow", function(event) {
-  var count = 0;
-  var historyTraversal = !!window.performance && window.performance.navigation.type == 2;
-
-  if((historyTraversal) || (count==1)) {
-    // Handle page restore.
-    window.location.reload();
-    console.log('Page reloaded!');
-  }
-
-  count++;
-  console.log('First pageload');
-});
-
 document.addEventListener("turbolinks:load", function() {
 
   gsap.registerPlugin(ScrollTrigger);
@@ -26,7 +11,8 @@ document.addEventListener("turbolinks:load", function() {
   // gsap.registerPlugin(ScrollSmoother);
   // gsap.registerPlugin(SplitText);
 
-  // console.clear();
+  console.clear();
+  console.log('Page reloaded!');
 
   const tl2 = gsap.timeline({
     scrollTrigger: {
