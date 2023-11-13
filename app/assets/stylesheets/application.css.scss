@@ -80,6 +80,12 @@ video {
   min-width: 100vw;
 }
 
+.img-container,
+.project-img,
+.image-container {
+  overflow: hidden;
+}
+
 
 
 /* Header */

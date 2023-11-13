@@ -10,9 +10,6 @@ div#fm-project-view {
   width: 100vw;
   overflow-x: hidden;
 
-
-
-
   #project-header {
     height: 700px;
     width: 100vw;
@@ -28,9 +25,14 @@ div#fm-project-view {
         z-index: 1;
 
         h1 {
-          font-family: 'Major Mono Display', sans-serif;
+          font-family: 'Alfa Slab One', sans-serif;
           font-size: 6rem;
+          letter-spacing: 0.5rem;
           text-align: right;
+          color: #ccc;
+          text-shadow: -1px 1px 1px rgba(0,0,0,0.81),
+                       -2px 2px 2px rgba(0,0,0,0.81),
+                       -4px 4px 4px rgba(0,0,0,0.81);
         }
       }
 
@@ -63,16 +65,16 @@ div#fm-project-view {
 
     .desc-container {
       display: flex;
-      width: 650px;
-      max-width: 750px;
+      width: 700px;
+      max-width: 800px;
       margin: 0 auto;
 
       .main-points {
-        width: 300px;
+        width: 350px;
 
         h2 {
           font-family: 'Major Mono Display', sans-serif;
-          font-size: 1;
+          font-size: 1rem;
         }
 
         li {
@@ -83,18 +85,24 @@ div#fm-project-view {
           font-family: 'Alfa Slab One', sans-serif;
           top: 3rem;
           color: #D1EB1D;
+          padding-left: 1rem;
+        }
+
+        span:hover {
+          color: #ccc;
         }
       }
     }
 
     .description {
       margin-left: 2rem;
-      margin-top: 2rem;
+      font-size: 1.25rem;
+      line-height: 2rem;
 
       p {
-        color: #ccc;
-        font-size: 1.25rem;
-        line-height: 2rem;
+        color: white;
+        margin-top: 2rem;
+        width: 450px;
       }
     }
   }
@@ -109,7 +117,7 @@ div#fm-project-view {
       width: 100vw;
       height: 100vh;
       min-height: 880px;
-      background-color: #393900;
+      background-color: #3F4800;
 
       img {
         position: absolute;

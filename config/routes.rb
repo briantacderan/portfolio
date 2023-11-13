@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   root 'pages#home'
   get 'fmfitness' => 'pages#fmfitness'
   get 'hoodcast' => 'pages#hoodcast'
+  get 'rellescookies' => 'pages#cookieshop'
 end
