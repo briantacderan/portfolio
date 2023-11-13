@@ -95,7 +95,9 @@
         </div>
 
         <div class="project-img image-two">
-          <%= image_tag "#{$s3}cookies-bump.png", class: "pImg space-trash" %>
+          <%= link_to rellescookies_path, class: "project-link" do %>
+            <%= image_tag "#{$s3}cookies-bump.png", class: "pImg space-trash" %>
+          <% end %>
         </div>
 
         <div class="project-img image-three">

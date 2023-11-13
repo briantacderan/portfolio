@@ -48,10 +48,12 @@ div#parallax-intro div.about {
 
 div#parallax-intro div.about h1 {
   font-family: 'Major Mono Display', sans-serif;
+  font-size: 1.25rem;
   text-align: left;
-  width: 75%;
+  letter-spacing: 0;
+  line-height: 1.2;
+  width: 90%;
   margin: 0 auto;
-  z-index: 100;
 }
 
 div#parallax-intro div.projects h1 {
@@ -79,6 +81,7 @@ div#parallax-intro div.about p {
   font-family: 'Major Mono Display', sans-serif;
   font-size: 1rem;
   margin-bottom: 0.5rem;
+  line-height: 1.3rem;
   color: rgba(78,152,21,1);
 }
 
@@ -325,7 +328,13 @@ div#parallax-intro div.projects #mission p {
   line-height: 1.25rem;
 }
 
-
+@media only screen and (min-width: 550px) {
+  div#parallax-intro div.about h1 {
+    font-size: 2.75rem;
+    letter-spacing: -0.4rem;
+    line-height: 1.2;
+  }
+}
 
 @media only screen and (min-width: 700px) {
   div.projects .container {
@@ -382,7 +391,7 @@ div#parallax-intro div.projects #mission p {
 
 @media only screen and (min-width: 1300px) {
   div#parallax-intro div.about h1 {
-    font-size: 4.5rem;
+    font-size: 4rem;
   }
 
   div#parallax-intro div.about h2 {
