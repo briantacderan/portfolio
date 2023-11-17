@@ -199,10 +199,4 @@ document.addEventListener("turbolinks:load", function() {
     })
   });
 
-
-
-  // page animation
-
-
-
 });
