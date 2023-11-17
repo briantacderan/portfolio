@@ -22,9 +22,25 @@ time, mark, audio, video {
   font: inherit;
 }
 
+html {
+  font-family: 'Permanent Marker', sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #4A4A4A;
+  background-color: #F1F1F1;
+  scroll-behavior: smooth;
+
+  //mobile
+  overflow-x: hidden;
+}
+
 body {
   line-height: 1;
   overflow-x: hidden;
+
+  // mobile
+  margin: 0;
+  padding: 0;
 }
 
 ol, ul {
@@ -45,15 +61,6 @@ a {
 * {
   box-sizing: border-box;
   /* border: solid 1px red !important; */
-}
-
-html {
-  font-family: 'Permanent Marker', sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  color: #4A4A4A;
-  background-color: #F1F1F1;
-  scroll-behavior: smooth;
 }
 
 #main-content {
@@ -422,7 +429,7 @@ html, body {
 
 html.page-loaded,
 body.page-loaded {
-  overflow: scroll;
+  overflow-y: scroll;
 }
 
 div#loading-page {

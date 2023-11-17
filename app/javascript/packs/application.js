@@ -9,6 +9,18 @@ ActiveStorage.start()
 
 document.addEventListener("turbolinks:load", function() {
 
+  // for no scroll at all
+  /* function preventMotion(event) {
+    window.scrollTo(0, 0);
+    event.preventDefault();
+    event.stopPropagation();
+  }
+
+  window.addEventListener("scroll", preventMotion, false);
+  window.addEventListener("touchmove", preventMotion, {
+    passive: false
+  }); */
+
   window.onscroll = function() {
     const nav = document.getElementById('scroll-top');
     if (window.pageYOffset > 750) {
