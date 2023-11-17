@@ -8,6 +8,7 @@
     "@rails/webpacker": "5.4.4",
     "gsap": "^3.12.2",
     "gsap-trial": "^3.12.2",
+    "jquery": "^3.7.1",
     "turbolinks": "^5.2.0",
     "webpack": "^4.46.0",
     "webpack-cli": "^3.3.12",

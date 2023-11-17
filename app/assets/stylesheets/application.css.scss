@@ -409,3 +409,122 @@ header .icon#heart {
 .wow {
   visibility: hidden;
 }
+
+
+
+
+
+
+// Loading page
+html, body {
+  overflow: hidden;
+}
+
+html.page-loaded,
+body.page-loaded {
+  overflow: scroll;
+}
+
+div#loading-page {
+  position: absolute;
+  background: rgba(0,0,0,1);
+  height: 100vh;
+  width: 100vw;
+  z-index: 100;
+  overflow-y: hidden;
+
+  -webkit-transition: all 1s ease-out;
+  -moz-transition: all 1s ease-out;
+  -o-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+
+  svg {
+    opacity: 1;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+  }
+}
+
+div#loading-page.page-loaded {
+  background: rgba(0,0,0,0);
+  overflow-y: scroll;
+
+  svg {
+    opacity: 0;
+  }
+}
+
+div#loading-page.page-loaded.undisplay {
+  height: 0;
+  width: 0;
+  display: none;
+  visibility: hidden;
+}
+
+
+.mv-svg-title{
+  left:50%;
+  max-width:80%;
+  position:absolute;
+  top:50%;
+  transform:translate(-50%, -50%);
+  width:560px;
+
+  .text-path {
+    display:block;
+    fill:#fff;
+    fill-opacity:0;
+    stroke:url(#gradation-1);
+    stroke-linecap:round;
+    stroke-linejoin:round;
+  }
+
+  .text-path {
+    $nth:1;
+    $delay:0;
+
+    @while $nth <= 10 {
+      &:nth-child(#{$nth}) {
+        animation:dash1 2.0s infinite linear forwards;
+        animation-delay:#{$delay}s;
+        stroke-dasharray:800;
+        stroke-dashoffset:800;
+      }
+
+      $nth:$nth+1;
+      $delay:$delay+0.1;
+    }
+
+    $nth:11;
+    $delay:0;
+
+    @while $nth <= 36 {
+      &:nth-child(#{$nth}) {
+        animation:dash1_en 2.0s linear forwards;
+        animation-delay:#{$delay}s;
+        stroke-dasharray:200;
+      }
+
+      $nth:$nth+1;
+      $delay:$delay+0.04;
+    }
+  }
+
+  @keyframes dash1 {
+       0%{ stroke-dashoffset:800; stroke-width:3px; }
+      50%{ stroke-dashoffset:1600; stroke-width:0.1px; }
+    50.1%{ stroke-dashoffset:800; }
+      80%{ stroke-width:2px; fill:#d2b; fill-opacity:0; }
+     100%{ stroke-dashoffset:0; stroke:#fff; stroke-width:0; fill:#fff; fill-opacity:1; stroke-dasharray:400; }
+  }
+
+  @keyframes dash1_en{
+       0%{ stroke-dashoffset:200; stroke-width:2px; }
+      50%{ stroke-dashoffset:400; stroke-width:0.1px; }
+    50.1%{ stroke-dashoffset:200; }
+      80%{ stroke-width:1px; fill:#d2b; fill-opacity:0; }
+     100%{ stroke-dashoffset:0; stroke:#fff; stroke-width:0; fill:#fff; fill-opacity:1; }
+  }
+}

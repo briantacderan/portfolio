@@ -70,4 +70,4 @@ gem 'dotenv-rails', :groups => [:development, :test]
 gem 'carrierwave', '~> 2.0'
 
 # Fixed protocol initialization errors
-gem "net-http"
+gem 'net-http'

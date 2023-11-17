@@ -6,26 +6,27 @@
     <div class="intro scrollDist"></div>
 
     <div class="intro main">
-      <svg viewBox="0 0 1500 6000" xmlns="http://www.w3.org/2000/svg">
+      <svg viewBox="0 0 1500 6000"
+           xmlns="http://www.w3.org/2000/svg">
         <mask id="m">
           <g class="mtn-front">
             <rect fill="#fff" width="100%" height="1501" y="1499"/>
-            <image xlink:href="https://tacderan-code.s3.us-west-1.amazonaws.com/images/new/sf-front-mtn-full.png" width="1500" height="1500" />
+            <image fetchpriority="high" xlink:href="https://tacderan-code.s3.us-west-1.amazonaws.com/images/new/sf-front-mtn-full.png" width="1500" height="1500" />
             <!--animate attributeName="opacity" from="0" to="1" begin="0s" dur="1s" fill="freeze"></animate-->
           </g>
         </mask>
 
-        <image class="arrow" xlink:href="https://tacderan-code.s3.us-west-1.amazonaws.com/images/new/down-arrow.png" width="50px" height="50px" x="1250" y="850"/>
+        <image fetchpriority="high" class="arrow" xlink:href="https://tacderan-code.s3.us-west-1.amazonaws.com/images/new/down-arrow.png" width="50px" height="50px" x="1250" y="850"/>
 
-        <image class="bkg-skyline" xlink:href="https://tacderan-code.s3.us-west-1.amazonaws.com/images/new/sf-skyline-shadow.png" width="1500" height="1000" />
-        <image class="mtn-left" xlink:href="https://tacderan-code.s3.us-west-1.amazonaws.com/images/new/sf-mtn-left.png" width="1500" height="1000"/>
-        <image class="baywater" xlink:href="https://tacderan-code.s3.us-west-1.amazonaws.com/images/new/sf-baywater.png" width="1500" height="1000"/>
-        <image class="bridge" xlink:href="https://tacderan-code.s3.us-west-1.amazonaws.com/images/new/sf-bridge.png" width="1500" height="1000"/>
-        <image class="mtn-full" xlink:href="https://tacderan-code.s3.us-west-1.amazonaws.com/images/new/sf-front-mtn-full.png" width="1500" height="1000"/>
+        <image fetchpriority="high" class="bkg-skyline" xlink:href="https://tacderan-code.s3.us-west-1.amazonaws.com/images/new/sf-skyline-shadow.png" width="1500" height="1000" />
+        <image fetchpriority="high" class="mtn-left" xlink:href="https://tacderan-code.s3.us-west-1.amazonaws.com/images/new/sf-mtn-left.png" width="1500" height="1000"/>
+        <image fetchpriority="high" class="baywater" xlink:href="https://tacderan-code.s3.us-west-1.amazonaws.com/images/new/sf-baywater.png" width="1500" height="1000"/>
+        <image fetchpriority="high" class="bridge" xlink:href="https://tacderan-code.s3.us-west-1.amazonaws.com/images/new/sf-bridge.png" width="1500" height="1000"/>
+        <image fetchpriority="high" class="mtn-full" xlink:href="https://tacderan-code.s3.us-west-1.amazonaws.com/images/new/sf-front-mtn-full.png" width="1500" height="1000"/>
 
         <text class="think" fill="#424242" x="600" y="800">THINK. CREATE.</text>
 
-        <image class="mtn-front mtn-front2" xlink:href="https://tacderan-code.s3.us-west-1.amazonaws.com/images/new/sf-front-mtn-white.png" width="100%" height="100%"/>
+        <image fetchpriority="high" class="mtn-front mtn-front2" xlink:href="https://tacderan-code.s3.us-west-1.amazonaws.com/images/new/sf-front-mtn-white.png" width="100%" height="100%"/>
 
         <g mask="url(#m)">
           <rect fill="#fff" width="100%" height="100%" />
@@ -100,7 +101,7 @@
           <% end %>
         </div>
 
-        <div class="project-img image-three">
+        <div class="project-img image-three" fetchpriority="low">
           <%= image_tag "#{$s3}bullseye-neon.png", id: "frame", class: "pImg oc-obs" %>
         </div>
 
