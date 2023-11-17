@@ -4,12 +4,18 @@
   <head>
     <title>The Tacderan Code</title>
     <meta name="viewport" content="user-scalable=no" />
-    <meta name="turbolinks-visit-control" content="reload">
+    <meta name="turbolinks-visit-control" content="reload" />
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Castoro:ital@0;1&family=Kaushan+Script&family=Orbitron:wght@900&family=Permanent+Marker&family=Lexend+Zetta:wght@200;300;400;900&family=Fugaz+One&family=Alfa+Slab+One&family=Major+Mono+Display&family=Russo+One&display=swap" rel="stylesheet" />
+
     <!-- universal -->
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
     <!-- jquery -->
     <script src="//cdn.jsdelivr.net/jquery/2.2.0/jquery.min.js"></script>
     <script src="//cdn.jsdelivr.net/jquery.sidr/2.2.1/jquery.sidr.min.js"></script>
@@ -18,18 +24,13 @@
     <!-- javascript universal -->
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-    <!-- google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Castoro:ital@0;1&family=Kaushan+Script&family=Orbitron:wght@900&family=Permanent+Marker&family=Lexend+Zetta:wght@200;300;400;900&family=Fugaz+One&family=Alfa+Slab+One&family=Major+Mono+Display&family=Russo+One&display=swap" rel="stylesheet" />
-
     <!-- scroll reveal -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/animatecss/3.5.2/animate.min.css" />
 
     <!-- slide swiper -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
 
-    <%= favicon_link_tag asset_path('https://tacderan-code.s3.us-west-1.amazonaws.com/images/new/bt-logo.png') %>
+    <%= favicon_link_tag asset_path("#{$s3}bt-logo.png") %>
 
   </head>
 
@@ -136,4 +137,5 @@
     <%= yield %>
 
   </body>
+
 </html>

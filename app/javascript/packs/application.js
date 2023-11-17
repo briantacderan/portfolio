@@ -53,6 +53,10 @@ document.addEventListener("turbolinks:load", function() {
   });
   window.wow.init();
 
+
+
+  // Page Loading animation
+
   setTimeout(() => {
 
     $('body').imagesLoaded(function() {
@@ -62,10 +66,11 @@ document.addEventListener("turbolinks:load", function() {
       document.querySelector('body').classList.add('page-loaded');
 
       setTimeout(() => {
+        // removes loading page container to reverse y offset
         document.getElementById('loading-page').classList.add('undisplay');
       }, '1000');
 
-      console.clear();
+      // console.clear();
       console.log('SVG loaded!');
     });
 
