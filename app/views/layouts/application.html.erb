@@ -36,36 +36,6 @@
 
   <body>
 
-    <header id="scroll-top">
-      <div class="content">
-
-        <%= link_to root_path, class: "desktop" do %>
-          <h1>BRIAN TACDERAN</h1>
-        <% end %>
-
-        <nav class="desktop">
-          <ul>
-            <li id="heart">
-              <%= link_to "https://github.com/briantacderan" do %>
-                <%= image_tag "#{$s3}bt-logo.png", id: "heart", class: "icon" %>
-              <% end %>
-            </li>
-          </ul>
-        </nav>
-
-        <nav class="mobile">
-          <ul>
-            <li id="heart">
-              <%= link_to "https://github.com/briantacderan" do %>
-                <%= image_tag "#{$s3}bt-logo.png", id: "heart", class: "icon" %>
-              <% end %>
-            </li>
-          </ul>
-        </nav>
-
-      </div>
-    </header>
-
     <div id="loading-page">
       <svg width="2300px"
        height="2400px"
@@ -133,6 +103,36 @@
         </g>
       </svg>
     </div>
+
+    <header id="scroll-top">
+      <div class="content">
+
+        <%= link_to root_path, class: "desktop" do %>
+          <h1>BRIAN TACDERAN</h1>
+        <% end %>
+
+        <nav class="desktop">
+          <ul>
+            <li id="heart">
+              <%= link_to "https://github.com/briantacderan" do %>
+                <%= image_tag "#{$s3}bt-logo.png", id: "heart", class: "icon" %>
+              <% end %>
+            </li>
+          </ul>
+        </nav>
+
+        <nav class="mobile">
+          <ul>
+            <li id="heart">
+              <%= link_to "https://github.com/briantacderan" do %>
+                <%= image_tag "#{$s3}bt-logo.png", id: "heart", class: "icon" %>
+              <% end %>
+            </li>
+          </ul>
+        </nav>
+
+      </div>
+    </header>
 
     <%= yield %>
 

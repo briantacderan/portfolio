@@ -47,11 +47,10 @@ document.addEventListener("turbolinks:load", function() {
     `${aws}sf-front-mtn-white.png`
   ])
 
-  const WOW = require('wowjs');
-  window.wow = new WOW.WOW({
-    live: false
-  });
-  window.wow.init();
+
+
+
+
 
 
 

@@ -1,18 +1,15 @@
 import gsap from "gsap"
 import ScrollTrigger from "gsap/ScrollTrigger"
 import ScrollToPlugin from "gsap/ScrollToPlugin"
-// import ScrollSmoother from "gsap-trial/ScrollSmoother"
-// import SplitText from "gsap-trial/SplitText"
+import Lenis from "@studio-freight/lenis"
+
+gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollToPlugin);
 
 document.addEventListener("turbolinks:load", function() {
 
-
-  gsap.registerPlugin(ScrollTrigger);
-  gsap.registerPlugin(ScrollToPlugin);
-  // gsap.registerPlugin(ScrollSmoother);
-  // gsap.registerPlugin(SplitText);
-
   const tl2 = gsap.timeline({
+    paused: true,
     scrollTrigger: {
       scrub: 0,
       trigger: '.scrollPist',
@@ -22,6 +19,7 @@ document.addEventListener("turbolinks:load", function() {
   })
 
   const tl = gsap.timeline({
+    paused: true,
     scrollTrigger: {
       scrub: 0,
       trigger: '.scrollDist',
@@ -63,7 +61,7 @@ document.addEventListener("turbolinks:load", function() {
       rotationY: 36,
       opacity: 0,
       duration: 1,
-      yPercent: -50,
+      yPercent: -100, // -50,
       stagger: 0.1,
       ease:"power4.easeOut",
       scrollTrigger: {
@@ -200,3 +198,26 @@ document.addEventListener("turbolinks:load", function() {
   });
 
 });
+
+setTimeout(() => {
+  const lenis = new Lenis({
+    duration: 1.2,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+  });
+
+  function raf(time) {
+    lenis.raf(time);
+    ScrollTrigger.update();
+    requestAnimationFrame(raf);
+  }
+  requestAnimationFrame(raf);
+}, '3500');
+
+document.addEventListener("turbolinks:before-cache", function() {
+  gsap.scrollTo('#loading-page');
+  $(window).scrollTo(0, 0);
+  tl.pause(0);
+  tl2.pause(0);
+  lenis.stop();
+  gsap.kill();
+})
