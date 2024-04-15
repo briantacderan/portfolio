@@ -68,3 +68,13 @@ yarn-debug.log*
 # Checkpoints
 .ipynb_checkpoints
 .DS_Store
+
+# Ignore application configuration
+/config/application.yml
+
+/public/packs
+/public/packs-test
+/node_modules
+/yarn-error.log
+yarn-debug.log*
+.yarn-integrity

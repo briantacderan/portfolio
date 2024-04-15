@@ -2,7 +2,6 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-
 html, body, div, span, applet, object, iframe, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
@@ -26,15 +25,18 @@ html {
   font-family: 'Permanent Marker', sans-serif;
   font-weight: normal;
   font-size: 16px;
+  width: 100vw;
   color: #4A4A4A;
-  background-color: #F1F1F1;
+  background-color: #404040;
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
-body {
+body.page-loaded {
   line-height: 1;
   overflow-x: hidden;
+  width: 100vw;
+  text-align: center;
 }
 
 ol, ul {
@@ -68,7 +70,7 @@ a {
 }
 
 p ,span, nav, a {
-  color: #383838;
+  color: #404040;
 }
 
 strong {
@@ -89,12 +91,15 @@ video {
 
 
 
+
+
+
 /* Header */
 header {
   position: fixed;
-  width: 100%;
   height: 3.5rem;
-  border-bottom: 1px solid rgba(241,241,241,0);
+  width: 100vw;
+  border-bottom: 1px solid rgba(66, 66, 66, 0.25);
   box-shadow: none;
   background-color: rgba(241,241,241,0);
   transition: background-color 200ms linear,
@@ -104,13 +109,7 @@ header {
 }
 
 header.opaque {
-  background-color: rgba(241,241,241 ,0.65); // ,0.95);
-  // border-bottom: 1px solid rgba(241,241,241,0.15);
-  /*box-shadow: 0 1px 1px rgba(0,0,0,0.05),
-              0 2px 2px rgba(0,0,0,0.05),
-              0 4px 4px rgba(0,0,0,0.05),
-              0 6px 8px rgba(0,0,0,0.05),
-              0 8px 16px rgba(0,0,0,0.05);*/
+  background-color: rgba(241,241,241,0.15);
   transition: background-color 200ms linear,
               border-bottom 200ms linear,
               box-shadow 200ms linear;
@@ -119,11 +118,10 @@ header.opaque {
 header.opaque:after {
   position: absolute;
   content: '';
-  border-bottom: 1px solid rgba(0,0,0,0.15);
-  width: 95vw;
+  border-bottom: 1px solid rgba(66, 66, 66, 0.15);
+  width: 90vw;
   transform: translateX(-50%);
   bottom: -1px;
-  left: 50%;
 }
 
 header nav.desktop ul {
@@ -142,12 +140,9 @@ header h1 {
   font-size:  1rem;
   margin-left: 2rem;
   letter-spacing: 1px;
-  color: #424242;
-  /* position: absolute;
-  bottom: 0;
-  top: -0.75rem;
-  left: 65px;
-  color: #383838; */
+  color: rgba(66, 66, 66, 0.75);
+  position: absolute;
+  bottom: 0.5rem;
 }
 
 header h1:first-child {
@@ -156,9 +151,13 @@ header h1:first-child {
 
 header .content {
   height: 100%;
+  width: 100%;
+  max-width: 1000px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  text-align: center;
+  margin: 0 auto;
 }
 
 header ul {
@@ -417,13 +416,14 @@ header .icon#heart {
 
 
 // Loading page
-html, body {
+html, body, rect {
   overflow: hidden;
 }
 
-html.page-loaded,
+html.page-loaded
 body.page-loaded {
   overflow-y: scroll;
+  scroll-behavior: auto;
 }
 
 div#loading-page {
@@ -440,6 +440,7 @@ div#loading-page {
   transition: all 1s ease-out;
 
   svg {
+    width: 100%;
     opacity: 1;
     -webkit-transition: all 0.5s ease-out;
     -moz-transition: all 0.5s ease-out;
@@ -464,13 +465,18 @@ div#loading-page.page-loaded.undisplay {
   visibility: hidden;
 }
 
+rect#arrowBtn {
+
+}
+
+
 
 
 // SVG main logo animation
 
 .mv-svg-title{
   left:50%;
-  max-width:80%;
+  max-width:30%;
   position:absolute;
   top:50%;
   transform:translate(-50%, -50%);

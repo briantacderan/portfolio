@@ -1,0 +1,407 @@
+/*
+    Icons with Popups
+    Author: Abdelrhman Said
+    Edited by: Brian Tacderan
+*/
+
+.icon-popups {
+  height: 100%;
+}
+
+*:focus, *:active {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.wrapper {
+  height: 100%;
+  width: 100%;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+div.icon-popups div.wrapper {
+  height: 400px;
+}
+
+.wrapper .icon {
+  position: relative;
+  background-color: #ffffff;
+  color: black;
+  border-radius: 50%;
+  padding: 15px;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background-color: #ffffff;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background-color: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .linkedin:hover,
+.wrapper .linkedin:hover .tooltip,
+.wrapper .linkedin:hover .tooltip::before {
+  background-color: #3b5999;
+  color: #ffffff;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+  background-color: #46c1f6;
+  color: #ffffff;
+}
+
+.wrapper .email:hover,
+.wrapper .email:hover .tooltip,
+.wrapper .email:hover .tooltip::before {
+  background-color: #e1306c;
+  color: #ffffff;
+}
+
+.wrapper .github:hover,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip::before {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+
+
+
+/* website preview tooltip */
+.wrapper .preview {
+  background-color: orange;
+  height: 1rem;
+  width: 1rem;
+  opacity: 0.5;
+  transition: all 250ms;
+}
+
+.wrapper .preview:hover {
+  height: 3.5rem;
+  width: 3.5rem;
+  opacity: 1;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.wrapper .preview:hover .tooltip {
+  top: -450px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .preview:hover .tooltip img {
+  width: auto;
+  height: 450px;
+}
+
+.wrapper .preview:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .preview:hover h3 {
+  transition: all 250ms;
+}
+
+.wrapper .preview:hover h3 {
+  margin: 1rem;
+}
+
+.wrapper .preview:hover,
+.wrapper .preview:hover .tooltip,
+.wrapper .preview:hover .tooltip::before {
+  background-color: #333333;
+  color: gray;
+}
+
+#about-me-slide .wrapper .preview:hover,
+#about-me-slide .wrapper .preview:hover .tooltip,
+#about-me-slide .wrapper .preview:hover .tooltip::before {
+  background-color: #202325;
+  color: white;
+}
+
+
+
+
+
+/* Projects container */
+.wrapper .preview.specs .tooltip {
+  width: 640px;
+  height: 500px;
+  z-index: 10000;
+}
+
+.wrapper .preview.specs:hover .tooltip {
+  left: -100px;
+}
+
+.wrapper .preview.specs .tooltip .project-about {
+
+}
+
+.wrapper .preview.specs:hover .tooltip {
+  top: -480px;
+}
+
+.wrapper .preview:hover h3,
+.wrapper .preview:hover li {
+  color: white;
+}
+
+.wrapper .preview .tooltip img.stack-item {
+
+}
+
+
+
+
+
+/* About me */
+div#about-me-slide .wrapper .preview.specs .tooltip {
+  width: 640px;
+  height: 680px;
+  z-index: 10000;
+  overflow-y: scroll;
+}
+
+div#about-me-slide .wrapper .preview.specs:hover .tooltip {
+  left: -115px;
+}
+
+div#about-me-slide .wrapper .preview.specs .tooltip .project-about {
+
+}
+
+div#about-me-slide .wrapper .preview.specs:hover .tooltip {
+  top: -650px;
+}
+
+/* About me */
+div#about-me-slide .wrapper .preview.specs .tooltip {
+  width: 640px;
+  height: 680px;
+  z-index: 10000;
+  overflow-y: scroll;
+}
+
+div#about-me-slide .wrapper .preview.specs:hover .tooltip {
+  left: -115px;
+}
+
+div#about-me-slide .wrapper .preview.specs .tooltip .project-about {
+
+}
+
+div#about-me-slide .wrapper .preview.specs:hover .tooltip {
+  top: -650px;
+}
+
+
+
+
+
+@media only screen and (max-width: 850px) {
+  .wrapper .icon {
+    width: 36px;
+    height: 36px;
+    box-shadow: 0 7.2px 7.2px rgba(0, 0, 0, 0.1);
+  }
+
+  div#about-me-slide .wrapper .preview.specs .tooltip {
+    width: 500px;
+    height: 650px;
+  }
+
+  div#about-me-slide .wrapper .preview.specs:hover .tooltip {
+    top: -615px;
+  }
+
+  div#about-me-slide .wrapper .preview.specs:hover .tooltip {
+    left: -60px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .wrapper .preview.specs .tooltip {
+    width: 80vw;
+    height: 520px;
+  }
+
+  .wrapper .preview.specs:hover .tooltip {
+    top: -500px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .wrapper .preview.specs .tooltip,
+  .wrapper .preview.specs:hover .tooltip {
+    left: -80px;
+  }
+
+  div#about-me-slide .wrapper .preview.specs .tooltip {
+    width: 350px;
+  }
+}
+
+
+@media only screen and (max-width: 650px) {
+  .wrapper .preview.site:hover .tooltip {
+    top: -350px;
+  }
+
+  .wrapper .preview.specs:hover .tooltip {
+    top: -360px;
+    left: -50px;
+  }
+
+  .wrapper .preview:hover .tooltip img {
+    width: auto;
+    height: 350px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .wrapper .preview.specs .tooltip,
+  .wrapper .preview.specs:hover .tooltip {
+    height: 405px;
+  }
+
+  div#about-me-slide .wrapper .preview.specs .tooltip {
+    width: 290px;
+    height: 265px;
+  }
+
+  .wrapper .preview.site .tooltip,
+  .wrapper .preview.site:hover .tooltip {
+    height: 260px;
+    top: -250px;
+  }
+
+  .wrapper .preview.specs:hover .tooltip {
+    left: -40px;
+    top: -290px;
+  }
+
+  .wrapper .preview.site:hover .tooltip img {
+    width: auto;
+    height: 250px;
+    top: 135px;
+    margin-bottom: 0;
+  }
+
+  .wrapper {
+    padding-bottom: 0;
+    justify-content: flex-end;
+  }
+
+  .wrapper .icon {
+    position: relative;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    width: 1.75rem;
+    height: 1.75rem;
+    box-shadow: 0 7.2px 7.2px rgba(0, 0, 0, 0.1);
+  }
+
+  .wrapper .icon-popups {
+
+  }
+
+  .wrapper .preview.specs:hover .tooltip {
+    left: -35px;
+  }
+
+  div#about-me-slide .wrapper .preview.specs:hover .tooltip {
+    left: -50px;
+    top: -225px;
+  }
+
+  div#about-me-slide div#slider-content-container {
+    //overflow-y: scroll;
+    height: 60%;
+  }
+
+  div#about-me-slide div#slider-content-container::-webkit-scrollbar {
+    display: none;  /* Safari and Chrome */
+  }
+
+  div#about-me-slide div.slider-image-wrapper.projects {
+    height: 100%;
+  }
+
+  div#about-me-slide div.slider-image-wrapper.projects img {
+    margin: 1rem;
+  }
+}
+
+@media only screen and (max-height: 600px) {
+  .wrapper {
+    padding-bottom: 2rem;
+    justify-content: flex-end;
+  }
+
+  .wrapper .icon {
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    width: 1.75rem;
+    height: 1.75rem;
+    box-shadow: 0 7.2px 7.2px rgba(0, 0, 0, 0.1);
+  }
+
+  .socials img {
+    padding: 0 1.5rem;
+  }
+}

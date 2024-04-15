@@ -1,0 +1,21 @@
+<%= stylesheet_link_tag 'bullseye', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<canvas class="webgl"></canvas>
+
+<div id="title" class="home-title">
+  <h1>Bullseye Studio</h1>
+  <h2>My Design Portfolio</h2>
+</div>
+
+<div id="categories">
+  <ul>
+    <li class="item" id="1">barracuda 1968<span>blender</span></li>
+    <li class="item" id="2">angel island<span>blender</span></li>
+    <li class="item" id="3">father sanchez<span id="unity">unity</span></li>
+    <li id="end">...more to come</li>
+  </ul>
+
+  <div id="back-button" class="undisplay"><h3>back</h3></div>
+</div>
+
+<%= javascript_pack_tag 'bullseye', inject: false %>

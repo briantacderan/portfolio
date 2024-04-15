@@ -7,12 +7,12 @@ ruby '3.2.2'
 gem 'rails', '~> 7.1.2'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.5.4', group: :development
+gem 'sqlite3', '~> 1.6.8', group: :development
 gem 'pg', '~> 1.5.4', group: :production
 gem 'rails_12factor', group: :production
 
 # Use Puma as the app server
-gem 'puma', '~> 5.3.2'
+gem 'puma', '~> 6.4.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
 # Use semantic-ui-css for Rails
@@ -27,6 +27,9 @@ gem 'jbuilder', '~> 2.7'
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+
+# To get javascript files to update w/ turbolinks
+gem 'sprockets-rails', '~> 3.0', '>= 3.0.4'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
@@ -66,8 +69,11 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # gem 'devise', '~> 4.8.0'
 gem 'dotenv-rails', :groups => [:development, :test]
 
-# Amazon S3 images
-gem 'carrierwave', '~> 2.0'
+# Amazon S3 storage
+gem 'carrierwave', '~> 3.0.4'
+gem 'figaro'
+gem 'paperclip', '~> 6.1'
+gem 'aws-sdk', '~> 3.0', '>= 3.0.1'
 
 # Fixed protocol initialization errors
 gem 'net-http'

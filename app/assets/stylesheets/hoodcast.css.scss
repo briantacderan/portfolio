@@ -47,8 +47,8 @@ div#rc-project-view {
 
         img {
           position: absolute;
-          top: 10%;
-          width: 70%;
+          top: 5%;
+          width: 80%;
           height: 45%;
           object-fit: cover;
         }
@@ -63,7 +63,8 @@ div#rc-project-view {
 
   #project-desc {
     font-family: 'Castoro', sans-serif;
-    height: 400px;
+    height: 500px;
+    padding-top: 80px;
 
     .desc-container {
       display: flex;
@@ -104,7 +105,7 @@ div#rc-project-view {
         line-height: 2rem;
 
         p {
-          color: #ccc;
+          color: black;
           // margin-top: 0;
           width: 450px;
         }

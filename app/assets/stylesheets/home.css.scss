@@ -1,12 +1,26 @@
-body, html {
-  width: 100%;
-  background-color: #fff;
+// Header
+
+@media only screen and (min-width: 1001px) {
+  header {
+    left: 50%;
+    width: 1000px;
+    margin-left: -500px;
+  }
+
+  header.opaque:after {
+    width: 900px;
+  }
 }
 
 
+
+
+
+
+
 div#about-view {
-  width: 100%;
   background-color: #fff;
+  width: 100%;
 }
 
 div.scrollDist {
@@ -16,18 +30,30 @@ div.scrollDist {
 // PARALLAX INTRO SECTION
 
 div#parallax-intro {
-  max-width: 1500px;
   background-color: #fff;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+div#parallax-intro:before,
+div#parallax-intro:after {
+  display: table;
+  content: "";
+}
+
+div#parallax-intro:after {
+  clear: both;
 }
 
 div#parallax-intro div.main {
-  max-width: 1500px;
+  max-width: 1000px;
   background-color: #fff;
 }
 
 div#parallax-intro text {
   font-family: 'Fugaz One', sans-serif;
-  font-size: 99px;
+  font-size: 90px;
   text-align: center;
 }
 
@@ -53,7 +79,7 @@ div#parallax-intro div.about h1 {
   letter-spacing: 0;
   line-height: 1.2;
   width: 90%;
-  margin: 0 auto;
+  margin: 0 auto 10rem;
 }
 
 div#parallax-intro div.projects h1 {
@@ -61,7 +87,7 @@ div#parallax-intro div.projects h1 {
   text-align: center;
   margin: 0 auto;
   z-index: 100;
-  margin-bottom: 30rem;
+  margin-bottom: 60rem;
 }
 
 div#parallax-intro div.about h2 {
@@ -80,29 +106,20 @@ div#parallax-intro div.about span {
 div#parallax-intro div.about p {
   font-family: 'Major Mono Display', sans-serif;
   font-size: 1rem;
-  margin-bottom: 0.5rem;
   line-height: 1.3rem;
-  color: rgba(78,152,21,1);
+  color: rgba(78, 152, 21, 1);
 }
 
 div#parallax-intro div.projects p {
   font-family: 'Alfa Slab One', sans-serif;
   color: #424242;
-  font-size: 0.65rem;
-  margin: 5rem auto;
-  width: 100%;
 	position: relative;
 	display: block;
 	background: #fff;
-	overflow: hidden;
 	z-index: 999;
 	clear: both;
 	margin: 4rem auto;
 	padding: 50px 0;
-	text-align: center;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
 }
 
 div#parallax-intro div.projects p.skill:nth-child(odd) {
@@ -133,16 +150,14 @@ div.projects .pSection {
 }
 
 .container {
-  padding: 20px;
-  margin: 0 auto;
-  max-width: 1200px;
+  width: 50%;
+  max-width: 500px;
   position: absolute;
   z-index: 1;
 }
 
 div.about .container {
-  left: 10%;
-  margin-top: 15vw;
+  margin: 10rem;
 }
 
 div.projects .container {
@@ -163,7 +178,7 @@ div.projects .pContent {
   position: relative;
 	margin: 0 auto;
 	overflow: hidden;
-  top: -15rem;
+  // top: 15rem;
 }
 
 div.projects .pContent::after {
@@ -193,26 +208,30 @@ div.projects .pContent span {
 .image-container {
   position: absolute;
   overflow-x: hidden;
-  width: 65vw;
-  height: 60vh;
+  width: 65%;
+  height: 150%;
+}
+
+div.image-full,
+img#me {
+  width: 100%;
 }
 
 .img-two {
-  left: 55vw;
-  top: 15vw;
+  left: 55%;
+  top: 15%;
 }
 
 .img-one {
-  left: -25vw;
-  height: 65vw;
-  top: 10vw;
+  left: -25%;
+  height: 65%;
+  top: 10%;
 }
 
 .project-img {
   position: absolute;
   overflow-x: hidden;
-  width: 35vw;
-  height: 60vh;
+  height: 60%;
 }
 
 .image-container img {
@@ -225,14 +244,13 @@ div.projects .pContent span {
   object-position: center;
   padding: 0;
   max-height: 900px;
-  opacity: 0.8;
   overflow: hidden;
   filter: grayscale(50%);
 }
 
 div.projects .project-img {
-  height: 55vw;
-  width: 55vw;
+  height: 550px;
+  width: 550px;
   min-width: 300px;
   min-height: 300px;
   z-index: 1;
@@ -243,20 +261,21 @@ div.projects .project-img:hover {
 }
 
 div.projects .project-img img {
-  filter: grayscale(0);
-  opacity: 0.75;
+  filter: grayscale(50) blur(2px) brightness(0.78);
   overflow: hidden;
 }
 
 div.projects .project-img img:hover {
-  opacity: 1;
+  filter: grayscale(0);
   transition-duration: 500ms;
 }
 
-div.projects .project-img img,
-div.projects .last-img img {
+div.projects .project-img img {
   height: 100%;
   width: 100%;
+  max-height: 550px;
+  max-width: 550px;
+  overflow-x: hidden;
 }
 
 .image-one,
@@ -280,15 +299,17 @@ div.project-img.image-two {
 }
 
 div.project-img.image-three {
-  top: 0;
+  top: 30rem;
 }
 
 div.project-img.image-four {
-  top: 20%;
+  top: 60rem;
 }
 
-.project-img {
-
+img#mission-img {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 div.projects {
@@ -378,22 +399,27 @@ div#parallax-intro div.projects #mission p {
   }
 }
 
-@media only screen and (min-width: 700px) {
-  div.projects .container {
-    left: auto;
-  }
+@media only screen and (min-width: 750px) {
+  div#parallax-intro div.about {
+    h1 {
+      font-size: 4rem;
+      letter-spacing: -0.5rem;
+      line-height: 1.2;
+      text-align: left;
+    }
 
-  div#parallax-intro div.projects h1 {
-    font-family: 'Major Mono Display', sans-serif;
-    text-align: center;
-    margin: 0 auto;
-    z-index: 100;
-    margin-bottom: 90vw;
+    span {
+      letter-spacing: 0.8rem;
+    }
   }
 
   div#parallax-intro div.about p {
-    font-size: 1rem;
-    line-height: 1.5rem;
+    font-size: 1.4rem;
+    line-height: 2.75rem;
+  }
+
+  div#parallax-intro div.projects h1 {
+    text-align: center;
   }
 
   div#parallax-intro div.projects p {
@@ -405,48 +431,5 @@ div#parallax-intro div.projects #mission p {
   div#parallax-intro div.projects #mission p {
     font-size: 1.25rem;
     line-height: 1.75rem;
-  }
-
-  div.about .container {
-    left: 35%;
-  }
-}
-
-@media only screen and (min-width: 1000px) {
-  div.projects .container {
-
-  }
-
-  div#parallax-intro div.about h1 {
-    font-size: 3.5rem;
-  }
-
-  div#parallax-intro div.about h2 {
-    font-size: 1rem;
-  }
-
-  div#parallax-intro div.about p {
-    font-size: 1.25rem;
-    line-height: 2rem;
-  }
-}
-
-@media only screen and (min-width: 1300px) {
-  div#parallax-intro div.about h1 {
-    font-size: 4rem;
-  }
-
-  div#parallax-intro div.about h2 {
-    font-size: 1.25rem;
-  }
-
-  div#parallax-intro div.about p,
-  div#parallax-intro div.projects p {
-    font-size: 1.75rem;
-    line-height: 2.5rem;
-  }
-
-  .container {
-    left: 35%;
   }
 }

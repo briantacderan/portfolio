@@ -3,10 +3,24 @@ import ScrollTrigger from "gsap/ScrollTrigger"
 import ScrollToPlugin from "gsap/ScrollToPlugin"
 import Lenis from "@studio-freight/lenis"
 
+import { GLTFLoader } from '/vendor/mods/three/addons/loaders/GLTFLoader.js'
+import { RGBELoader } from '/vendor/mods/three/addons/loaders/RGBELoader.js'
+
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrollToPlugin);
 
+// if(!Turbolinks) location.reload();
+// Turbolinks.dispatch("turbolinks:load");
+
 document.addEventListener("turbolinks:load", function() {
+
+  let myReq, start, lenis
+
+  let scrollEnabled = false
+
+  window.scrollTo(0, 0)
+
+  if(!scrollEnabled) disableScroll()
 
   const tl2 = gsap.timeline({
     paused: true,
@@ -32,30 +46,31 @@ document.addEventListener("turbolinks:load", function() {
   gsap.set('.main', {
     position: 'fixed',
     width: '100%',
-    height: '400%',
-    maxWidth: '1200px',
+    height: '300%',
+    maxWidth: '1000px',
     top: 0,
   })
 
   gsap.set('.scrollDist', {
     width: '100%',
-    height: '400%',
+    height: '300%',
+    maxWidth: '1000px',
   })
 
   gsap.set('.about', {
-    width: '100%',
-    height: '400%',
-    top: '2400px',
+    width: '1000px',
+    height: '230%',
+    top: '2800px',
   })
 
   gsap.set('.projects', {
-    width: '100%',
-    height: '300%',
-    top: '4000px',
+    width: '1000px',
+    height: '120%',
+    top: '4800px',
   })
 
   gsap.utils.toArray(".me-container").forEach(function(container) {
-    let words = container.querySelector("#me");
+    let words = container.querySelector("#me")
 
     gsap.from(words, {
       rotationY: 36,
@@ -66,7 +81,7 @@ document.addEventListener("turbolinks:load", function() {
       ease:"power4.easeOut",
       scrollTrigger: {
         trigger: words,
-        start: 'top center',
+        start: 'bottom 80%',
       }
     })
   })
@@ -84,22 +99,24 @@ document.addEventListener("turbolinks:load", function() {
     }
   })
 
-  tl2.fromTo('.mtn-front', {y:0},{y:-700}, 0)
-  tl2.fromTo('.baywater', {y:-300},{y:-950}, 0)
-  tl2.fromTo('.mtn-full', {y:350},{y:0}, 0)
-  tl2.fromTo('.bkg-skyline', {y:-300},{y:-1000}, 0)
-  tl2.fromTo('.mtn-left', {y:-350},{y:-1100}, 0)
-  tl2.fromTo('.bridge', {y:-300},{y:-800}, 0)
-  tl2.fromTo('.inspire', {y:0},{y:-1150}, 0)
-  tl2.fromTo('.think', {x:0},{x:-2850}, 0)
+  tl2.fromTo('.mtn-front', {y:100,scale:1},{y:-1300,scale:2}, 0)
+  tl2.fromTo('.baywater', {y:-200},{y:-650}, 0)
+  tl2.fromTo('.mtn-full', {y:450},{y:200}, 0)
+  tl2.fromTo('.bkg-skyline', {y:-150},{y:-900}, 0)
+  tl2.fromTo('.mtn-left', {y:-550},{y:-1000}, 0)
+  tl2.fromTo('.bridge', {y:-200},{y:-600}, 0)
+  tl2.fromTo('.inspire', {y:400,opacity:1},{y:250,opacity:0}, 0)
 
-  tl.fromTo('.mtn-front', {y:380},{y:0}, 0)
-  tl.fromTo('.baywater', {y:350},{y:-300}, 0)
-  tl.fromTo('.mtn-full', {y:800},{y:350}, 0)
-  tl.fromTo('.bkg-skyline', {y:350},{y:-300}, 0)
-  tl.fromTo('.mtn-left', {y:300},{y:-350}, 0)
-  tl.fromTo('.bridge', {y:100},{y:-300}, 0)
-  tl.fromTo('.arrow', {y:850},{y:0}, 0)
+  tl.fromTo('.mtn-front', {y:480},{y:100}, 0)
+  tl.fromTo('.baywater', {y:450},{y:-200}, 0)
+  tl.fromTo('.mtn-full', {y:900},{y:450}, 0)
+  tl.fromTo('.bkg-skyline', {y:450},{y:-150}, 0)
+  tl.fromTo('.mtn-left', {y:400,scale:1},{y:-550,scale:1.3}, 0)
+  tl.fromTo('.bridge', {y:-850,scale:2},{y:-200,scale:1}, 0)
+  tl.fromTo('.arrow', {y:0},{y:5000}, 0)
+  tl.fromTo('.inspire', {y:-400,scale:0},{y:400,scale:1.65}, 0)
+
+  let body = $('html, body')
 
   $('#arrowBtn').on('mouseenter', (e) => {
     gsap.to('.arrow', {
@@ -107,7 +124,7 @@ document.addEventListener("turbolinks:load", function() {
       duration: 0.8,
       ease: 'back.inOut(3)',
       overwrite: 'auto'
-    });
+    })
   })
 
   $('#arrowBtn').on('mouseleave', (e) => {
@@ -116,16 +133,27 @@ document.addEventListener("turbolinks:load", function() {
       duration: 0.5,
       ease: 'power3.out',
       overwrite: 'auto'
-    });
+    })
   })
 
-  $('#arrowBtn').on('click', (e) => {
-    gsap.to(window, {
-      scrollTo: '.bkg-skyline',
-      duration: 1.5,
-      ease: 'power1.inOut'
-    });
+  $('#arrowBtn').on('click', function() {
+
+    enableScroll()
+    scrollEnabled = true
+
+    myReq = requestAnimationFrame(raf)
+
+    // preloadModels()
+
+    setTimeout(() => {
+      gsap.to(window, {
+        scrollTo: '.bkg-skyline',
+        duration: 1.5,
+        ease: 'power1.inOut'
+      })
+    }, 500)
   })
+
   // scrollTo requires the ScrollTo plugin
   // (not to be confused w/ ScrollTrigger)
 
@@ -136,7 +164,7 @@ document.addEventListener("turbolinks:load", function() {
       trigger: ".pSection",
       scrub: true
     },
-  });
+  })
 
   gsap.to(".pContent", {
     yPercent: -40,
@@ -145,10 +173,10 @@ document.addEventListener("turbolinks:load", function() {
       trigger: ".pSection",
       scrub: true
     },
-  });
+  })
 
   gsap.utils.toArray(".image-container").forEach(function(container) {
-    let image = container.querySelector("img");
+    let image = container.querySelector("img")
 
     gsap.to(image, {
       yPercent: 30,
@@ -160,11 +188,11 @@ document.addEventListener("turbolinks:load", function() {
         pin: false,
         invalidateOnRefresh: true
       },
-    });
-  });
+    })
+  })
 
   gsap.utils.toArray(".project-img").forEach(function(container) {
-    let image = container.querySelector("img");
+    let image = container.querySelector("img")
 
     gsap.to(image, {
       yPercent: 30,
@@ -176,7 +204,7 @@ document.addEventListener("turbolinks:load", function() {
         pin: false,
         invalidateOnRefresh: true
       },
-    });
+    })
 
     $(image).on('mouseenter', (e) => {
       gsap.to(container, {
@@ -193,31 +221,120 @@ document.addEventListener("turbolinks:load", function() {
         duration: 0.5,
         ease: 'power3.out',
         overwrite: 'auto'
-      });
+      })
     })
-  });
+  })
 
-});
+  const requestAnimationFrame =
+    window.requestAnimationFrame ||
+    window.mozRequestAnimationFrame ||
+    window.webkitRequestAnimationFrame ||
+    window.msRequestAnimationFrame
 
-setTimeout(() => {
-  const lenis = new Lenis({
+  const cancelAnimationFrame =
+  window.cancelAnimationFrame ||
+  window.mozCancelAnimationFrame
+
+  lenis = new Lenis({
     duration: 1.2,
     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
-  });
+  })
 
   function raf(time) {
-    lenis.raf(time);
-    ScrollTrigger.update();
-    requestAnimationFrame(raf);
+    lenis.raf(time)
+    ScrollTrigger.update()
+    myReq = requestAnimationFrame(raf)
   }
-  requestAnimationFrame(raf);
-}, '3500');
+
+  setTimeout(() => {
+    myReq = requestAnimationFrame(raf)
+    // if(!enableScroll) cancelAnimationFrame(myReq)
+    cancelAnimationFrame(myReq)
+
+  }, '3500')
+
+
+  // SCROLL DISABLER
+  // left: 37, up: 38, right: 39, down: 40,
+  // spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
+  var keys = {37: 1, 38: 1, 39: 1, 40: 1}
+
+  function preventDefault(e) {
+    e.preventDefault()
+  }
+
+  function preventDefaultForScrollKeys(e) {
+    if (keys[e.keyCode]) {
+      preventDefault(e)
+      return false
+    }
+  }
+
+  // modern Chrome requires { passive: false } when adding event
+  var supportsPassive = false
+  try {
+    window.addEventListener("test", null, Object.defineProperty({}, 'passive', {
+      get: function () { supportsPassive = true; }
+    }));
+  } catch(e) {}
+
+  var wheelOpt = supportsPassive ? { passive: false } : false;
+  var wheelEvent = 'onwheel' in document.createElement('div')
+                   ? 'wheel' : 'mousewheel'
+
+  // call this to Disable
+  function disableScroll() {
+    window.addEventListener('DOMMouseScroll', preventDefault, false) // older FF
+    window.addEventListener(wheelEvent, preventDefault, wheelOpt) // modern desktop
+    window.addEventListener('touchmove', preventDefault, wheelOpt) // mobile
+    window.addEventListener('keydown', preventDefaultForScrollKeys, false)
+  }
+
+  // call this to Enable
+  function enableScroll() {
+    window.removeEventListener('DOMMouseScroll', preventDefault, false)
+    window.removeEventListener(wheelEvent, preventDefault, wheelOpt)
+    window.removeEventListener('touchmove', preventDefault, wheelOpt)
+    window.removeEventListener('keydown', preventDefaultForScrollKeys, false)
+  }
+
+  /* PRELOAD
+  const aws = 'https://tacderan-code.s3.us-west-1.amazonaws.com/'
+  const id = {
+    loc: 'table_mountain_2',    						 						// Location
+    mod: 'puddles',																			// Model
+    dim: {																							// Dimensions
+      w: window.innerWidth,																	// width
+      h: window.innerHeight,																// height
+    },
+  }
+
+  async function preloadModels() {
+    const rgbeLoader = new RGBELoader().setPath(`${aws}textures/equirectangular/`)
+  	const gltfLoader = new GLTFLoader().setPath(`${aws}models/gltf/`)
+
+    const [ texture, gltf ] = await Promise.all([
+      rgbeLoader.loadAsync(`${id.loc}/${id.loc}_1k.hdr`), gltfLoader.loadAsync(`${id.mod}/${id.mod}.gltf`)
+    ])
+
+    window.texture = JSON.stringify(texture, { clicked: true })
+    window.gltf = JSON.stringify(gltf, { clicked: true })
+  } */
+})
+
+
+/* window.onbeforeunload = function() {
+  window.scrollTo(0, 0)
+  console.log('one')
+} */
 
 document.addEventListener("turbolinks:before-cache", function() {
-  gsap.scrollTo('#loading-page');
-  $(window).scrollTo(0, 0);
-  tl.pause(0);
-  tl2.pause(0);
-  lenis.stop();
-  gsap.kill();
+  console.log('beforecache-unload')
+  document.getElementById('loading-page').classList.remove('undisplay')
+  window.scrollTo('#loading-page')
+  // cancelAnimationFrame(myReq)
+  tl.pause(0)
+  tl2.pause(0)
+  lenis.stop()
+  gsap.kill()
 })
