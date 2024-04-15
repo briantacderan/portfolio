@@ -126,6 +126,21 @@ document.addEventListener('turbolinks:load', function() {
     texture = await rgbeLoader.load(`${id.loc}/${id.loc}_8k.hdr`, textureScene) */
   }
 
+  /*
+  const title = document.querySelector('div#title')
+  const cats = document.querySelector('div#categories')
+  const photos = document.querySelector('div#title')
+  const backbtn = document.querySelector('div#back-button')
+
+  function pickSet(num) {
+    title.classList.add('undisplay')
+    catrs.classList.add('undisplay')
+    switch num {
+      case 1:
+
+    }
+  } */
+
   function onWindowResize() {
   	id.dim.w = window.innerWidth
   	id.dim.h = window.innerHeight
