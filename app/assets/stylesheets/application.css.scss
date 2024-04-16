@@ -27,7 +27,7 @@ html {
   font-size: 16px;
   width: 100vw;
   color: #4A4A4A;
-  background-color: #404040;
+  background-color: #434040;
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
@@ -132,6 +132,11 @@ header nav.desktop ul {
 header.opaque nav.desktop ul {
   opacity: 1;
   transition: opacity 200ms linear;
+}
+
+header nav.desktop:hover + div.icon-popups {
+  bottom: -20rem;
+  opacity: 1;
 }
 
 header h1 {
@@ -463,10 +468,6 @@ div#loading-page.page-loaded.undisplay {
   width: 0;
   display: none;
   visibility: hidden;
-}
-
-rect#arrowBtn {
-
 }
 
 

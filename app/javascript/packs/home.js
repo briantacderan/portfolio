@@ -16,11 +16,22 @@ document.addEventListener("turbolinks:load", function() {
 
   let myReq, start, lenis
 
-  let scrollEnabled = false
+  if(localStorage.getItem('scrollEnabled') != 'yes') {
+    window.scrollTo(0, 0)
+    disableScroll()
 
-  window.scrollTo(0, 0)
+    setTimeout(() => {
+      myReq = requestAnimationFrame(raf)
+      cancelAnimationFrame(myReq)
 
-  if(!scrollEnabled) disableScroll()
+    }, '3500')
+  } else {
+    enableScroll()
+    setTimeout(() => {
+      myReq = requestAnimationFrame(raf)
+      enableScroll()
+    }, '1500')
+  }
 
   const tl2 = gsap.timeline({
     paused: true,
@@ -65,7 +76,7 @@ document.addEventListener("turbolinks:load", function() {
 
   gsap.set('.projects', {
     width: '1000px',
-    height: '120%',
+    height: '100%',
     top: '4800px',
   })
 
@@ -95,6 +106,19 @@ document.addEventListener("turbolinks:load", function() {
     ease:"Expo.easeOut",
     scrollTrigger: {
       trigger: '.pContent',
+      start: 'top center',
+    }
+  })
+
+  gsap.from("p.mission-content", {
+    rotationY: 80,
+    opacity: 0,
+    duration: 1,
+    yPercent: 50,
+    stagger: 0.1,
+    ease:"Expo.easeIn",
+    scrollTrigger: {
+      trigger: 'h1#mission-title',
       start: 'top center',
     }
   })
@@ -139,7 +163,7 @@ document.addEventListener("turbolinks:load", function() {
   $('#arrowBtn').on('click', function() {
 
     enableScroll()
-    scrollEnabled = true
+    localStorage.setItem('scrollEnabled', 'yes')
 
     myReq = requestAnimationFrame(raf)
 
@@ -246,13 +270,6 @@ document.addEventListener("turbolinks:load", function() {
     myReq = requestAnimationFrame(raf)
   }
 
-  setTimeout(() => {
-    myReq = requestAnimationFrame(raf)
-    // if(!enableScroll) cancelAnimationFrame(myReq)
-    cancelAnimationFrame(myReq)
-
-  }, '3500')
-
 
   // SCROLL DISABLER
   // left: 37, up: 38, right: 39, down: 40,
@@ -330,9 +347,9 @@ document.addEventListener("turbolinks:load", function() {
 
 document.addEventListener("turbolinks:before-cache", function() {
   console.log('beforecache-unload')
-  document.getElementById('loading-page').classList.remove('undisplay')
-  window.scrollTo('#loading-page')
-  // cancelAnimationFrame(myReq)
+  // document.getElementById('loading-page').classList.remove('undisplay')
+  // window.scrollTo('#loading-page')
+  cancelAnimationFrame(myReq)
   tl.pause(0)
   tl2.pause(0)
   lenis.stop()

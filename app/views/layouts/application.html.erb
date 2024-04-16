@@ -16,6 +16,10 @@
     <!-- universal -->
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
+    <!-- icon popups -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <%= stylesheet_link_tag 'icon-popups', media: 'all', 'data-turbolinks-track': 'reload' %>
+
     <!-- jquery -->
     <script src="//cdn.jsdelivr.net/jquery/2.2.0/jquery.min.js"></script>
     <script src="//cdn.jsdelivr.net/jquery.sidr/2.2.1/jquery.sidr.min.js"></script>
@@ -113,7 +117,7 @@
 
         <nav class="desktop">
           <ul>
-            <li id="heart">
+            <li id="heart" class="logo">
               <%= link_to "https://github.com/briantacderan" do %>
                 <%= image_tag "#{$s3}bt-logo.png", id: "heart", class: "icon" %>
               <% end %>
@@ -121,17 +125,41 @@
           </ul>
         </nav>
 
-        <nav class="mobile">
-          <ul>
-            <li id="heart">
-              <%= link_to "https://github.com/briantacderan" do %>
-                <%= image_tag "#{$s3}bt-logo.png", id: "heart", class: "icon" %>
-              <% end %>
-            </li>
-          </ul>
-        </nav>
+        <div class="icon-popups">
+          <div class="wrapper">
+            <%= link_to "https://github.com/briantacderan" do %>
+              <div class="icon github">
+                <div class="tooltip">GitHub</div>
+                <span><i class="fab fa-github"></i></span>
+              </div>
+            <% end %>
+
+            <%= link_to "https://www.linkedin.com/in/briantacderan" do %>
+              <div class="icon linkedin">
+                <div class="tooltip">LinkedIn</div>
+                <span><i class="fab fa-linkedin"></i></span>
+              </div>
+            <% end %>
+
+            <%= link_to "https://twitter.com/BrianTacderan" do %>
+              <div class="icon twitter">
+                <div class="tooltip">Twitter</div>
+                <span><i class="fab fa-twitter"></i></span>
+              </div>
+            <% end %>
+
+            <%= link_to "mailto:brian@thetacderancode.com" do %>
+              <div class="icon email">
+                <div class="tooltip">Email</div>
+                <span><i class="fab fa-telegram-plane"></i></span>
+              </div>
+            <% end %>
+          </div>
+        </div>
 
       </div>
+
+
     </header>
 
   <%= yield %>

@@ -2,12 +2,17 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+.icon-popups {
+  left: 1rem;
+}
+
 header .content {
   height: 100%;
   width: 100%;
   max-width: 100vw;
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
+  flex-direction: row-reverse;
   align-items: center;
   text-align: center;
   margin: 0 auto;
@@ -28,9 +33,9 @@ nav {
   color: white;
   z-index: 0.5;
   position: relative;
-  padding: 4rem 8rem;
   display: flex;
   justify-content: space-between;
+  margin-left: 2.5rem;
 
   a {
     text-decoration: none;

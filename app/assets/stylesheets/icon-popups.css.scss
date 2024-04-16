@@ -5,7 +5,20 @@
 */
 
 .icon-popups {
-  height: 100%;
+  float: right;
+  flex-direction: column;
+  margin: 1rem;
+  position: absolute;
+  bottom: 5rem;
+  opacity: 0;
+  left: 904px;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.icon-popups:hover {
+  bottom: -20rem;
+  opacity: 1;
 }
 
 *:focus, *:active {
@@ -14,9 +27,7 @@
 }
 
 .wrapper {
-  height: 100%;
   width: 100%;
-  padding-bottom: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -107,7 +118,7 @@ div.icon-popups div.wrapper {
 .wrapper .github:hover,
 .wrapper .github:hover .tooltip,
 .wrapper .github:hover .tooltip::before {
-  background-color: #333333;
+  background-color: #4e9815;
   color: #ffffff;
 }
 
