@@ -80,6 +80,19 @@ document.addEventListener("turbolinks:load", function() {
     top: '4800px',
   })
 
+  gsap.from('h1#me-intro', {
+    rotationY: 80,
+    opacity: 0,
+    duration: 1,
+    yPercent: 0, // -50,
+    stagger: 0.1,
+    ease:"power4.easeOut",
+    scrollTrigger: {
+      trigger: 'img#me-photo',
+      start: 'bottom 80%',
+    }
+  })
+
   gsap.utils.toArray(".me-container").forEach(function(container) {
     let words = container.querySelector("#me")
 
@@ -113,13 +126,13 @@ document.addEventListener("turbolinks:load", function() {
   gsap.from("p.mission-content", {
     rotationY: 80,
     opacity: 0,
-    duration: 1,
-    yPercent: 50,
+    duration: 1.5,
+    yPercent: 0,
     stagger: 0.1,
-    ease:"Expo.easeIn",
+    ease:"power4.easeIn",
     scrollTrigger: {
       trigger: 'h1#mission-title',
-      start: 'top center',
+      start: 'bottom 80%',
     }
   })
 

@@ -203,10 +203,12 @@ div#fm-project-view {
 
         img:nth-child(even) {
           margin-right: 50vw;
+          border-left: solid 3px white;
         }
 
         img:nth-child(odd) {
           margin-right: 0;
+          border-right: solid 3px white;
         }
       }
     }
