@@ -89,7 +89,11 @@ video {
   overflow: hidden;
 }
 
-
+.prevent-select {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
 
 
 
@@ -112,8 +116,6 @@ header {
 header.opaque {
   // background-color: rgba(241,241,241,0.15);
   border-bottom: solid 2px black;
-  border-left: solid 1px black;
-  border-right: solid 1px black;
   background-color: rgba(59,73,131,0.95);
   transition: background-color 200ms linear,
               border-bottom 200ms linear,
@@ -131,23 +133,38 @@ header.opaque:after {
 
 header nav.desktop ul {
   opacity: 0.4;
-  transition: opacity 200ms linear;
+  color: black;
+  filter: none;
+  transition: all 200ms linear;
 }
 
 header.opaque nav.desktop ul {
-  opacity: 1;
-  transition: opacity 200ms linear;
+  opacity: 0.6;
+  color: white;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(19%) hue-rotate(347deg) brightness(105%) contrast(105%);
+  transition: all 200ms linear;
 }
 
-header nav.desktop:hover + div.icon-popups {
-  bottom: -20rem;
+@keyframes lateappear {
+     0%{ opacity: 0; }
+    50%{ opacity: 0; }
+    75%{ opacity: 0.5; }
+   100%{ opacity: 1; }
+}
+
+header a.desktop:hover + div.icon-popups,
+div.icon-popups:hover,
+header.popup .icon-popups {
+  left: 915px;
   opacity: 1;
+  bottom: -25rem;
+  animation: lateappear 0.5s linear forwards;
 }
 
 header h1 {
   font-family: 'Major Mono Display', sans-serif;
   font-weight: 400;
-  font-size:  1rem;
+  font-size: 1rem;
   color: rgba(66, 66, 66, 0.75);
   margin-left: 2rem;
   letter-spacing: 1px;
@@ -156,11 +173,16 @@ header h1 {
 }
 
 header.opaque h1 {
-  color: black;
+  color: white;
 }
 
 header h1:first-child {
   margin-top: 35px;
+}
+
+header h2 {
+  opacity: 0.2;
+  display: none;
 }
 
 header .content {
@@ -209,22 +231,6 @@ header li.session-user a {
   margin: 0;
 }
 
-header nav li a {
-  color: #383838;
-  line-height: 0.75rem;
-  font-size: 1.5rem;
-  padding: 0.25rem 0.6rem;
-  border-radius: 0.5rem;
-  margin: 1rem 0;
-  font-family: 'Alfa Slab One', sans-serif;
-}
-
-header nav li a:hover {
-  background-color: rgba(43,25,12,0.1);
-  color: black;
-  transition-duration: 50ms;
-}
-
 header a.desktop:hover:first-of-type h1 {
   color: #bbb;
   transition-duration: 500ms;
@@ -242,6 +248,23 @@ header #background.icon.mobile {
 header .icon {
   height: 1.1rem;
   fill: white;
+}
+
+header li#heart{
+  margin-right: 1rem;
+}
+
+header li#heart img.hidden {
+  position: inherit;
+}
+
+header li#heart .icon#heart-logo,
+header li#heart .icon#bs-logo,
+header li#heart .icon.back-logo,
+header li#heart .icon#bt-logo {
+  height: 40px;
+  margin-top: 5px;
+  // filter: invert(30%) sepia(49%) saturate(1812%) hue-rotate(314deg) brightness(86%) contrast(92%);
 }
 
 header .icon#name {
@@ -263,11 +286,6 @@ header .icon#background {
   z-index: 3;
 }
 
-header .icon#heart {
-  height: 40px;
-  padding-top: 5px;
-  // filter: invert(30%) sepia(49%) saturate(1812%) hue-rotate(314deg) brightness(86%) contrast(92%);
-}
 
 @media only screen and (max-width: 730px) {
   header {

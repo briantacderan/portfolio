@@ -4,21 +4,25 @@
     Edited by: Brian Tacderan
 */
 
+@keyframes fadefast {
+     0%{ opacity: 1; }
+    25%{ opacity: 0; }
+    50%{ opacity: 0; }
+   100%{ opacity: 0; }
+}
+
 .icon-popups {
   float: right;
   flex-direction: column;
-  margin: 1rem;
   position: absolute;
   bottom: 5rem;
   opacity: 0;
-  left: 904px;
-  -moz-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-}
-.icon-popups:hover {
-  bottom: -20rem;
-  opacity: 1;
+  left: 1500px;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  animation: fadefast 0.5s linear forwards;
+  transition-delay: all 2.3s;
 }
 
 *:focus, *:active {
@@ -42,10 +46,10 @@ div.icon-popups div.wrapper {
   background-color: #ffffff;
   color: black;
   border-radius: 50%;
-  padding: 15px;
+  padding: 16px;
   margin: 10px;
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   font-size: 1.4rem;
   display: flex;
   justify-content: center;
@@ -56,7 +60,19 @@ div.icon-popups div.wrapper {
   transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.wrapper .tooltip {
+.icon.designs {
+  position: relative;
+  color: black;
+  width: 50px;
+  height: 50px;
+  display: none;
+  flex-direction: row;
+  flex-flow: row-reverse;
+  font-size: 0.5rem;
+  margin-right: 5px;
+}
+
+.wrapper .tooltip{
   position: absolute;
   top: 0;
   font-size: 14px;
@@ -70,7 +86,26 @@ div.icon-popups div.wrapper {
   transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.wrapper .tooltip::before {
+.icon.designs .tooltip {
+    position:absolute;
+    background-color: none;
+    padding: 5px 8px;
+    color: black;
+    font-size: 1rem;
+    position: fixed;
+    top: -3rem;
+    bottom: auto;
+    margin-bottom: 0px;
+    transform: translate(-35px, -35px);
+    padding: 5px 8px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before,
+.icon.designs .tooltip::before {
   position: absolute;
   content: "";
   height: 8px;
@@ -82,11 +117,22 @@ div.icon-popups div.wrapper {
   transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.wrapper .icon:hover .tooltip {
+.wrapper .icon:hover .tooltip, {
   top: -45px;
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
+}
+
+.icon.designs:hover .tooltip {
+  top: 48px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.icon.designs img {
+
 }
 
 .wrapper .icon:hover span,
@@ -105,23 +151,68 @@ div.icon-popups div.wrapper {
 .wrapper .twitter:hover .tooltip,
 .wrapper .twitter:hover .tooltip::before {
   background-color: #46c1f6;
-  color: #ffffff;
+  color: #404040;
 }
 
 .wrapper .email:hover,
 .wrapper .email:hover .tooltip,
 .wrapper .email:hover .tooltip::before {
-  background-color: #e1306c;
+  background-color: #F8F12E;
+  color: #404040;
+}
+
+.wrapper .youtube:hover,
+.wrapper .youtube:hover .tooltip,
+.wrapper .youtube:hover .tooltip::before {
+  background-color: #FF0000;
   color: #ffffff;
 }
 
 .wrapper .github:hover,
 .wrapper .github:hover .tooltip,
 .wrapper .github:hover .tooltip::before {
-  background-color: #4e9815;
-  color: #ffffff;
+  background-color: #9EC131;
+  color: #404040;
 }
 
+.wrapper .vocal:hover,
+.wrapper .vocal:hover .tooltip,
+.wrapper .vocal:hover .tooltip::before {
+  background-color: #DCDCDC;
+  color: #404040;
+}
+
+.wrapper .linkedin {
+  border: solid 2px #3b5999;
+}
+
+.wrapper .twitter {
+  border: solid 2px #46c1f6;
+}
+
+.wrapper .email {
+  border: solid 2px #F8F12E;
+}
+
+.wrapper .youtube {
+  border: solid 2px #FF0000;
+}
+
+.wrapper .github {
+  border: solid 2px #9EC131;
+}
+
+.wrapper .vocal {
+  border: solid 2px #DCDCDC;
+}
+
+.icon.designs:hover,
+.icon.designs:hover .tooltip,
+.icon.designs:hover .tooltip::before {
+  background-color: none;
+  color: #3b5999;
+  font-weight: bold;
+}
 
 
 

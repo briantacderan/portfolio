@@ -1,10 +1,19 @@
 // Header
 
+@media only screen and (max-width: 1500px) {
+  header {
+    left: 0;
+    width: 100vw;
+    margin-left: -0;
+  }
+}
+
+
 @media only screen and (min-width: 1001px) {
   header {
     left: 50%;
-    width: 1000px;
-    margin-left: -500px;
+    width: 1002px;
+    margin-left: -509px;
   }
 
   header.opaque:after {

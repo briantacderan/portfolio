@@ -1,21 +1,41 @@
 <%= stylesheet_link_tag 'bullseye', media: 'all', 'data-turbolinks-track': 'reload' %>
+<%= javascript_pack_tag 'jquery-ajax', inject: false %>
 
+<div id="screen-filter">
 <canvas class="webgl"></canvas>
-
-<div id="title" class="home-title">
-  <h1>Bullseye Studio</h1>
-  <h2>My Design Portfolio</h2>
 </div>
 
-<div id="categories">
-  <ul>
-    <li class="item" id="1">barracuda1968<span>blender</span></li>
-    <li class="item" id="2">angelisland<span>blender</span></li>
-    <li class="item" id="3">fathersanchez<span id="unity">unity</span></li>
-    <li id="end">...adding in very soon</li>
+<div id="title" class="home-title prevent-select">
+  <div id="container">
+    <div id="overlay"></div>
+
+    <div id="video">
+      <div id="video-container">
+      </div>
+    </div>
+
+    <h1 id="port-name">Bullseye Studio</h1>
+    <h2 id="my-design">My Design Portfolio</h2><br><br>
+
+
+  </div>
+</div>
+
+<div id="categories" class="prevent-select">
+
+  <ul class="prevent-select">
+    <li class="item button ready" id="gltf1"><button id="btn1" type="button">barracuda1968<span>blender</span></button></li>
+    <li class="item button ready" id="gltf2"><button id="btn2"  type="button">fathersanchez<span id="unity">unity</span></button></li>
+    <li class="item button developing" id="gltf3"><button id="btn3"  type="button">wallsofintramuros<span>blender</span></button></li>
+    <li class="item button developing" id="gltf4"><button id="btn4"  type="button">nürburgrisland<span id="unity">unity</span></button></li>
+    <li class="item button ready" id="gltf5"><button id="btn5"  type="button"><span id="unity">sample</span><span>images</span></button></li>
+    <li id="end">...adding more soon</li>
+
   </ul>
 
   <div id="back-button" class="undisplay"><h3>back</h3></div>
+
 </div>
+
 
 <%= javascript_pack_tag 'bullseye', inject: false %>

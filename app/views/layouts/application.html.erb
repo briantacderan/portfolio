@@ -23,6 +23,7 @@
     <!-- jquery -->
     <script src="//cdn.jsdelivr.net/jquery/2.2.0/jquery.min.js"></script>
     <script src="//cdn.jsdelivr.net/jquery.sidr/2.2.1/jquery.sidr.min.js"></script>
+
     <!--imagesLoaded -->
     <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.js"></script>
     <!-- javascript universal -->
@@ -110,23 +111,48 @@
 
     <header id="scroll-top">
       <div class="content">
-
-        <%= link_to root_path, class: "desktop" do %>
-          <h1>BRIAN TACDERAN</h1>
+        <% if @home_menu %>
+          <%= link_to root_path, class: "desktop" do %>
+            <h1>BRIAN TACDERAN</h1>
+          <% end %>
+        <% else %>
+        <%= link_to bullseyestudio_path, class: "desktop" do %>
+          <%= image_tag "#{$s3}bt-logo.png", id: "heart-logo", class: "icon shown" %>
+          <div class="icon designs">
+            <div class="tooltip">Design Portfolio</div>
+            <%= image_tag "#{$s3}bs-logo.png", id: "bs-logo", class: "icon hidden" %>
+          </div>
         <% end %>
+        <% end %>
+
 
         <nav class="desktop">
           <ul>
             <li id="heart" class="logo">
-              <%= link_to "https://github.com/briantacderan" do %>
-                <%= image_tag "#{$s3}bt-logo.png", id: "heart", class: "icon" %>
+
+              <% if @home_menu %>
+                <%= link_to bullseyestudio_path, class: "desktop" do %>
+                  <%= image_tag "#{$s3}bt-logo.png", id: "heart-logo", class: "icon shown" %>
+                  <div class="icon designs">
+                    <div class="tooltip">Design Portfolio</div>
+                    <%= image_tag "#{$s3}bs-logo.png", id: "bs-logo", class: "icon hidden" %>
+                  </div>
+                <% end %>
+
+              <% else %>
+
+                <%= link_to root_path, class: "desktop" do %>
+                  <span id="back"><i class="fas fa-arrow-left"></i></span>
+                <% end %>
+
               <% end %>
+
             </li>
           </ul>
         </nav>
 
-        <div class="icon-popups">
-          <div class="wrapper">
+        <div id="ip-section" class="icon-popups">
+          <div id="ip-wrapper" class="wrapper">
             <%= link_to "https://github.com/briantacderan" do %>
               <div class="icon github">
                 <div class="tooltip">GitHub</div>
@@ -138,6 +164,20 @@
               <div class="icon linkedin">
                 <div class="tooltip">LinkedIn</div>
                 <span><i class="fab fa-linkedin"></i></span>
+              </div>
+            <% end %>
+
+            <%= link_to "https://youtube.com/@thetacderancode" do %>
+              <div class="icon youtube">
+                <div class="tooltip">YouTube</div>
+                <span><i class="fab fa-youtube"></i></span>
+              </div>
+            <% end %>
+
+            <%= link_to "https://vocal.media/authors/brian-tacderan" do %>
+              <div class="icon vocal">
+                <div class="tooltip">Vocal</div>
+                <span><i class="fas fa-paragraph"></i></span>
               </div>
             <% end %>
 

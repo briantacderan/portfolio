@@ -47,6 +47,23 @@ document.addEventListener("turbolinks:load", function() {
     `images/new/${aws}sf-front-mtn-white.png`
   ])
 
+  document.querySelector('header').addEventListener('mouseenter', function() {
+
+    $('img#heart-logo').css('display', 'none')
+    $('.icon.designs').css('display', 'flex')
+    $('header h2').fadeIn('slow')
+    document.querySelector('header').classList.add('popup')
+
+  })
+
+  document.querySelector('header').addEventListener('mouseleave', function() {
+
+    $('img#heart-logo').css('display', 'flex')
+    $('.icon.designs').css('display', 'none')
+    $('header h2').fadeOut('fast')
+    document.querySelector('header').classList.remove('popup')
+
+  })
 
 
   // Page Loading animation

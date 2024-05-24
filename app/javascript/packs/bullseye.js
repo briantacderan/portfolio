@@ -2,6 +2,7 @@ import * as THREE from '/node_modules/three/build/three.module.js'
 import { OrbitControls } from '/vendor/mods/three/examples/jsm/controls/OrbitControls.js'
 import { GLTFLoader } from '/vendor/mods/three/addons/loaders/GLTFLoader.js'
 import { RGBELoader } from '/vendor/mods/three/addons/loaders/RGBELoader.js'
+import { DRACOLoader } from '/vendor/mods/three/addons/loaders/DRACOLoader.js'
 import { GUI } from 'dat.gui'
 import gsap from 'gsap'
 import { NodeMaterial, uv, vec2, checker, float, timerLocal } from '/vendor/mods/three/nodes/Nodes.js'
@@ -13,8 +14,12 @@ import { NodeMaterial, uv, vec2, checker, float, timerLocal } from '/vendor/mods
 
 document.addEventListener('turbolinks:load', function() {
 
-  let canvas, id, renderer, scene, camera, controls, s3, model
+  let canvas, id, renderer, scene, camera, controls, s3, model, car, mixer, animation, action, clip, prevTime, startTime
   let yRotation = 0
+
+  // model animation
+  // let rendered = false
+  // let played = false
 
   s3 = 'https://tacderan-code.s3.us-west-1.amazonaws.com/'
 
@@ -73,7 +78,7 @@ document.addEventListener('turbolinks:load', function() {
   	controls.minZoom = 1;
   	controls.maxZoom = 2; */
 
-  	controls.target.set(0, 1, 0)
+  	controls.target.set(0, 2, 0)
   	controls.update()
 
     const light = new THREE.PointLight(0xffffff, 1, 100)
@@ -86,6 +91,10 @@ document.addEventListener('turbolinks:load', function() {
     	const rgbeLoader = new RGBELoader().setPath(`${s3}textures/equirectangular/`)
     	const gltfLoader = new GLTFLoader().setPath(`${s3}models/gltf/`)
 
+      const dracoLoader = new DRACOLoader()
+      dracoLoader.setDecoderPath('https://www.gstatic.com/draco/v1/decoders/')
+      dracoLoader.preload()
+
       const mesh = gltfLoader.load('logo/logo.gltf', function(mesh) {
         const logo = mesh.scene
         logo.position.setY(2)
@@ -94,7 +103,6 @@ document.addEventListener('turbolinks:load', function() {
         scene.add(logo)
         model = logo
       })
-
 
       const [ texture, gltf ] = await Promise.all([
     		rgbeLoader.loadAsync(`${id.loc}/${id.loc}_1k.hdr`),
@@ -114,6 +122,34 @@ document.addEventListener('turbolinks:load', function() {
     document.querySelector('div.home-title h2').style.color = 'black'
 
   	scene.add(gltf.scene)
+
+
+    /* gltfLoader.setDRACOLoader(dracoLoader)
+
+    gltfLoader.load('barracuda/barracuda.gltf', function(mesh) {
+      car = mesh
+      model = mesh.scene
+      model.position.setY(0)
+      yRotation = 0
+
+      $('#gltf1').on('click', function() {
+        if(rendered && !played) {
+          startTime = Date.now()
+          prevTime = Date.now()
+
+          animation = car.animations
+          clip = animation[0]
+          console.log(car.animations)
+          mixer = new THREE.AnimationMixer(model)
+          action = mixer.clipAction(clip).setDuration(6000)
+          action.play()
+          played = true
+        }
+      }, false)
+
+      scene.add(model)
+      rendered = true
+    }) */
 
 
   	for(var i=0; i<scene.length; i++) {
@@ -174,6 +210,66 @@ document.addEventListener('turbolinks:load', function() {
     }
   } */
 
+  let currentlyPlaying = false
+
+  // barracude1968
+  document.getElementById('btn1').addEventListener('mouseup', function() {
+
+    $('#categories ul').fadeOut('slow')
+    $('#video, #overlay').fadeIn('fast')
+    document.getElementById('video').classList.add('display')
+    document.getElementById('overlay').classList.add('display')
+    document.querySelector('#screen-filter').classList.add('theatre')
+    document.querySelector('#title.home-title').classList.add('theatre')
+
+
+    try {
+      $('#video').html('<iframe id="ytplayer" type="text/html" width="1120" height="630" src="https://www.youtube.com/embed/Q2fOHzbFnkE?si=4Fh0JclhGPumgQoA&amp;controls=0&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>')
+    } catch(err) {
+      console.log(err)
+    }
+    setTimeout(() =>{
+      currentlyPlaying = true
+    }, 1000)
+
+  }, false)
+
+  // fathersanchez
+  document.getElementById('btn2').addEventListener('mouseup', function() {
+
+    $('#categories ul').fadeOut('slow')
+    $('#video, #overlay').fadeIn('fast')
+    document.getElementById('video').classList.add('display')
+    document.getElementById('overlay').classList.add('display')
+    document.querySelector('#screen-filter').classList.add('theatre')
+    document.querySelector('#title.home-title').classList.add('theatre')
+
+
+    try {
+      $('#video').html('<iframe id="ytplayer2" type="text/html" width="1120" height="630" src="https://www.youtube.com/embed/lT47Os-w1gU?si=zgKv5yZJR7_qOed3&amp;controls=0&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>')
+    } catch(err) {
+      console.log(err)
+    }
+    setTimeout(() =>{
+      currentlyPlaying = true
+    }, 1000)
+
+  }, false)
+
+  window.addEventListener('mouseup', function(e) {
+    if(!$('#video').is(e.target) && currentlyPlaying) {
+      $('#video, #overlay').fadeOut('slow')
+      $('#categories ul').fadeIn('slow')
+      $('#video').html('')
+      document.querySelector('#screen-filter').classList.remove('theatre')
+      document.querySelector('#title.home-title').classList.remove('theatre')
+
+      setTimeout(() =>{
+        currentlyPlaying = false
+      }, 1000)
+    }
+  }, false)
+
   function onWindowResize() {
   	id.dim.w = window.innerWidth
   	id.dim.h = window.innerHeight
@@ -229,6 +325,13 @@ document.addEventListener('turbolinks:load', function() {
   function animate() {
   	// nodeFrame.update()
   	controls.update()
+
+    if((mixer !== undefined) && (prevTime - startTime < 5100 )) {
+      const time = Date.now()
+      mixer.update((time - prevTime) * 0.001)
+      prevTime = time
+    }
+
   	renderer.render(scene, camera)
 
     if(yRotation > 0) {

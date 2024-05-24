@@ -155,40 +155,32 @@ document.addEventListener("turbolinks:load", function() {
 
   let body = $('html, body')
 
-  $('#arrowBtn').on('mouseenter', (e) => {
-    gsap.to('.arrow', {
-      y: 10,
-      duration: 0.8,
-      ease: 'back.inOut(3)',
-      overwrite: 'auto'
-    })
-  })
 
-  $('#arrowBtn').on('mouseleave', (e) => {
-    gsap.to('.arrow', {
-      y: 0,
-      duration: 0.5,
-      ease: 'power3.out',
-      overwrite: 'auto'
-    })
-  })
 
-  $('#arrowBtn').on('click', function() {
+  $('rect', 'rect#arrowBtn').on('click', function() {
+    if(localStorage.getItem('scrollEnabled') != 'yes') {
 
-    enableScroll()
-    localStorage.setItem('scrollEnabled', 'yes')
+      enableScroll()
+      localStorage.setItem('scrollEnabled', 'yes')
 
-    myReq = requestAnimationFrame(raf)
+      myReq = requestAnimationFrame(raf)
 
-    // preloadModels()
+      // preloadModels()
 
-    setTimeout(() => {
-      gsap.to(window, {
-        scrollTo: '.bkg-skyline',
-        duration: 1.5,
-        ease: 'power1.inOut'
-      })
-    }, 500)
+      setTimeout(() => {
+        gsap.to(window, {
+          scrollTo: '.bkg-skyline',
+          duration: 1.5,
+          ease: 'power1.inOut'
+        })
+      }, '500')
+    } else {
+      enableScroll()
+      setTimeout(() => {
+        myReq = requestAnimationFrame(raf)
+        enableScroll()
+      }, '1500')
+    }
   })
 
   // scrollTo requires the ScrollTo plugin

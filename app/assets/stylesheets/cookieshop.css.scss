@@ -8,12 +8,18 @@
   }
 
   header .content {
+    flex-flow: row-reverse;
     background-color: dimgray;
     border-bottom: solid 1px black;
   }
 
   header.opaque:after {
     width: 900px;
+  }
+
+  header .icon {
+    height: 2.6rem;
+    margin: 0 2.1rem;
   }
 }
 
@@ -22,6 +28,34 @@ header h1 {
 }
 
 
+
+
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body,
+div#rc-project-view,
+div#fm-project-view,
+ {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+
+
+
+
+i.fas.fa-arrow-left {
+  padding-left: 5px;
+}
+
+i.fas.fa-arrow-left:hover {
+  color: black;
+}
 
 
 
