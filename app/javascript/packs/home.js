@@ -9,22 +9,21 @@ import { RGBELoader } from '/vendor/mods/three/addons/loaders/RGBELoader.js'
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrollToPlugin);
 
-// if(!Turbolinks) location.reload();
-// Turbolinks.dispatch("turbolinks:load");
+if(!Turbolinks) location.reload();
+Turbolinks.dispatch("turbolinks:load");
 
 document.addEventListener("turbolinks:load", function() {
-
   let myReq, start, lenis
 
   if(localStorage.getItem('scrollEnabled') != 'yes') {
-    window.scrollTo(0, 0)
+    /* window.scrollTo(0, 0)
     disableScroll()
 
     setTimeout(() => {
       myReq = requestAnimationFrame(raf)
       cancelAnimationFrame(myReq)
 
-    }, '3500')
+    }, '3500') */
   } else {
     enableScroll()
     setTimeout(() => {
@@ -155,33 +154,38 @@ document.addEventListener("turbolinks:load", function() {
 
   let body = $('html, body')
 
+  let startTime
 
+  countG()
 
-  $('rect', 'rect#arrowBtn').on('click', function() {
-    if(localStorage.getItem('scrollEnabled') != 'yes') {
+  function countG() {
+    startTime = Date.now()
 
-      enableScroll()
-      localStorage.setItem('scrollEnabled', 'yes')
+    setTimeout(() => {
 
-      myReq = requestAnimationFrame(raf)
+      gsap.utils.toArray('g').forEach(function(parent) {
+        $('rect').on('click', function() {
+          if(localStorage.getItem('scrollEnabled') != 'yes') {
 
-      // preloadModels()
+            enableScroll()
+            localStorage.setItem('scrollEnabled', 'yes')
 
-      setTimeout(() => {
-        gsap.to(window, {
-          scrollTo: '.bkg-skyline',
-          duration: 1.5,
-          ease: 'power1.inOut'
+            myReq = requestAnimationFrame(raf)
+
+            setTimeout(() => {
+              gsap.to(window, {
+                scrollTo: '.bkg-skyline',
+                duration: 1.5,
+                ease: 'power1.inOut'
+              })
+            }, '500')
+          }
         })
-      }, '500')
-    } else {
-      enableScroll()
-      setTimeout(() => {
-        myReq = requestAnimationFrame(raf)
-        enableScroll()
-      }, '1500')
-    }
-  })
+      })
+
+    }, '1500')
+  }
+
 
   // scrollTo requires the ScrollTo plugin
   // (not to be confused w/ ScrollTrigger)
@@ -319,6 +323,50 @@ document.addEventListener("turbolinks:load", function() {
     window.removeEventListener('touchmove', preventDefault, wheelOpt)
     window.removeEventListener('keydown', preventDefaultForScrollKeys, false)
   }
+
+  /*function countG() {
+    setTimeout(() => {
+
+      let numG = 0
+
+      while(numG < 3) {
+        if ((numG == 0) && (Date.now()-startTime > 12000)) {
+          numG = 3
+        } else {
+          gsap.utils.toArray("g").forEach(function(gect) {
+            if (gect != undefined) numG++
+            else numG = 0
+          }
+        }
+      }
+
+      rect.on('click', function() {
+        if(localStorage.getItem('scrollEnabled') != 'yes') {
+
+          enableScroll()
+          localStorage.setItem('scrollEnabled', 'yes')
+
+          myReq = requestAnimationFrame(raf)
+
+          // preloadModels()
+
+          setTimeout(() => {
+            gsap.to(window, {
+              scrollTo: '.bkg-skyline',
+              duration: 1.5,
+              ease: 'power1.inOut'
+            })
+          }, '500')
+        } else {
+          enableScroll()
+          setTimeout(() => {
+            myReq = requestAnimationFrame(raf)
+            enableScroll()
+          }, '500')
+        }
+      }
+    }, '1500')
+  } */
 
   /* PRELOAD
   const aws = 'https://tacderan-code.s3.us-west-1.amazonaws.com/'

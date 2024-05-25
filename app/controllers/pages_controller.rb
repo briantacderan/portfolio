@@ -7,7 +7,7 @@ class PagesController < ApplicationController
   end
 
   def bullseye
-    @home_menu = false
+    @design_menu = true
   end
 
 end

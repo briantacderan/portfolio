@@ -116,13 +116,15 @@
             <h1>BRIAN TACDERAN</h1>
           <% end %>
         <% else %>
-        <%= link_to bullseyestudio_path, class: "desktop" do %>
-          <%= image_tag "#{$s3}bt-logo.png", id: "heart-logo", class: "icon shown" %>
-          <div class="icon designs">
-            <div class="tooltip">Design Portfolio</div>
-            <%= image_tag "#{$s3}bs-logo.png", id: "bs-logo", class: "icon hidden" %>
-          </div>
-        <% end %>
+          <%= link_to bullseyestudio_path, class: "desktop" do %>
+            <%= image_tag "#{$s3}bt-logo.png", id: "heart-logo", class: "icon shown" %>
+            <div class="icon designs">
+              <% if !@design_menu %>
+                <div class="tooltip">Design Portfolio</div>
+              <% end %>
+              <%= image_tag "#{$s3}bs-logo.png", id: "bs-logo", class: "icon hidden" %>
+            </div>
+          <% end %>
         <% end %>
 
 

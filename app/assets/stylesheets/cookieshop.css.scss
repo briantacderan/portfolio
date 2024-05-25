@@ -50,10 +50,22 @@ div#fm-project-view,
 
 
 i.fas.fa-arrow-left {
-  padding-left: 5px;
+  padding-left: 2rem;
 }
 
 i.fas.fa-arrow-left:hover {
+  color: black;
+}
+
+.icon.designs .tooltip {
+  transform: translate(-45px, -15px);
+}
+
+.icon.designs .tooltip::before {
+  background-color: none;
+}
+
+.icon.designs:hover .tooltip {
   color: black;
 }
 
