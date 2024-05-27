@@ -31,23 +31,6 @@ header h1 {
 
 
 
-/* Hide scrollbar for Chrome, Safari and Opera */
-body::-webkit-scrollbar {
-  display: none;
-}
-
-/* Hide scrollbar for IE, Edge and Firefox */
-body,
-div#rc-project-view,
-div#fm-project-view,
- {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-}
-
-
-
-
 
 i.fas.fa-arrow-left {
   padding-left: 2rem;

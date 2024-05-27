@@ -98,6 +98,25 @@ video {
 
 
 
+/* Hide scrollbar for Chrome, Safari and Opera */
+body#home::-webkit-scrollbar,
+div#rc-project-view::-webkit-scrollbar,
+div#fm-project-view::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body#home,
+div#rc-project-view,
+div#fm-project-view,
+ {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+
+
+
 /* Header */
 header {
   position: fixed;
@@ -243,6 +262,11 @@ header a.mobile,
 header nav.mobile,
 header #background.icon.mobile {
   display: none;
+}
+
+header nav.desktop {
+  padding: 5rem;
+  padding-right: 0;
 }
 
 header .icon {

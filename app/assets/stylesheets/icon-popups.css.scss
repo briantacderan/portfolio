@@ -16,6 +16,7 @@
   flex-direction: column;
   position: absolute;
   bottom: 5rem;
+  padding-right: 100vw;
   opacity: 0;
   left: 1500px;
   -moz-transition: all 0.5s ease-out;
@@ -102,6 +103,10 @@ div.icon-popups div.wrapper {
     opacity: 0;
     pointer-events: none;
     transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.icon.designs:hover {
+  cursor: pointer;
 }
 
 .wrapper .tooltip::before,
