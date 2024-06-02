@@ -256,9 +256,26 @@ document.addEventListener('turbolinks:load', function() {
 
   }, false)
 
+  // photos
+  document.getElementById('btn5').addEventListener('mouseup', function() {
+
+    $('#categories ul').fadeOut('slow')
+    $('#photos, #overlay').fadeIn('fast')
+    document.getElementById('photos').classList.add('display')
+    document.getElementById('overlay').classList.add('display')
+    document.querySelector('#screen-filter').classList.add('theatre')
+    document.querySelector('#title.home-title').classList.add('theatre')
+
+    setTimeout(() =>{
+      currentlyPlaying = true
+      window.dispatchEvent(new Event('resize'))
+    }, 1000)
+
+  }, false)
+
   window.addEventListener('mouseup', function(e) {
-    if(!$('#video').is(e.target) && currentlyPlaying) {
-      $('#video, #overlay').fadeOut('slow')
+    if(((!$('#photos').is(e.target)) || (!$('#video').is(e.target))) && currentlyPlaying) {
+      $('#photos, #video, #overlay').fadeOut('slow')
       $('#categories ul').fadeIn('slow')
       $('#video').html('')
       document.querySelector('#screen-filter').classList.remove('theatre')
@@ -269,6 +286,27 @@ document.addEventListener('turbolinks:load', function() {
       }, 1000)
     }
   }, false)
+
+  var swiperOne = new Swiper('#swiper-1', {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  effect: 'fade',
+  loop: true,
+  speed: 300,
+  mousewheel: {
+    invert: false,
+  },
+  pagination: {
+    el: '.swiper-pagination.projects',
+    clickable: true,
+    dynamicBullets: true
+  },
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next.projects',
+    prevEl: '.swiper-button-prev.projects',
+  }
+});
 
   function onWindowResize() {
   	id.dim.w = window.innerWidth

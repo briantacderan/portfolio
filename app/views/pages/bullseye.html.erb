@@ -1,4 +1,6 @@
 <%= stylesheet_link_tag 'bullseye', media: 'all', 'data-turbolinks-track': 'reload' %>
+<%= stylesheet_link_tag 'slide-swiper', media: 'all', 'data-turbolinks-track': 'reload' %>
+
 <%= javascript_pack_tag 'jquery-ajax', inject: false %>
 
 <div id="screen-filter">
@@ -11,6 +13,35 @@
 
     <div id="video">
       <div id="video-container">
+      </div>
+    </div>
+
+    <div class="s s2 forward slide-swiper" id="photos">
+
+      <div class="container section-wrapper">
+        <div id="swiper-1"
+             class="row swiper-container projects wow fadeInLeft"
+             data-wow-delay="0.45s">
+          <div id="slide-box-one" class="swiper-wrapper scroll-point">
+
+            <% @photos.each_with_index do |photo, index| %>
+              <div class="slider-item project-slide swiper-slide">
+                <div class="slider-image-wrapper <%= photo.project_name.split(' ')[0] %> projects">
+                  <%= image_tag "#{photo.photo_url}", id: "image#{index}" %>
+                </div>
+                <h1 id="project-name"><%= photo.project_name %></h1>
+              </div>
+            <% end %>
+
+          </div>
+
+          <div class="slider-buttons">
+            <button class="swiper-button-prev projects">Prev</button>
+            <button class="swiper-button-next projects">Next</button>
+          </div>
+
+          <div class="swiper-pagination projects"></div>
+        </div>
       </div>
     </div>
 
@@ -37,5 +68,6 @@
 
 </div>
 
-
+<!-- slide swiper -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.5/swiper-bundle.min.js"></script>
 <%= javascript_pack_tag 'bullseye', inject: false %>

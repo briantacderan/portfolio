@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2021_07_28_083741) do
+ActiveRecord::Schema[7.1].define(version: 2024_06_01_015447) do
   create_table "menus", force: :cascade do |t|
     t.string "talent"
     t.string "name"
@@ -19,6 +19,17 @@ ActiveRecord::Schema[7.1].define(version: 2021_07_28_083741) do
     t.string "photo"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "photos", force: :cascade do |t|
+    t.integer "photo_id"
+    t.integer "project_id"
+    t.string "project_name"
+    t.string "photo_url"
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["photo_id"], name: "index_photos_on_photo_id"
   end
 
   create_table "subscriptions", force: :cascade do |t|

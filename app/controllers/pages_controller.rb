@@ -8,6 +8,7 @@ class PagesController < ApplicationController
 
   def bullseye
     @design_menu = true
+    @photos = Photo.all
   end
 
 end

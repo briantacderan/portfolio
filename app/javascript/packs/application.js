@@ -9,6 +9,12 @@ ActiveStorage.start()
 
 document.addEventListener("turbolinks:load", function() {
 
+  const WOW = require('wowjs')
+  window.wow = new WOW.WOW({
+    live: false
+  })
+  window.wow.init()
+
   // for no scroll at all
   /* function preventMotion(event) {
     window.scrollTo(0, 0);
