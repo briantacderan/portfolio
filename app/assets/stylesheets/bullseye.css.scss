@@ -99,6 +99,7 @@ header div.icon-popups div.tooltip {
 
 header {
   height: 5rem;
+  background-color: rgba(255, 255, 255, 0);
 }
 
 header .content {
@@ -116,6 +117,10 @@ header .content {
 .icon-popups {
   bottom: 0;
   float: right;
+}
+
+div.icon-popups div.wrapper {
+  flex-direction: row;
 }
 
 .icon.designs {
