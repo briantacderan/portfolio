@@ -125,7 +125,7 @@ header {
   border-bottom: 1px solid rgba(66, 66, 66, 0.25);
   box-shadow: none;
   color: rgba(66, 66, 66, 0.75);
-  background-color: rgba(241,241,241,0);
+  background-color: rgba(255, 255, 255, 0.8);
   transition: background-color 200ms linear,
               border-bottom 200ms linear,
               box-shadow 200ms linear;
@@ -133,10 +133,9 @@ header {
 }
 
 header.opaque {
-  // background-color: rgba(241,241,241,0.15);
   border-bottom: solid 2px black;
-  background-color: rgba(59,73,131,0.95);
-  transition: background-color 200ms linear,
+  // background-color: rgba(59,73,131,0.95);
+  transition: color 200ms linear,
               border-bottom 200ms linear,
               box-shadow 200ms linear;
 }
@@ -159,8 +158,8 @@ header nav.desktop ul {
 
 header.opaque nav.desktop ul {
   opacity: 0.6;
-  color: white;
-  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(19%) hue-rotate(347deg) brightness(105%) contrast(105%);
+  color: black;
+  // filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(19%) hue-rotate(347deg) brightness(105%) contrast(105%);
   transition: all 200ms linear;
 }
 
@@ -192,7 +191,7 @@ header h1 {
 }
 
 header.opaque h1 {
-  color: white;
+  color: rgba(59,73,131,0.95);
 }
 
 header h1:first-child {
@@ -271,7 +270,7 @@ header nav.desktop {
 
 header .icon {
   height: 1.1rem;
-  fill: white;
+  fill: black;
 }
 
 header li#heart{
@@ -288,7 +287,7 @@ header li#heart .icon.back-logo,
 header li#heart .icon#bt-logo {
   height: 40px;
   margin-top: 5px;
-  // filter: invert(30%) sepia(49%) saturate(1812%) hue-rotate(314deg) brightness(86%) contrast(92%);
+  filter: invert(0%) sepia(98%) saturate(6%) hue-rotate(247deg) brightness(104%) contrast(101%);
 }
 
 header .icon#name {

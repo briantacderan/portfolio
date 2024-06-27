@@ -112,8 +112,12 @@
     <header id="scroll-top">
       <div class="content">
         <% if @home_menu %>
-          <%= link_to root_path, class: "desktop" do %>
+          <%= link_to root_path, class: "desktop-view" do %>
             <h1>BRIAN TACDERAN</h1>
+          <% end %>
+
+          <%= link_to root_path, class: "mobile-view" do %>
+            <%= image_tag "#{$s3}bt-logo.png", id: "heart-logo", class: "icon shown" %>
           <% end %>
         <% else %>
           <%= link_to bullseyestudio_path, class: "desktop" do %>
@@ -153,7 +157,7 @@
           </ul>
         </nav>
 
-        <div id="ip-section" class="icon-popups">
+        <div id="ip-section" class="icon-popups desktop-view">
           <div id="ip-wrapper" class="wrapper">
             <%= link_to "https://github.com/briantacderan" do %>
               <div class="icon github">

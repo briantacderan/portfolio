@@ -1,11 +1,11 @@
 <%= stylesheet_link_tag 'home', media: 'all', 'data-turbolinks-track': 'reload' %>
 
-<div id="about-view">
+<div id="about-view" class="desktop-view">
 
   <div id="parallax-intro">
-    <div class="intro scrollDist"></div>
+    <div class="intro scrollDist desktop-view"></div>
 
-    <div class="intro main">
+    <div class="intro main desktop-view">
       <svg viewBox="0 0 1500 6000"
            xmlns="http://www.w3.org/2000/svg">
         <mask id="m">
@@ -43,7 +43,7 @@
 
     <div class="intro about me-container">
 
-      <div id="image-me" class="image-full">
+      <div id="image-me" class="image-full desktop-view">
         <%= image_tag "#{$s3}me.png", id: "me-photo" %>
       </div>
 
@@ -87,7 +87,7 @@
         <div class="projects-container">
 
           <div class="pContent">
-            <p class="skill"><span>iOS application</span><br><br>FMFitness</p>
+            <p class="skill"><span>iOS SaaS application</span><br><br>FMFitness</p>
             <p class="skill"><span>eCommerce site</span><br><br>Cookies by RELLE</p>
             <p class="skill"><span>Design Portfolio</span><br><br>Bullseye Studio</p>
             <p class="skill"><span>Financial Data Tool</span><br><br>Hoodcast</p>
@@ -125,7 +125,7 @@
         <div class="container">
           <div class="mission-content">
             <h1 id="mission-title"><span>Mission</span></h1>
-            <p class="mission-content">It is absolutely critical in my career journey to integrate my technological enthusiasm with my entrepreneurial spirit and business education. Along the way, I aim to guarantee access to technology for everyone and ensure the industry is reflective of human diversity in totality. Other than enjoying code and writing it, I aim to utilize my business degree in computer science to create innovative products and services in technology. I am searching for stepping stones that reveal new potentials and possibilities for solutions that target the world's modern problems. <br><br> I want to tell my story, honor the people who paved the way for me, and expose social stigmas that persist. Working on projects relevant to society will allow me to take a stance, learn from my mistakes, and grow as a person. To work with a passionate team in tech will open the door for me to write inclusive code and persist changes in narrative. Because this industry reaches far corners worldwide, I hope to educate myself on how we can promote the best practices regarding how a more diverse and inclusive workplace can increase the economic potential of future applications.</p>
+            <p class="mission-content">It is absolutely critical in my career journey to integrate my technological enthusiasm with my entrepreneurial spirit and business education. Along the way, I aim to guarantee access to technology for everyone and ensure the industry is reflective of human diversity in totality. Other than enjoying code and writing it, I aim to utilize my degree in Business with my passion in computer science to create innovative products and services in technology. I am searching for stepping stones that reveal new potentials and possibilities for solutions that target the world's modern problems. <br><br> I want to tell my story, honor the people who paved the way for me, and expose social stigmas that persist. Working on projects relevant to society will allow me to take a stance, learn from my mistakes, and grow as a person. To work with a passionate team in tech will open the door for me to write inclusive code and persist changes in narrative. Because this industry reaches far corners worldwide, I hope to educate myself on how we can promote the best practices regarding how a more diverse and inclusive workplace can increase the economic potential of future applications.</p>
           </div>
         </div>
 
@@ -137,6 +137,128 @@
     </div>
   </div>
 
+  <%= javascript_pack_tag 'home', 'data-turbolinks-track': 'reload'%>
+
 </div>
 
-<%= javascript_pack_tag 'home', 'data-turbolinks-track': 'reload' %>
+<div id="about-view" class="mobile-view">
+
+  <h1 id="me-intro">My name is<br><br><span>BRIAN TACDERAN</span><br><br>a Strategic Full Stack Web Developer based in San Francisco CA</h1>
+
+  <div class="me-projects">
+    <h1 id="me"><span>Selected Projects</span></h1>
+
+    <section class="pSection">
+
+      <div class="projects-container">
+
+        <div id="project-one" class="pj">
+          <%= link_to fmfitness_path, class: "project-link" do %>
+            <p class="skill">FMFitness <span>iOS SaaS application</span><br><br></p>
+            <%= image_tag "#{$s3}fitness.png", class: "pImg oc-obs" %>
+          <% end %>
+        </div>
+
+        <div id="project-two" class="pj">
+          <%= link_to rellescookies_path, class: "project-link" do %>
+            <p class="skill">Cookies by RELLE <span>eCommerce site</span><br><br></p>
+            <%= image_tag "#{$s3}cookies-bump.png", class: "pImg space-trash" %>
+          <% end %>
+        </div>
+
+        <div id="project-three" class="pj">
+          <%= link_to bullseyestudio_path, class: "project-link" do %>
+            <p class="skill">Bullseye Studio <span>Design Portfolio</span><br><br></p>
+            <%= image_tag "#{$s3}bullseye-neon.png", id: "frame", class: "pImg oc-obs" %>
+          <% end %>
+        </div>
+
+        <div id="project-four" class="pj">
+          <%= link_to hoodcast_path, class: "project-link" do %>
+            <p class="skill">Hoodcast <span>Financial Data Tool</span><br><br></p>
+            <%= image_tag "#{$s3}hoodcast.png", class: "pImg space-trash" %>
+          <% end %>
+        </div>
+      </div>
+
+    </section>
+  </div>
+
+  <div class="me-skills">
+    <h2>Skills</h2>
+    <p class="skill">Competitive Sales</p>
+    <p class="skill">Strategic UI/UX Design</p>
+    <p class="skill">Web/iOS Development</p>
+    <p class="skill">Vector and 3D Graphics</p>
+    <p class="skill">Accounting/Finance</p>
+    <p class="skill">Machine Learning</p>
+    <p class="skill">Regression Analysis</p>
+  </div>
+
+  <div class="me-school">
+    <h2>Education</h2>
+    <br><br>
+    <h3 class="school">Golden Gate University</h3>
+    <p class="degree">B.S. Business</p>
+    <p class="year">Year graduated: 2018</p>
+  </div>
+
+  <div class="me-mission">
+    <h2 id="mission-title">Mission</h1>
+    <p class="mission-content">It is absolutely critical in my career journey to integrate my technological enthusiasm with my entrepreneurial spirit and business education. Along the way, I aim to guarantee access to technology for everyone and ensure the industry is reflective of human diversity in totality. Other than enjoying code and writing it, I aim to utilize my degree in Business with my passion in computer science to create innovative products and services in technology. I am searching for stepping stones that reveal new potentials and possibilities for solutions that target the world's modern problems. <br><br> I want to tell my story, honor the people who paved the way for me, and expose social stigmas that persist. Working on projects relevant to society will allow me to take a stance, learn from my mistakes, and grow as a person. To work with a passionate team in tech will open the door for me to write inclusive code and persist changes in narrative. Because this industry reaches far corners worldwide, I hope to educate myself on how we can promote the best practices regarding how a more diverse and inclusive workplace can increase the economic potential of future applications.</p>
+  </div>
+
+  <div id="me-contact">
+    <h2>Contact Me</h2>
+    <div id="ip-section" class="icon-popups">
+      <div id="ip-wrapper" class="wrapper mobile-view">
+        <%= link_to "https://github.com/briantacderan", class: 'popup mobile-view' do %>
+          <div class="icon github">
+            <div class="tooltip">GitHub</div>
+            <span><i class="fab fa-github"></i></span>
+          </div>
+        <% end %>
+
+        <%= link_to "https://www.linkedin.com/in/briantacderan", class: 'popup mobile-view' do %>
+          <div class="icon linkedin">
+            <div class="tooltip">LinkedIn</div>
+            <span><i class="fab fa-linkedin"></i></span>
+          </div>
+        <% end %>
+
+        <%= link_to "https://youtube.com/@thetacderancode", class: 'popup mobile-view' do %>
+          <div class="icon youtube">
+            <div class="tooltip">YouTube</div>
+            <span><i class="fab fa-youtube"></i></span>
+          </div>
+        <% end %>
+
+        <%= link_to "https://vocal.media/authors/brian-tacderan", class: 'popup mobile-view' do %>
+          <div class="icon vocal">
+            <div class="tooltip">Vocal</div>
+            <span><i class="fas fa-paragraph"></i></span>
+          </div>
+        <% end %>
+
+        <%= link_to "https://twitter.com/BrianTacderan", class: 'popup mobile-view' do %>
+          <div class="icon twitter">
+            <div class="tooltip">Twitter</div>
+            <span><i class="fab fa-twitter"></i></span>
+          </div>
+        <% end %>
+
+        <%= link_to "mailto:brian@thetacderancode.com", class: 'popup mobile-view' do %>
+          <div class="icon email">
+            <div class="tooltip">Email</div>
+            <span><i class="fab fa-telegram-plane"></i></span>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <div class="last-img">
+    <%= image_tag "#{$s3}rooftop.png", id: "mission-img" %>
+  </div>
+
+</div>

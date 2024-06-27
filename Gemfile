@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.2.2'
+ruby '3.3.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 7.1.2'
@@ -77,3 +77,6 @@ gem 'aws-sdk', '~> 3.0', '>= 3.0.1'
 
 # Fixed protocol initialization errors
 gem 'net-http'
+
+# Dark/Light Time of Day transition Data
+gem 'RubySunrise', '~> 0.3.3'

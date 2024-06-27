@@ -3,10 +3,13 @@ import { OrbitControls } from '/vendor/mods/three/examples/jsm/controls/OrbitCon
 import { GLTFLoader } from '/vendor/mods/three/addons/loaders/GLTFLoader.js'
 import { RGBELoader } from '/vendor/mods/three/addons/loaders/RGBELoader.js'
 import { DRACOLoader } from '/vendor/mods/three/addons/loaders/DRACOLoader.js'
+import * as BufferGeometryUtils from '/vendor/mods/three/addons/utils/BufferGeometryUtils.js'
 import { GUI } from 'dat.gui'
 import gsap from 'gsap'
 import { NodeMaterial, uv, vec2, checker, float, timerLocal } from '/vendor/mods/three/nodes/Nodes.js'
 // import { nodeFrame } from '/vendor/mods/three/addons/renderers/webgl-legacy/nodes/WebGLNodes.js'
+import * as POSTPROCESSING from "postprocessing"
+import { SSGIEffect, TRAAEffect, HBAOEffect, MotionBlurEffect, VelocityDepthNormalPass } from "realism-effects"
 
 
 // if(!Turbolinks) location.reload()
@@ -14,7 +17,8 @@ import { NodeMaterial, uv, vec2, checker, float, timerLocal } from '/vendor/mods
 
 document.addEventListener('turbolinks:load', function() {
 
-  let canvas, id, renderer, scene, camera, controls, s3, model, car, mixer, animation, action, clip, prevTime, startTime
+  let canvas, id, renderer, scene, camera, controls, s3, model, car, mixer
+      // animation, action, clip, prevTime, startTime
   let yRotation = 0
 
   // model animation
@@ -31,12 +35,19 @@ document.addEventListener('turbolinks:load', function() {
 
   	// PARAMETERS
     id = {
-  		loc: 'table_mountain_2',    												// Location
-  		mod: 'puddles',																			// Model
+  		loc: 'table_mountain_2/table_mountain_2_1k.hdr',    												// Location
+  		mod: 'puddles/puddles.gltf',												// Stage
   		dim: {																							// Dimensions
   			w: window.innerWidth,																	// width
   	    h: window.innerHeight,																// height
   		},
+      gltf: {                                             // Showcase
+        logo: 'logo/logo.gltf',
+        car: {
+          mesh: 'barracuda/barracuda.gltf',
+          tx: 'barracuda/Textures/'
+        }
+      }
     }
 
   	// CANVAS
@@ -52,17 +63,48 @@ document.addEventListener('turbolinks:load', function() {
   	renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
   	renderer.setSize(id.dim.w, id.dim.h)
   	renderer.toneMapping = THREE.ACESFilmicToneMapping
-  	// renderer.outputEncoding = THREE.sRGBEncoding
     renderer.outputColorSpace = THREE.SRGBColorSpace
+    // renderer.shadowMap.enabled = true
     renderer.setAnimationLoop(animate)
+
+    const composer = new POSTPROCESSING.EffectComposer(renderer)
+
+    // const pmremGenerator = new THREE.PMREMGenerator(renderer)
+    // pmremGenerator.compileEquirectangularShader()
 
   	// SCENE&CAMERA
   	scene = new THREE.Scene()
   	camera = new THREE.PerspectiveCamera(50, id.dim.w/id.dim.h, 0.1, 500)
   	camera.position.y = 2
   	camera.position.x = -10
-  	scene.add(camera)
 
+
+
+    // realism-effects
+    const velocityDepthNormalPass = new VelocityDepthNormalPass(scene, camera)
+    composer.addPass(velocityDepthNormalPass)
+
+    // SSGI
+    const ssgiEffect = new SSGIEffect(scene, camera, velocityDepthNormalPass)
+
+    // TRAA
+    const traaEffect = new TRAAEffect(scene, camera, velocityDepthNormalPass)
+
+    // Motion Blur
+    const motionBlur = new MotionBlurEffect(velocityDepthNormalPass)
+
+    // HBAO
+    const hbaoEffect = new HBAOEffect(composer, camera, scene)
+
+    const effectPass = new POSTPROCESSING.EffectPass(camera, ssgiEffect, hbaoEffect, traaEffect, motionBlur)
+
+    composer.addPass(effectPass)
+    scene.add(camera)
+
+
+
+
+    // OrbitControls
   	controls = new OrbitControls(camera, canvas)
 
   	controls.enableDamping = true
@@ -81,52 +123,219 @@ document.addEventListener('turbolinks:load', function() {
   	controls.target.set(0, 2, 0)
   	controls.update()
 
+
     const light = new THREE.PointLight(0xffffff, 1, 100)
-    light.position.set(0, 10, 10)
-    light.intensity = 200.0
+    light.position.set(5, 100, 100)
+    light.intensity = 2000.0
     scene.add(light)
 
-    // if(!window.texture || !window.gltf) {
-    	// LOADERS
-    	const rgbeLoader = new RGBELoader().setPath(`${s3}textures/equirectangular/`)
-    	const gltfLoader = new GLTFLoader().setPath(`${s3}models/gltf/`)
+    /* Light
+    const light = new THREE.DirectionalLight(0xffffff, 1, 100)
+    light.position.set(5, 10, 10)
+    light.intensity = 15.0
+    light.castShadow = true
+    scene.add(light)
+    // scene.add(new THREE.CameraHelper(light.shadow.camera))
 
-      const dracoLoader = new DRACOLoader()
-      dracoLoader.setDecoderPath('https://www.gstatic.com/draco/v1/decoders/')
-      dracoLoader.preload()
+    // Light
+    const lightB = new THREE.DirectionalLight(0xffffff, 1, 100)
+    lightB.position.set(-5, 10, -10)
+    lightB.intensity = 10.0
+    lightB.castShadow = true
+    scene.add(lightB)
+    // scene.add(new THREE.CameraHelper(lightB.shadow.camera)) */
 
-      const mesh = gltfLoader.load('logo/logo.gltf', function(mesh) {
-        const logo = mesh.scene
-        logo.position.setY(2)
-        yRotation = 180
-        move(logo)
-        scene.add(logo)
-        model = logo
+    // const pmremGenerator = new THREE.PMREMGenerator(renderer)
+    // pmremGenerator.compileEquirectangularShader()
+
+    // LOADERS
+    // const txLoader = new THREE.TextureLoader().setPath(`${s3}models/gltf/`)
+
+
+    /* const txLoader = new THREE.TextureLoader().setPath('/gltf/')
+
+    const dracoLoader = new DRACOLoader()
+    dracoLoader.setDecoderPath(`${s3}models/loaders/draco/`)
+    dracoLoader.setDecoderConfig({ type: 'js' })
+    dracoLoader.preload() */
+
+  	const rgbeLoader = new RGBELoader().setPath(`${s3}textures/equirectangular/`)
+  	const gltfLoader = new GLTFLoader().setPath(`${s3}models/gltf/`)
+
+
+    const mesh = gltfLoader.load('logo/logo.gltf', function(mesh) {
+      const logo = mesh.scene
+
+      logo.traverse((obj) => {
+        if(obj.isObject3d) obj.receiveShadow = true
+        if(obj.isGroup) obj.traverse((child) => {
+          if(child.isObject3d) child.receiveShadow = true
+        })
+        if(obj.isMesh) {
+          obj.castShadow = true
+          obj.receiveShadow = true
+          obj.material.envMap = hdri
+          // obj.material.envMapIntensity = 0.25
+        }
       })
 
-      const [ texture, gltf ] = await Promise.all([
-    		rgbeLoader.loadAsync(`${id.loc}/${id.loc}_1k.hdr`),
-        gltfLoader.loadAsync(`${id.mod}/${id.mod}.gltf`)
-    	])
-    /* } else {
-      const texture = JSON.parse(window.texture)
-      const gltf = JSON.parse(window.gltf)
-    } */
+      logo.position.setY(2)
+      yRotation = 180
+      move(logo)
+      scene.add(logo)
+      model = logo
+    })
 
+    const [ hdri, ground ] = await Promise.all([
+      rgbeLoader.loadAsync(id.loc),
+      gltfLoader.loadAsync(id.mod)
+    ])
 
-    texture.mapping = THREE.EquirectangularReflectionMapping
-    texture.colorSpace = THREE.LinearSRGBColorSpace
-    scene.background = texture
-    scene.environment = texture
+    const hdriCube = $.extend(true, {}, hdri)
+
+    hdri.mapping = THREE.EquirectangularReflectionMapping
+    hdriCube.mapping = THREE.CubeUVReflectionMapping
+    hdri.colorSpace = THREE.LinearSRGBColorSpace
+    hdriCube.colorSpace = THREE.LinearSRGBColorSpace
+    hdri.generateMipmaps = false
+    hdriCube.generateMipmaps = false
+
+    scene.environment = hdri
+    scene.background = hdri
+
+    if(ground.isObject3d) ground.receiveShadow = true
+
+    ground.scene.traverse((obj) => {
+      if(obj.isObject3d) obj.receiveShadow = true
+      if(obj.isGroup) obj.traverse((child) => {
+        if(child.isObject3d) child.receiveShadow = true
+      })
+      if(obj.isMesh) {
+        obj.castShadow = true
+        obj.receiveShadow = true
+        obj.material.envMap = hdri
+        // obj.material.envMapIntensity = 0.25
+      }
+    })
 
     document.querySelector('div.home-title h2').style.color = 'black'
 
-  	scene.add(gltf.scene)
+    scene.add(ground.scene)
 
 
-    /* gltfLoader.setDRACOLoader(dracoLoader)
 
-    gltfLoader.load('barracuda/barracuda.gltf', function(mesh) {
+    // SHOWCASE ITEMS
+
+    /* const mesh = gltfLoader.load('logo/logo.gltf', function(mesh) {
+      const logo = mesh.scene
+      logo.position.setY(2)
+      yRotation = 180
+      move(logo)
+      scene.add(logo)
+      model = logo
+    })
+
+    gltfLoader.setDRACOLoader(dracoLoader)
+    gltfLoader.setPath(`${s3}models/gltf/`)
+    // gltfLoader.setPath('/gltf/')
+
+    const [ carColorMap, carNormalMap, carMetalMap, carRoughMap, carTransMap, carSpecMap, carEmissionMap, whlColorMap, whlNormalMap, whlNormalInvMap, whlMetalRoughMap ] = await Promise.all([
+      txLoader.loadAsync(`${id.gltf.car.tx}Barracuda_16K-PNG_BaseColor.png`),
+      txLoader.loadAsync(`${id.gltf.car.tx}Barracuda_16K-JPG_Normal.jpg`),
+      txLoader.loadAsync(`${id.gltf.car.tx}Barracuda_16K-JPG_Metallic.jpg`),
+      txLoader.loadAsync(`${id.gltf.car.tx}Barracuda_16K-JPG_Roughness.jpg`),
+      txLoader.loadAsync(`${id.gltf.car.tx}Barracuda_16K-PNG_Transmission.png`),
+      txLoader.loadAsync(`${id.gltf.car.tx}Barracuda_16K-JPG_SpecularColor.jpg`),
+      txLoader.loadAsync(`${id.gltf.car.tx}Barracuda_16K-JPG_Emission.jpg`),
+      txLoader.loadAsync(`${id.gltf.car.tx}BarracudaWHEEL_4K-JPG_BaseColor.jpg`),
+      txLoader.loadAsync(`${id.gltf.car.tx}BarracudaWHEEL_4K-JPG_Normal.jpg`),
+      txLoader.loadAsync(`${id.gltf.car.tx}BarracudaWHEEL_4K-JPG_NormalInverted.jpg`),
+      txLoader.loadAsync(`${id.gltf.car.tx}BarracudaWHEEL_4K-JPG_Metallic-BarracudaWHEEL_4K-JPG_Roughness.jpg`)
+    ])
+
+    carColorMap.colorSpace = THREE.SRGBColorSpace
+    carSpecMap.colorSpace = THREE.SRGBColorSpace
+    carEmissionMap.colorSpace = THREE.SRGBColorSpace
+    whlColorMap.colorSpace = THREE.SRGBColorSpace
+
+    const maps = [ carColorMap, carNormalMap, carMetalMap, carRoughMap, carTransMap, carSpecMap, carEmissionMap, whlColorMap, whlNormalMap, whlNormalInvMap, whlMetalRoughMap ]
+
+    // maps.map((map, i) => map.flipY = (i<7) ? false : true)
+    maps.map((map) => map.flipY = false)
+
+    const mesh = gltfLoader.load(id.gltf.car.mesh, function(group) {
+      const barracuda = group.scene
+      console.log('\nSCENE TYPE: ', barracuda.type)
+
+      barracuda.traverse((obj) => {
+        console.log('\nSCENE CHILD TYPE: ', obj.type)
+
+        if(obj.isObject3d) obj.receiveShadow = true
+
+        if(obj.isGroup) obj.traverse((child) => {
+          if(child.isObject3d) child.receiveShadow = true
+        })
+
+        if(obj.isMesh) {
+          obj.castShadow = true
+          obj.receiveShadow = true
+
+          // if(obj.name.slice(-1) == 'y') {
+          if(obj.name.slice(-1) == 'P') {
+            obj.material = new THREE.MeshPhysicalMaterial({
+              envMap: hdri,
+              // envMapIntensity: 0.25,
+              map: maps[0],
+              normalMap: maps[1],
+              normalMapType: THREE.ObjectSpaceNormalMap,
+              roughnessMap: maps[3],
+              metalnessMap: maps[2],
+              // opacity: 1.0,
+              // transmission: 1.0,
+              // transmissionMap: maps[4],
+              specularColorMap: maps[5],
+              emissiveMap: maps[6],
+              emissiveIntensity: 28.0,
+
+              thickness: 1.001
+            })
+          } else {
+            obj.material = new THREE.MeshPhysicalMaterial({
+              envMap: hdri,
+              // envMapIntensity: 0.25,
+              map: maps[7],
+              normalMap: obj.name.slice(-1) == 'L' ? maps[8] : maps[9],
+              normalMapType: THREE.ObjectSpaceNormalMap,
+              roughnessMap: maps[10],
+              metalnessMap: maps[10],
+              thickness: 1.001
+            })
+          }
+
+          if(obj.geometry.isBufferGeometry) {
+            obj.geometry = BufferGeometryUtils.mergeVertices(obj.geometry, 0.001)
+            obj.geometry.computeVertexNormals()
+            obj.geometry.normalizeNormals()
+          }
+        }
+      })
+      barracuda.position.setY(0)
+      yRotation = 0
+      model = barracuda
+      scene.add(model)
+    }, function ( xhr ) {
+      console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' )
+    }, function ( error ) {
+      console.log( 'An error happened' )
+    }) */
+
+
+
+    // dracoLoader.dispose()
+
+
+
+    /* gltfLoader.load('barracuda/barracuda.gltf', function(mesh) {
       car = mesh
       model = mesh.scene
       model.position.setY(0)
@@ -151,15 +360,14 @@ document.addEventListener('turbolinks:load', function() {
       rendered = true
     }) */
 
+    /* texture = await rgbeLoader.load(`${id.loc}/${id.loc}_4k.hdr`, textureScene)
+    texture = await rgbeLoader.load(`${id.loc}/${id.loc}_8k.hdr`, textureScene) */
 
-  	for(var i=0; i<scene.length; i++) {
+    for(var i=0; i<scene.length; i++) {
   		console.log(scene[i].isMesh)
   	}
 
   	window.addEventListener('resize', onWindowResize)
-
-    /* texture = await rgbeLoader.load(`${id.loc}/${id.loc}_4k.hdr`, textureScene)
-    texture = await rgbeLoader.load(`${id.loc}/${id.loc}_8k.hdr`, textureScene) */
   }
 
   /* RAYCASTER

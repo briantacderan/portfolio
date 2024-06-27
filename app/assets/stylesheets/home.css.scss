@@ -36,6 +36,174 @@ image.arrow {
 
 
 
+
+
+@media only screen and (max-width: 700px) {
+  .mv-svg-title {
+    max-width: 80%;
+  }
+
+  .desktop-view {
+    visibility: hidden;
+    display: none;
+  }
+
+  body, html {
+    overflow-y: scroll;
+    background-color: #BDBDBD;
+  }
+
+  div#about-view.mobile-view {
+    background-color: #BDBDBD;
+  }
+
+  header {
+    height: 5rem;
+    width: 100vw;
+
+    .icon {
+      margin: 0;
+      margin-left: 1rem;
+      padding: 0;
+      width: 3.8rem;
+      height: 3.5rem;
+    }
+  }
+
+  section#me-contact {
+    margin: 0 auto;
+
+    .icon-popups {
+      display: flex;
+      visibility: visible;
+    }
+  }
+
+  h2 {
+    padding-top: 4rem;
+  }
+
+  h3 {
+    color: gainsboro;
+    font-size: 1.5rem;
+    text-shadow: -1px 1px 1px #383838,
+                 -2px 2px 2px #383838,
+                 -4px 4px 4px #383838;
+    -webkit-text-stroke: 2px #383838;
+  }
+
+  h2, h3, span {
+    font-family: 'Alfa Slab One', sans-serif;
+  }
+
+  h1#me-intro {
+    font-family: 'Major Mono Display', sans-serif;
+    font-size: 2rem;
+    text-align: left;
+    letter-spacing: 0;
+    line-height: 1.2;
+    width: 90%;
+    margin: 0 auto 10rem;
+    padding: 10rem 1rem 2rem;
+
+    span {
+      font-family: 'Alfa Slab One', sans-serif;
+      color: #F03743; //rgba(78, 152, 21, 0.8);
+      letter-spacing: 0.5rem;
+      opacity: 0.8;
+      text-align: right;
+      float: right;
+      padding-bottom: 1rem;
+    }
+  }
+
+  section.pSection {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  p.skill {
+    font-family: 'Alfa Slab One', sans-serif;
+    color: #F03743;
+    font-size: 1.2rem;
+
+    span {
+      font-family: 'Poppins', sans-serif;
+      color: grayaaa;
+      font-size: 1rem;
+    }
+  }
+
+  .projects-container {
+    .pj {
+      margin: 4rem auto;
+    }
+
+    p {
+      text-shadow: -1px 1px 1px #383838,
+                   -2px 2px 2px #383838,
+                   -4px 4px 4px #383838;
+      -webkit-text-stroke: 2px #383838;
+
+      span {
+        text-shadow: none;
+        -webkit-text-stroke: none;
+        font-weight: 200;
+      }
+    }
+
+    #project-one p {
+      color: #9EC131;
+    }
+
+    #project-three p {
+      color: #46C1F6;
+    }
+
+    #project-four p {
+      color: #F8F12E;
+    }
+
+    img {
+      width: 80vw;
+      border: 5px black solid;
+      border-radius: 10px;
+    }
+  }
+
+  .me-mission p {
+    margin: 0 auto;
+    padding: 2rem;
+    line-height: 1.2rem;
+  }
+
+  #me-contact {
+    background-color: white;
+
+    .mobile-view .icon-popups {
+      flex-direction: column;
+      position: relative;
+      opacity: 1;
+      width: 100vw;
+
+      div.wrapper.mobile-view {
+        width: 100vw;
+      }
+    }
+  }
+
+  a.popup.mobile-view {
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .mobile-view {
+    visibility: hidden;
+    display: none;
+  }
+}
+
 div#about-view {
   background-color: #fff;
   width: 100%;

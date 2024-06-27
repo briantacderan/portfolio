@@ -11,7 +11,7 @@
    100%{ opacity: 0; }
 }
 
-.icon-popups {
+.icon-popups.desktop-view {
   float: right;
   flex-direction: column;
   position: absolute;
@@ -31,15 +31,12 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-.wrapper {
+div.icon-popups div.wrapper {
+  height: 400px;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-}
-
-div.icon-popups div.wrapper {
-  height: 400px;
 }
 
 .wrapper .icon {
@@ -365,7 +362,7 @@ div#about-me-slide .wrapper .preview.specs:hover .tooltip {
 
 
 
-@media only screen and (max-width: 850px) {
+/*@media only screen and (max-width: 850px) {
   .wrapper .icon {
     width: 36px;
     height: 36px;
@@ -488,7 +485,7 @@ div#about-me-slide .wrapper .preview.specs:hover .tooltip {
   }
 
   div#about-me-slide div#slider-content-container::-webkit-scrollbar {
-    display: none;  /* Safari and Chrome */
+    display: none;
   }
 
   div#about-me-slide div.slider-image-wrapper.projects {
@@ -520,4 +517,4 @@ div#about-me-slide .wrapper .preview.specs:hover .tooltip {
   .socials img {
     padding: 0 1.5rem;
   }
-}
+} */
