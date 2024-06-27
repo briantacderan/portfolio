@@ -18,6 +18,8 @@ b8 = Photo.create(project_id: 1, project_name: "Plymouth Barracuda 1968", photo_
 
 b9 = Photo.create(project_id: 1, project_name: "Plymouth Barracuda 1968", photo_url: "https://tacderan-code.s3.us-west-1.amazonaws.com/images/renders/b9.jpeg")
 
+b10 = Photo.create(project_id: 1, project_name: "Plymouth Barracuda 1968", photo_url: "https://tacderan-code.s3.us-west-1.amazonaws.com/images/renders/b10.jpeg")
+
 fs0 = Photo.create(project_id: 2, project_name: "Father Sanchez in \"La Sangre del Rio Grande\"", photo_url: "https://tacderan-code.s3.us-west-1.amazonaws.com/images/renders/fs0.jpeg")
 
 fs1 = Photo.create(project_id: 2, project_name: "Father Sanchez in \"La Sangre del Rio Grande\"", photo_url: "https://tacderan-code.s3.us-west-1.amazonaws.com/images/renders/fs1.jpeg")
@@ -34,22 +36,28 @@ i2 = Photo.create(project_id: 3, project_name: "Intramuros Building", photo_url:
 
 i3 = Photo.create(project_id: 3, project_name: "Intramuros Building", photo_url: "https://tacderan-code.s3.us-west-1.amazonaws.com/images/renders/i3.jpeg")
 
-n0 = Photo.create(project_id: 4, project_name: "Nurburgring Racetrack", photo_url: "https://tacderan-code.s3.us-west-1.amazonaws.com/images/renders/n0.jpeg")
+m0 = Photo.create(project_id: 4, project_name: "Motown, U.S.A.", photo_url: "https://tacderan-code.s3.us-west-1.amazonaws.com/images/renders/m0.jpeg")
 
-n1 = Photo.create(project_id: 4, project_name: "Nurburgring Racetrack", photo_url: "https://tacderan-code.s3.us-west-1.amazonaws.com/images/renders/n1.jpeg")
+m1 = Photo.create(project_id: 4, project_name: "Motown, U.S.A.", photo_url: "https://tacderan-code.s3.us-west-1.amazonaws.com/images/renders/m1.jpeg")
 
-n2 = Photo.create(project_id: 4, project_name: "Nurburgring Racetrack", photo_url: "https://tacderan-code.s3.us-west-1.amazonaws.com/images/renders/n2.jpeg")
+m2 = Photo.create(project_id: 4, project_name: "Motown, U.S.A.", photo_url: "https://tacderan-code.s3.us-west-1.amazonaws.com/images/renders/m2.jpeg")
 
-n3 = Photo.create(project_id: 4, project_name: "Nurburgring Racetrack", photo_url: "https://tacderan-code.s3.us-west-1.amazonaws.com/images/renders/n3.jpeg")
+n0 = Photo.create(project_id: 5, project_name: "Nurburgring Racetrack", photo_url: "https://tacderan-code.s3.us-west-1.amazonaws.com/images/renders/n0.jpeg")
 
-ai0 = Photo.create(project_id: 5, project_name: "Angel Island", photo_url: "https://tacderan-code.s3.us-west-1.amazonaws.com/images/renders/ai0.jpeg")
+n1 = Photo.create(project_id: 5, project_name: "Nurburgring Racetrack", photo_url: "https://tacderan-code.s3.us-west-1.amazonaws.com/images/renders/n1.jpeg")
 
-ai1 = Photo.create(project_id: 5, project_name: "Angel Island", photo_url: "https://tacderan-code.s3.us-west-1.amazonaws.com/images/renders/ai1.jpeg")
+n2 = Photo.create(project_id: 5, project_name: "Nurburgring Racetrack", photo_url: "https://tacderan-code.s3.us-west-1.amazonaws.com/images/renders/n2.jpeg")
 
-ai2 = Photo.create(project_id: 5, project_name: "Angel Island", photo_url: "https://tacderan-code.s3.us-west-1.amazonaws.com/images/renders/ai2.jpeg")
+n3 = Photo.create(project_id: 5, project_name: "Nurburgring Racetrack", photo_url: "https://tacderan-code.s3.us-west-1.amazonaws.com/images/renders/n3.jpeg")
 
-ai3 = Photo.create(project_id: 5, project_name: "Angel Island", photo_url: "https://tacderan-code.s3.us-west-1.amazonaws.com/images/renders/ai3.jpeg")
+ai0 = Photo.create(project_id: 6, project_name: "Angel Island", photo_url: "https://tacderan-code.s3.us-west-1.amazonaws.com/images/renders/ai0.jpeg")
 
-ai4 = Photo.create(project_id: 5, project_name: "Angel Island", photo_url: "https://tacderan-code.s3.us-west-1.amazonaws.com/images/renders/ai4.jpeg")
+ai1 = Photo.create(project_id: 6, project_name: "Angel Island", photo_url: "https://tacderan-code.s3.us-west-1.amazonaws.com/images/renders/ai1.jpeg")
 
-c0 = Photo.create(project_id: 6, project_name: "Chair Tutorial", photo_url: "https://tacderan-code.s3.us-west-1.amazonaws.com/images/renders/c0.jpeg")
+ai2 = Photo.create(project_id: 6, project_name: "Angel Island", photo_url: "https://tacderan-code.s3.us-west-1.amazonaws.com/images/renders/ai2.jpeg")
+
+ai3 = Photo.create(project_id: 6, project_name: "Angel Island", photo_url: "https://tacderan-code.s3.us-west-1.amazonaws.com/images/renders/ai3.jpeg")
+
+ai4 = Photo.create(project_id: 6, project_name: "Angel Island", photo_url: "https://tacderan-code.s3.us-west-1.amazonaws.com/images/renders/ai4.jpeg")
+
+c0 = Photo.create(project_id: 7, project_name: "Chair Tutorial", photo_url: "https://tacderan-code.s3.us-west-1.amazonaws.com/images/renders/c0.jpeg")
