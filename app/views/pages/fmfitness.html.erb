@@ -52,4 +52,59 @@
     </div>
   </div>
 
+  <div id="me-contact" class="mobile-view">
+    <h2>Contact Me</h2>
+    <div id="ip-section" class="icon-popups mobile-view">
+      <div id="ip-wrapper" class="wrapper mobile-view">
+        <%= link_to "https://github.com/briantacderan", class: 'popup mobile-view' do %>
+          <div class="icon github">
+            <div class="tooltip">GitHub</div>
+            <span><i class="fab fa-github"></i></span>
+          </div>
+        <% end %>
+
+        <%= link_to "https://www.linkedin.com/in/briantacderan", class: 'popup mobile-view' do %>
+          <div class="icon linkedin">
+            <div class="tooltip">LinkedIn</div>
+            <span><i class="fab fa-linkedin"></i></span>
+          </div>
+        <% end %>
+
+        <%= link_to "https://youtube.com/@thetacderancode", class: 'popup mobile-view' do %>
+          <div class="icon youtube">
+            <div class="tooltip">YouTube</div>
+            <span><i class="fab fa-youtube"></i></span>
+          </div>
+        <% end %>
+
+        <%= link_to "https://vocal.media/authors/brian-tacderan", class: 'popup mobile-view' do %>
+          <div class="icon vocal">
+            <div class="tooltip">Vocal</div>
+            <span><i class="fas fa-paragraph"></i></span>
+          </div>
+        <% end %>
+
+        <%= link_to "https://twitter.com/BrianTacderan", class: 'popup mobile-view' do %>
+          <div class="icon twitter">
+            <div class="tooltip">Twitter</div>
+            <span><i class="fab fa-twitter"></i></span>
+          </div>
+        <% end %>
+
+        <%= link_to "mailto:brian@thetacderancode.com", class: 'popup mobile-view' do %>
+          <div class="icon email">
+            <div class="tooltip">Email</div>
+            <span><i class="fab fa-telegram-plane"></i></span>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <div class="last-img mobile-view">
+    <%= image_tag "#{$s3}rooftop.png", id: "mission-img" %>
+  </div>
+
 </div>
+
+<%= javascript_include_tag 'root/base', 'data-turbolinks-track': 'reload', type: :module, crossorigin: 'anonymous' %>

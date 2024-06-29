@@ -1,3 +1,11 @@
+@media only screen and (max-width: 730px) {
+  h1#port-name,
+  h2#my-design {
+    position: relative;
+    left: 12rem;
+  }
+}
+
 img#heart-logo {
   display: none !important;
 }
@@ -108,15 +116,19 @@ header .content {
   max-width: 100vw;
   display: flex;
   justify-content: space-between;
-  flex-direction: row-reverse;
+  flex-direction: row;
   align-items: center;
   text-align: center;
   margin: 0 auto;
 }
 
 .icon-popups {
-  bottom: 0;
+  // bottom: -5rem;
   float: right;
+}
+
+.icon-popups.desktop-view {
+  left: 1000px;
 }
 
 div.icon-popups div.wrapper {
@@ -131,7 +143,6 @@ div.icon-popups div.wrapper {
   position: static;
   top: 0;
   font-size: 1rem;
-  background-color: #ffffff;
   color: #ffffff;
   padding: 0 0;
   border-radius: none;
@@ -142,10 +153,11 @@ div.icon-popups div.wrapper {
 }
 
 header a.desktop:hover + div.icon-popups,
-div.icon-popups:hover,
+header div.icon-popups:hover,
 header.popup .icon-popups {
   bottom: -20.5rem;
-  left: 50vw;
+  right: 50vw;
+  left: 30vw;
 }
 
 .wrapper .tooltip::before,
@@ -357,7 +369,7 @@ div#categories {
   }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 730px) {
   nav {
     font-size: 1rem;
     padding: 2rem;
@@ -378,7 +390,7 @@ div#categories {
   }
 
   div#categories {
-    transform: translate(-90%, 120%);
+    transform: translate(-56%, 80%);
 
     ul {
       display: flex;
@@ -392,7 +404,10 @@ div#categories {
         letter-spacing: 0.3rem;
         text-transform: uppercase;
         line-height: 3rem;
-        background-color: black;
+
+        button {
+          background-color: rgba(0, 0, 0, 0.7);
+        }
 
         span {
         }
@@ -402,6 +417,10 @@ div#categories {
       }
 
       li.item:hover {
+      }
+
+      li#end {
+        color: white;
       }
     }
 

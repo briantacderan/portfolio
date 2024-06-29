@@ -4,7 +4,7 @@
   <head>
     <title>The Tacderan Code</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <meta name="turbolinks-visit-control" content="reload" />
+    <!--meta name="turbolinks-visit-control" content="reload" / -->
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -21,13 +21,19 @@
     <%= stylesheet_link_tag 'icon-popups', media: 'all', 'data-turbolinks-track': 'reload' %>
 
     <!-- jquery -->
-    <script src="//cdn.jsdelivr.net/jquery/2.2.0/jquery.min.js"></script>
-    <script src="//cdn.jsdelivr.net/jquery.sidr/2.2.1/jquery.sidr.min.js"></script>
+    <script type="module" src="//cdn.jsdelivr.net/jquery/2.2.0/jquery.min.js"></script>
+    <script type="module" src="//cdn.jsdelivr.net/jquery.sidr/2.2.1/jquery.sidr.min.js"></script>
 
     <!--imagesLoaded -->
-    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.js"></script>
-    <!-- javascript universal -->
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script type="module" src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.js"></script>
+
+    <!-- gsap -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+
+    <!-- lenis -->
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
 
     <!-- scroll reveal -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/animatecss/3.5.2/animate.min.css" />
@@ -120,14 +126,8 @@
             <%= image_tag "#{$s3}bt-logo.png", id: "heart-logo", class: "icon shown" %>
           <% end %>
         <% else %>
-          <%= link_to bullseyestudio_path, class: "desktop" do %>
+          <%= link_to root_path, class: "mobile-view" do %>
             <%= image_tag "#{$s3}bt-logo.png", id: "heart-logo", class: "icon shown" %>
-            <div class="icon designs">
-              <% if !@design_menu %>
-                <div class="tooltip">Digital Designs</div>
-              <% end %>
-              <%= image_tag "#{$s3}bs-logo.png", id: "bs-logo", class: "icon hidden" %>
-            </div>
           <% end %>
         <% end %>
 
@@ -205,10 +205,9 @@
 
       </div>
 
-
     </header>
 
-  <%= yield %>
+    <%= yield %>
 
   </body>
 

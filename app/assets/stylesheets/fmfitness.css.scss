@@ -1,5 +1,14 @@
 // Header
 
+@media only screen and (max-width: 730px) {
+  header {
+    height: 5rem;
+    background-image: none;
+    background-color: gray;
+    border-bottom: solid 2px black;
+  }
+}
+
 @media only screen and (min-width: 1001px) {
   header {
     left: 50%;
@@ -80,7 +89,7 @@ div#fm-project-view {
     background-color: dimgray;
 
     .header-content  {
-      padding-top: 10vh;
+      padding-top: 14vh;
       display: flex;
 
       .text-container {
@@ -185,11 +194,6 @@ div#fm-project-view {
     }
   }
 
-
-
-
-
-
   #project-main {
     .main-container {
       max-width: 1000px;
@@ -252,35 +256,28 @@ div#fm-project-view {
 }
 
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 730px) {
   div#fm-project-view {
-    #project-header {
+    background-color: white;
+
+    div#project-header {
       height: 500px;
 
       .header-content {
         .text-container h1 {
-          font-size: 3.5rem;
-        }
-
-        .img-container  {
-          width: 100%;
-          height: 0;
-
-          img {
-            top: 0;
-            width: 100%;
-            height: 50%;
-            left: 0;
-          }
+          font-size: 4.5rem;
         }
       }
     }
 
     #project-desc {
-      height: 320px;
+      height: 700px;
 
       .desc-container {
-        margin-left: 25vw;
+        width: 80vw;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
 
         .main-points {
           width: 350px;
@@ -291,7 +288,14 @@ div#fm-project-view {
         }
 
         .description {
-          display: none;
+          margin-left: 0;
+
+          p {
+            width: 100%;
+            line-height: 1.5rem;
+            font-size: 1rem;
+            margin: 4rem auto;
+          }
         }
       }
     }
@@ -319,23 +323,25 @@ div#fm-project-view {
         .extra-container {
           display: flex;
           flex-direction: column;
-          padding-top: 100px;
+          padding-top: 50px;
+          background-color: #ccc;
 
           img {
             background-color: #ccc;
-            width: 90vw;
+            width: 100vw;
             min-width: 100px;
             padding: 30px;
-            margin: 60px auto;
+            margin: 0 auto;
           }
 
           img:nth-child(even) {
             margin-right: 0;
+            padding-left: 0;
           }
 
           img:nth-child(odd) {
             margin-left: 0;
-            padding-right: 30px;
+            padding-right: 0;
           }
         }
       }

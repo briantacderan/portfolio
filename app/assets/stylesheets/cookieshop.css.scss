@@ -1,5 +1,14 @@
 // Header
 
+@media only screen and (max-width: 730px) {
+  header {
+    height: 5rem;
+    background-image: none;
+    background-color: dimgray;
+    border-bottom: solid 2px black;
+  }
+}
+
 @media only screen and (min-width: 1001px) {
   header {
     left: 50%;
@@ -10,7 +19,6 @@
   header .content {
     flex-flow: row-reverse;
     background-color: dimgray;
-    border-bottom: solid 1px black;
   }
 
   header.opaque:after {
@@ -225,17 +233,19 @@ div#rc-project-view {
           padding: 60px;
           margin: 5rem auto 0;
           border-bottom: solid 2px black;
-          border-radius: 50% 0 0 0;
+          border-radius: 0;
         }
 
         img:nth-child(even) {
           margin-right: 50vw;
           border-right: solid 1px black;
+          border-radius: 0 10rem 0 0;
         }
 
         img:nth-child(odd) {
           margin-right: 0;
           border-left: solid 1px black;
+          border-radius: 10rem 0 0 0;
         }
 
         img:last-child {
@@ -256,10 +266,12 @@ div#rc-project-view {
 
 
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 730px) {
   div#rc-project-view {
-    #project-header {
-      height: 500px;
+    background-color: gainsboro;
+
+    div#project-header {
+      height: 350px;
 
       .header-content {
         .text-container {
@@ -271,17 +283,24 @@ div#rc-project-view {
           }
         }
 
-        .img-container img {
-          height: 30%;
+        .img-container {
+          position: static;
+
+          img {
+            height: 30%;
+          }
         }
       }
     }
 
     #project-desc {
-      height: 320px;
+      height: 430px;
 
       .desc-container {
-        margin-left: 25vw;
+        margin: 0 auto;
+        width: 80vw;
+        display: flex;
+        flex-direction: column;
 
         .main-points {
           width: 350px;
@@ -292,7 +311,14 @@ div#rc-project-view {
         }
 
         .description {
-          display: none;
+          margin-left: 0;
+
+          p {
+            width: 100%;
+            line-height: 1.5rem;
+            font-size: 1rem;
+            margin: 4rem 0;
+          }
         }
       }
     }
@@ -305,32 +331,39 @@ div#rc-project-view {
       }
 
       .extra-content {
-        background-color: coral;
+        // background-color: coral;
         width: 100vw;
 
         .extra-container {
           display: flex;
           flex-direction: column;
-          padding-top: 100px;
+          padding-top: 3rem;
+          background-color: gainsboro;
 
           img {
             background-color: gainsboro;
-            width: 90vw;
-            min-width: 100px;
-            padding: 75 30px 30px 30px;
-            margin: 40px auto;
+            width: 100vw;
+            margin: 0 auto;
+            padding: 10px;
+            border-bottom: none;
+            border: none;
+            border-radius: 0;
           }
 
           img:nth-child(even) {
             margin-right: 0;
+            border-right: none;
+            border-radius: 0;
           }
 
           img:nth-child(odd) {
             margin-left: 0;
+            border-left: none;
+            border-radius: 0;
           }
 
           img:last-child {
-            padding: 75px 30px 30px 30px;
+            padding: 2rem 0;
             margin-bottom: 0;
           }
         }

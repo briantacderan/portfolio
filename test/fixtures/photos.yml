@@ -1,14 +1,14 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  photo_id: 1
+  id: 
   project_id: 1
   project_name: MyString
   photo_url: MyString
   description: MyString
 
 two:
-  photo_id: 1
+  id: 
   project_id: 1
   project_name: MyString
   photo_url: MyString

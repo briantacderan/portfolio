@@ -20,13 +20,7 @@ b9 = Photo.create(project_id: 1, project_name: "Plymouth Barracuda 1968", photo_
 
 b10 = Photo.create(project_id: 1, project_name: "Plymouth Barracuda 1968", photo_url: "https://tacderan-code.s3.us-west-1.amazonaws.com/images/renders/b10.jpeg")
 
-fs0 = Photo.create(project_id: 2, project_name: "Father Sanchez in \"La Sangre del Rio Grande\"", photo_url: "https://tacderan-code.s3.us-west-1.amazonaws.com/images/renders/fs0.jpeg")
-
-fs1 = Photo.create(project_id: 2, project_name: "Father Sanchez in \"La Sangre del Rio Grande\"", photo_url: "https://tacderan-code.s3.us-west-1.amazonaws.com/images/renders/fs1.jpeg")
-
-fs2 = Photo.create(project_id: 2, project_name: "Father Sanchez in \"La Sangre del Rio Grande\"", photo_url: "https://tacderan-code.s3.us-west-1.amazonaws.com/images/renders/fs2.jpeg")
-
-fs3 = Photo.create(project_id: 2, project_name: "Father Sanchez in \"La Sangre del Rio Grande\"", photo_url: "https://tacderan-code.s3.us-west-1.amazonaws.com/images/renders/fs3.jpeg")
+fs0 = Photo.create(project_id: 2, project_name: "Father Sanchez in \"La Sangre del Rio Grande\"", photo_url: "https://tacderan-code.s3.us-west-1.amazonaws.com/images/renders/fs3.jpeg")
 
 i0 = Photo.create(project_id: 3, project_name: "Intramuros Building", photo_url: "https://tacderan-code.s3.us-west-1.amazonaws.com/images/renders/i0.jpeg")
 

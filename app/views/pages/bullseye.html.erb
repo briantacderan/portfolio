@@ -1,8 +1,6 @@
 <%= stylesheet_link_tag 'bullseye', media: 'all', 'data-turbolinks-track': 'reload' %>
 <%= stylesheet_link_tag 'slide-swiper', media: 'all', 'data-turbolinks-track': 'reload' %>
 
-<%= javascript_pack_tag 'jquery-ajax', inject: false %>
-
 <div id="screen-filter">
 <canvas class="webgl"></canvas>
 </div>
@@ -69,5 +67,7 @@
 </div>
 
 <!-- slide swiper -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.5/swiper-bundle.min.js"></script>
-<%= javascript_pack_tag 'bullseye', inject: false %>
+<script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.5/swiper-bundle.min.js"></script>
+
+<%= javascript_include_tag 'root/base', 'data-turbolinks-track': 'reload', type: :module, crossorigin: 'anonymous' %>
+<%= javascript_include_tag 'canvas/bullseye', 'data-turbolinks-track': 'reload', type: :module, crossorigin: 'anonymous' %>

@@ -137,13 +137,11 @@
     </div>
   </div>
 
-  <%= javascript_pack_tag 'home', 'data-turbolinks-track': 'reload'%>
-
 </div>
 
 <div id="about-view" class="mobile-view">
 
-  <h1 id="me-intro">My name is<br><br><span>BRIAN TACDERAN</span><br><br>a Strategic Full Stack Web Developer based in San Francisco CA</h1>
+  <h1 id="me-intro" class="mobile-view wow fadeInLeft" data-wow-delay="2.45s">My name is<br><br><span>BRIAN TACDERAN</span><br><br>a Strategic Full Stack Web Developer based in San Francisco CA</h1>
 
   <div class="me-projects">
     <h1 id="me"><span>Selected Projects</span></h1>
@@ -205,7 +203,7 @@
 
   <div class="me-mission">
     <h2 id="mission-title">Mission</h1>
-    <p class="mission-content">It is absolutely critical in my career journey to integrate my technological enthusiasm with my entrepreneurial spirit and business education. Along the way, I aim to guarantee access to technology for everyone and ensure the industry is reflective of human diversity in totality. Other than enjoying code and writing it, I aim to utilize my degree in Business with my passion in computer science to create innovative products and services in technology. I am searching for stepping stones that reveal new potentials and possibilities for solutions that target the world's modern problems. <br><br> I want to tell my story, honor the people who paved the way for me, and expose social stigmas that persist. Working on projects relevant to society will allow me to take a stance, learn from my mistakes, and grow as a person. To work with a passionate team in tech will open the door for me to write inclusive code and persist changes in narrative. Because this industry reaches far corners worldwide, I hope to educate myself on how we can promote the best practices regarding how a more diverse and inclusive workplace can increase the economic potential of future applications.</p>
+    <p class="mission-content mobile-view">It is absolutely critical in my career journey to integrate my technological enthusiasm with my entrepreneurial spirit and business education. Along the way, I aim to guarantee access to technology for everyone and ensure the industry is reflective of human diversity in totality. Other than enjoying code and writing it, I aim to utilize my degree in Business with my passion in computer science to create innovative products and services in technology. I am searching for stepping stones that reveal new potentials and possibilities for solutions that target the world's modern problems. <br><br> I want to tell my story, honor the people who paved the way for me, and expose social stigmas that persist. Working on projects relevant to society will allow me to take a stance, learn from my mistakes, and grow as a person. To work with a passionate team in tech will open the door for me to write inclusive code and persist changes in narrative. Because this industry reaches far corners worldwide, I hope to educate myself on how we can promote the best practices regarding how a more diverse and inclusive workplace can increase the economic potential of future applications.</p>
   </div>
 
   <div id="me-contact">
@@ -262,3 +260,6 @@
   </div>
 
 </div>
+
+<%= javascript_include_tag 'root/base', 'data-turbolinks-track': 'reload', type: :module, crossorigin: 'anonymous' %>
+<%= javascript_include_tag 'home/home', 'data-turbolinks-track': 'reload', type: :module, crossorigin: 'anonymous' %>

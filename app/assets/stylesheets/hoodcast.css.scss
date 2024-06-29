@@ -1,5 +1,13 @@
 // Header
 
+@media only screen and (max-width: 730px) {
+  header {
+    height: 5rem;
+    background-image: none;
+    background-color: dimgray;
+    border-bottom: solid 2px black;
+  }
+}
 
 @media only screen and (min-width: 1001px) {
   header {
@@ -11,7 +19,6 @@
   header .content {
     flex-flow: row-reverse;
     background-color: dimgray;
-    border-bottom: solid 1px black;
   }
 
   header .icon {
@@ -217,7 +224,9 @@ div#rc-project-view {
       }
 
       img#widget {
-        padding: 5vw ;
+        padding: 5vw;
+        border-right: solid 1px black;
+        border-left: solid 1px black;
       }
     }
 
@@ -232,10 +241,10 @@ div#rc-project-view {
 
         img {
           background-color: #ccc;
-          width: 60%;
+          width: 100%;
           min-width: 700px;
           padding: 60px 0 0;
-          margin: 60px auto 0;
+          margin: 0 auto;
         }
       }
     }
@@ -249,31 +258,37 @@ div#rc-project-view {
 
 
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 730px) {
   div#rc-project-view {
-    #project-header {
-      height: 500px;
+    background-color: white;
+
+    div#project-header {
+      height: 400px;
 
       .header-content {
+        padding-top: 8vh;
+
         .text-container {
-          width: 500px;
+          width: 400px;
+          position: absolute;
 
           h1 {
-            font-size: 3.5rem;
+            font-size: 4.25rem;
+            padding-top: 2rem;
           }
-        }
-
-        .img-container img {
-          height: 30%;
         }
       }
     }
 
     #project-desc {
-      height: 320px;
+      height: 800px;
+      padding-top: 0;
 
       .desc-container {
-        margin-left: 25vw;
+        width: 80vw;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
 
         .main-points {
           width: 350px;
@@ -284,7 +299,13 @@ div#rc-project-view {
         }
 
         .description {
-          display: none;
+          margin-left: 0;
+
+          p {
+            width: 100%;
+            line-height: 1.5rem;
+            font-size: 1rem;
+          }
         }
       }
     }
