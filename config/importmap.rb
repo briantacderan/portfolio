@@ -7,7 +7,9 @@ pin_all_from "vendor/mods"
 pin_all_from "app/javascript/controllers", under: "controllers"
 pin_all_from "app/javascript/root", under: "root"
 pin_all_from "app/javascript/home", under: "home"
-# pin_all_from "app/javascript/canvas", under: "canvas"
+
+pin "three" # @0.165.0
+pin_all_from "app/javascript/canvas", under: "canvas"
 
 def pin_all_relative(dir_name)
   pin_all_from "app/javascript/#{dir_name}",
@@ -15,4 +17,4 @@ def pin_all_relative(dir_name)
     to: dir_name
 end
 
-pin_all_relative "canvas"
+# pin_all_relative "canvas"

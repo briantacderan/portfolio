@@ -258,6 +258,7 @@ div#fm-project-view {
 
 @media only screen and (max-width: 730px) {
   div#fm-project-view {
+    overflow-x: hidden;
     background-color: white;
 
     div#project-header {
@@ -274,7 +275,7 @@ div#fm-project-view {
       height: 700px;
 
       .desc-container {
-        width: 80vw;
+        width: 90vw;
         margin: 0 auto;
         display: flex;
         flex-direction: column;
@@ -301,18 +302,21 @@ div#fm-project-view {
     }
 
     #project-main {
+
       .main-container {
         height: 800px;
         min-height: 0;
 
         img#gif {
-          left: 80px;
-          height: 600px;
+          left: 60px;
+          height: 45vh;
+          position: absolute;
         }
 
         img#frame {
           left: 10px;
-          height: 660px;
+          height: 50vh;
+          position: absolute;
         }
       }
 
@@ -337,11 +341,13 @@ div#fm-project-view {
           img:nth-child(even) {
             margin-right: 0;
             padding-left: 0;
+            border-left: none;
           }
 
           img:nth-child(odd) {
             margin-left: 0;
             padding-right: 0;
+            border-right: none;
           }
         }
       }

@@ -1,5 +1,5 @@
 import * as THREE from './three.module'
-import { OrbitControls, GLTFLoader, RGBELoader } from './index'
+import { OrbitControls, RGBELoader, GLTFLoader } from './index'
 
 // import POSTPROCESSING from "./postprocessing"
 // import { SSGIEffect, TRAAEffect, HBAOEffect, MotionBlurEffect, VelocityDepthNormalPass } from "./realism-effects"
