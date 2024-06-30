@@ -11,8 +11,8 @@ window.addEventListener("load", (event) => {
   gsap.registerPlugin(ScrollTrigger)
   gsap.registerPlugin(ScrollToPlugin)
 
-  // if(!Turbolinks) location.reload();
-  // Turbolinks.dispatch("turbolinks:load");
+  // if(!Turbolinks) location.reload()
+  // Turbolinks.dispatch("turbolinks:load")
 
   let myReq, start, lenis
 
@@ -49,7 +49,7 @@ window.addEventListener("load", (event) => {
         scrub: 0,
         trigger: '.scrollDist',
         start: 'top top',
-        end: '1200vh',
+        end: (window.innerWidth > 730) ? '1200vh' : '550vh',
         snap: true,
       }
     })
@@ -81,6 +81,7 @@ window.addEventListener("load", (event) => {
     })
 
     gsap.from('h1#me-intro', {
+      delay: (window.innerWidth > 730) ? 0 : 4,
       rotationY: 80,
       opacity: 0,
       duration: 1,

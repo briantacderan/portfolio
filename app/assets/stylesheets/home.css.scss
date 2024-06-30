@@ -110,22 +110,34 @@ image.arrow {
 
   h1#me-intro {
     font-family: 'Major Mono Display', sans-serif;
-    font-size: 2rem;
+    font-size: 1.75rem;
     text-align: left;
     letter-spacing: 0;
     line-height: 1.2;
-    width: 90%;
+    width: 95%;
     margin: 0 auto 10rem;
-    padding: 10rem 1rem 2rem;
+    padding: 10rem 0 2rem;
 
     span {
       font-family: 'Alfa Slab One', sans-serif;
+      font-size: 4rem;
       color: #F03743; //rgba(78, 152, 21, 0.8);
       letter-spacing: 0.5rem;
       opacity: 0.8;
+      line-height: 2rem;
       text-align: right;
+      text-shadow: -1px 1px 1px #383838,
+                   -2px 2px 2px #383838,
+                   -4px 4px 4px #383838;
       float: right;
-      padding-bottom: 1rem;
+      padding: 0 0 3rem;
+    }
+
+    strong {
+      font-size: 2.5rem;
+      color: #202020;
+      line-height: 1.25rem;
+      text-shadow: none;
     }
   }
 

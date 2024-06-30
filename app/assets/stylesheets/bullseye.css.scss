@@ -1,7 +1,6 @@
 @media only screen and (max-width: 730px) {
   h1#port-name,
   h2#my-design {
-    position: relative;
     left: 12rem;
   }
 }
@@ -369,7 +368,37 @@ div#categories {
   }
 }
 
+@media only screen and (max-width: 1000px) {
+  header nav.desktop {
+    padding: 0;
+  }
+
+  h1#port-name,
+  h2#my-design {
+    position: relative;
+    left: 20vw;
+    bottom: 5vh;
+  }
+
+  div#categories ul {
+    li button {
+      font-size: x-large;
+    }
+  }
+}
+
+@media only screen and (max-height: 800px) {
+  header {
+    border-bottom: none;
+  }
+}
+
 @media only screen and (max-width: 730px) {
+  h1#port-name,
+  h2#my-design {
+    left: 50vw;
+  }
+
   nav {
     font-size: 1rem;
     padding: 2rem;
@@ -399,14 +428,14 @@ div#categories {
 
       li {
         color: white;
-        font-size: 1rem;
-        font-weight: 300;
+        font-weight: 100;
         letter-spacing: 0.3rem;
         text-transform: uppercase;
-        line-height: 3rem;
+        line-height: 2.8rem;
 
         button {
           background-color: rgba(0, 0, 0, 0.7);
+          font-size: x-large;
         }
 
         span {
