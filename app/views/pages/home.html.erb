@@ -261,5 +261,7 @@
 
 </div>
 
-<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload', type: :module, crossorigin: 'anonymous' %>
-<%= javascript_include_tag 'home/home', 'data-turbolinks-track': 'reload', type: :module, crossorigin: 'anonymous' %>
+<% content_for :head do %>
+  <%= javascript_import_module_tag "root/application" %>
+  <%= javascript_import_module_tag "home/home" %>
+<% end %>

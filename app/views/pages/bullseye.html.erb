@@ -69,8 +69,8 @@
 <!-- slide swiper -->
 <script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.5/swiper-bundle.min.js"></script>
 
-<!-- ES module shim >
-<script async src="https://ga.jspm.io/npm:es-module-shims@1.10.0/dist/es-module-shims.js"></script -->
+<!-- ES module shim -->
+<script async src="https://ga.jspm.io/npm:es-module-shims@1.10.0/dist/es-module-shims.js"></script>
 
 
 <!-- three >
@@ -78,6 +78,8 @@
 <script type="module" as="three/addons/" src="//cdn.jsdelivr.net/npm/three@0.165.0/examples/jsm/"></script -->
 
 
-<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload', type: :module, crossorigin: 'anonymous' %>
 
-<%= javascript_include_tag 'canvas/bullseye', 'data-turbolinks-track': 'reload', type: :module, crossorigin: 'anonymous' %>
+<% content_for :head do %>
+  <%= javascript_import_module_tag "root/application" %>
+  <%= javascript_import_module_tag "canvas/bullseye" %>
+<% end %>

@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
     <%= stylesheet_link_tag 'icon-popups', media: 'all', 'data-turbolinks-track': 'reload' %>
 
+    <%= javascript_importmap_tags %>
+
     <!-- jquery -->
     <script type="module" src="//cdn.jsdelivr.net/jquery/2.2.0/jquery.min.js"></script>
     <script type="module" src="//cdn.jsdelivr.net/jquery.sidr/2.2.1/jquery.sidr.min.js"></script>
@@ -207,6 +209,7 @@
 
     </header>
 
+    <%= yield(:head) %>
     <%= yield %>
 
   </body>
