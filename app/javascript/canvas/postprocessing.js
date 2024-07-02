@@ -1,4 +1,4 @@
-import THREE from "./three.module"
+import * as THREE from "canvas/three.module"
 
 /**
  * postprocessing v6.35.5 build Sat Jun 01 2024

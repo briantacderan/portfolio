@@ -1,5 +1,5 @@
-import { Pass, Effect, RenderPass, Selection, NormalPass } from './postprocessingexports';
-import { DataTexture, RGBAFormat, FloatType, ShaderChunk, ShaderLib, UniformsUtils, WebGLMultipleRenderTargets, ShaderMaterial, GLSL3, NoBlending, Uniform, Vector2, Matrix4, Vector3, Clock, Quaternion, LinearFilter, HalfFloatType, UnsignedByteType, RGBADepthPacking, BackSide, BasicDepthPacking, NearestFilter, WebGLRenderTarget, ClampToEdgeWrapping, LinearMipMapLinearFilter, EquirectangularReflectionMapping, Color, Matrix3, TangentSpaceNormalMap, RepeatWrapping, RedFormat, Source, MeshDepthMaterial, TextureLoader, NoColorSpace, DepthTexture, SRGBColorSpace, Texture, NoToneMapping, PerspectiveCamera, FramebufferTexture } from './three.module';
+import { Pass, Effect, RenderPass, Selection, NormalPass } from 'canvas/postprocessingexports';
+import { DataTexture, RGBAFormat, FloatType, ShaderChunk, ShaderLib, UniformsUtils, WebGLMultipleRenderTargets, ShaderMaterial, GLSL3, NoBlending, Uniform, Vector2, Matrix4, Vector3, Clock, Quaternion, LinearFilter, HalfFloatType, UnsignedByteType, RGBADepthPacking, BackSide, BasicDepthPacking, NearestFilter, WebGLRenderTarget, ClampToEdgeWrapping, LinearMipMapLinearFilter, EquirectangularReflectionMapping, Color, Matrix3, TangentSpaceNormalMap, RepeatWrapping, RedFormat, Source, MeshDepthMaterial, TextureLoader, NoColorSpace, DepthTexture, SRGBColorSpace, Texture, NoToneMapping, PerspectiveCamera, FramebufferTexture } from 'canvas/three.module';
 
 const getVisibleChildren = object => {
   const queue = [object];

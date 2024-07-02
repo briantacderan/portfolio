@@ -28,7 +28,7 @@ import {
   UnsignedInt248Type,
   Vector2,
   WebGLRenderTarget as WebGLRenderTarget3
-} from "three";
+} from "canvas/three.module";
 
 // src/core/Timer.js
 var MILLISECONDS_TO_SECONDS = 1 / 1e3;

@@ -5,7 +5,7 @@ import {
 	HalfFloatType,
 	LinearFilter,
 	LinearSRGBColorSpace
-} from './three.module';
+} from 'canvas/three.module';
 
 // https://github.com/mrdoob/three.js/issues/5552
 // http://en.wikipedia.org/wiki/RGBE_image_format
