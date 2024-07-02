@@ -1,6 +1,10 @@
 import * as THREE from 'canvas/three.module'
-import { OrbitControls, RGBELoader, GLTFLoader } from './index'
+// import { OrbitControls, RGBELoader, GLTFLoader } from './index'
 // import * as THREE from "canvas/three.module"
+
+import { OrbitControls } from "./OrbitControls"
+import { RGBELoader } from "./RGBELoader"
+import { GLTFLoader } from "./GLTFLoader"
 
 // import POSTPROCESSING from "./postprocessing"
 // import { SSGIEffect, TRAAEffect, HBAOEffect, MotionBlurEffect, VelocityDepthNormalPass } from "./realism-effects"
