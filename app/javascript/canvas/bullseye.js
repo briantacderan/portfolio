@@ -1,4 +1,5 @@
-import * as THREE from './three.module'
+import * as THREE from "./three.module"
+// import * as THREE from 'canvas/three.module'
 import { OrbitControls, RGBELoader, GLTFLoader } from './index'
 
 // import POSTPROCESSING from "./postprocessing"
@@ -21,7 +22,11 @@ import { OrbitControls, RGBELoader, GLTFLoader } from './index'
 // if(!Turbolinks) location.reload()
 // Turbolinks.dispatch('turbolinks:load')
 
+// const THREE = require([ "./three.module" ])
+
 window.addEventListener("load", (event) => {
+	// const THREE = window.__THREE__ // require([ "three.js" ])
+
 	let canvas, id, renderer, scene, camera, controls, s3, model, car, mixer
 	      // animation, action, clip, prevTime, startTime
 	let yRotation = 0

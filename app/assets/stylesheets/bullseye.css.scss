@@ -373,16 +373,31 @@ div#categories {
     padding: 0;
   }
 
-  h1#port-name,
-  h2#my-design {
-    position: relative;
-    left: 20vw;
-    bottom: 5vh;
+  #title.home-title {
+
+    h1#port-name {
+      font-size: 1.5rem;
+    }
+
+    h2#port-name {
+      
+    }
+
+    h1#port-name,
+    h2#my-design {
+      position: relative;
+      left: 20vw;
+      bottom: 5vh;
+    }
   }
 
-  div#categories ul {
-    li button {
-      font-size: x-large;
+  div#categories {
+    left: 43%;
+
+    ul {
+      li button {
+        font-size: x-large;
+      }
     }
   }
 }
@@ -394,9 +409,12 @@ div#categories {
 }
 
 @media only screen and (max-width: 730px) {
-  h1#port-name,
-  h2#my-design {
-    left: 50vw;
+  #title.home-title {
+
+    h1#port-name,
+    h2#my-design {
+      left: 50vw;
+    }
   }
 
   nav {
