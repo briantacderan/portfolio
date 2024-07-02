@@ -81,5 +81,7 @@
 
 <% content_for :head do %>
   <%= javascript_import_module_tag "root/application" %>
+  <%= javascript_import_module_tag "canvas/three.module" %>
+  <%= javascript_import_module_tag "canvas/BufferGeometryUtils" %>
   <%= javascript_import_module_tag "canvas/bullseye" %>
 <% end %>

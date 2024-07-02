@@ -2,7 +2,7 @@ import * as THREE from 'canvas/three.module'
 import { OrbitControls } from "canvas/OrbitControls"
 import { RGBELoader } from "canvas/RGBELoader"
 import { GLTFLoader } from "canvas/GLTFLoader"
-import "canvas/BufferGeometryUtils"
+// import "canvas/BufferGeometryUtils"
 
 // import * as THREE from 'canvas/three.module'
 // import { OrbitControls, RGBELoader, GLTFLoader } from 'canvas/index'
