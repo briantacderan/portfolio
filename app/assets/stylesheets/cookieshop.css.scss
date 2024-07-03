@@ -268,6 +268,7 @@ div#rc-project-view {
 
 @media only screen and (max-width: 730px) {
   div#rc-project-view {
+    overflow-x: hidden;
     background-color: gainsboro;
 
     div#project-header {
