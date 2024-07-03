@@ -389,10 +389,21 @@ div#categories {
       left: 20vw;
       bottom: 5vh;
     }
+
+    h1#port-name.undisplay,
+    h2#my-design.undisplay {
+      display: none;
+      visibility: hidden;
+    }
+
+    h1#project-name {
+      font-size: 1.75rem;
+    }
   }
 
   div#categories {
     left: 43%;
+    top: 8rem;
 
     ul {
       li button {
@@ -408,12 +419,39 @@ div#categories {
   }
 }
 
+@media only screen and (max-height: 500px) {
+  div#categories {
+    top: 3rem;
+  }
+
+  #title.home-title {
+
+    h1#port-name,
+    h2#my-design {
+      bottom: 3rem;
+    }
+  }
+}
+
 @media only screen and (max-width: 730px) {
+  header nav.desktop {
+    display: flex;
+  }
+
+  header nav.desktop.undisplay {
+    display: none;
+    visibility: hidden;
+  }
+
   #title.home-title {
 
     h1#port-name,
     h2#my-design {
       left: 50vw;
+    }
+
+    h1#project-name {
+      font-size: 1.25rem;
     }
   }
 

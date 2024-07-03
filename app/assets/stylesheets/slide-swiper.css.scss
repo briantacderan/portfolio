@@ -655,112 +655,6 @@ li#project-links {
 } */
 
 
-@media only screen and (max-width: 500px) {
-  .swiper-container {
-    margin-left: 0;
-    margin-top: 3rem;
-    right: 1rem;
-    height: 400px;
-    width: 110%;
-  }
-
-  .swiper-container.neo {
-    height: auto;
-    max-width: 275px;
-  }
-
-  #edu-slide .swiper-container {
-    margin-left: 15px;
-    margin-top: 0;
-  }
-
-  .slider-content-container {
-
-  }
-
-  .slider-item-content#slider-right {
-
-  }
-
-  .slider-item-content.ggu h2 {
-    font-size: 1rem;
-    margin-top: 0.5rem;
-  }
-
-  .slider-image-wrapper {
-    max-height: 140px;
-  }
-
-  .slider-image-wrapper img {
-
-  }
-
-  .wrapper .icon {
-    font-size: 1rem;
-    padding: 0.75rem;
-  }
-
-  .wrapper#slide-right-container ul.stack-list {
-    margin: 0.25rem;
-    margin-left: 0;
-  }
-
-  .wrapper#slide-right-container ul.stack-list img {
-    margin: 0.25rem auto;
-    width: 2.75rem;
-    height: 2.75rem;
-  }
-
-  .wrapper#slide-right-container ul.showcase-list {
-
-  }
-
-  .wrapper#slide-right-container ul.showcase-list p {
-    font-size: 0.65rem;
-    padding-left: 0.5rem;
-  }
-
-  .wrapper#slide-right-container ul.stack-container h3 {
-    width: 3rem;
-    margin-left: 0rem;
-  }
-
-  .wrapper#slide-right-container ul.stack-list img {
-    margin: 0.25rem 0 0.25rem 0.75rem;
-  }
-
-  .slider-image-wrapper img#fitness-project,
-  .slider-image-wrapper img#cookies-project,
-  .slider-image-wrapper img#codecademy-unquote {
-    max-width: 300px;
-    padding: 3rem;
-  }
-
-  .slider-image-wrapper img#fitness-project,
-  .slider-image-wrapper img#hoodcast-project,
-  .slider-image-wrapper img#codecademy-goldmedal,
-  .slider-image-wrapper img#medium-heroes {
-    padding: 3.5rem;
-  }
-
-  .wrapper#slide-right-container ul.showcase-list h3.th {
-    margin: 0.5rem 0;
-    font-size: 0.5rem;
-  }
-
-  .wrapper#slide-right-container ul.showcase-list h3 {
-    font-size: 0.75rem;
-  }
-
-  #edu-container #slider-content-container.ggu {
-    height: 75%;
-  }
-
-  div.s3 .slider-item {
-    height: 450px;
-  }
-}
-
 @media only screen and (min-height: 601px) {
   .socials .icon-popups {
     padding-bottom: 8rem;
@@ -872,16 +766,6 @@ li#project-links {
   }
 }
 
-@media only screen and (max-width: 500px) {
-  #edu-slide .slider-item-content h1 {
-    font-size: 2.5rem;
-  }
-
-  #edu-slide p {
-    margin-left: 1.5rem;
-  }
-}
-
 
 
 
@@ -958,33 +842,6 @@ li#project-links {
     line-height: 3rem
   }
 }
-
-@media only screen and (max-width: 500px) {
-  #about-me-slide img.about-me {
-      box-shadow: 0 7.2px 7.2px rgba(0, 0, 0, 0.6);
-      border-radius: 50%;
-      border: 3px solid orange;
-      float: right;
-      margin: 0 0.5rem 0.5rem 1.5rem;
-      position: relative;
-  }
-
-  #about-me-slide p.front-desc {
-    line-height: 1rem;
-    font-size: 0.75rem;
-    overflow-x: hidden;
-    margin-bottom: 0;
-  }
-
-  #about-me-slide img.about-me {
-    max-height: 100%;
-  }
-
-  #about-me-slide h1 {
-    margin-top: 0;
-  }
-}
-
 
 
 
@@ -1067,35 +924,6 @@ li#project-links {
   }
 }
 
-@media only screen and (max-width: 500px) {
-  #exp-slide h1.title-header {
-    padding: 1rem;
-  }
-
-  #exp-container {
-    height: 315px;
-    overflow-y: scroll;
-    overflow-x: hidden;
-  }
-
-  #exp-container::-webkit-scrollbar {
-    display: none;
-  }
-
-  #exp-container p {
-    margin: 1.5rem;
-    font-size: 0.76rem;
-  }
-
-  #exp-container p:last-child {
-    padding-bottom: 2rem;
-  }
-
-  #cert-slide #cert-container {
-    height: 75%;
-    padding-top: 0;
-  }
-}
 
 @media only screen and (max-width: 800px) and (max-height: 600px) {
   .swiper-container.neo {
