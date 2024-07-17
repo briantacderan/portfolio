@@ -67,6 +67,13 @@ window.addEventListener("load", (event) => {
       document.querySelector('header').classList.remove('popup')
 
     })
+  } else {
+    const bars = document.querySelector('i.fa-bars')
+    bars.addEventListener('touchstart touchend', function(e) {
+      e.preventDefault()
+      $('div.icon-popups').toggleClass('hover-effect')
+      $('header nav.desktop i.fa-bars').toggleClass('undisplay')
+    })
   }
 
   // Page Loading animation

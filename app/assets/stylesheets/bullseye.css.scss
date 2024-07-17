@@ -166,10 +166,7 @@ div.icon-popups div.wrapper {
   transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-header a.desktop:hover + div.icon-popups,
-header div.icon-popups:hover,
-header.popup .icon-popups,
-i.fa-bars.hover-effect {
+header a.desktop:hover + div.icon-popups, header div.icon-popups:hover, header.popup .icon-popups, div.icon-popups.hover-effect  {
   bottom: -20.5rem;
   right: 50vw;
   left: 50vw;
@@ -385,7 +382,7 @@ div#categories {
 }
 
 @media only screen and (max-width: 1000px) {
-  header a.desktop:hover + div.icon-popups, header div.icon-popups:hover, header.popup .icon-popups {
+  header a.desktop:hover + div.icon-popups, header div.icon-popups:hover, header.popup .icon-popups, div.icon-popups.hover-effect  {
     left: 70vw;
   }
 
@@ -462,9 +459,14 @@ div#categories {
 
 @media only screen and (max-width: 730px) {
 
-  header a.desktop:hover + div.icon-popups, header div.icon-popups:hover, header.popup .icon-popups {
-    bottom: -21.5rem;
+  header a.desktop:hover + div.icon-popups, header div.icon-popups:hover, header.popup .icon-popups, div.icon-popups.hover-effect {
+    bottom: 0.5rem; // -21.5rem;
     left: 90vw;
+  }
+
+
+  div.icon-popups div.wrapper {
+    height: 3rem;
   }
 
   .wrapper .icon {
@@ -492,7 +494,7 @@ div#categories {
     i.fa-bars {
       margin-right: 1.5rem;
       -webkit-user-select: none;
-      -webkit-touch-callout: none; 
+      -webkit-touch-callout: none;
     }
 
     i.fa-bars.undisplay {
