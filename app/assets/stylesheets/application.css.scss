@@ -98,6 +98,7 @@ video {
 span#up {
   display: none;
   visibility: hidden;
+  color: red;
 }
 
 span#up.opaque {
@@ -543,6 +544,17 @@ footer {
         width: 100vw;
       }
     }
+  }
+
+  div#footer.mobile-view h3 {
+    background-color: white;
+    font-family: 'Condensed Roboto', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 100;
+    text-shadow: none;
+    color: black;
+    margin: 0;
+    padding-top: 3rem;
   }
 
   div.last-img {

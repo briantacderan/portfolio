@@ -168,7 +168,8 @@ div.icon-popups div.wrapper {
 
 header a.desktop:hover + div.icon-popups,
 header div.icon-popups:hover,
-header.popup .icon-popups {
+header.popup .icon-popups,
+i.fa-bars.hover-effect {
   bottom: -20.5rem;
   right: 50vw;
   left: 50vw;
@@ -490,6 +491,8 @@ div#categories {
 
     i.fa-bars {
       margin-right: 1.5rem;
+      -webkit-user-select: none;
+      -webkit-touch-callout: none; 
     }
 
     i.fa-bars.undisplay {

@@ -256,6 +256,20 @@ div#rc-project-view {
 
 
 @media only screen and (max-width: 730px) {
+  header {
+    .content {
+      flex-direction: row-reverse;
+    }
+
+    nav.desktop {
+      padding: 0;
+    }
+  }
+
+  i.fas.fa-arrow-left {
+    padding-left: 1rem;
+  }
+
   div#rc-project-view {
     overflow-x: hidden;
     background-color: gainsboro;

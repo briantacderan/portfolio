@@ -546,6 +546,11 @@ window.addEventListener("load", (event) => {
 	  }
 	}, false)
 
+	$('i.fa-bars').on('touchstart touchend', function(e) {
+      e.preventDefault()
+      $(this).toggleClass('hover-effect')
+  })
+
 	var swiperOne = new Swiper('#swiper-1', {
 	slidesPerView: 1,
 	spaceBetween: 20,

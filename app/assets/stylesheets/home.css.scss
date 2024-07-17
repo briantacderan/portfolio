@@ -99,12 +99,13 @@ image.arrow {
     font-family: 'Alfa Slab One', sans-serif;
   }
 
-  div#footer.mobile h3 {
+  div#footer.mobile-view h3 {
     background-color: white;
     font-family: 'Condensed Roboto', sans-serif;
     font-size: 0.6rem;
     font-weight: 100;
-    text-shadow: none;
+    text-shadow: 0;
+    -webkit-text-stroke: 0;
     color: black;
     margin: 0;
     padding-top: 3rem;
