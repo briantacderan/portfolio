@@ -27,7 +27,7 @@ html {
   font-size: 16px;
   width: 100vw;
   color: #4A4A4A;
-  background-color: #434040;
+  background-color: gainsboro;
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
@@ -95,6 +95,17 @@ video {
   user-select: none; /* Standard syntax */
 }
 
+span#up {
+  display: none;
+  visibility: hidden;
+}
+
+span#up.opaque {
+  display: inline;
+  visibility: visible;
+}
+
+
 
 
 
@@ -135,16 +146,19 @@ div#fm-project-view,
 
 
 
-
-
-
 /* Header */
+body#home.pageloaded {
+  background-attachment: fixed;
+}
+
 header {
+  border-radius: 2rem;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
   position: fixed;
   height: 3.5rem;
   width: 100vw;
-  border-bottom: 1px solid rgba(66, 66, 66, 0.25);
-  box-shadow: none;
   color: rgba(66, 66, 66, 0.75);
   background-color: rgba(255, 255, 255, 0);
   background-image: none;
@@ -201,7 +215,7 @@ header.opaque nav.desktop ul {
 header a.desktop:hover + div.icon-popups,
 header div.icon-popups:hover,
 header.popup .icon-popups {
-  left: 915px;
+  left: 855px;
   opacity: 1;
   bottom: -25rem;
   animation: lateappear 0.5s linear forwards;
@@ -214,13 +228,20 @@ header.opaque.popup .icon-popups {
 }
 
 header h1 {
-  font-family: 'Major Mono Display', sans-serif;
-  font-weight: 400;
-  font-size: 1rem;
+  // font-family: 'Major Mono Display', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 1.4rem;
   color: rgba(66, 66, 66, 0.75);
   margin-left: 2rem;
   letter-spacing: 1px;
   bottom: 0.5rem;
+}
+
+header h1 span {
+  color: black;
 }
 
 header.opaque h1 {
@@ -349,6 +370,13 @@ footer {
   }
 }
 
+@media only screen and (max-width: 1000px) {
+  header {
+    margin: 1rem;
+  }
+}
+
+
 
 @media only screen and (max-width: 730px) {
   .mv-svg-title {
@@ -356,14 +384,16 @@ footer {
   }
 
   header {
+    height: 3.5rem;
+    width: 92vw;
+    margin: 1rem;
     border-bottom: none;
 
     .icon {
-      margin-top: 1.25rem;
       margin-left: 1rem;
       padding: 0;
-      width: 3.8rem;
-      height: 3.5rem;
+      width: 2.8rem;
+      height: 2.5rem;
     }
   }
 
@@ -392,7 +422,7 @@ footer {
   }
 
   header nav.desktop {
-    display: none;
+    // display: none;
   }
 
   header nav.mobile,

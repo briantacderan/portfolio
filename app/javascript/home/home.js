@@ -49,7 +49,7 @@ window.addEventListener("load", (event) => {
         scrub: 0,
         trigger: '.scrollDist',
         start: 'top top',
-        end: (window.innerWidth > 730) ? '1200vh' : '550vh',
+        end: (window.innerWidth > 730) ? '1200vh' : '500vh',
         snap: true,
       }
     })

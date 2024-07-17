@@ -24,7 +24,7 @@ window.addEventListener("touchmove", preventMotion, {
 
 window.addEventListener("load", (event) => {
   window.onscroll = function() {
-    const nav = document.getElementById('scroll-top')
+    const nav = document.getElementById('up')
     if (window.pageYOffset > 750) {
       nav.classList.add("opaque")
     } else {

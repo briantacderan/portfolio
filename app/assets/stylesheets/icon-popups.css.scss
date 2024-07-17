@@ -221,9 +221,11 @@ div.icon-popups div.wrapper {
 .icon.designs:hover .tooltip,
 .icon.designs:hover .tooltip::before {
   background-color: none;
-  color: #3b5999;
-  font-weight: bold;
+  color: black;
+  font-weight: 900;
+  text-align: right;
 }
+
 
 
 

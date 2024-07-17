@@ -11,7 +11,7 @@
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alfa+Slab+One&family=Castoro:ital@0;1&family=Kaushan+Script&family=Orbitron:wght@900&family=Permanent+Marker&family=Lexend+Zetta:wght@200;300;400;900&family=Fugaz+One&family=Major+Mono+Display&family=Poppins:wght@200;300;500;700;900&family=Russo+One&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alfa+Slab+One&family=Castoro:ital@0;1&family=Kaushan+Script&family=Orbitron:wght@900&family=Permanent+Marker&family=Lexend+Zetta:wght@200;300;400;900&family=Fugaz+One&family=Major+Mono+Display&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Russo+One&family=Poppins:wght@200;300;500;700;900&display=swap" rel="stylesheet" />
 
     <!-- universal -->
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -119,18 +119,22 @@
 
     <header id="scroll-top">
       <div class="content">
-        <% if @home_menu %>
+
+        <% if @design_menu %>
+          <a><i class="fas fa-bars mobile-view"></i></a>
+        <% else if @home_menu %>
           <%= link_to root_path, class: "desktop-view" do %>
-            <h1>BRIAN TACDERAN</h1>
+            <h1>BRIAN<span>TACDERAN</span></h1>
           <% end %>
 
           <%= link_to root_path, class: "mobile-view" do %>
             <%= image_tag "#{$s3}bt-logo.png", id: "heart-logo", class: "icon shown" %>
           <% end %>
         <% else %>
-          <%= link_to root_path, class: "mobile-view" do %>
-            <%= image_tag "#{$s3}bt-logo.png", id: "heart-logo", class: "icon shown" %>
-          <% end %>
+          <a href="#" class="mobile-view">
+            <span id="up"><i class="fas fa-arrow-up"></i></span>
+          </a>
+        <% end %>
         <% end %>
 
 
@@ -139,13 +143,18 @@
             <li id="heart" class="logo">
 
               <% if @home_menu %>
-                <%= link_to bullseyestudio_path, class: "desktop" do %>
+
+                <%= link_to bullseyestudio_path, class: "desktop-view" do %>
                   <%= image_tag "#{$s3}bt-logo.png", id: "heart-logo", class: "icon shown" %>
                   <div class="icon designs">
-                    <div class="tooltip">Digital Designs</div>
+                    <div class="tooltip">GO TO<br><span>My Design Portfolio</span></div>
                     <%= image_tag "#{$s3}bs-logo.png", id: "bs-logo", class: "icon hidden" %>
                   </div>
                 <% end %>
+
+                <a href="#" class="mobile-view">
+                  <span id="up"><i class="fas fa-arrow-up"></i></span>
+                </a>
 
               <% else %>
 

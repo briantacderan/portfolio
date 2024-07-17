@@ -1,14 +1,3 @@
-// Header
-
-@media only screen and (max-width: 730px) {
-  header {
-    height: 5rem;
-    background-image: none;
-    background-color: dimgray;
-    border-bottom: solid 2px black;
-  }
-}
-
 @media only screen and (min-width: 1001px) {
   header {
     left: 50%;
