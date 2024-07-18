@@ -441,19 +441,11 @@ window.addEventListener("load", (event) => {
 
 	// barracude1968
 	document.getElementById('btn1').addEventListener('mouseup', function() {
-		switch(window.orientation) {
-	    case -90: case 90:
-	        /* Device is in landscape mode */
-	        break;
-	    default:
-	        /* Device is in portrait mode */
-    }
-
-	  $('#categories ul').fadeOut('slow')
+		$('#categories ul').fadeOut('slow')
 	  $('#video, #overlay').fadeIn('fast')
 	  document.getElementById('video').classList.add('display')
 	  document.getElementById('overlay').classList.add('display')
-		document.querySelector('header nav.desktop').classList.add('undisplay')
+		document.querySelector('header').classList.add('undisplay')
 		document.querySelector('h1#port-name').classList.add('undisplay')
 		document.querySelector('h2#my-design').classList.add('undisplay')
 	  document.querySelector('#screen-filter').classList.add('theatre')
@@ -461,9 +453,9 @@ window.addEventListener("load", (event) => {
 
 	  try {
 			if(window.innerWidth > 900) {
-	    	$('#video').html('<iframe id="ytplayer" type="text/html" width="1120" height="630" src="https://www.youtube.com/embed/Q2fOHzbFnkE?si=4Fh0JclhGPumgQoA&amp;controls=0&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>')
+	    	$('#video').html('<iframe id="ytplayer" type="text/html" width="1120" height="630" src="https://www.youtube.com/embed/Q2fOHzbFnkE?si=4Fh0JclhGPumgQoA&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>')
 			} else {
-				$('#video').html('<iframe id="ytplayer" type="text/html" width="672" height="378" src="https://www.youtube.com/embed/Q2fOHzbFnkE?si=4Fh0JclhGPumgQoA&amp;controls=0&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>')
+				$('#video').html('<iframe id="ytplayer" type="text/html" width="672" height="378" src="https://www.youtube.com/embed/Q2fOHzbFnkE?si=4Fh0JclhGPumgQoA&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>')
 			}
 	  } catch(err) {
 	    console.log(err)
@@ -476,19 +468,11 @@ window.addEventListener("load", (event) => {
 
 	// fathersanchez
 	document.getElementById('btn2').addEventListener('mouseup', function() {
-		switch(window.orientation) {
-	    case -90: case 90:
-	        /* Device is in landscape mode */
-	        break;
-	    default:
-	        /* Device is in portrait mode */
-    }
-
-	  $('#categories ul').fadeOut('slow')
+		$('#categories ul').fadeOut('slow')
 	  $('#video, #overlay').fadeIn('fast')
 	  document.getElementById('video').classList.add('display')
 	  document.getElementById('overlay').classList.add('display')
-		document.querySelector('header nav.desktop').classList.add('undisplay')
+		document.querySelector('header').classList.add('undisplay')
 		document.querySelector('h1#port-name').classList.add('undisplay')
 		document.querySelector('h2#my-design').classList.add('undisplay')
 	  document.querySelector('#screen-filter').classList.add('theatre')
@@ -496,9 +480,9 @@ window.addEventListener("load", (event) => {
 
 	  try {
 			if(window.innerWidth > 900) {
-		    $('#video').html('<iframe id="ytplayer2" type="text/html" width="1120" height="630" src="https://www.youtube.com/embed/lT47Os-w1gU?si=zgKv5yZJR7_qOed3&amp;controls=0&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>')
+		    $('#video').html('<iframe id="ytplayer2" type="text/html" width="1120" height="630" src="https://www.youtube.com/embed/lT47Os-w1gU?si=zgKv5yZJR7_qOed3&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>')
 			} else {
-				$('#video').html('<iframe id="ytplayer2" type="text/html" width="672" height="378" src="https://www.youtube.com/embed/lT47Os-w1gU?si=zgKv5yZJR7_qOed3&amp;controls=0&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>')
+				$('#video').html('<iframe id="ytplayer2" type="text/html" width="672" height="378" src="https://www.youtube.com/embed/lT47Os-w1gU?si=zgKv5yZJR7_qOed3&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>')
 			}
 	  } catch(err) {
 	    console.log(err)
@@ -511,13 +495,12 @@ window.addEventListener("load", (event) => {
 
 	// photos
 	document.getElementById('btn5').addEventListener('mouseup', function() {
-
-	  setTimeout(() =>{
+		setTimeout(() =>{
 			$('#categories ul').fadeOut('slow')
 			$('#photos, #overlay').fadeIn('fast')
 			document.getElementById('photos').classList.add('display')
 			document.getElementById('overlay').classList.add('display')
-			document.querySelector('header nav.desktop').classList.add('undisplay')
+			document.querySelector('header').classList.add('undisplay')
 			document.querySelector('h1#port-name').classList.add('undisplay')
 			document.querySelector('h2#my-design').classList.add('undisplay')
 			document.querySelector('#screen-filter').classList.add('theatre')
@@ -534,7 +517,7 @@ window.addEventListener("load", (event) => {
 	    $('#photos, #video, #overlay').fadeOut('slow')
 	    $('#categories ul').fadeIn('slow')
 	    $('#video').html('')
-			document.querySelector('header nav.desktop').classList.remove('undisplay')
+			document.querySelector('header').classList.remove('undisplay')
 			document.querySelector('h1#port-name').classList.remove('undisplay')
 			document.querySelector('h2#my-design').classList.remove('undisplay')
 	    document.querySelector('#screen-filter').classList.remove('theatre')

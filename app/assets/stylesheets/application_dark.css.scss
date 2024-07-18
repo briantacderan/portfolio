@@ -1,0 +1,223 @@
+html {
+  color: #CFCFCF; //#4A4A4A;
+  background-color: #171717; //gainsboro;
+}
+
+p ,span, nav, a {
+  color: #D7D7D7; //#404040;
+}
+
+strong {
+  color: #ab0345; // winered
+}
+
+span#up {
+  color: red;
+}
+
+header {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: rgba(66, 66, 66, 0.75);
+
+  nav.desktop {
+
+
+    ul {
+      color: white;
+    }
+  }
+
+  h1 {
+    color: rgba(189, 189, 189, 0.75); // rgba(66, 66, 66, 0.75);
+
+    span {
+      color: rgba(189, 189, 189, 0.95); // rgba(66, 66, 66, 0.75);
+    }
+  }
+
+  li#heart {
+
+    .icon#heart-logo,
+    .icon#bs-logo,
+    .icon.back-logo,
+    .icon#bt-logo {
+      filter: invert(97%) sepia(1%) saturate(1084%) hue-rotate(190deg) brightness(102%) contrast(96%) // invert(0%) sepia(98%) saturate(6%) hue-rotate(247deg) brightness(104%) contrast(101%); yellow?
+    }
+  }
+}
+
+div.scrollDist,
+div#about-view,
+div#parallax-intro,
+div#parallax-intro div.main,
+div#parallax-intro div.intro,
+div#parallax-intro div.about,
+div.projects {
+  background-color: black; // #fff;
+}
+
+div#parallax-intro  {
+
+
+  div.about {
+
+
+    span {
+      color: #F03743; // red
+    }
+
+    p {
+      color: aqua; // rgba(78, 152, 21, 1); green
+    }
+  }
+
+  div.projects {
+
+    p {
+      color: #424242;
+    }
+
+    .pContent {
+      background-color: rgba(78,152,21,0); // invisible green
+
+      span {
+        color: #F03743; // red
+      }
+    }
+
+    .pContent::after {
+      background-color: #4F4F4F; // #ccc;
+    }
+
+    #mission p {
+      color: #D5D5D5; // #424242;
+    }
+  }
+}
+
+.pContent {
+  background-color: gray;
+  background-opacity: 0.85; // rgba(0,0,0,0.9);
+  color: black; // white;
+}
+
+@media only screen and (min-width: 731px) {
+  div#footer h3 {
+    color: rgba(255, 255, 255, 0.5); // rgba(0, 0, 0, 0.5);
+  }
+}
+
+@media only screen and (max-width: 730px) {
+  body, html, div#about-view.mobile-view {
+    background-color: #626262; // #BDBDBD;
+  }
+
+  h3 {
+    color: #3A3A3A; // gainsboro;
+  }
+
+  div#footer.mobile-view h3 {
+    background-color: black; // white;
+    color: white; // black;
+  }
+
+  h1#me-intro {
+
+    span {
+      color: #F03743; // red
+    }
+
+    strong {
+      color: #EDEDED; // #202020;
+    }
+  }
+
+  p.skill {
+    color: aqua; //red
+
+    span {
+      color: gray;
+    }
+  }
+
+  .projects-container {
+
+
+    #project-one p {
+      color: #9EC131; // olive green
+    }
+
+    #project-two p {
+
+    }
+
+    #project-three p {
+      color: #F8F12E; // yellow
+    }
+
+    img {
+      border: 5px white solid; // 5px black solid;
+    }
+  }
+
+  header {
+
+    .icon#logout {
+      filter: invert(99%) sepia(83%) saturate(90%) hue-rotate(192deg) brightness(110%) contrast(89%);
+    }
+
+    .icon#bars {
+      filter: invert(20%) sepia(2%) saturate(0%) hue-rotate(156deg) brightness(86%) contrast(85%);
+    }
+
+    .icon#logout:hover,
+    .icon#bars:hover {
+      filter: invert(5%) sepia(2%) saturate(4805%) hue-rotate(138deg) brightness(97%) contrast(84%);
+    }
+
+    .icon#bars:hover::selection .dropdown-content a {
+      filter: invert(99%) sepia(83%) saturate(90%) hue-rotate(192deg) brightness(110%) contrast(89%);
+    }
+  }
+
+  .dropdown-content a {
+    color: #DDDDDD; // #383838;
+    background-color: #161616; // #F1F1F1;
+  }
+
+  .dropdown-content a:hover {
+    color: #c27c7c; // rose
+    background-color: #F1F1F1;
+  }
+
+  nav.mobile {
+
+
+    .dropdown .dropdown-content:hover {
+      background-color: #161616; // #F1F1F1;
+      color: #BEE04C; // lime-green
+    }
+
+    li {
+
+
+      a#heart:hover,
+      a#logout:hover {
+        color: #BEE04C; // lime-green
+      }
+    }
+  }
+
+  #me-contact {
+    background-color: black; // white;
+
+    h2 {
+      color: #EDEDED; // #202020;
+    }
+  }
+
+  div#footer.mobile-view h3 {
+    background-color: black; // white;
+    color: white; // black;
+  }
+}

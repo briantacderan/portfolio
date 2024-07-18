@@ -14,5 +14,8 @@ Rails.application.routes.draw do
   get 'hoodcast' => 'pages#hoodcast'
   get 'rellescookies' => 'pages#cookieshop'
   get 'bullseyestudio' => 'pages#bullseye'
-  
+
+  # get '/moon', to: 'application#moon', as: 'moon'
+  # get '/sun', to: 'application#sun', as: 'sun'
+
 end

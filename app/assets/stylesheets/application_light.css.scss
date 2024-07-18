@@ -1,0 +1,222 @@
+html {
+  color: #4A4A4A;
+  background-color: gainsboro;
+}
+
+p ,span, nav, a {
+  color: #404040;
+}
+
+strong {
+  color: #ab0345;
+}
+
+span#up {
+  color: red;
+}
+
+header {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: rgba(66, 66, 66, 0.75);
+
+  nav.desktop {
+
+
+    ul {
+      color: black;
+    }
+  }
+
+  h1 {
+    color: rgba(66, 66, 66, 0.75);
+
+    span {
+      color: rgba(66, 66, 66, 0.75);
+    }
+  }
+
+  li#heart {
+
+    .icon#heart-logo,
+    .icon#bs-logo,
+    .icon.back-logo,
+    .icon#bt-logo {
+      filter: invert(0%) sepia(98%) saturate(6%) hue-rotate(247deg) brightness(104%) contrast(101%);
+    }
+  }
+}
+
+div.scrollDist,
+div#about-view,
+div#parallax-intro,
+div#parallax-intro div.main,
+div#parallax-intro div.intro,
+div#parallax-intro div.about,
+div.projects {
+  background-color: #fff;
+}
+
+div#parallax-intro  {
+
+
+  div.about {
+
+
+    span {
+      color: #F03743;
+    }
+
+    p {
+      color: rgba(78, 152, 21, 1);
+    }
+  }
+
+  div.projects {
+
+    p {
+      color: #424242;
+    }
+
+    .pContent {
+      background-color: rgba(78,152,21,0);
+
+      span {
+        color: #F03743;
+      }
+    }
+
+    .pContent::after {
+      background-color: #ccc;
+    }
+
+    #mission p {
+      color: #424242;
+    }
+  }
+}
+
+.pContent {
+  background-color: rgba(0,0,0,0.9);
+  color: white;
+}
+
+@media only screen and (min-width: 731px) {
+  div#footer h3 {
+    color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+@media only screen and (max-width: 730px) {
+  body, html, div#about-view.mobile-view {
+    background-color: #BDBDBD;
+  }
+
+  h3 {
+    color: gainsboro;
+  }
+
+  div#footer.mobile-view h3 {
+    background-color: white;
+    color: black;
+  }
+
+  h1#me-intro {
+
+    span {
+      color: #F03743;
+    }
+
+    strong {
+      color: #202020;
+    }
+  }
+
+  p.skill {
+    color: #F03743;
+
+    span {
+      color: gray;
+    }
+  }
+
+  .projects-container {
+
+
+    #project-one p {
+      color: #9EC131;
+    }
+
+    #project-two p {
+
+    }
+
+    #project-three p {
+      color: #F8F12E;
+    }
+
+    img {
+      border: 5px black solid;
+    }
+  }
+
+  header {
+
+    .icon#logout {
+      filter: invert(99%) sepia(83%) saturate(90%) hue-rotate(192deg) brightness(110%) contrast(89%);
+    }
+
+    .icon#bars {
+      filter: invert(20%) sepia(2%) saturate(0%) hue-rotate(156deg) brightness(86%) contrast(85%);
+    }
+
+    .icon#logout:hover,
+    .icon#bars:hover {
+      filter: invert(5%) sepia(2%) saturate(4805%) hue-rotate(138deg) brightness(97%) contrast(84%);
+    }
+
+    .icon#bars:hover::selection .dropdown-content a {
+      filter: invert(99%) sepia(83%) saturate(90%) hue-rotate(192deg) brightness(110%) contrast(89%);
+    }
+  }
+
+  .dropdown-content a {
+    color: #383838;
+    background-color: #F1F1F1;
+  }
+
+  .dropdown-content a:hover {
+    color: #c27c7c;
+    background-color: #F1F1F1;
+  }
+
+  nav.mobile {
+
+
+    .dropdown .dropdown-content:hover {
+      background-color: #F1F1F1;
+      color: #BEE04C;
+    }
+
+    li {
+
+
+      a#heart:hover,
+      a#logout:hover {
+        color: #BEE04C;
+      }
+    }
+  }
+
+  #me-contact {
+    background-color: white;
+
+    h2 {
+      color: #202020;
+    }
+  }
+
+  div#footer.mobile-view h3 {
+    background-color: white;
+    color: black;
+  }
+}
