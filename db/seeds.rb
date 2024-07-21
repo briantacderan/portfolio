@@ -22,13 +22,15 @@ b10 = Photo.create(project_id: 1, project_name: "Plymouth Barracuda 1968", photo
 
 fs0 = Photo.create(project_id: 2, project_name: "Father Sanchez in \"La Sangre del Rio Grande\"", photo_url: "https://tacderan-code.s3.us-west-1.amazonaws.com/images/renders/fs3.jpeg")
 
-i0 = Photo.create(project_id: 3, project_name: "Intramuros Building", photo_url: "https://tacderan-code.s3.us-west-1.amazonaws.com/images/renders/i0.jpeg")
+i0 = Photo.create(project_id: 3, project_name: "Intramuros - Casa Manila", photo_url: "https://tacderan-code.s3.us-west-1.amazonaws.com/images/renders/i0.jpeg")
 
-i1 = Photo.create(project_id: 3, project_name: "Intramuros Building", photo_url: "https://tacderan-code.s3.us-west-1.amazonaws.com/images/renders/i1.jpeg")
+i1 = Photo.create(project_id: 3, project_name: "Intramuros", photo_url: "https://tacderan-code.s3.us-west-1.amazonaws.com/images/renders/i1.jpeg")
 
-i2 = Photo.create(project_id: 3, project_name: "Intramuros Building", photo_url: "https://tacderan-code.s3.us-west-1.amazonaws.com/images/renders/i2.jpeg")
+i2 = Photo.create(project_id: 3, project_name: "Intramuros", photo_url: "https://tacderan-code.s3.us-west-1.amazonaws.com/images/renders/i2.jpeg")
 
-i3 = Photo.create(project_id: 3, project_name: "Intramuros Building", photo_url: "https://tacderan-code.s3.us-west-1.amazonaws.com/images/renders/i3.jpeg")
+i3 = Photo.create(project_id: 3, project_name: "Intramuros", photo_url: "https://tacderan-code.s3.us-west-1.amazonaws.com/images/renders/i3.jpeg")
+
+i4 = Photo.create(project_id: 3, project_name: "Intramuros - Jose Rizal", photo_url: "https://tacderan-code.s3.us-west-1.amazonaws.com/images/renders/i4.jpeg")
 
 m0 = Photo.create(project_id: 4, project_name: "Motown, U.S.A.", photo_url: "https://tacderan-code.s3.us-west-1.amazonaws.com/images/renders/m0.jpeg")
 
