@@ -215,7 +215,7 @@ header.opaque nav.desktop ul {
 
 header a.desktop:hover + div.icon-popups,
 header div.icon-popups:hover,
-header.popup .icon-popups {
+header.popup .icon-popups, div.icon-popups.hover-effect {
   left: 855px;
   opacity: 1;
   bottom: -25rem;

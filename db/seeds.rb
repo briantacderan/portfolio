@@ -32,6 +32,8 @@ i3 = Photo.create(project_id: 3, project_name: "Intramuros", photo_url: "https:/
 
 i4 = Photo.create(project_id: 3, project_name: "Intramuros - Jose Rizal", photo_url: "https://tacderan-code.s3.us-west-1.amazonaws.com/images/renders/i4.jpeg")
 
+i5 = Photo.create(project_id: 3, project_name: "Intramuros - Jose Rizal", photo_url: "https://tacderan-code.s3.us-west-1.amazonaws.com/images/renders/i5.jpeg")
+
 m0 = Photo.create(project_id: 4, project_name: "Motown, U.S.A.", photo_url: "https://tacderan-code.s3.us-west-1.amazonaws.com/images/renders/m0.jpeg")
 
 m1 = Photo.create(project_id: 4, project_name: "Motown, U.S.A.", photo_url: "https://tacderan-code.s3.us-west-1.amazonaws.com/images/renders/m1.jpeg")

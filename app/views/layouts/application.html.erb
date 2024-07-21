@@ -121,7 +121,9 @@
       <div class="content">
 
         <% if @design_menu %>
-          <a><i class="fas fa-bars mobile-view"></i></a>
+          <a class="mobile-view">
+            <span id="bars" class="displayed"><i class="fas fa-bars"></i></span>
+          </a>
         <% else if @home_menu %>
           <%= link_to root_path, class: "desktop-view" do %>
             <h1>BRIAN<span>TACDERAN</span></h1>
@@ -139,7 +141,7 @@
 
 
         <nav class="desktop">
-          <ul>
+          <ul id="header-content">
             <li id="heart" class="logo">
 
               <% if @home_menu %>

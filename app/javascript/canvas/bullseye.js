@@ -438,8 +438,22 @@ window.addEventListener("load", (event) => {
 	} */
 
 	let currentlyPlaying = false
+	let menuOpen = false
 
-	// barracude1968
+	if(id.dim.w < 730) {
+		console.log('bars event listening')
+
+	  $('span#bars').on('touchend', function() {
+			setTimeout(() => {
+				$('span#bars').toggleClass('undisplay')
+				$('div.icon-popups').toggleClass('hover-effect')
+				console.log('bars clicked')
+				menuOpen = true
+			}, 100)
+		})
+	}
+
+	// barracuda1968
 	document.getElementById('btn1').addEventListener('mouseup', function() {
 		$('#categories ul').fadeOut('slow')
 	  $('#video, #overlay').fadeIn('fast')
@@ -513,10 +527,20 @@ window.addEventListener("load", (event) => {
 	}, false)
 
 	window.addEventListener('mouseup', function(e) {
+
+		if(menuOpen) {
+			$('span#bars').toggleClass('undisplay')
+			$('div.icon-popups').toggleClass('hover-effect')
+			menuOpen = !menuOpen
+		}
+
 	  if(((!$('#photos').is(e.target)) || (!$('#video').is(e.target))) && currentlyPlaying) {
+
 	    $('#photos, #video, #overlay').fadeOut('slow')
 	    $('#categories ul').fadeIn('slow')
 	    $('#video').html('')
+
+
 			document.querySelector('header').classList.remove('undisplay')
 			document.querySelector('h1#port-name').classList.remove('undisplay')
 			document.querySelector('h2#my-design').classList.remove('undisplay')

@@ -23,15 +23,6 @@ window.addEventListener("touchmove", preventMotion, {
 
 
 window.addEventListener("load", (event) => {
-  window.onscroll = function() {
-    const nav = document.getElementById('up')
-    if (window.pageYOffset > 750) {
-      nav.classList.add("opaque")
-    } else {
-      nav.classList.remove("opaque")
-    }
-  }
-
   function preload(arrayOfImages) {
     $(arrayOfImages).each(function(){
       $('<image/>')[0].href = this
@@ -49,7 +40,7 @@ window.addEventListener("load", (event) => {
     `images/new/${aws}sf-front-mtn-white.png`
   ])
 
-  if(window.innerWidth > 700) {
+  if(window.innerWidth >= 730) {
     document.querySelector('header').addEventListener('mouseenter', function() {
 
       $('img#heart-logo').css('display', 'none')
@@ -66,13 +57,6 @@ window.addEventListener("load", (event) => {
       $('header h2').fadeOut('fast')
       document.querySelector('header').classList.remove('popup')
 
-    })
-  } else {
-    const bars = document.querySelector('i.fa-bars')
-    bars.addEventListener('touchstart touchend', function(e) {
-      e.preventDefault()
-      $('div.icon-popups').toggleClass('hover-effect')
-      $('header nav.desktop i.fa-bars').toggleClass('undisplay')
     })
   }
 
