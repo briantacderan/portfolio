@@ -77,7 +77,6 @@ end
 # Amazon S3 storage
 gem 'carrierwave', '~> 3.0.4'
 gem 'figaro'
-gem 'paperclip', '~> 6.1'
 gem 'aws-sdk', '~> 3.0', '>= 3.0.1'
 
 # Fixed protocol initialization errors
