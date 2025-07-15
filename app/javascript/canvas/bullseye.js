@@ -467,7 +467,7 @@ window.addEventListener("load", (event) => {
 
 	  try {
 			if(window.innerWidth > 900) {
-	    	$('#video').html('<iframe id="ytplayer" type="text/html" width="1120" height="630" src="https://www.youtube.com/embed/Q2fOHzbFnkE?si=4Fh0JclhGPumgQoA&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>')
+	    	$('#video').html('<iframe id="ytplayer" type="text/html" width="1120" height="630" src="https://www.youtube.com/embed/ax1N3Qf5PP4?si=4Fh0JclhGPumgQoA&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>')
 			} else {
 				$('#video').html('<iframe id="ytplayer" type="text/html" width="672" height="378" src="https://www.youtube.com/embed/Q2fOHzbFnkE?si=4Fh0JclhGPumgQoA&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>')
 			}
